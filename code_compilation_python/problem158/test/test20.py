@@ -1,0 +1,3 @@
+from ..program158 import program158
+def test20():
+    assert program158(01111011111010111100101100001011001010111110000010) == ['NO']

@@ -1,0 +1,4 @@
+from ..program3086 import program3086
+def test88():
+    assert program3086(3
+460) == ['NO']

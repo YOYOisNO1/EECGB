@@ -1,0 +1,3 @@
+from ..program4290 import program4290
+def test118():
+    assert program4290(gfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpis) == ['YES\r\ngfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpis', 'YES\r\ngfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpiskgfpis']

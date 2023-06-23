@@ -1,0 +1,4 @@
+from ..program4938 import program4938
+def test54():
+    assert program4938(67
+VVVVKKAVVKVKKVVVVKKAVVKVKKAOVVVVKKAVVKVKKVVVVKKAVVKVKKVVVVKKAVVKVKK) == ['44']

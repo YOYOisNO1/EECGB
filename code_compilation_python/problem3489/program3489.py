@@ -1,0 +1,20 @@
+def program3489():
+    x,y = map(int, input().split())
+    r = [(2,2),(1,12),(0,22)]
+    while True:
+        for a in r:
+            if x >= a[0] and y >= a[1]:
+                x -= a[0]
+                y -= a[1]
+                break;
+            else:
+                print "Hanako"
+                break
+            for a in reversed(r):
+                if x >= a[0] and y >= a[1]:
+                    x -= a[0]
+                    y -= a[1]
+                    break
+            else:
+                print "Ciel"
+                break

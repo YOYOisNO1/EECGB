@@ -1,0 +1,4 @@
+from ..program259 import program259
+def test36():
+    assert program259(34 34
+BGGBBBBGGBBGBGGGGGGBBGGGGGBGGBGGGB) == ['GGGGGGGGGGGGGGGGGGGGGBBBBBBBBBBBBB']

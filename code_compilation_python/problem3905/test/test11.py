@@ -1,0 +1,8 @@
+from ..program3905 import program3905
+def test11():
+    assert program3905(2 3
+-9617 845
+4195 -2181
+-6305 -9903
+-535 -6060
+9417 -8419) == ['No', 'NO']

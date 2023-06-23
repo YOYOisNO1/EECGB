@@ -1,0 +1,4 @@
+from ..program4074 import program4074
+def test39():
+    assert program4074(52
+3D 5S 5S JS 5H 5C 5S 5H 2S 5S 9S 3S 2S 5S 2S 2S 5S 4S 3S 5S 7H 3S 5S 7S 4S 2S TS 2S 3S 3S 3S 3S 3S 3S 2S 7S 3S 2S 2S 2S 2S 2S 5S 2H 2C 4S 2S 2S 4S 7S 2S 2S) == ['YES']

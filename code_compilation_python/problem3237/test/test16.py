@@ -1,0 +1,6 @@
+from ..program3237 import program3237
+def test16():
+    assert program3237(3
+0 0 0
+0 0 0
+0 0 0) == ['0']

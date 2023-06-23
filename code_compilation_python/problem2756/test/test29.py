@@ -1,0 +1,54 @@
+from ..program2756 import program2756
+def test29():
+    assert program2756(id
+50
+hi
+dc
+fg
+ee
+gi
+hc
+ac
+ih
+dg
+fc
+de
+ed
+ie
+eb
+ic
+cf
+ib
+fa
+gc
+ba
+be
+ga
+ha
+hg
+ia
+df
+ab
+ei
+eh
+ad
+ii
+ci
+dh
+ec
+if
+di
+bg
+ag
+he
+eg
+ca
+ae
+db
+aa
+id
+fh
+hh
+cc
+fb
+gb) == ['YES']

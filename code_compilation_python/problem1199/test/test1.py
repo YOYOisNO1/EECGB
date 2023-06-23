@@ -1,0 +1,4 @@
+from ..program1199 import program1199
+def test1():
+    assert program1199(3
+abc) == ['No', 'NO']

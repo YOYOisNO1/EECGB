@@ -1,0 +1,10 @@
+from ..program3001 import program3001
+def test29():
+    assert program3001(7 7
+2C J2 5D 3C AH 6S 8H
+TD 7S QD TC AD 5C 3H
+3D 4H 6C 2S AC AS 7H
+JS 9H JD 6D 7C 9S KS
+6H 9C QC 8S 9D 4D QS
+4S 5H 5S 8D JH 8C 2D
+KC 4C TS TH 3S 7D QH) == ['No solution.']

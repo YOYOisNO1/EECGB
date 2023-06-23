@@ -1,0 +1,9 @@
+from ..program3806 import program3806
+def test135():
+    assert program3806(6
+3 2
+2 4
+3 1
+3 5
+5 2
+1 2) == ['WIN']

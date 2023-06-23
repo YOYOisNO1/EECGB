@@ -1,0 +1,8 @@
+from ..program4200 import program4200
+def test18():
+    assert program4200(56000
+U.K. MONEY MARKET DEFICIT FORECAST AT 400 MLN STG
+LONDON, April 13 - The Bank of England said it forecast a
+shortage of around 400 mln stg in the money market today.
+Among the main factors affecting liquidity, bills maturing
+in official hands a...) == ['1']

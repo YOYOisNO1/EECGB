@@ -1,0 +1,3 @@
+from ..program4821 import program4821
+def test83():
+    assert program4821(edridrxwwgcsqpbdotsxmcalmxrloxorirgcmzaeokpoxqhsptnghbexuikgvmmocywpygmbassbqxsrivcrdzxxftecuufmiimrvhddyjiuqiphplutofrjvnwtugqmbrwclnmmecetdkkpydwdcxtgogbnsazfpfleheituvoamkquhvzlhlxibfgjxlsrqzjgdvkkpbnqmbwakgcxxgwtmkjgxlroawpjtqtiskkqfgtmikpxrneeyyjekli...) == ['0']

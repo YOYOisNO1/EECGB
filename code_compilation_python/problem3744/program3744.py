@@ -1,0 +1,16 @@
+def program3744():
+    F=[input() for i in [0]*8]
+    
+    q=[(7,0)]
+    
+    for I in range(8):
+        t=[]
+        for i,j in q:
+            for x in [-1,0,1]:
+                for y in [-1,0,1]:
+                    X,Y=i+x,j+y
+                    if 0<=X<8 and 0<=Y<8:
+                        if F[X-I][Y] != 'S' and F[X-I-1][Y] != 'S':
+                            t+=[(X,Y)]
+        q=t
+    print "WIN" if q else "LOSE"

@@ -1,0 +1,14 @@
+    import math
+def ar():
+        return map(int,input().split())
+    c,d=ar()
+    n,m=ar()
+    k=ar()[0]
+    req=(n*m)-k
+    mi=100000000
+    for i in range(req+1):
+        for j in range(req+3):
+            if n*i+j >=req:
+                if c*i+j*d<mi:
+                    mi=i*c+j*d
+    print mi

@@ -1,0 +1,3 @@
+from ..program3083 import program3083
+def test29():
+    assert program3083(666033930784103123 883523065811761270) == ['576460752303423487']

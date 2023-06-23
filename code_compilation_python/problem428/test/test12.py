@@ -1,0 +1,4 @@
+from ..program428 import program428
+def test12():
+    assert program428(50 13
+10011010100010100111010000010000000000010100000101) == ['5']

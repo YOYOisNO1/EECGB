@@ -1,0 +1,5 @@
+from ..program703 import program703
+def test53():
+    assert program703(2
+1 7 8 6 0 9
+3 2 1 7 4 9) == ['4']

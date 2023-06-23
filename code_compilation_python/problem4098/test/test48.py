@@ -1,0 +1,3 @@
+from ..program4098 import program4098
+def test48():
+    assert program4098(252509053898415172 285803555062529649) == ['3329450116411448']

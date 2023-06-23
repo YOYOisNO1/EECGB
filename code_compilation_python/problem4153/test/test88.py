@@ -1,0 +1,4 @@
+from ..program4153 import program4153
+def test88():
+    assert program4153(66996673951
+0 3942718254 0 0 0 6953053415 6291887292 0) == ['66996673951']

@@ -1,0 +1,5 @@
+from ..program2136 import program2136
+def test27():
+    assert program2136(443336387 317738308
+-731455437 682073969
+443336387 -487472781) == ['2']

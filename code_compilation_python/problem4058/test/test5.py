@@ -1,0 +1,39 @@
+from ..program4058 import program4058
+def test5():
+    assert program4058(3 36
+ab b
+bb a
+af c
+bd b
+cd a
+ff c
+ce a
+ae a
+cb a
+ba a
+ad d
+db a
+bf a
+be a
+cc b
+dc a
+bc a
+ca e
+aa e
+ec b
+ac e
+ed b
+df d
+fa b
+ea a
+ef b
+ee a
+da c
+cf a
+fe d
+dd f
+de a
+eb f
+fd a
+fc a
+fb a) == ['86']

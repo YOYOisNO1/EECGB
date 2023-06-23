@@ -1,0 +1,3 @@
+from ..program4334 import program4334
+def test97():
+    assert program4334(6929 8303 -718092932 630511765 717136401 -678221530) == ['165239']

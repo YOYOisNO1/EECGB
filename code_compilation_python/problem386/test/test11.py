@@ -1,0 +1,3 @@
+from ..program386 import program386
+def test11():
+    assert program386(72 8 186 92 267 69) == ['YES', 'yes', 'Yes']

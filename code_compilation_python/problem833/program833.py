@@ -1,0 +1,17 @@
+def program833():
+    input=input()
+    n, m = map(int, input.split(' '))
+    
+    
+    if n%m==0:
+        result=n/m
+        for i in range(m):
+            print result,
+    
+    else:
+        rest=n%m
+        fair=(n-n%m)/m
+        for i in range(m-rest):
+            print fair,
+    
+        for j in range(rest):

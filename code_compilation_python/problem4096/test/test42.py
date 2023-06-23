@@ -1,0 +1,3 @@
+from ..program4096 import program4096
+def test42():
+    assert program4096(9754875457700 1000000000000000000) == ['99999024512454230']

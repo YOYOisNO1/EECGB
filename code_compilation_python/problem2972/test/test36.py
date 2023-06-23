@@ -1,0 +1,3 @@
+from ..program2972 import program2972
+def test36():
+    assert program2972(99991) == ['199980 2\r\n1 2', '199981 2\r\n1 2']

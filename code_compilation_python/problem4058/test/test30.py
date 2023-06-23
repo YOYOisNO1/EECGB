@@ -1,0 +1,39 @@
+from ..program4058 import program4058
+def test30():
+    assert program4058(6 36
+aa a
+ab f
+ac a
+ad b
+ae c
+af d
+ba f
+bb a
+bc b
+bd c
+be d
+bf e
+ca f
+cb a
+cc b
+cd c
+ce d
+cf e
+da f
+db a
+dc b
+dd c
+de d
+df e
+ea f
+eb a
+ec b
+ed c
+ee d
+ef e
+fa f
+fb a
+fc b
+fd c
+fe d
+ff e) == ['9331']

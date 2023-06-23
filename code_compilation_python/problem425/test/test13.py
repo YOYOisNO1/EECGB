@@ -1,0 +1,4 @@
+from ..program425 import program425
+def test13():
+    assert program425(50 8
+11010100000011001100001100010001110000101100110011) == ['8']

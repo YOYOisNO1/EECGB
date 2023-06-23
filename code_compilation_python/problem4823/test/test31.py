@@ -1,0 +1,4 @@
+from ..program4823 import program4823
+def test31():
+    assert program4823(dkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjijdkjij
+dddkikjjidkkidijjjjkkjjikjdikiidijjikikjijj...) == ['0']

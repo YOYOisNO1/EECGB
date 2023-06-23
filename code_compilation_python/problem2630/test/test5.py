@@ -1,0 +1,15 @@
+from ..program2630 import program2630
+def test5():
+    assert program2630(12
+16
+27
+65
+54
+154
+90
+23
+135
+102
+42
+17
+173) == ['YES']

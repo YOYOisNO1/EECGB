@@ -1,0 +1,3 @@
+from ..program2794 import program2794
+def test77():
+    assert program2794(rveviaomdienfygifatviahordebxazoxflfgzslhyzowhxbhqzpsgellkoimnwkvhpbijorhpggwfjexivpqbcbmqjyghkbq) == ['rveviaomdienfygifbtvichordefxgzoxhlijzslkyzowlxmnqzpsopqrstuvwxyzhpbijorhpggwfjexivpqbcbmqjyghkbq']

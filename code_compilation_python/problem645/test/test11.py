@@ -1,0 +1,4 @@
+from ..program645 import program645
+def test11():
+    assert program645(6 50
+6 8 7 8 5 4 4 5 7 8 6 5 7 4 7 7 7 8 6 4 6 6 8 8 7 7 8 7 5 8 5 4 4 7 8 4 4 6 6 6 8 7 4 7 6 6 5 8 4 7) == ['0']

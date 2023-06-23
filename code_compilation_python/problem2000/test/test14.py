@@ -1,0 +1,6 @@
+from ..program2000 import program2000
+def test14():
+    assert program2000(0 0 2 0
+0 1 0 3
+0 4 3 4
+3 0 3 3) == ['NO']

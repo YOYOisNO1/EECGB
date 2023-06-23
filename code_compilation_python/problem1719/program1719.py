@@ -1,0 +1,32 @@
+def program1719():
+    from math import ceil
+    n= int(input())
+    a = int(input())
+    b = int(input())
+    c = int(input())
+    if b - c < a:
+        if n < b:
+            if n < a:
+                print(0)
+            else:
+                 print(n // a)
+        else:
+            if b > 100000000000000000:
+                count = n // (b - c) + 1 - b // (b - c)
+            else:
+                if b // ( b - c) * (b - c) + n % (b - c) >= b:
+                    count = n // (b - c) + 1  - (b // ( b - c) * (b - c) + n % (b - c)) // (b - c)
+                else:
+                    count = n // (b - c) + 1  - (b // ( b - c) + 1) * (b - c) + n % (b - c)) // (b - c)
+            if a <= b:
+                if a < n:
+                    print(count + (n - (b - c) * count) // a)
+                else:
+                    print(count)
+            else:
+                print(count)
+    else:
+        if n < a:
+            print(0)
+        else:
+            print(n // a)

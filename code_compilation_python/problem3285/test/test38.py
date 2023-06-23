@@ -1,0 +1,3 @@
+from ..program3285 import program3285
+def test38():
+    assert program3285(4 5) == ['2']

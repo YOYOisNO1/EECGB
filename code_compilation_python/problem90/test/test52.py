@@ -1,0 +1,3 @@
+from ..program90 import program90
+def test52():
+    assert program90(344459175789842163 7328918633826429 47) == ['1/7328918633826429']

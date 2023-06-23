@@ -1,0 +1,3 @@
+from ..program3312 import program3312
+def test27():
+    assert program3312(191597366 33903 33828) == ['1149610752\r\n33984 33828', '1149610752\n33984 33828']

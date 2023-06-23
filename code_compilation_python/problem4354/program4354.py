@@ -1,0 +1,11 @@
+def program4354():
+    
+     n=input()
+    a=sorted(map(int,input().split()))
+    t=input()
+    i,j,s=0,0,0
+    while i<n:
+     while j<n and a[j]-a[i]<=t:j+=1
+     s=max(s,j-i)
+     i+=1
+    print s

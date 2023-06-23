@@ -1,0 +1,4 @@
+from ..program670 import program670
+def test16():
+    assert program670(50
+0 0 1 1 0 0 0 1 0 1 1 1 0 1 1 1 0 1 1 0 0 1 1 0 1 0 0 0 0 1 0 1 1 1 1 0 1 0 1 1 0 1 1 0 0 0 1 1 0 1) == ['122880']

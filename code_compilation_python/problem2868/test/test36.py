@@ -1,0 +1,3 @@
+from ..program2868 import program2868
+def test36():
+    assert program2868(47474747474747474747474747474747474747474747474747) == ['4']

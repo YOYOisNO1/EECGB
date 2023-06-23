@@ -1,0 +1,3 @@
+from ..program4672 import program4672
+def test192():
+    assert program4672(999999999999999999 423539247696576513) == ['3']

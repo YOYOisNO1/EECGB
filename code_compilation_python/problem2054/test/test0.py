@@ -1,0 +1,10 @@
+from ..program2054 import program2054
+def test0():
+    assert program2054(WBWBWBWB
+BWBWBWBW
+BWBWBWBW
+BWBWBWBW
+WBWBWBWB
+WBWBWBWB
+BWBWBWBW
+WBWBWBWB) == ['YES']

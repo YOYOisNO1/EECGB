@@ -1,0 +1,5 @@
+from ..program4902 import program4902
+def test2():
+    assert program4902(11 5
+5 6 3 2 3 4 7 5 4 5 6
+RWOORWORROW) == ['28']

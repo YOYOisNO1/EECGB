@@ -1,0 +1,4 @@
+from ..program2349 import program2349
+def test9():
+    assert program2349(aanerbaqslfmqmuciqbxyznkevukvznpkmxlcorpmrenwxhzfgbmlfpxtkqpxdrmcqcmbf
+aanebbaqkgfiimcciqbaoznkeqqkrgapdillccrfeienwbcvfgbmlfbimkqchcrmclcmbf) == ['zzzzbzzzkgziizczzzzaozzzzqqzrgazdilzzczfeizzzbcvzzzzzzbimzzchczzzlzzzz', 'bbofbcbrkggiincdjrcaozolfqqlrgaqdilmdcsfeifoxbcvghcnmgbimlrchcsndldncg', 'aanebbaqkgfiimcciqbaoznkeqqkrgapdillccrfeienwbcvfgbmlfbimkqchcrmclcmbf']

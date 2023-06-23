@@ -1,0 +1,3 @@
+from ..program3881 import program3881
+def test21():
+    assert program3881(667266829466 1518201697184 23643010980 898976260568) == ['6']

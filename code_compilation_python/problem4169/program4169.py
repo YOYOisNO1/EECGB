@@ -1,0 +1,14 @@
+def program4169():
+    import java.math.BigInteger;
+    import java.util.*;
+    import static java.lang.Math.*;
+    
+    public class Main{
+        public static void main(String[] args){
+            Scanner in = new Scanner(System.in);
+            String n = in.next();
+            String m = in.next();
+            int base = max(n.chars().max().getAsInt(), m.chars().max().getAsInt())-'0' + 1;
+            System.out.println(new BigInteger(n,base).add(new BigInteger(m, base)).toString(base).length());
+        }
+    }

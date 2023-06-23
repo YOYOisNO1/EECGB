@@ -1,0 +1,4 @@
+from ..program1310 import program1310
+def test15():
+    assert program1310(3
+WWB) == ['1\n1', '1 \r\n 1', '1\r\n1']

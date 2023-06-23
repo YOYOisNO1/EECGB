@@ -1,0 +1,4 @@
+from ..program680 import program680
+def test10():
+    assert program680(64
+1001001010010010100101010010010100100101001001001001010100101001) == ['YES', 'Yes']

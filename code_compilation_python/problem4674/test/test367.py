@@ -1,0 +1,3 @@
+from ..program4674 import program4674
+def test367():
+    assert program4674(987654321123456789 1099511627777) == ['987654321122558522']

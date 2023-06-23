@@ -1,0 +1,4 @@
+from ..program2885 import program2885
+def test9():
+    assert program2885(50
+BRRRBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB) == ['1125899906842609']

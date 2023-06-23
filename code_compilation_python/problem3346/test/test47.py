@@ -1,0 +1,4 @@
+from ..program3346 import program3346
+def test47():
+    assert program3346(-1 0
+R) == ['No']

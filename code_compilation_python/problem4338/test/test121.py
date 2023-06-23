@@ -1,0 +1,3 @@
+from ..program4338 import program4338
+def test121():
+    assert program4338(6152051 53675778 964821583 85960172 -939564894 755134693) == ['100']

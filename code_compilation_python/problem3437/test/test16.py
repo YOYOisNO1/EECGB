@@ -1,0 +1,7 @@
+from ..program3437 import program3437
+def test16():
+    assert program3437(CFJGYQ BERLAND 5:0
+HYTCIPDD BERLAND 5:9
+HYTCIPDD CFJGYQ 3:6
+UWHSJOSRWKXU CFJGYQ 4:1
+UWHSJOSRWKXU HYTCIPDD 8:1) == ['6:0']

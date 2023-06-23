@@ -1,0 +1,4 @@
+from ..program4105 import program4105
+def test42():
+    assert program4105(11
+3657071886390583694504) == ['HHHHHHHHHHHMMMMMMMMMMM', 'MMMMMMMMMMMHHHHHHHHHHH']

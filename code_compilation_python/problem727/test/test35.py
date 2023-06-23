@@ -1,0 +1,4 @@
+from ..program727 import program727
+def test35():
+    assert program727(32
+15 32 11 3 18 23 19 14 5 8 6 21 13 24 25 4 16 9 27 20 17 31 2 22 7 12 30 1 26 10 29 28) == ['30']

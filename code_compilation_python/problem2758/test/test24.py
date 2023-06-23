@@ -1,0 +1,24 @@
+from ..program2758 import program2758
+def test24():
+    assert program2758(be
+20
+ad
+cd
+cb
+db
+dd
+aa
+ab
+ca
+ae
+ed
+dc
+bb
+ba
+da
+ee
+ea
+cc
+ac
+ec
+eb) == ['YES']

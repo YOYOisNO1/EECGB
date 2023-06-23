@@ -1,0 +1,6 @@
+from ..program3687 import program3687
+def test41():
+    assert program3687(10 38
+16 19 37 32 16 7 14 33 16 11
+10 39
+10 27 35 15 31 15 17 16 38 35) == ['>']

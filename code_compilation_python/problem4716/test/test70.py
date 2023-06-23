@@ -1,0 +1,4 @@
+from ..program4716 import program4716
+def test70():
+    assert program4716(2 3 4
+7 8) == ['0']

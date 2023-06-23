@@ -1,0 +1,4 @@
+from ..program393 import program393
+def test40():
+    assert program393(90 15
+YNNNNN?NNYNNYNNNN?NNNNYNNY?NNNNNNN?NNNNNNYN?NNYNNNNNN?NNYYNNYN?NNN??NNNNYNNN?YN?NNNNYNN?NY) == ['YES']

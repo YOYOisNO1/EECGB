@@ -1,0 +1,4 @@
+from ..program4577 import program4577
+def test34():
+    assert program4577(35
+W2 W3 Y2 G5 G2 W3 G5 Y2 W5 Y5 W3 G2 G3 W5 W2 W3 Y2 Y5 Y2 Y5 Y2 Y2 G2 Y5 W3 Y5 G3 Y2 G3 Y2 Y5 W5 G3 W5 W5) == ['4']

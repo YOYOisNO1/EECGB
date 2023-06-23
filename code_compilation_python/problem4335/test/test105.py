@@ -1,0 +1,3 @@
+from ..program4335 import program4335
+def test105():
+    assert program4335(10088 6166 -735339950 -111273129 787180186 -439981865) == ['150116']

@@ -1,0 +1,7 @@
+from ..program3437 import program3437
+def test1():
+    assert program3437(AERLAND DERLAND 2:2
+DERLAND CERLAND 2:3
+CERLAND AERLAND 1:3
+AERLAND BERLAND 2:1
+DERLAND BERLAND 4:1) == ['IMPOSSIBLE']

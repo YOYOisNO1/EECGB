@@ -1,0 +1,4 @@
+from ..program1019 import program1019
+def test21():
+    assert program1019(izoiweukqszkkhwapzxyotbaarpqxbybsjxilhylbbjbvoedrezyluaabsfzvtxxvncdwxrlfdtfvbfoqwlzqwneimwzpoygfdcldmxdhoxzensxlspituzocvzzrfomhggrwurdccgfoorvhyzsdkpjhwakuoxwdjhzaalanyzwuuqwlrtmvmdraleyusjqdyxuztvc
+oukzkkhwazxbaarpbybsjxlylbbjbrezlasfzvtxvcdxrltffoqwlzqwneizpoygfdcmdxzesxlsitozzrfomhggrwrcfoorvhyzdpjhakuoxdjhzaalanzwqlrtmmraleyjyxutc) == ['4']

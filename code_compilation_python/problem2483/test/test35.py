@@ -1,0 +1,3 @@
+from ..program2483 import program2483
+def test35():
+    assert program2483(5 4) == ['2\t0\t4', '2 0 4']

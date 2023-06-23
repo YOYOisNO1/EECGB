@@ -1,0 +1,3 @@
+from ..program3964 import program3964
+def test11():
+    assert program3964(-411495869 33834653 -234317741 925065545) == ['78953311064369599']

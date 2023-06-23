@@ -1,0 +1,4 @@
+from ..program1300 import program1300
+def test12():
+    assert program1300(50
+88888888888888888888888888888888888888888888888888) == ['4']

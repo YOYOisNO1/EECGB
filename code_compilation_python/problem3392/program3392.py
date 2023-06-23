@@ -1,0 +1,17 @@
+    #!/usr/bin/env python
+    
+def gcd(a, b):
+    	return gcd(b, a%b) if b else a
+    
+    a, b = map(int, input().split())
+    g = gcd(a, b)
+    a /= g
+    b /= g
+    if a - b == 1 or b - a == 1:
+    	print("Equal")
+    elif a < b:
+    	print("Dasha")
+    else:
+    	print("Masha")
+    
+    return 0

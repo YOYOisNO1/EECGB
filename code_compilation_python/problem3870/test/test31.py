@@ -1,0 +1,3 @@
+from ..program3870 import program3870
+def test31():
+    assert program3870(R!GBRYGBRYGBRYG!RY!BRYGBRYGBRYGBRYGBRYGBRYGBRYGBRYGBR!GBRY!BRY!BRYGBRYGBRYGBRYGB) == ['0 1 2 3', '0\r\n1\r\n2\r\n3']

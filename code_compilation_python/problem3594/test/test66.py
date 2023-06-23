@@ -1,0 +1,4 @@
+from ..program3594 import program3594
+def test66():
+    assert program3594(9
+hbe??ec??????????) == ['IMPOSSIBLE']

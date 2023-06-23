@@ -1,0 +1,4 @@
+from ..program725 import program725
+def test34():
+    assert program725(31
+29 13 26 27 9 28 2 16 30 21 12 11 3 31 23 6 22 20 1 5 14 24 19 18 8 4 10 17 15 25 7) == ['18']

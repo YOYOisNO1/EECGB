@@ -1,0 +1,11 @@
+def program2865():
+    s = input()
+    a = s.count('4')
+    b = s.count('7')
+    if a >= b and a > 0:
+        print(4)
+    else if b >= a and b > 0:
+        print(7)
+    else:
+        print(-1)
+        

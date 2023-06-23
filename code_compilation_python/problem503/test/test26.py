@@ -1,0 +1,5 @@
+from ..program503 import program503
+def test26():
+    assert program503(ZWCOJFORBPHXCOVJIDPKVECMHVHCOC
+TEV
+JVGTBFTLFVIEPCCHODOFOMCVZHWXVCPEH) == ['NO']

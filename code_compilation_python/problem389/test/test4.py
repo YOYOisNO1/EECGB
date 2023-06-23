@@ -1,0 +1,3 @@
+from ..program389 import program389
+def test4():
+    assert program389(633 609 369 704 573 416) == ['NO', 'no', 'No']

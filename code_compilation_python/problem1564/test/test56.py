@@ -1,0 +1,15 @@
+from ..program1564 import program1564
+def test56():
+    assert program1564(7 12
+4 1
+6 4
+3 4
+3 1
+2 4
+7 5
+5 4
+2 1
+6 7
+2 3
+7 4
+6 5) == ['11']

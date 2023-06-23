@@ -1,0 +1,24 @@
+def program1148():
+    import sys,math
+    
+    maxsec,noten,planken,notsec=map(int,input().split())
+    
+    dozen=min(noten/(notsec*maxsec),planken/(maxsec-1))
+    noten-=dozen*notsec*maxsec
+    planken-=dozen*(maxsec-1)
+    
+    sec=noten/notsec+int(noten%notsec>0)
+    if sec>=planken+1:
+        dozen+=1
+        noten-=(planken+1)*notsec
+        if noten>0:
+            dozen+=noten/notsec+int(noten%notsec>0)
+    else if sec>0:
+        dozen+=1
+        
+        
+    
+        
+    
+    print dozen
+        
