@@ -1,4 +1,3 @@
-#刘欣炜
 import json
 import os
 import ast
