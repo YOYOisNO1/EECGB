@@ -1,0 +1,4 @@
+from ..program3245 import program3245
+def test118():
+    assert program3245(4 9397683889583 17 39 9920 3984
+1 9397683889587 357111987818129) == ['2']

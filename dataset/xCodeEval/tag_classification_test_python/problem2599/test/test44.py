@@ -1,0 +1,4 @@
+from ..program2599 import program2599
+def test44():
+    assert program2599(1
+73 34 11) == ['NO', 'NO\n\n', 'no\n', 'NO \n', 'nO\n', 'no\n\n', '\nno', 'No\n\n', 'NO\n', 'NO\n', 'No\n', 'no\n\n', 'NO\n\n', 'No\n', 'NO \n']

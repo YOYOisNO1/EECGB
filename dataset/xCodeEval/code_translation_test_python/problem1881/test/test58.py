@@ -1,0 +1,3 @@
+from ..program1881 import program1881
+def test58():
+    assert program1881(lctspivevplfdgjahojfmeswtmqlovtbdoliltaslqvmwfmbvkpjmjbkmbtcbssqjellnbtnfuathtmlvsqqstfvcpmwektcpdctcjeulhpeeolnmkbvjglvjiekiueshrptjkcttvihetgcwrldalrrefwsagugjnrtbjrvlfoquifppcjamuvkbmikcdmlcttcpohmofkicquvqhomwewtilgjuwaqkokrlprvgavopeguchwagefibkrelbr...) == ['426854908']

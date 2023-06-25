@@ -1,0 +1,3 @@
+from ..program1497 import program1497
+def test38():
+    assert program1497(1000000000000000000 2) == ['61\r\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 1 1 0 0 0 0 1 0 0 0 1 0 0 1', '61\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n1\r\n0\r\n0\r\n1\r\n0\r\n1\r\n0\r\n0\r\n0\r\n1\r\n1\r\n1\r\n1\r\n1\r\n0\r\n0\r\n1\r\n0\r\n1\r\n1\r\n1\r\n1\r\n1\r\n1\r\n0\r\n1\r\n0\r\n0\r\n1\r\n1\r\n1\r\n0\r\n0\r\n0\r\n0\r\n1\r\n0\r\n0\r\n0\r\n1\r\n0\r\n0\r\n1']

@@ -1,0 +1,8 @@
+from ..program4462 import program4462
+def test7():
+    assert program4462(0 0 5 100
+17 3
+42 24
+72 22
+72 25
+120 25) == ['Dasha']

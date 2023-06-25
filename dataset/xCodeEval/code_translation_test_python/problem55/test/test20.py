@@ -1,0 +1,4 @@
+from ..program55 import program55
+def test20():
+    assert program55(ggzmtrhkpdswwqgcbtviahqrgzhyhzddtdekchrpjgngupitzyyuipwstgzewktcqpwezidwvvxgjixnflpjhfznokmpbyzczrzk
+gpgwhtzrcytstezmhettkppgmvxlxqnkjzibiqdtceczkbfhdziuajwjqzgwnhnkdzizprgzwud) == ['both']

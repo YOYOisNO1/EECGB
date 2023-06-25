@@ -1,0 +1,4 @@
+from ..program3806 import program3806
+def test142():
+    assert program3806(999999999999999998
+999999999999999997) == ['999999999999999989']

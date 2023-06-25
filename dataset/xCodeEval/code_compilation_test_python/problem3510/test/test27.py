@@ -1,0 +1,3 @@
+from ..program3510 import program3510
+def test27():
+    assert program3510(CPPCCPPCCPPPCCCPPPPCPPPPPPPCCPCPCCPPPPCCCPPCCPCCPPCCCPCCPCPPPPCCPP) == ['31']

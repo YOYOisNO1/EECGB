@@ -1,0 +1,4 @@
+from ..program1770 import program1770
+def test0():
+    assert program1770(4 10 5
+200 6) == ['39']

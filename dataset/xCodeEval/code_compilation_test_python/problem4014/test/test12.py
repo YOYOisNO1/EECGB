@@ -1,0 +1,3 @@
+from ..program4014 import program4014
+def test12():
+    assert program4014(934002691939 300407 113318 885765 858791) == ['105841987132852686']

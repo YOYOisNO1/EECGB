@@ -1,0 +1,4 @@
+from ..program465 import program465
+def test67():
+    assert program465(9
+0 0 0 1 1 1 1 -1 -1) == ['0']

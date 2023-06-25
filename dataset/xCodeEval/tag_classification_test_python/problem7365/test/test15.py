@@ -1,0 +1,3 @@
+from ..program7365 import program7365
+def test15():
+    assert program7365(1 8) == ['6']

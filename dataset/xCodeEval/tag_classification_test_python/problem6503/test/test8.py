@@ -1,0 +1,4 @@
+from ..program6503 import program6503
+def test8():
+    assert program6503(117708228 562858833
+118004008 360437130 154015822) == ['738362681']

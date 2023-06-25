@@ -1,0 +1,18 @@
+from ..program3959 import program3959
+def test71():
+    assert program3959(15 150
+12 1
+11 1
+7 1
+11 3
+9 2
+2 3
+5 1
+5 3
+9 3
+15 2
+11 1
+1 1
+13 3
+8 3
+4 1) == ['0']

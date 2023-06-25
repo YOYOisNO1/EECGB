@@ -1,0 +1,4 @@
+from ..program1918 import program1918
+def test79():
+    assert program1918(50
+88000000000000000000000000000000000000000000000000) == ['2']

@@ -1,0 +1,4 @@
+from ..program1773 import program1773
+def test30():
+    assert program1773(kxzkueqzheeolprfncwxyxgqqlocajzkusopvpwowdxubsvvtfvnrkyijoxqjawzkvfkainowbxdzcxbgrywttplukaorxvtimqxonumuvsqyfobzorqqsohazhjyvscjhtlgbmetpigfzhtcjipiorcrcsvvdofflgkqzymdxbeaozrgcjxrgtkxrzpshjesucdwhds
+kzkqeeolprcxyxgqqloazkuspwouvvvnkyoxjzvkinowxdzbrytluaorximxnmvfoboqqsozjvschtlgbetizhcjipirccvffgkzyxbeozgctkzpsheus) == ['5']

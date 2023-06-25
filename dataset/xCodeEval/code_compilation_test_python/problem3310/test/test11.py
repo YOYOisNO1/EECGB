@@ -1,0 +1,3 @@
+from ..program3310 import program3310
+def test11():
+    assert program3310(980000000 2 100000) == ['5880000000\r\n2 2940000000', '5880000000\n2 2940000000']

@@ -1,0 +1,4 @@
+from ..program1242 import program1242
+def test12():
+    assert program1242(18
+101111001111000110) == ['1\n101111001111000110', '1\r\n101111001111000110']

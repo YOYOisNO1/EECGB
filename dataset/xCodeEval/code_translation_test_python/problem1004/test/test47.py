@@ -1,0 +1,3 @@
+from ..program1004 import program1004
+def test47():
+    assert program1004(4591740193030 3537449154450 1714308697782 442983863265) == ['8']

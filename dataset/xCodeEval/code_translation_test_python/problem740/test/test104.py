@@ -1,0 +1,3 @@
+from ..program740 import program740
+def test104():
+    assert program740(313727604417502165 313727604417502155) == ['313727604417502159']

@@ -1,0 +1,3 @@
+from ..program323 import program323
+def test2():
+    assert program323(100) == ['192']

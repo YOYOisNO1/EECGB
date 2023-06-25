@@ -1,0 +1,3 @@
+from ..program90 import program90
+def test60():
+    assert program90(595779167455745259 9741 9331) == ['61162012885196/595779167455745259']

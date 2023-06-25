@@ -1,0 +1,4 @@
+from ..program6818 import program6818
+def test39():
+    assert program6818(9
+abcdefghiiabddfhbfeaeifeibcdbbgbidbbgdhbccgdbedghdhgdebdgccbhdgbbdibgbb?cbiefieaefbhfddbaiihgfedcba) == ['abcdefghiiabddfhbfeaeifeibcdbbgbidbbgdhbccgdbedghdhgdebdgccbhdgbbdibgbbdcbiefieaefbhfddbaiihgfedcba']

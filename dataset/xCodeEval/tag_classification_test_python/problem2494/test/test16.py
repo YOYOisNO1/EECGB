@@ -1,0 +1,4 @@
+from ..program2494 import program2494
+def test16():
+    assert program2494(101010101111010001
+001001111101111101) == ['100011010010101100']

@@ -1,0 +1,4 @@
+from ..program1832 import program1832
+def test6():
+    assert program1832(11994176272990019
+0 6395394930893349 0 0 0 0 0 0) == ['11994176272990018']

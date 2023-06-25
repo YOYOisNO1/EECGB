@@ -1,0 +1,4 @@
+from ..program1015 import program1015
+def test62():
+    assert program1015(rosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefranci
+rosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefranci) == ['100']

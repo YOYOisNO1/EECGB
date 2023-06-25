@@ -1,0 +1,3 @@
+from ..program175 import program175
+def test13():
+    assert program175(QQUMQAYAUAAGWAAAQSDAVAAQAAAASKQJJQQQQMAWAYYAAAAAAEAJAXWQQ) == ['625']

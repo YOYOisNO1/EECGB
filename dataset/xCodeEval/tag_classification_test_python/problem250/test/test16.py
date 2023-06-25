@@ -1,0 +1,3 @@
+from ..program250 import program250
+def test16():
+    assert program250(Ykkekrsqolzryiwsmdlnbmfautxxxauoojrddvwklgnlyrfcvhorrzbmtcrvpaypqhcffdqhwziipyyskcmztjprjqvmzzqhqnw) == ['ykkekrsqolzryiwsmdlnbmfautxxxauoojrddvwklgnlyrfcvhorrzbmtcrvpaypqhcffdqhwziipyyskcmztjprjqvmzzqhqnw']

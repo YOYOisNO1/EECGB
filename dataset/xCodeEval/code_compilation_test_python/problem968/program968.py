@@ -1,0 +1,10 @@
+def program968():
+    n = int(input())
+    A = []
+    sum = 0
+    for i in range(n):
+        x = int(input())
+        sum += x
+        A.append(sum/i)
+    
+    print('%.6f\n' % max(A))

@@ -1,0 +1,4 @@
+from ..program1016 import program1016
+def test24():
+    assert program1016(dexradrxekhwsmctzdqyrqctyrduvazzfybzlwdrhjdxawojhilywadneuijwuuwjbnhdjitjekszqjmnhrxulxcwfrwfzjlkzagaygllqzbehxdyiaztrcpjtvrvtmzkhvgnopwdnssyvaagatdvxgwectdpelvjmsgovdxrdeffawhwcdkospyjziiyiwyoofgnxzq
+dexrdekhwczqrqtyduvzzyblwhdaojhilwanijuuwbnhjitjeksqjmnhrulxwfwflkgagllbhxyiaztcpjvrvmzkhvnnsaadvxwectdpevjsgodxdefwhwcdospyjziiwoogxz) == ['4']

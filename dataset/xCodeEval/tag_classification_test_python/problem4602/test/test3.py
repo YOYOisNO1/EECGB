@@ -1,0 +1,4 @@
+from ..program4602 import program4602
+def test3():
+    assert program4602(27 1
+ABCDEFGHIJKLMNOPQRSTUVWXYZA) == ['YES', 'yes']

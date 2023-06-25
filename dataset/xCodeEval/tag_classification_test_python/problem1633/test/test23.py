@@ -1,0 +1,3 @@
+from ..program1633 import program1633
+def test23():
+    assert program1633(T,NDMUYCCXH_L_FJHMCCAGX_XSCPGOUZSY?D?CNDSYRITYS,VAT!PJVKNTBMXGGRYKACLYU.RJQ_?UWKXYIDE_AE) == ['Too weak']

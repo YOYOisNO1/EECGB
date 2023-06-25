@@ -1,0 +1,3 @@
+from ..program823 import program823
+def test48():
+    assert program823(DMWSBHPGSJJD?EEV?CYAXQCCGNNQWNN?OMEDD?VC?CTKNQQPYXKKJFAYMJ?FMPXXCLKOL?OTRCE) == ['-1']

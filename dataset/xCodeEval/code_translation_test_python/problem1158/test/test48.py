@@ -1,0 +1,3 @@
+from ..program1158 import program1158
+def test48():
+    assert program1158(Danil_Danil_Olya) == ['NO']

@@ -1,0 +1,12 @@
+from ..program4925 import program4925
+def test40():
+    assert program4925(9
+IAO'0
+IAO'00
+IAO'000
+IAO'0000
+IAO'00000
+IAO'000000
+IAO'0000000
+IAO'00000000
+IAO'000000000) == ['1990\r\n2000\r\n3000\r\n10000\r\n100000\r\n1000000\r\n10000000\r\n100000000\r\n1000000000']

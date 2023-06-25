@@ -1,0 +1,3 @@
+from ..program2392 import program2392
+def test22():
+    assert program2392(VVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVVKKKVV) == ['13']

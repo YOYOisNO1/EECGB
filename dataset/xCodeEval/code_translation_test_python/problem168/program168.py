@@ -1,0 +1,10 @@
+def program168():
+    S=input().split()
+    if(S[-1]=='?'):
+    	x=S[-2][-1].lower()
+    else:
+    	x=S[-1][-2].lower()
+    if(x=='a' or x=='e' or x=='i' or x=='o' or x=='u' or x=='y'):
+    	print("YES")
+    else:
+    	print("NO")

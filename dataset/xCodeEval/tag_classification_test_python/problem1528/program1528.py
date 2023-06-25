@@ -1,0 +1,27 @@
+def program1528():
+    n,m,k = map(int, input().split())
+    arr = map(int, input().split())
+    arr.sort()
+    arr = arr[::-1]
+    c = k
+    
+    if m<= c:
+        ans = 0
+        toggle = 0
+    else:
+        
+        
+        toggle = 1
+        ans = 0
+        
+        for i in xrange(n):
+            
+            c = c+arr[i]-1
+            if c>=m:
+                ans = i+1
+                toggle = 0
+                break
+    if toggle:
+        print(-1)
+    else:
+        print(ans)

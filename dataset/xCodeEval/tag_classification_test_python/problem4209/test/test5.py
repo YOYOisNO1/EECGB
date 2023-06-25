@@ -1,0 +1,3 @@
+from ..program4209 import program4209
+def test5():
+    assert program4209(01234567890123456789012345678901234567890123456789) == ['25']

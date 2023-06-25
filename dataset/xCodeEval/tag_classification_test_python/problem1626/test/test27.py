@@ -1,0 +1,3 @@
+from ..program1626 import program1626
+def test27():
+    assert program1626(aru) == ['u']

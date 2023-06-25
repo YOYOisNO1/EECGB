@@ -1,0 +1,3 @@
+from ..program1880 import program1880
+def test49():
+    assert program1880(ocljamadmpdlnckbgpakmdfnhbmgfalggiobajepnfaljbkheilgghfbgcidbnonkebceepljanfhnaooggmdjlgahejbiiejfcmlmbjbaihjgohcjplehjnfcaifakndldafbljefddoneaccidhdofgckblfdhigenceljdanigbalnaafomkochecfiddjhdddedlmahhbcehedhpjdoijcnnchlpfncchbdobfpoaapefmndggjemcfcdej...) == ['0']

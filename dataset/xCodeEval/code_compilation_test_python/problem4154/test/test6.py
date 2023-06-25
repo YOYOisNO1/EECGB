@@ -1,0 +1,4 @@
+from ..program4154 import program4154
+def test6():
+    assert program4154(11994176272990019
+0 6395394930893349 0 0 0 0 0 0) == ['11994176272990018']

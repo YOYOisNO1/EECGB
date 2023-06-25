@@ -1,0 +1,4 @@
+from ..program1841 import program1841
+def test10():
+    assert program1841(17
+QZVRZKDKMZZAKKZVA) == ['0']

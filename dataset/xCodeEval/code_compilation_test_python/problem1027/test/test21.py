@@ -1,0 +1,3 @@
+from ..program1027 import program1027
+def test21():
+    assert program1027(-673 -270) == ['white']

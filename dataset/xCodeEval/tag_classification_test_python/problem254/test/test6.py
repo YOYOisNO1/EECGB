@@ -1,0 +1,3 @@
+from ..program254 import program254
+def test6():
+    assert program254(uMtXK?) == ['NO']

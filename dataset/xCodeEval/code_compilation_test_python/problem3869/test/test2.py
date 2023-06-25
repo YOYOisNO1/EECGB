@@ -1,0 +1,3 @@
+from ..program3869 import program3869
+def test2():
+    assert program3869(!!!!YGRB) == ['1\r\n1\r\n1\r\n1', '1 1 1 1']

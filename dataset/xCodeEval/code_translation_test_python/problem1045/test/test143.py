@@ -1,0 +1,4 @@
+from ..program1045 import program1045
+def test143():
+    assert program1045(21111111111111111
+21111111111111110) == ['12111111111111111']

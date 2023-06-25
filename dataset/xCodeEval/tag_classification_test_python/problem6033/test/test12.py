@@ -1,0 +1,3 @@
+from ..program6033 import program6033
+def test12():
+    assert program6033(632668612680440378 864824360766754908) == ['576460752303423487']

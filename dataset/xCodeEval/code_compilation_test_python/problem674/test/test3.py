@@ -1,0 +1,4 @@
+from ..program674 import program674
+def test3():
+    assert program674(20
+0 0 0 0 1 1 1 0 1 0 0 1 0 1 1 0 1 1 1 0) == ['24']

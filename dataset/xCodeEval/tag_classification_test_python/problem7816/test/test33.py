@@ -1,0 +1,4 @@
+from ..program7816 import program7816
+def test33():
+    assert program7816(FTFFTFTTFFTFTFFTTTTTFTFTFTFFFFTTFTTFTFTTTFTTFFFFFFTFTFTFFFTFTT
+10) == ['38']

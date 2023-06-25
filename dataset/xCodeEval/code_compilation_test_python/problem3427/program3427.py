@@ -1,0 +1,11 @@
+def program3427():
+    n = int(input())
+    s = input()
+    if (n > len(s)):
+        print('NO')
+    else:
+        print('YES')
+        for i in range(n - 1):
+            print(s[i])
+        print(s[i + 1:])
+        

@@ -1,0 +1,3 @@
+from ..program904 import program904
+def test16():
+    assert program904(2925) == ['25']

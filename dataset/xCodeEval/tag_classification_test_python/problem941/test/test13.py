@@ -1,0 +1,3 @@
+from ..program941 import program941
+def test13():
+    assert program941(7) == ['Ehab']

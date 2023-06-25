@@ -1,0 +1,4 @@
+from ..program270 import program270
+def test32():
+    assert program270(2000:01:02
+2000:02:02) == ['31']

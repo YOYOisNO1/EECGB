@@ -1,0 +1,3 @@
+from ..program662 import program662
+def test39():
+    assert program662(ABCD) == ['4']

@@ -1,0 +1,4 @@
+from ..program1701 import program1701
+def test49():
+    assert program1701(2
+251 155) == ['BitAryo']

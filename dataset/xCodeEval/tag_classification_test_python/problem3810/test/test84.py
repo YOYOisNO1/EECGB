@@ -1,0 +1,4 @@
+from ..program3810 import program3810
+def test84():
+    assert program3810(456546546549874615
+441554543131214545) == ['441554498766665554']

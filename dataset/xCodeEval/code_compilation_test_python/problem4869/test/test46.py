@@ -1,0 +1,15 @@
+from ..program4869 import program4869
+def test46():
+    assert program4869(3 3 1
+Venus
+40 5 3
+7 6 3
+8 4 3
+Earth
+70 60 3
+800 700 3
+6 5 3
+Mars
+8 7 3
+14 5 3
+15 14 3) == ['693']

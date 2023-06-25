@@ -1,0 +1,4 @@
+from ..program641 import program641
+def test46():
+    assert program641(25
+abcdefghijklmnopqrstuvwxy) == ['No', 'NO', 'no']

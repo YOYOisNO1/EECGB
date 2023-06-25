@@ -1,0 +1,8 @@
+from ..program2291 import program2291
+def test28():
+    assert program2291(5
+49948848825 49948848824
+33118965298 33118965297
+34285673904 34285673903
+46923258767 46923258766
+48431110341 48431110340) == ['NO\r\nNO\r\nNO\r\nNO\r\nNO', 'no\r\nno\r\nno\r\nno\r\nno']

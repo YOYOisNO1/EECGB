@@ -1,0 +1,4 @@
+from ..program1352 import program1352
+def test40():
+    assert program1352(99
+4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 6 6 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8) == ['1\n49 ', '1 49', '1 \n49 \n', '1\n50', '1\n49\n', '1\n49\n', '1\n50 \n', '1\n50\n', '1\n49 \n', '1\n50\n', '1\n49', '1 50\n', '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1\n50\n', '1\n49\n\n', '1\n50\n', '1\n49\n', '1 \n49', '1 49\n', '1\n49\n\n', '1 \n49\n', '1\n50 ', '1\n49', '1\n49\n\n', '1\n49 \n\n', '1 \n49\n']

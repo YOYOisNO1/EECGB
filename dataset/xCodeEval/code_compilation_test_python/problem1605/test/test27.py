@@ -1,0 +1,4 @@
+from ..program1605 import program1605
+def test27():
+    assert program1605(mzmhjmfxaxaplzjmjkbyadeweltagyyuzpvrmnyvirjpdmebxyzjvdoezhnayfrvtnccryhkvhcvakcf
+ohhhhkujfpjbgouebtmmbzizuhuumvrsqfniwpmxdtzhyiaivdyxhywnqzagicydixjtvbqbevhbqttu) == ['nzmhjmfxaxaplzjmjkbyadeweltagyyuzpvrmnyvirjpdmebxyzjvdoezhnayfrvtnccryhkvhcvakcf', 'nanhkngybybqmaknklczaffxfmtchzzvaqwsnozwjskqenfcyzakwepfaiobzgswuoddszilwidwbldg', 'mzmhjmfxaxaplzjmjkbyadeweltagyyuzpvrmnyvirjpdmebxyzjvdoezhnayfrvtnccryhkvhcvakcg']

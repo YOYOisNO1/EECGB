@@ -1,0 +1,4 @@
+from ..program3335 import program3335
+def test14():
+    assert program3335(50
+74444444444444444444444444444444444444444444444444) == ['NO']

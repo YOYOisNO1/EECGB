@@ -1,0 +1,3 @@
+from ..program349 import program349
+def test7():
+    assert program349(70809) == ['00000']

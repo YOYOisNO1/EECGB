@@ -1,0 +1,13 @@
+def program3783():
+    #! /usr/bin/env python
+    # -*- coding: utf-8 -*-
+    # vim:fenc=utf-8
+    
+    r=input()
+    s = r[1:]
+    s = s[:-1]
+    s=s.replace('at','@',1)
+    s=s.replace('dot','.')
+    s = r[0] + s + r[-1]
+    print s
+    

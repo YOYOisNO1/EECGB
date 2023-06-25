@@ -1,0 +1,5 @@
+from ..program263 import program263
+def test6():
+    assert program263(2 48
+12 54
+69) == ['-3150']

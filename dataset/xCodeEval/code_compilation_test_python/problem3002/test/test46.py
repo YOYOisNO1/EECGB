@@ -1,0 +1,16 @@
+from ..program3002 import program3002
+def test46():
+    assert program3002(13 3
+TH 9H 8H
+7H 6H 5H
+JH 3H 4H
+2C 3C 4C
+AH 6C 7C
+8C 9C AS
+2D 3D 4D
+5D 6D AD
+AC 9D KD
+2S 3S 4S
+KS 6S 7S
+8S 9S 2H
+JS QS KH) == ['No solution.']

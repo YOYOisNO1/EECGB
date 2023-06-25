@@ -1,0 +1,3 @@
+from ..program2710 import program2710
+def test43():
+    assert program2710(9 1) == ['Hanako']

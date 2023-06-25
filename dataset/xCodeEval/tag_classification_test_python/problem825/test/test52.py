@@ -1,0 +1,3 @@
+from ..program825 import program825
+def test52():
+    assert program825(KMNTIOJTLEKZW?JALAZYWYMKWRXTLAKNMDJLICZMETAKHVPTDOLAPCGHOEYSNIUJZVLPBTZ?YSR) == ['-1']

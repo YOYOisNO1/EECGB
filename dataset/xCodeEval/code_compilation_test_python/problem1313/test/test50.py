@@ -1,0 +1,4 @@
+from ..program1313 import program1313
+def test50():
+    assert program1313(80
+BBWWBBBWBBWWWWBBWBWBBWWWWWBWBBWWBWBWBWBWBWWBWWBWWWBWBBWBBWBBWBBBWWBBBBBBBWBBBWBB) == ['23\r\n2 3 2 2 1 2 1 2 1 1 1 1 1 1 1 1 2 2 2 3 7 3 2', '23\n2 3 2 2 1 2 1 2 1 1 1 1 1 1 1 1 2 2 2 3 7 3 2', '23 \r\n 2 3 2 2 1 2 1 2 1 1 1 1 1 1 1 1 2 2 2 3 7 3 2']

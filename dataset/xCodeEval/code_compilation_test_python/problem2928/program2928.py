@@ -1,0 +1,17 @@
+def program2928():
+    import sys
+    
+    if __name__ == '__main__':
+    	
+    	#cin = open("1.in", "r")
+    	#cout = sys.stdout
+    	cin = sys.stdin
+    	
+    	n = int(cin.read())
+    	f = n/(36)
+    	n %= 36
+    	i = n/3
+    	n%=3
+    	if n>1:
+    		i+=1
+    	print str(f) + " " + str(i)

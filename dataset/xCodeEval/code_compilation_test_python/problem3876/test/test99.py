@@ -1,0 +1,4 @@
+from ..program3876 import program3876
+def test99():
+    assert program3876(536870912 536870912
+387420489 387420489) == ['58\r\n128 536870912\r\n262144 262144']

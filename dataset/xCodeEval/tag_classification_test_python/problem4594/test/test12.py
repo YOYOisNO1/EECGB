@@ -1,0 +1,4 @@
+from ..program4594 import program4594
+def test12():
+    assert program4594(73 2
+DEBECECBBADAADEAABEAEEEAEBEAEBCDDBABBAEBACCBEEBBAEADEECACEDEEDABACDCDBBBD) == ['YES', 'yes']

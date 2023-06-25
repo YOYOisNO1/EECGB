@@ -1,0 +1,6 @@
+from ..program5548 import program5548
+def test20():
+    assert program5548(179
+2
+2
+1) == ['178']

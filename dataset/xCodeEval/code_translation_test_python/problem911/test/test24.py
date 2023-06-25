@@ -1,0 +1,3 @@
+from ..program911 import program911
+def test24():
+    assert program911(847222126505823289 115713658562976) == ['847199999999999999']

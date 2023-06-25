@@ -1,0 +1,29 @@
+def program2402():
+    from __future__ import print_function
+    a,k = map(int,input().split())
+    d = []
+    num = a
+    while(num != 0):
+        d.append(num%10)
+        num /= 10
+    d.reverse()
+    start = 0
+    while k > 0:
+        pos = start
+        m = 0
+        l = min(start + k+1,len(d))
+        for i in range(start,l):
+            if d[i] > m:
+                m = d[i]
+                pos = i
+        if pos-start > k:
+            break
+        else:
+            for i in range(pos,start,-1):
+                d[i] = d[i-1] 
+            d[start] = m
+        k -= (pos-start)
+        start += 1
+    
+    for i in d:
+        print (i,end = '')

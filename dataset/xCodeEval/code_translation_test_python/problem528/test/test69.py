@@ -1,0 +1,3 @@
+from ..program528 import program528
+def test69():
+    assert program528(0 710 0 532 389 511) == ['Ron']

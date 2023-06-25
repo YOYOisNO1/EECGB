@@ -1,0 +1,7 @@
+from ..program4054 import program4054
+def test72():
+    assert program4054(4
+0 0
+1 0
+1 1
+0 1) == ['1']

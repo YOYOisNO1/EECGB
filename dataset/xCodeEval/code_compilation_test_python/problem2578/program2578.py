@@ -1,0 +1,7 @@
+def program2578():
+    n, m = map(int, input().split())
+    
+    x = max(n*2, m*3)
+    while(n + m > x/2 + x/3 - x/6):
+    	x+=1
+    print x

@@ -1,0 +1,4 @@
+from ..program6430 import program6430
+def test26():
+    assert program6430(9
+998877665544332211) == ['MHMHMHMHMHMHMHMHMH', 'HMHMHMHMHMHMHMHMHM', 'HMHMHMHMMHHMHMHMHM']

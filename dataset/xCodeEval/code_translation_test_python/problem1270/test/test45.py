@@ -1,0 +1,5 @@
+from ..program1270 import program1270
+def test45():
+    assert program1270(151
+308
+616) == ['1057']

@@ -1,0 +1,3 @@
+from ..program1137 import program1137
+def test32():
+    assert program1137(7) == ['6']

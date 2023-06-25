@@ -1,0 +1,14 @@
+def program836():
+    v1, v2 = map(int, input().split())
+    t, d = map(int, input().split())
+    
+    arr = [0] * t
+    arr[0], arr[-1] = v1, v2
+    
+    for i in xrange(-2, -t, -1):
+    	arr[i] = arr[i + 1] + d
+    
+    for i in xrange(1, t - 1):
+    	arr[i] = min(arr[i], arr[i - 1] + d)
+    
+    print(sum(arr))

@@ -1,0 +1,3 @@
+from ..program2060 import program2060
+def test16():
+    assert program2060(47 5 1) == ['164058640']

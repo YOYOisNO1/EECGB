@@ -1,0 +1,3 @@
+from ..program166 import program166
+def test3():
+    assert program166(CAPs) == ['CAPs']

@@ -1,0 +1,4 @@
+from ..program2913 import program2913
+def test105():
+    assert program2913(8
+abcabcde) == ['6']

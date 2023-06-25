@@ -1,0 +1,14 @@
+def program674():
+    n = input()
+    A = map(int, input().split())
+    
+    B = []
+    for i in xrange(n): 
+        if A[i]: B.append(i)
+        
+    k = len(B)
+    ans = 1
+    for i in xrange(1, k): ans *= (B[i] - B[i - 1])
+    
+    if k = 0: ans = 0
+    print ans

@@ -1,0 +1,3 @@
+from ..program1608 import program1608
+def test6():
+    assert program1608(60) == ['8 0']

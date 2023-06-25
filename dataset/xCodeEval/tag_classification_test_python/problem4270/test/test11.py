@@ -1,0 +1,3 @@
+from ..program4270 import program4270
+def test11():
+    assert program4270(yehcqdlllqpuxdsaicyjjxiylahgxbygmsopjbxhtimzkashs) == ['49']

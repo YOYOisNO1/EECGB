@@ -1,0 +1,20 @@
+def program468():
+    n = int(input())
+    a,b=0,0
+    l=map(int,input().split())
+    for x in l:
+        if x==100:
+            a+=1
+        else:
+            b+=1
+    
+    if a&1:
+        print('NO')
+    
+    elif b&1:
+        if a>=2:
+            print('YES')
+        else:
+            print('NO')
+    else:
+        print('YES')

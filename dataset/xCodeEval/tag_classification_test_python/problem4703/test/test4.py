@@ -1,0 +1,4 @@
+from ..program4703 import program4703
+def test4():
+    assert program4703(5 2
+ABACA) == ['NO', 'no']

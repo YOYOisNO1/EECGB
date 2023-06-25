@@ -1,0 +1,3 @@
+from ..program3882 import program3882
+def test51():
+    assert program3882(2023521027270 3298933358415 137370252990 2592814018030) == ['12']

@@ -1,0 +1,3 @@
+from ..program7796 import program7796
+def test64():
+    assert program7796(1 2000000000 4001) == ['40979']

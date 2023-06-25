@@ -1,0 +1,6 @@
+from ..program1263 import program1263
+def test39():
+    assert program1263(AB
+CX
+XA
+BC) == ['NO']

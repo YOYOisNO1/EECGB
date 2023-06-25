@@ -1,0 +1,3 @@
+from ..program892 import program892
+def test19():
+    assert program892(CODEFORQWUFJLOFFXTXRCES) == ['YES']

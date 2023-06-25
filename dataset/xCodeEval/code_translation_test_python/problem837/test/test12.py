@@ -1,0 +1,4 @@
+from ..program837 import program837
+def test12():
+    assert program837(3
+1210020121011022121222022012121212020) == ['268193483524125978']

@@ -1,0 +1,5 @@
+from ..program1199 import program1199
+def test6():
+    assert program1199(0..
+...
+...) == ['illegal']

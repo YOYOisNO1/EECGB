@@ -1,0 +1,5 @@
+from ..program6744 import program6744
+def test27():
+    assert program6744(200 100
+jfajfiiicgiehiihdbgghhiihijcejjabibhjcjdgdagbidecgifaagcehbjjbcgjcgijhjeegadcfjbfaahbfhbaddadgdfbjiahfcbhfbicffbhdiaafjjchjgbhdeehdgddahibehdhaeibhfbchadfjchgddgfhfjgihhgejdheajjjfbdibjadchgeeiggifice
+cf) == ['4106']

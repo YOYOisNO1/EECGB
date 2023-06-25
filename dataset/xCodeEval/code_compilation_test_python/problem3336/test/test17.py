@@ -1,0 +1,4 @@
+from ..program3336 import program3336
+def test17():
+    assert program3336(50
+44747747774474747747747447777447774747447477444474) == ['YES']

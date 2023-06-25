@@ -1,0 +1,3 @@
+from ..program4500 import program4500
+def test79():
+    assert program4500(xtlsgypsfadpooefxzbcoejuvpvaboygpoeylfpbnpljvrvipyamyehwqnqrqpmxujjloovaowuxwhmsncbxcoksfzkvatxdknly) == ['xtlsgypsfadpooefxzbcoejuvpvdeoygpofylgphnpljvrvipyjmyklwqnqrqpmxunopqrvstwuxwvwxyzbxcoksfzkvatxdknly']

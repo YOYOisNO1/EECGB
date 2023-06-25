@@ -1,0 +1,5 @@
+from ..program972 import program972
+def test4():
+    assert program972(319
+10 53 256
+182 103 34) == ['119 226']

@@ -1,0 +1,4 @@
+from ..program2394 import program2394
+def test81():
+    assert program2394(10123456789013451
+26666666666666666) == ['26598754433111100']

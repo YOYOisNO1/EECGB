@@ -1,0 +1,4 @@
+from ..program5558 import program5558
+def test37():
+    assert program5558(109928480 219856920
+LRURLRLURDRDLDRDLRDDUUDDLULDRRUUURRUDLLUULUUUR) == ['No']

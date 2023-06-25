@@ -1,0 +1,3 @@
+def program7003():
+    k = int(round(input()/3.0))
+    print(k/12,) k%12

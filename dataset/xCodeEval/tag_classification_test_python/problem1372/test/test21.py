@@ -1,0 +1,4 @@
+from ..program1372 import program1372
+def test21():
+    assert program1372(000X00000X00000X00000000000000
+000X00000X00000X00000000000000) == ['17']

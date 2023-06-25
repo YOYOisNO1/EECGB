@@ -1,0 +1,2 @@
+def program3014():
+    print((3**(max(0, int(input())-1)))%1000003)

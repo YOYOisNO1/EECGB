@@ -1,0 +1,3 @@
+from ..program892 import program892
+def test13():
+    assert program892(BCODEFORCES) == ['YES']

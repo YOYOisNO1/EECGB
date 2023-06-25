@@ -1,0 +1,3 @@
+from ..program903 import program903
+def test17():
+    assert program903(220) == ['10']

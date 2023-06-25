@@ -1,0 +1,3 @@
+from ..program2061 import program2061
+def test40():
+    assert program2061(100 50 3) == ['494224664']

@@ -1,0 +1,6 @@
+from ..program897 import program897
+def test31():
+    assert program897(3 2
+S.
+.S
+S.) == ['0']

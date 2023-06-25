@@ -1,0 +1,4 @@
+from ..program3360 import program3360
+def test14():
+    assert program3360(199288399 887887887 900000000
+0 299999889 299999900) == ['299999890']

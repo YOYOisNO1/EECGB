@@ -1,0 +1,4 @@
+from ..program2258 import program2258
+def test21():
+    assert program2258(20809236 56504497
+972004030 441166533 495487081) == ['4235488636']

@@ -1,0 +1,4 @@
+from ..program7829 import program7829
+def test11():
+    assert program7829(3000 3000 3000 3000
+272739241 996213854 992075003 999999937) == ['49']

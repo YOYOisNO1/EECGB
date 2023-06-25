@@ -1,0 +1,3 @@
+from ..program4096 import program4096
+def test44():
+    assert program4096(111111111111111111 333333333444444445) == ['22222222233333334']

@@ -1,0 +1,3 @@
+from ..program2747 import program2747
+def test32():
+    assert program2747(1002) == ['1013']

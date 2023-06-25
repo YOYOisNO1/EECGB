@@ -1,0 +1,5 @@
+from ..program542 import program542
+def test14():
+    assert program542(2
+3
+3) == ['NO']

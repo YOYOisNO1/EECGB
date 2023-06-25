@@ -1,0 +1,3 @@
+from ..program4270 import program4270
+def test21():
+    assert program4270(abcddcba) == ['8']

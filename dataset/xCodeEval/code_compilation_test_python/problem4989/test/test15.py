@@ -1,0 +1,4 @@
+from ..program4989 import program4989
+def test15():
+    assert program4989(283 1
+bababbababbabbababbababbabbababbabbababbababbabbababbabbababbababbabbababbababbabbababbabbababbababbabbababbabbababbababbabbababbababbabbababbabbababbababbabbababbababbabbababbabbababbababbabbababbabbababbababbabbababbababbabbababbabbababbababbabba...) == ['162323312']

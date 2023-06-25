@@ -1,0 +1,3 @@
+from ..program2081 import program2081
+def test51():
+    assert program2081(DDDDDDDDDDLLLLLLLLLLLDDDDDDDDDDDRRRRRRRRRRRUUUUUUUUUURRRRRRRRRR) == ['BUG']

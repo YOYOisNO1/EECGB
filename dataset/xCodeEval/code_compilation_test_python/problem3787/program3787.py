@@ -1,0 +1,19 @@
+def program3787():
+    s=str(input())
+    
+    head=''
+    if a.startswith'dot':
+    	head='dot'
+    	a=[3:]
+    elif a.startswith('at'):
+    	head='at'
+    	a=[2:]
+    
+    tail=''
+    if a.endswith('dot'):
+    	tail='dot'
+    	a=a[:len(a)-3]
+    elif a.endswith('at'):
+    	tail='at'
+    	a=a[:len(a)-2]
+    print head + a.replace("dot", ".").replace("at", "@", 1) + tail

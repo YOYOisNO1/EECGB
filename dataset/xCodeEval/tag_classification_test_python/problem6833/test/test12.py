@@ -1,0 +1,4 @@
+from ..program6833 import program6833
+def test12():
+    assert program6833(9
+a??d?fgh???????beaabaih????c??) == ['aacdafghiabaaebbeaabaihgfadcaa']

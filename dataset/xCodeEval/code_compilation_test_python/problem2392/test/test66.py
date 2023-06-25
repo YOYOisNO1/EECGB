@@ -1,0 +1,4 @@
+from ..program2392 import program2392
+def test66():
+    assert program2392(20000000000000001
+20000000000000000) == ['12000000000000000']

@@ -1,0 +1,4 @@
+from ..program256 import program256
+def test37():
+    assert program256(34 20
+BBBBGBGGGBGGGBGBGGBBBBGGBBGGGBGBBG) == ['GGGGGGGGGGGGGGGGGBBBBBBBBBBBBBBBBB']

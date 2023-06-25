@@ -1,0 +1,3 @@
+from ..program201 import program201
+def test37():
+    assert program201(o----------------------oo----) == ['No', 'NO']

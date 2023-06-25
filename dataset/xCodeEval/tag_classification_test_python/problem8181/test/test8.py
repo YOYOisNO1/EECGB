@@ -1,0 +1,3 @@
+from ..program8181 import program8181
+def test8():
+    assert program8181(1 100000 1) == ['2', '2\n', '2\n', '2 ']

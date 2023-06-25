@@ -1,0 +1,5 @@
+from ..program3192 import program3192
+def test15():
+    assert program3192(50 100 100000 99000
+49 99 1000000 99000
+100 100 200 200) == ['NO']

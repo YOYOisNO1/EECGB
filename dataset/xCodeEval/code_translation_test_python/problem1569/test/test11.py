@@ -1,0 +1,3 @@
+from ..program1569 import program1569
+def test11():
+    assert program1569(0 1 0 2) == ['Polycarp']

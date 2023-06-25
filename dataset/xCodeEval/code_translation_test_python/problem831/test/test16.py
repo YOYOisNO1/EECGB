@@ -1,0 +1,5 @@
+from ..program831 import program831
+def test16():
+    assert program831(14 7
+><<<<>>>>>>><<
+vv^^^vv) == ['NO']

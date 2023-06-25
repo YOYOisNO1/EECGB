@@ -1,0 +1,5 @@
+from ..program4320 import program4320
+def test1():
+    assert program4320(4
+7
+13) == ['21']

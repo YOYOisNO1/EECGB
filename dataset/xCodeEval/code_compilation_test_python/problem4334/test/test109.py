@@ -1,0 +1,3 @@
+from ..program4334 import program4334
+def test109():
+    assert program4334(13225 984 -760662977 -854994174 786299019 825465374) == ['122020']

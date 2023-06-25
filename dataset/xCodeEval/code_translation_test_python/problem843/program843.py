@@ -1,0 +1,9 @@
+def program843():
+    s = input()
+    l,u,d=0,0,0
+    for i in s:
+     u+=i.isupper()
+     l+=i.islower()
+     d+=i.isdigit()
+    print(["Too) weak","Correct"][(len(s)>=5)*u*l*d!=0]
+     

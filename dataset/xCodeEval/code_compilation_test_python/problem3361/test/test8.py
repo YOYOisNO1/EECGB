@@ -1,0 +1,4 @@
+from ..program3361 import program3361
+def test8():
+    assert program3361(339403920 743344311 1000000000
+1 403940389 403940390) == ['403940389']

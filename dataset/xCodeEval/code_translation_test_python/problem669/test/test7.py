@@ -1,0 +1,3 @@
+from ..program669 import program669
+def test7():
+    assert program669(511020182 242192314 394753578 198572007) == ['394753578 198572007']

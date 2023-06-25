@@ -1,0 +1,3 @@
+from ..program579 import program579
+def test11():
+    assert program579(77) == ['No', 'NO', 'no']

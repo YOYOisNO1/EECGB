@@ -1,0 +1,4 @@
+from ..program4300 import program4300
+def test20():
+    assert program4300(3000 10 2 6
+597162980 777111977 891095879 999999937) == ['1150562456841']

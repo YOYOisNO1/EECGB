@@ -1,0 +1,4 @@
+from ..program3863 import program3863
+def test77():
+    assert program3863(5 2
+aaaab) == ['NO']

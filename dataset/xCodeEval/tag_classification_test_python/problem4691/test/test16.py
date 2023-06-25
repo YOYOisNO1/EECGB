@@ -1,0 +1,4 @@
+from ..program4691 import program4691
+def test16():
+    assert program4691(41 19
+TMEYYIIELFDCMBDKWWKYNRNDUPRONYROXQCLVQALP) == ['NO', 'no']

@@ -1,0 +1,3 @@
+from ..program2136 import program2136
+def test81():
+    assert program2136(19909590) == ['32\n', '32', '32\r\n']

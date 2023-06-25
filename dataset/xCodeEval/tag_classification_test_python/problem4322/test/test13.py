@@ -1,0 +1,5 @@
+from ..program4322 import program4322
+def test13():
+    assert program4322(1000
+1000
+3) == ['0']

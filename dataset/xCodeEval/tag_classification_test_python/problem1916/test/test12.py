@@ -1,0 +1,4 @@
+from ..program1916 import program1916
+def test12():
+    assert program1916(50
+88888888888888888888888888888888888888888888888888) == ['4']

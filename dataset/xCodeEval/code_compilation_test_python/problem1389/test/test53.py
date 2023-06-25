@@ -1,0 +1,3 @@
+from ..program1389 import program1389
+def test53():
+    assert program1389(1327917795375366484539554526312125336) == ['YES\r\n136', 'YES\r\n1327917795375366484539554526312125336', 'YES\n8', 'YES\r\n32', 'YES\r\n8', 'YES\r\n336']

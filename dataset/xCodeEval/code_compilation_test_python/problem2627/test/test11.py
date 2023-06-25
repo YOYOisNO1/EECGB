@@ -1,0 +1,4 @@
+from ..program2627 import program2627
+def test11():
+    assert program2627(1 1 2 2 1 1
+10000000000000000 10000000000000000 10000000000000000) == ['1']

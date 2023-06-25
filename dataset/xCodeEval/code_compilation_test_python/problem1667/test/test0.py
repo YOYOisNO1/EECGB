@@ -1,0 +1,6 @@
+from ..program1667 import program1667
+def test0():
+    assert program1667(BBBSSC
+6 4 1
+1 2 3
+4) == ['2']

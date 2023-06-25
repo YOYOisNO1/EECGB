@@ -1,0 +1,5 @@
+from ..program831 import program831
+def test74():
+    assert program831(3 3
+<><
+v^v) == ['NO']

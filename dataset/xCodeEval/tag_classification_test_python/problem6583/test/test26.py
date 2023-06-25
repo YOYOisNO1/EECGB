@@ -1,0 +1,3 @@
+from ..program6583 import program6583
+def test26():
+    assert program6583(10000000001 111111111111100001) == ['11111110111110001']

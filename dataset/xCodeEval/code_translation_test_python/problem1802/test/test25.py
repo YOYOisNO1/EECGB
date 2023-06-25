@@ -1,0 +1,3 @@
+from ..program1802 import program1802
+def test25():
+    assert program1802(847) == ['206774372']

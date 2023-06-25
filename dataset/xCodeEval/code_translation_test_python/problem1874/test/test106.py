@@ -1,0 +1,5 @@
+from ..program1874 import program1874
+def test106():
+    assert program1874(60 55
+-88 -38
+0 59) == ['NO']

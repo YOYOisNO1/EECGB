@@ -1,0 +1,4 @@
+from ..program1700 import program1700
+def test26():
+    assert program1700(1
+10) == ['BitLGM']

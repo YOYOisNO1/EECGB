@@ -1,0 +1,8 @@
+from ..program6064 import program6064
+def test1():
+    assert program6064(5
+1 2
+2 3
+3 4
+4 5
+5 1) == ['FAIL']

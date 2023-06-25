@@ -1,0 +1,4 @@
+from ..program6835 import program6835
+def test31():
+    assert program6835(5
+abcdeeecdabbaaaeeedebedacccdebacbaeceaaeddabbaaeaccaeaabbaddeaaeceabcabedcccadebedeeeaaabbadceeedcba) == ['abcdeeecdabbaaaeeedebedacccdebacbaeceaaeddabbaaeaccaeaabbaddeaaeceabcabedcccadebedeeeaaabbadceeedcba']

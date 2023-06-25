@@ -1,0 +1,3 @@
+from ..program568 import program568
+def test11():
+    assert program568(XHRPXZEGHSOCJPICUIXSKFUZUPYTSGJSDIYBCMNMNBPNDBXLXBzhbfnqvwcffvrdhtickyqhupmcehlsyvncqmfhautvxudqdhgg) == ['xhrpxzeghsocjpicuixskfuzupytsgjsdiybcmnmnbpndbxlxbzhbfnqvwcffvrdhtickyqhupmcehlsyvncqmfhautvxudqdhgg']

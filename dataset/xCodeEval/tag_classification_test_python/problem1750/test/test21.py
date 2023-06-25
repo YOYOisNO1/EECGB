@@ -1,0 +1,4 @@
+from ..program1750 import program1750
+def test21():
+    assert program1750(hJDANKUNBisOOINDsTixJmYgHNogtpwswwcvVMptfGwIjvqgwTYFcqTdyAqaqlnhOCMtsnWXQqtjFwQlEcBtMFAtSqnqthVb
+rNquIcjNWESjpPVWmzUJFrelpUZeGDmSvCurCqVmKHKVAAPkaHksniOlzjiKYIJtvbuQWZRufMebpTFPqyxIWWjfPaWYiNlK) == ['-1']

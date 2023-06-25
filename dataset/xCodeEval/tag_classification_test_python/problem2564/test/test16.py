@@ -1,0 +1,4 @@
+from ..program2564 import program2564
+def test16():
+    assert program2564(18
+18 18 18 36 36 36 54 72 54 36 72 54 36 36 36 36 18 36) == ['324']

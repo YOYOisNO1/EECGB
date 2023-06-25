@@ -1,0 +1,4 @@
+from ..program1536 import program1536
+def test46():
+    assert program1536(42
+100001010001111100000010101101110100001001) == ['3715362']

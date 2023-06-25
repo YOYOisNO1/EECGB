@@ -1,0 +1,4 @@
+from ..program1015 import program1015
+def test27():
+    assert program1015(pofvbxtueyzxgzcrthooeacytrsysourmdvkfhebuqpoofbixkxrveqijcluhgaqbeljezhpeiffpeaejkvvuhbhrlhlwuwpkbmgejmrelsnzlrubrgmqowtfucbjzvqoqcbvrqqljzvlscrrulfahdijkzosggdocqmhpbszktbucsfnfurklmlnxcshtdjhrherwxr
+pofvbxtuezgrtooacytrssoumdvkuobxr) == ['151']

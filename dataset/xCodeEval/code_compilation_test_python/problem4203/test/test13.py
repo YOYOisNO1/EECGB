@@ -1,0 +1,9 @@
+from ..program4203 import program4203
+def test13():
+    assert program4203(51000
+U.S. BUSINESS LOANS FALL 1.08 BILLION DLRS
+WASHINGTON, April 17 - Business loans on the books of major
+U.S. banks, excluding acceptances, fell 1.08 billion dlrs to
+276.37 billion dlrs in the week ended April 8, the Federal
+Reserve Board said.
+...) == ['2']

@@ -1,0 +1,3 @@
+from ..program4396 import program4396
+def test7():
+    assert program4396(catdotdotdotatatdotdotdotnatjdotatdotdotdoteatatoatatatoatatatdotdotatdotdotwxrdotatfatgfdotuatata) == ['c@...atat...natj.at...eatatoatatatoatatat..at..wxr.atfatgf.uatata']

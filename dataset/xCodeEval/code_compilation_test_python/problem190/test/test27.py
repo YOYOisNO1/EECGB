@@ -1,0 +1,3 @@
+from ..program190 import program190
+def test27():
+    assert program190(0 576460752303423488) == ['2\r\n288230376151711744 288230376151711744']

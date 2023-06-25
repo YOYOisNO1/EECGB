@@ -1,0 +1,4 @@
+from ..program622 import program622
+def test44():
+    assert program622(1
+28) == ['YES', 'Yes']

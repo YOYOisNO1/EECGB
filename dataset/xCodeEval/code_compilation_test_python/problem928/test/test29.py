@@ -1,0 +1,4 @@
+from ..program928 import program928
+def test29():
+    assert program928(53 245
+5 6 9 9 2 3 2 5 10 9 3 5 6 3 10 10 9 4 9 7 10 9 7 7 3 4 9 3 7 3 8 6 8 9 3 8 9 1 3 1 9 10 3 9 3 1 6 6 3 8 7 8 9) == ['NO']

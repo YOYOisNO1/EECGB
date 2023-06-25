@@ -1,0 +1,3 @@
+from ..program982 import program982
+def test6():
+    assert program982(WUBJKDWUBWUBWBIRAQKFWUBWUBYEWUBWUBWUBWVWUBWUB) == ['JKD  WBIRAQKF  YE   WV', 'JKD WBIRAQKF YE WV']

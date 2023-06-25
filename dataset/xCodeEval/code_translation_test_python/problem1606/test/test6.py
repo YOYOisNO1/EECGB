@@ -1,0 +1,3 @@
+from ..program1606 import program1606
+def test6():
+    assert program1606(7) == ['716666674']

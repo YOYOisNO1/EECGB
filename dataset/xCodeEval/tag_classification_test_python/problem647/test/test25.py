@@ -1,0 +1,3 @@
+from ..program647 import program647
+def test25():
+    assert program647(75) == ['0']

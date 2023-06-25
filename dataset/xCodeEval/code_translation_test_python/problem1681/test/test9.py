@@ -1,0 +1,3 @@
+from ..program1681 import program1681
+def test9():
+    assert program1681(9 41 17 10 1) == ['YES']

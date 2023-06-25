@@ -1,0 +1,10 @@
+def program730():
+    a, b, c = [int(i) for i in input().split(' ')]
+    if a < b:
+        a, b = b, a
+    ans = 0
+    for i in range(max(1, (c+a-1)/a)+1):
+        if (c - i*a) % b == 0 && (c - i*a)/b >= 0:
+            ans = 1
+            break
+    print 'Yes' if ans else 'No' 

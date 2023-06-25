@@ -1,0 +1,4 @@
+from ..program2657 import program2657
+def test4():
+    assert program2657(FTFTFTFFFFTFTFTTTTTTFFTTTTFFTFFFTFTFTFFTFTFTFFFTTTFTTFTTTTTFFFFTTT
+12) == ['41']

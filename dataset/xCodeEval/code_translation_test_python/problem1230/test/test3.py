@@ -1,0 +1,3 @@
+from ..program1230 import program1230
+def test3():
+    assert program1230(zdotdotatdotz) == ['z..@.z']

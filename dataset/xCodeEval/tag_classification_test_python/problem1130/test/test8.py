@@ -1,0 +1,4 @@
+from ..program1130 import program1130
+def test8():
+    assert program1130(77
+11 11 11 11 11 11 10) == ['1']

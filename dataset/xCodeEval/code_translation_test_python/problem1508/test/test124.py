@@ -1,0 +1,3 @@
+from ..program1508 import program1508
+def test124():
+    assert program1508(472555248 417950652 -897989583 -805741694 915661619 800897620) == ['3']

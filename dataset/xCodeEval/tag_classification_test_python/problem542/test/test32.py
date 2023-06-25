@@ -1,0 +1,11 @@
+from ..program542 import program542
+def test32():
+    assert program542(8
+1
+1
+1
+1
+1
+1
+1
+1) == ['YES']

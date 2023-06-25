@@ -1,0 +1,4 @@
+from ..program4700 import program4700
+def test2():
+    assert program4700(26 1
+ABCDEFGHIJKLMNOPQRSTUVWXYZ) == ['NO', 'no']

@@ -1,0 +1,3 @@
+from ..program256 import program256
+def test24():
+    assert program256(q             ?) == ['NO']

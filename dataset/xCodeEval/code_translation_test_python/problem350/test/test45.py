@@ -1,0 +1,3 @@
+from ..program350 import program350
+def test45():
+    assert program350(-24) == ['-2']

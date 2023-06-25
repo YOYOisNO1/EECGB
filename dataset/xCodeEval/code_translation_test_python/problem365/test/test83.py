@@ -1,0 +1,3 @@
+from ..program365 import program365
+def test83():
+    assert program365(595261150 794915864 332353903994901365) == ['177161677 794915848']

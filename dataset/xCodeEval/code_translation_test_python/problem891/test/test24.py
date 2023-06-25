@@ -1,0 +1,3 @@
+from ..program891 import program891
+def test24():
+    assert program891(CODJRDPDEFOROES) == ['NO']

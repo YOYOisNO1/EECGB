@@ -1,0 +1,5 @@
+from ..program1027 import program1027
+def test5():
+    assert program1027(7 7
+5 5
+2 4) == ['YES']

@@ -1,0 +1,4 @@
+from ..program1949 import program1949
+def test26():
+    assert program1949(15
+987654329876543) == ['777777555533333333332222222222222']

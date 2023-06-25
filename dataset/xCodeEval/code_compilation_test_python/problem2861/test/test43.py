@@ -1,0 +1,4 @@
+from ..program2861 import program2861
+def test43():
+    assert program2861(5
+11 14 25 21 21) == ['biceps']

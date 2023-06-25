@@ -1,0 +1,4 @@
+from ..program6735 import program6735
+def test7():
+    assert program6735(100293023 882738299 1000000000
+0 445483940 500000000) == ['382738300']

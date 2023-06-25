@@ -1,0 +1,4 @@
+from ..program8190 import program8190
+def test44():
+    assert program8190(64
+VVKKAKBKCKDKEKFKGKHKIKJKKKLKMKNKOKPKQKRKSKTKUKVKWKXKYKZKVVVKKKKK) == ['7']

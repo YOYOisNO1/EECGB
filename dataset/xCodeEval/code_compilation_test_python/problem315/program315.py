@@ -1,0 +1,10 @@
+def program315():
+    a,b,c,d=list(map(int,input().split()))
+    ms=max(0.3*a,a-(a*c/250))
+    ms=max(0.3*b,b-(b*d/250))
+    if ms>vs:
+        print("Mishra")
+    if ms<vs:
+        print("Vasya")
+    else:
+        print("Tie")

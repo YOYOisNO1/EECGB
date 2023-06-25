@@ -1,0 +1,4 @@
+from ..program2255 import program2255
+def test26():
+    assert program2255(612127849 669475006
+271630930 676010757 22959739) == ['682559736']

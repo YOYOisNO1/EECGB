@@ -1,0 +1,4 @@
+from ..program3643 import program3643
+def test23():
+    assert program3643(1 50
+G) == ['G']

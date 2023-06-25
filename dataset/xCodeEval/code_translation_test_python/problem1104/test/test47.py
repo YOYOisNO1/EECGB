@@ -1,0 +1,4 @@
+from ..program1104 import program1104
+def test47():
+    assert program1104(5
+-1 -2 1 2 3) == ['9']

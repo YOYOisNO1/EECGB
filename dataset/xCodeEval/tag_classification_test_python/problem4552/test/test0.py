@@ -1,0 +1,3 @@
+from ..program4552 import program4552
+def test0():
+    assert program4552(4 1 1) == ['YES']

@@ -1,0 +1,4 @@
+from ..program250 import program250
+def test13():
+    assert program250(13
+5761790121605) == ['7775555333322']

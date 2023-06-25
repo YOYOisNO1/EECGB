@@ -1,0 +1,5 @@
+def program2763():
+    l=lambda:map(int,input().split())
+    a,A=l()
+    b,B=l()
+    print("NYOE S")[a-2 < B < 2*a+3 or A-2 < b < 2*A+3::2]

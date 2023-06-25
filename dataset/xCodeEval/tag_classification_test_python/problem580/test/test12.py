@@ -1,0 +1,3 @@
+from ..program580 import program580
+def test12():
+    assert program580(32) == ['YES', 'Yes', 'yes']

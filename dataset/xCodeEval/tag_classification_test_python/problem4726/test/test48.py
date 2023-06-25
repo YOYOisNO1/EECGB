@@ -1,0 +1,3 @@
+from ..program4726 import program4726
+def test48():
+    assert program4726(7420738134810) == ['1\n6', '1\r\n6', '1\r\n1147']

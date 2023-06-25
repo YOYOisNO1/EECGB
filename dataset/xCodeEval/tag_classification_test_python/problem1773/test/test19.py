@@ -1,0 +1,4 @@
+from ..program1773 import program1773
+def test19():
+    assert program1773(eseflxqdffomkoxxhdicryombxleqlvckmqfxxpwipivffhoozteiinpelbaukuifsoygjwyxjlqtazufqrafadzulucrgbtqfsxlnrvauxpojwbpgyzwentjokrkvkepazivjvtxsepruqorgmhvjfnjintftbvnqfwmapmcuilsbkmjgdulgirtpfpywawfpjpbxhy
+fnntftvnqwmmulbkmdgifpywfpjpxhy) == ['150']

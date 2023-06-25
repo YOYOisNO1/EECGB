@@ -1,0 +1,7 @@
+from ..program1250 import program1250
+def test16():
+    assert program1250(78
+7
+7
+6
+38) == ['0']

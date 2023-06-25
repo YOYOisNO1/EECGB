@@ -1,0 +1,3 @@
+from ..program677 import program677
+def test31():
+    assert program677(1043706193704 1177988368866 2133416547786 1380684288366) == ['2']

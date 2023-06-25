@@ -1,0 +1,4 @@
+from ..program1831 import program1831
+def test7():
+    assert program1831(7517891175237043
+0 0 0 0 0 0 0 1985236500005094) == ['7517891175237040']

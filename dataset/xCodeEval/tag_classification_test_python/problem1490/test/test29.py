@@ -1,0 +1,3 @@
+from ..program1490 import program1490
+def test29():
+    assert program1490(B G D#) == ['major']

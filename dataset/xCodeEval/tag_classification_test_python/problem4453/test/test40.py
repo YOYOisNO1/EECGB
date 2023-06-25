@@ -1,0 +1,3 @@
+from ..program4453 import program4453
+def test40():
+    assert program4453(1 100) == ['<']

@@ -1,0 +1,8 @@
+def program3176():
+    a=input()
+    b=a+1
+    while True:
+    	if '8' in str(b):
+    		print(b-a)
+    		break
+    	b+=1	

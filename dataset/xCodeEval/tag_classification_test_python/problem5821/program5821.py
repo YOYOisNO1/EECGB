@@ -1,0 +1,16 @@
+def program5821():
+    from math import *
+    from Queue import *
+    from sys import *
+    from random import *
+    
+    
+    
+    
+    n = int(input())
+    k = int((-1+sqrt(1+8*n))/2)
+    rem = n - k*(k+1)/2
+    if (rem == 0):
+        print(k)
+    else:
+        print(rem%(k+1))

@@ -1,0 +1,5 @@
+from ..program1536 import program1536
+def test1():
+    assert program1536(6 1
+2 3 0 8 9 10
+5) == ['No', 'NO']

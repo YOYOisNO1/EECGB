@@ -1,0 +1,3 @@
+from ..program4349 import program4349
+def test1():
+    assert program4349(erfdcoeocs) == ['codeforces']

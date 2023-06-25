@@ -1,0 +1,3 @@
+from ..program7561 import program7561
+def test31():
+    assert program7561(689283015 999950443 31601) == ['Timur']

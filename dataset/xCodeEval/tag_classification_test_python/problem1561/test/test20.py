@@ -1,0 +1,4 @@
+from ..program1561 import program1561
+def test20():
+    assert program1561(vonggnmokmvmguwtobkxoqgxkuxtyjmxrygyliohlhwxuxjmlkqcfuxboxjnzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+vonggnmokmvmguwtobkxoqgxkuxtyjmxrygyliohlhwxuxjmlkqcfuxboxjoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaac) == ['vonggnmokmvmguwtobkxoqgxkuxtyjmxrygyliohlhwxuxjmlkqcfuxboxjoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa']

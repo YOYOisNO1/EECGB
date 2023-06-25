@@ -1,0 +1,3 @@
+from ..program4040 import program4040
+def test4():
+    assert program4040(1000000000 1000000000 1000000000 1000000000) == ['2000000000']

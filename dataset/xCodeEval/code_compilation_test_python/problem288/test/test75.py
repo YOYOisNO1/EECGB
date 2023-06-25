@@ -1,0 +1,11 @@
+from ..program288 import program288
+def test75():
+    assert program288(8
+15840 South
+4142 East
+17246 North
+13413 North
+4733 West
+15311 North
+12514 South
+17616 South) == ['NO', 'no']

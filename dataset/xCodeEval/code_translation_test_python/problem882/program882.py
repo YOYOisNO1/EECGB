@@ -1,0 +1,3 @@
+def program882():
+    a, b = map(int, input().split())
+    print('YES' if abs(a - b) < 2 and (a, b) != (0, 0) else 'NO')

@@ -1,0 +1,5 @@
+def program1917():
+    n,s=input(),input()
+    for name in ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]:
+        if len(name) == n and all(s[i]=='.'or s[i] == name[i] for i in range(n))
+            print name

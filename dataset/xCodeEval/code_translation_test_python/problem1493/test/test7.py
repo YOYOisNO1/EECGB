@@ -1,0 +1,3 @@
+from ..program1493 import program1493
+def test7():
+    assert program1493(BYOVRR) == ['15']

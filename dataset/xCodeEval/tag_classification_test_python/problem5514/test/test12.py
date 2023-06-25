@@ -1,0 +1,3 @@
+from ..program5514 import program5514
+def test12():
+    assert program5514(1 -1 1) == ['-1']

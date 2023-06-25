@@ -1,0 +1,9 @@
+from ..program3000 import program3000
+def test13():
+    assert program3000(6 7
+J1 2H 3H JH JS JC JD
+4H 5H 6H 6D TH TS TD
+7H 8H 9H 9D QS QC QD
+7C 8C 9C KH KS KC KD
+4C 5C 6C AH AS AC AD
+2C 3C TC QH 6S 7S 8S) == ['No solution.']

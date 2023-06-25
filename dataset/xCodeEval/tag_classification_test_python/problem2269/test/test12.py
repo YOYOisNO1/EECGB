@@ -1,0 +1,7 @@
+from ..program2269 import program2269
+def test12():
+    assert program2269(6
+4
+9
+8
+72628) == ['28244']

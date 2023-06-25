@@ -1,0 +1,4 @@
+from ..program2 import program2
+def test23():
+    assert program2(30
+900) == ['YES\r\n1']
