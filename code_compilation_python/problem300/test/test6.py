@@ -1,6 +1,0 @@
-from ..program300 import program300
-def test6():
-    assert program300(A.a___FXIcs_gB____dxFFzst_p_P_Xp_vS__cS_C_ei_
-B.fmnmkS_SeZYx_tSys_d__Exbojv_a_YPEL_BPj__I_aYH
-C._nrPx_j
-D.o_A_UwmNbC_sZ_AXk_Y___i_SN_U_UxrBN_qo_____) == ['C']

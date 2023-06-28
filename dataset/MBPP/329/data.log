@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program329.py (2) ----
+
+# mutant 3
+--- ./program329.py
++++ ./program329.py
+@@ -23,7 +23,7 @@
+ 
+   for num in list: 
+ 
+-    if num <= 0: 
++    if num < 0: 
+ 
+       neg_count += 1
+ 
+
+# mutant 10
+--- ./program329.py
++++ ./program329.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program22.py (5) ----
+
+# mutant 1
+--- ./program22.py
++++ ./program22.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_first_duplicate(nums):
+ 
+-    num_set = set()
++    num_set = None
+ 
+     no_duplicate = -1
+ 
+
+# mutant 2
+--- ./program22.py
++++ ./program22.py
+@@ -21,7 +21,7 @@
+ 
+     num_set = set()
+ 
+-    no_duplicate = -1
++    no_duplicate = +1
+ 
+ 
+ 
+
+# mutant 3
+--- ./program22.py
++++ ./program22.py
+@@ -21,7 +21,7 @@
+ 
+     num_set = set()
+ 
+-    no_duplicate = -1
++    no_duplicate = -2
+ 
+ 
+ 
+
+# mutant 4
+--- ./program22.py
++++ ./program22.py
+@@ -21,7 +21,7 @@
+ 
+     num_set = set()
+ 
+-    no_duplicate = -1
++    no_duplicate = None
+ 
+ 
+ 
+
+# mutant 5
+--- ./program22.py
++++ ./program22.py
+@@ -29,7 +29,7 @@
+ 
+ 
+ 
+-        if nums[i] in num_set:
++        if nums[i] not in num_set:
+ 
+             return nums[i]
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program22.py (1) ----
+
+# mutant 8
+--- ./program22.py
++++ ./program22.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

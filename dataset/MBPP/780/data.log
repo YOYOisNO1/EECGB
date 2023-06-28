@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program780.py (4) ----
+
+# mutant 1
+--- ./program780.py
++++ ./program780.py
+@@ -21,7 +21,7 @@
+ 
+ def find_combinations(test_list):
+ 
+-  res = [(b1 + a1, b2 + a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]
++  res = [(b1 - a1, b2 + a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]
+ 
+   return (res) 
+ 
+
+# mutant 2
+--- ./program780.py
++++ ./program780.py
+@@ -21,7 +21,7 @@
+ 
+ def find_combinations(test_list):
+ 
+-  res = [(b1 + a1, b2 + a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]
++  res = [(b1 + a1, b2 - a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]
+ 
+   return (res) 
+ 
+
+# mutant 4
+--- ./program780.py
++++ ./program780.py
+@@ -21,7 +21,7 @@
+ 
+ def find_combinations(test_list):
+ 
+-  res = [(b1 + a1, b2 + a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 6
+--- ./program780.py
++++ ./program780.py
+@@ -36,7 +36,7 @@
+             test_list),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

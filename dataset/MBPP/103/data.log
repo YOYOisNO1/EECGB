@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program103.py (3) ----
+
+# mutant 1
+--- ./program103.py
++++ ./program103.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def eulerian_num(n, m): 
+ 
+-	if (m >= n or n == 0): 
++	if (m > n or n == 0): 
+ 
+ 		return 0 
+ 
+
+# mutant 4
+--- ./program103.py
++++ ./program103.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def eulerian_num(n, m): 
+ 
+-	if (m >= n or n == 0): 
++	if (m >= n and n == 0): 
+ 
+ 		return 0 
+ 
+
+# mutant 23
+--- ./program103.py
++++ ./program103.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

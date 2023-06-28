@@ -1,4 +1,0 @@
-from ..program2259 import program2259
-def test15():
-    assert program2259(862920032 378341609
-360240924 241342224 337423122) == ['974174021']

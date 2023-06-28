@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program809.py (2) ----
+
+# mutant 1
+--- ./program809.py
++++ ./program809.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_smaller(test_tup1, test_tup2):
+ 
+-  res = all(x > y for x, y in zip(test_tup1, test_tup2))
++  res = all(x >= y for x, y in zip(test_tup1, test_tup2))
+ 
+   return (res) 
+ 
+
+# mutant 5
+--- ./program809.py
++++ ./program809.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

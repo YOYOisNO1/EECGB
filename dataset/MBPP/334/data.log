@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program334.py (1) ----
+
+# mutant 11
+--- ./program334.py
++++ ./program334.py
+@@ -38,7 +38,7 @@
+             a, b, c),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (3)
+
+---- ./program334.py (3) ----
+
+# mutant 4
+--- ./program334.py
++++ ./program334.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_validity(a,b,c):  
+ 
+-    if (a + b <= c) or (a + c <= b) or (b + c <= a) : 
++    if (a + b <= c) or (a + c < b) or (b + c <= a) : 
+ 
+         return False
+ 
+
+# mutant 6
+--- ./program334.py
++++ ./program334.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_validity(a,b,c):  
+ 
+-    if (a + b <= c) or (a + c <= b) or (b + c <= a) : 
++    if (a + b <= c) or (a + c <= b) or (b + c < a) : 
+ 
+         return False
+ 
+
+# mutant 12
+--- ./program334.py
++++ ./program334.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program302.py (2) ----
+
+# mutant 9
+--- ./program302.py
++++ ./program302.py
+@@ -27,7 +27,7 @@
+ 
+     n = int(n / 2); 
+ 
+-    while (n > 0): 
++    while (n >= 0): 
+ 
+         n = int(n / 2); 
+ 
+
+# mutant 11
+--- ./program302.py
++++ ./program302.py
+@@ -29,7 +29,7 @@
+ 
+     while (n > 0): 
+ 
+-        n = int(n / 2); 
++        n = int(n * 2); 
+ 
+         msb += 1; 
+ 
+
+
+Survived 🙁 (3)
+
+---- ./program302.py (3) ----
+
+# mutant 2
+--- ./program302.py
++++ ./program302.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_bit_number(n): 
+ 
+-    if (n == 0): 
++    if (n == 1): 
+ 
+         return 0; 
+ 
+
+# mutant 3
+--- ./program302.py
++++ ./program302.py
+@@ -21,7 +21,7 @@
+ 
+     if (n == 0): 
+ 
+-        return 0; 
++        return 1; 
+ 
+     msb = 0; 
+ 
+
+# mutant 21
+--- ./program302.py
++++ ./program302.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

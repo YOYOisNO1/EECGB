@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program444.py (3) ----
+
+# mutant 1
+--- ./program444.py
++++ ./program444.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def trim_tuple(test_list, K):
+ 
+-  res = []
++  res = None
+ 
+   for ele in test_list:
+ 
+
+# mutant 2
+--- ./program444.py
++++ ./program444.py
+@@ -23,7 +23,7 @@
+ 
+   for ele in test_list:
+ 
+-    N = len(ele)
++    N = None
+ 
+     res.append(tuple(list(ele)[K: N - K]))
+ 
+
+# mutant 3
+--- ./program444.py
++++ ./program444.py
+@@ -25,7 +25,7 @@
+ 
+     N = len(ele)
+ 
+-    res.append(tuple(list(ele)[K: N - K]))
++    res.append(tuple(list(ele)[K: N + K]))
+ 
+   return (str(res)) 
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program444.py (1) ----
+
+# mutant 6
+--- ./program444.py
++++ ./program444.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

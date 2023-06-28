@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program538.py (1) ----
+
+# mutant 5
+--- ./program538.py
++++ ./program538.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+
+
+Survived 🙁 (3)
+
+---- ./program538.py (3) ----
+
+# mutant 1
+--- ./program538.py
++++ ./program538.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def string_list_to_tuple(str1):
+ 
+-    result = tuple(x for x in str1 if not x.isspace()) 
++    result = tuple(x for x in str1 if  x.isspace()) 
+ 
+     return result
+ 
+
+# mutant 2
+--- ./program538.py
++++ ./program538.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def string_list_to_tuple(str1):
+ 
+-    result = tuple(x for x in str1 if not x.isspace()) 
++    result = None 
+ 
+     return result
+ 
+
+# mutant 4
+--- ./program538.py
++++ ./program538.py
+@@ -34,7 +34,7 @@
+             str1),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

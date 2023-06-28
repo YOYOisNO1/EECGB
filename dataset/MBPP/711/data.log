@@ -1,0 +1,146 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program711.py (1) ----
+
+# mutant 4
+--- ./program711.py
++++ ./program711.py
+@@ -23,7 +23,7 @@
+ 
+         return False
+ 
+-    prodOdd = 1; prodEven = 1
++    prodOdd = 2; prodEven = 1
+ 
+     while n > 0: 
+ 
+
+
+Survived 🙁 (9)
+
+---- ./program711.py (9) ----
+
+# mutant 1
+--- ./program711.py
++++ ./program711.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def product_equal(n): 
+ 
+-    if n < 10: 
++    if n <= 10: 
+ 
+         return False
+ 
+
+# mutant 2
+--- ./program711.py
++++ ./program711.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def product_equal(n): 
+ 
+-    if n < 10: 
++    if n < 11: 
+ 
+         return False
+ 
+
+# mutant 3
+--- ./program711.py
++++ ./program711.py
+@@ -21,7 +21,7 @@
+ 
+     if n < 10: 
+ 
+-        return False
++        return True
+ 
+     prodOdd = 1; prodEven = 1
+ 
+
+# mutant 9
+--- ./program711.py
++++ ./program711.py
+@@ -25,7 +25,7 @@
+ 
+     prodOdd = 1; prodEven = 1
+ 
+-    while n > 0: 
++    while n > 1: 
+ 
+         digit = n % 10
+ 
+
+# mutant 13
+--- ./program711.py
++++ ./program711.py
+@@ -29,7 +29,7 @@
+ 
+         digit = n % 10
+ 
+-        prodOdd *= digit 
++        prodOdd = digit 
+ 
+         n = n//10
+ 
+
+# mutant 18
+--- ./program711.py
++++ ./program711.py
+@@ -33,7 +33,7 @@
+ 
+         n = n//10
+ 
+-        if n == 0: 
++        if n != 0: 
+ 
+             break; 
+ 
+
+# mutant 19
+--- ./program711.py
++++ ./program711.py
+@@ -33,7 +33,7 @@
+ 
+         n = n//10
+ 
+-        if n == 0: 
++        if n == 1: 
+ 
+             break; 
+ 
+
+# mutant 20
+--- ./program711.py
++++ ./program711.py
+@@ -35,7 +35,7 @@
+ 
+         if n == 0: 
+ 
+-            break; 
++            continue; 
+ 
+         digit = n % 10
+ 
+
+# mutant 34
+--- ./program711.py
++++ ./program711.py
+@@ -61,7 +61,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

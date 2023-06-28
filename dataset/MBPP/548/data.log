@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program548.py (5) ----
+
+# mutant 7
+--- ./program548.py
++++ ./program548.py
+@@ -27,7 +27,7 @@
+ 
+ 		for j in range(0 , i): 
+ 
+-			if arr[i] > arr[j] and longest_increasing_subsequence[i]< longest_increasing_subsequence[j] + 1 : 
++			if arr[i] >= arr[j] and longest_increasing_subsequence[i]< longest_increasing_subsequence[j] + 1 : 
+ 
+ 				longest_increasing_subsequence[i] = longest_increasing_subsequence[j]+1
+ 
+
+# mutant 8
+--- ./program548.py
++++ ./program548.py
+@@ -27,7 +27,7 @@
+ 
+ 		for j in range(0 , i): 
+ 
+-			if arr[i] > arr[j] and longest_increasing_subsequence[i]< longest_increasing_subsequence[j] + 1 : 
++			if arr[i] > arr[j] and longest_increasing_subsequence[i]<= longest_increasing_subsequence[j] + 1 : 
+ 
+ 				longest_increasing_subsequence[i] = longest_increasing_subsequence[j]+1
+ 
+
+# mutant 10
+--- ./program548.py
++++ ./program548.py
+@@ -27,7 +27,7 @@
+ 
+ 		for j in range(0 , i): 
+ 
+-			if arr[i] > arr[j] and longest_increasing_subsequence[i]< longest_increasing_subsequence[j] + 1 : 
++			if arr[i] > arr[j] and longest_increasing_subsequence[i]< longest_increasing_subsequence[j] + 2 : 
+ 
+ 				longest_increasing_subsequence[i] = longest_increasing_subsequence[j]+1
+ 
+
+# mutant 15
+--- ./program548.py
++++ ./program548.py
+@@ -31,7 +31,7 @@
+ 
+ 				longest_increasing_subsequence[i] = longest_increasing_subsequence[j]+1
+ 
+-	maximum = 0
++	maximum = 1
+ 
+ 	for i in range(n): 
+ 
+
+# mutant 20
+--- ./program548.py
++++ ./program548.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

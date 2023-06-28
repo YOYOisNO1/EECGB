@@ -1,0 +1,115 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (8)
+
+---- ./program416.py (8) ----
+
+# mutant 1
+--- ./program416.py
++++ ./program416.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-MAX = 1000000
++MAX = 1000001
+ 
+ def break_sum(n): 
+ 
+
+# mutant 2
+--- ./program416.py
++++ ./program416.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-MAX = 1000000
++MAX = None
+ 
+ def break_sum(n): 
+ 
+
+# mutant 3
+--- ./program416.py
++++ ./program416.py
+@@ -21,7 +21,7 @@
+ 
+ def break_sum(n): 
+ 
+-	dp = [0]*(n+1) 
++	dp = [1]*(n+1) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 6
+--- ./program416.py
++++ ./program416.py
+@@ -21,7 +21,7 @@
+ 
+ def break_sum(n): 
+ 
+-	dp = [0]*(n+1) 
++	dp = [0]*(n+2) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 8
+--- ./program416.py
++++ ./program416.py
+@@ -23,7 +23,7 @@
+ 
+ 	dp = [0]*(n+1) 
+ 
+-	dp[0] = 0
++	dp[1] = 0
+ 
+ 	dp[1] = 1
+ 
+
+# mutant 11
+--- ./program416.py
++++ ./program416.py
+@@ -25,7 +25,7 @@
+ 
+ 	dp[0] = 0
+ 
+-	dp[1] = 1
++	dp[2] = 1
+ 
+ 	for i in range(2, n+1): 
+ 
+
+# mutant 14
+--- ./program416.py
++++ ./program416.py
+@@ -27,7 +27,7 @@
+ 
+ 	dp[1] = 1
+ 
+-	for i in range(2, n+1): 
++	for i in range(3, n+1): 
+ 
+ 		dp[i] = max(dp[int(i/2)] + dp[int(i/3)] + dp[int(i/4)], i); 
+ 
+
+# mutant 28
+--- ./program416.py
++++ ./program416.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

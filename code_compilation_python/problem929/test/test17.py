@@ -1,4 +1,0 @@
-from ..program929 import program929
-def test17():
-    assert program929(42 227
-3 6 1 9 4 10 4 10 7 8 10 10 8 7 10 4 6 8 7 7 6 9 3 6 5 5 2 7 2 7 4 4 6 6 4 3 9 3 6 4 7 2) == ['NO']

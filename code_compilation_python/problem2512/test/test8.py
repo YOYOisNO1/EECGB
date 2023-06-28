@@ -1,3 +1,0 @@
-from ..program2512 import program2512
-def test8():
-    assert program2512(12) == ['ROYBIVGBIVGB', 'ROYGBIVGBIVG', 'ROYGBIVOYGIV', 'ROYGROYGRVIB', 'ROYVGBIVGBIV', 'ROYGROYGRBIV', 'ROYGBIVROYGB']

@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program547.py (1) ----
+
+# mutant 6
+--- ./program547.py
++++ ./program547.py
+@@ -23,7 +23,7 @@
+ 
+     sum = 0
+ 
+-    while (n // i > 0):  
++    while (n // i >= 0):  
+ 
+         sum = sum + n // i  
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program547.py (2) ----
+
+# mutant 5
+--- ./program547.py
++++ ./program547.py
+@@ -23,7 +23,7 @@
+ 
+     sum = 0
+ 
+-    while (n // i > 0):  
++    while (n / i > 0):  
+ 
+         sum = sum + n // i  
+ 
+
+# mutant 16
+--- ./program547.py
++++ ./program547.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

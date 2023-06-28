@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program289.py (7) ----
+
+# mutant 5
+--- ./program289.py
++++ ./program289.py
+@@ -21,7 +21,7 @@
+ 
+     hund1 = N // 100
+ 
+-    hund4 = N // 400
++    hund4 = N // 401
+ 
+     leap = N >> 2
+ 
+
+# mutant 6
+--- ./program289.py
++++ ./program289.py
+@@ -21,7 +21,7 @@
+ 
+     hund1 = N // 100
+ 
+-    hund4 = N // 400
++    hund4 = None
+ 
+     leap = N >> 2
+ 
+
+# mutant 16
+--- ./program289.py
++++ ./program289.py
+@@ -35,7 +35,7 @@
+ 
+     if (hund4): 
+ 
+-        ordd -= hund4 
++        ordd = hund4 
+ 
+         leap += hund4 
+ 
+
+# mutant 17
+--- ./program289.py
++++ ./program289.py
+@@ -35,7 +35,7 @@
+ 
+     if (hund4): 
+ 
+-        ordd -= hund4 
++        ordd += hund4 
+ 
+         leap += hund4 
+ 
+
+# mutant 18
+--- ./program289.py
++++ ./program289.py
+@@ -37,7 +37,7 @@
+ 
+         ordd -= hund4 
+ 
+-        leap += hund4 
++        leap = hund4 
+ 
+     days = ordd + leap * 2
+ 
+
+# mutant 19
+--- ./program289.py
++++ ./program289.py
+@@ -37,7 +37,7 @@
+ 
+         ordd -= hund4 
+ 
+-        leap += hund4 
++        leap -= hund4 
+ 
+     days = ordd + leap * 2
+ 
+
+# mutant 29
+--- ./program289.py
++++ ./program289.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

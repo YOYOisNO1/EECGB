@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program673.py (2) ----
+
+# mutant 3
+--- ./program673.py
++++ ./program673.py
+@@ -21,7 +21,7 @@
+ 
+     s = [str(i) for i in list] 
+ 
+-    res = int("".join(s))  
++    res = None  
+ 
+     return (res) 
+ 
+
+# mutant 5
+--- ./program673.py
++++ ./program673.py
+@@ -36,7 +36,7 @@
+             list),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program673.py (1) ----
+
+# mutant 6
+--- ./program673.py
++++ ./program673.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program526.py (4) ----
+
+# mutant 1
+--- ./program526.py
++++ ./program526.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def capitalize_first_last_letters(str1):
+ 
+-     str1 = result = str1.title()
++     str1 = result = None
+ 
+      result =  ""
+ 
+
+# mutant 10
+--- ./program526.py
++++ ./program526.py
+@@ -25,7 +25,7 @@
+ 
+      for word in str1.split():
+ 
+-        result += word[:-1] + word[-1].upper() + " "
++        result += word[:-1] + word[-2].upper() + " "
+ 
+      return result[:-1]  
+ 
+
+# mutant 13
+--- ./program526.py
++++ ./program526.py
+@@ -27,7 +27,7 @@
+ 
+         result += word[:-1] + word[-1].upper() + " "
+ 
+-     return result[:-1]  
++     return result[:+1]  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 16
+--- ./program526.py
++++ ./program526.py
+@@ -40,7 +40,7 @@
+             str1),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (2)
+
+---- ./program526.py (2) ----
+
+# mutant 4
+--- ./program526.py
++++ ./program526.py
+@@ -25,7 +25,7 @@
+ 
+      for word in str1.split():
+ 
+-        result += word[:-1] + word[-1].upper() + " "
++        result = word[:-1] + word[-1].upper() + " "
+ 
+      return result[:-1]  
+ 
+
+# mutant 17
+--- ./program526.py
++++ ./program526.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

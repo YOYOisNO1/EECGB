@@ -1,0 +1,185 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program793.py (3) ----
+
+# mutant 12
+--- ./program793.py
++++ ./program793.py
+@@ -27,7 +27,7 @@
+ 
+     while (low <= high):
+ 
+-        mid = (low + high) // 2 
++        mid = (low + high) // 3 
+ 
+         if arr[mid] > x:
+ 
+
+# mutant 15
+--- ./program793.py
++++ ./program793.py
+@@ -31,7 +31,7 @@
+ 
+         if arr[mid] > x:
+ 
+-            high = mid - 1
++            high = mid + 1
+ 
+         elif arr[mid] < x:
+ 
+
+# mutant 23
+--- ./program793.py
++++ ./program793.py
+@@ -41,7 +41,7 @@
+ 
+             res = mid
+ 
+-            low = mid + 1
++            low = mid - 1
+ 
+     return res
+ 
+
+
+Survived 🙁 (10)
+
+---- ./program793.py (10) ----
+
+# mutant 3
+--- ./program793.py
++++ ./program793.py
+@@ -21,7 +21,7 @@
+ 
+     low = 0
+ 
+-    high = n - 1
++    high = n + 1
+ 
+     res = -1  
+ 
+
+# mutant 4
+--- ./program793.py
++++ ./program793.py
+@@ -21,7 +21,7 @@
+ 
+     low = 0
+ 
+-    high = n - 1
++    high = n - 2
+ 
+     res = -1  
+ 
+
+# mutant 6
+--- ./program793.py
++++ ./program793.py
+@@ -23,7 +23,7 @@
+ 
+     high = n - 1
+ 
+-    res = -1  
++    res = +1  
+ 
+     while (low <= high):
+ 
+
+# mutant 7
+--- ./program793.py
++++ ./program793.py
+@@ -23,7 +23,7 @@
+ 
+     high = n - 1
+ 
+-    res = -1  
++    res = -2  
+ 
+     while (low <= high):
+ 
+
+# mutant 8
+--- ./program793.py
++++ ./program793.py
+@@ -23,7 +23,7 @@
+ 
+     high = n - 1
+ 
+-    res = -1  
++    res = None  
+ 
+     while (low <= high):
+ 
+
+# mutant 19
+--- ./program793.py
++++ ./program793.py
+@@ -35,7 +35,7 @@
+ 
+         elif arr[mid] < x:
+ 
+-            low = mid + 1
++            low = mid - 1
+ 
+         else:
+ 
+
+# mutant 20
+--- ./program793.py
++++ ./program793.py
+@@ -35,7 +35,7 @@
+ 
+         elif arr[mid] < x:
+ 
+-            low = mid + 1
++            low = mid + 2
+ 
+         else:
+ 
+
+# mutant 21
+--- ./program793.py
++++ ./program793.py
+@@ -35,7 +35,7 @@
+ 
+         elif arr[mid] < x:
+ 
+-            low = mid + 1
++            low = None
+ 
+         else:
+ 
+
+# mutant 24
+--- ./program793.py
++++ ./program793.py
+@@ -41,7 +41,7 @@
+ 
+             res = mid
+ 
+-            low = mid + 1
++            low = mid + 2
+ 
+     return res
+ 
+
+# mutant 28
+--- ./program793.py
++++ ./program793.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,146 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program771.py (2) ----
+
+# mutant 29
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == '(' and ch != ')') or (top == '{' and ch == '}' or (top == '[' and ch != ']')):
+ 
+                 return False
+ 
+
+# mutant 32
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top != '[' and ch != ']')):
+ 
+                 return False
+ 
+
+
+Survived 🙁 (8)
+
+---- ./program771.py (8) ----
+
+# mutant 20
+--- ./program771.py
++++ ./program771.py
+@@ -37,7 +37,7 @@
+ 
+             if not stack:
+ 
+-                return False
++                return True
+ 
+             top = stack.pop()
+ 
+
+# mutant 23
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == 'XX(XX' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
+ 
+                 return False
+ 
+
+# mutant 28
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == '(' and ch != ')') or (top == 'XX{XX' and ch != '}' or (top == '[' and ch != ']')):
+ 
+                 return False
+ 
+
+# mutant 33
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == 'XX[XX' and ch != ']')):
+ 
+                 return False
+ 
+
+# mutant 37
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == '(' and ch != ')') or (top == '{' and ch != '}' and (top == '[' and ch != ']')):
+ 
+                 return False
+ 
+
+# mutant 38
+--- ./program771.py
++++ ./program771.py
+@@ -41,7 +41,7 @@
+ 
+             top = stack.pop()
+ 
+-            if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
++            if (top == '(' and ch != ')') and (top == '{' and ch != '}' or (top == '[' and ch != ']')):
+ 
+                 return False
+ 
+
+# mutant 39
+--- ./program771.py
++++ ./program771.py
+@@ -43,7 +43,7 @@
+ 
+             if (top == '(' and ch != ')') or (top == '{' and ch != '}' or (top == '[' and ch != ']')):
+ 
+-                return False
++                return True
+ 
+     return not stack
+ 
+
+# mutant 43
+--- ./program771.py
++++ ./program771.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

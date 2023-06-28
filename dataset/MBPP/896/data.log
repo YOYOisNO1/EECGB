@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program896.py (3) ----
+
+# mutant 1
+--- ./program896.py
++++ ./program896.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def last(n):
+ 
+-   return n[-1]
++   return n[+1]
+ 
+ def sort_list_last(tuples):
+ 
+
+# mutant 2
+--- ./program896.py
++++ ./program896.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def last(n):
+ 
+-   return n[-1]
++   return n[-2]
+ 
+ def sort_list_last(tuples):
+ 
+
+# mutant 4
+--- ./program896.py
++++ ./program896.py
+@@ -36,7 +36,7 @@
+             tuples),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

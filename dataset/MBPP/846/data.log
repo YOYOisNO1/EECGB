@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program846.py (2) ----
+
+# mutant 16
+--- ./program846.py
++++ ./program846.py
+@@ -37,7 +37,7 @@
+ 
+             plat_needed+= 1
+ 
+-            i+= 1
++            i= 1
+ 
+         elif (arr[i] > dep[j]):           
+ 
+
+# mutant 23
+--- ./program846.py
++++ ./program846.py
+@@ -43,7 +43,7 @@
+ 
+             plat_needed-= 1
+ 
+-            j+= 1
++            j= 1
+ 
+         if (plat_needed > result):  
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program846.py (4) ----
+
+# mutant 12
+--- ./program846.py
++++ ./program846.py
+@@ -33,7 +33,7 @@
+ 
+     while (i < n and j < n): 
+ 
+-        if (arr[i] <= dep[j]):           
++        if (arr[i] < dep[j]):           
+ 
+             plat_needed+= 1
+ 
+
+# mutant 19
+--- ./program846.py
++++ ./program846.py
+@@ -39,7 +39,7 @@
+ 
+             i+= 1
+ 
+-        elif (arr[i] > dep[j]):           
++        elif (arr[i] >= dep[j]):           
+ 
+             plat_needed-= 1
+ 
+
+# mutant 26
+--- ./program846.py
++++ ./program846.py
+@@ -45,7 +45,7 @@
+ 
+             j+= 1
+ 
+-        if (plat_needed > result):  
++        if (plat_needed >= result):  
+ 
+             result = plat_needed           
+ 
+
+# mutant 30
+--- ./program846.py
++++ ./program846.py
+@@ -63,7 +63,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

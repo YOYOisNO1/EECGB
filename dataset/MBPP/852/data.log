@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program852.py (3) ----
+
+# mutant 1
+--- ./program852.py
++++ ./program852.py
+@@ -21,7 +21,7 @@
+ 
+     for item in num_list: 
+ 
+-        if item < 0: 
++        if item <= 0: 
+ 
+            num_list.remove(item) 
+ 
+
+# mutant 2
+--- ./program852.py
++++ ./program852.py
+@@ -21,7 +21,7 @@
+ 
+     for item in num_list: 
+ 
+-        if item < 0: 
++        if item < 1: 
+ 
+            num_list.remove(item) 
+ 
+
+# mutant 5
+--- ./program852.py
++++ ./program852.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

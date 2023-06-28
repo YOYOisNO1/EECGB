@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program228.py (2) ----
+
+# mutant 11
+--- ./program228.py
++++ ./program228.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def all_bits_set_in_the_given_range(n,l,r):  
+ 
+-    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) 
++    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 2)) 
+ 
+     new_num = n & num
+ 
+
+# mutant 13
+--- ./program228.py
++++ ./program228.py
+@@ -21,7 +21,7 @@
+ 
+     num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) 
+ 
+-    new_num = n & num
++    new_num = n | num
+ 
+     if (new_num == 0): 
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program228.py (4) ----
+
+# mutant 6
+--- ./program228.py
++++ ./program228.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def all_bits_set_in_the_given_range(n,l,r):  
+ 
+-    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) 
++    num = (((1 << r) - 1) ^ ((2 << (l - 1)) - 1)) 
+ 
+     new_num = n & num
+ 
+
+# mutant 8
+--- ./program228.py
++++ ./program228.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def all_bits_set_in_the_given_range(n,l,r):  
+ 
+-    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) 
++    num = (((1 << r) - 1) ^ ((1 << (l + 1)) - 1)) 
+ 
+     new_num = n & num
+ 
+
+# mutant 10
+--- ./program228.py
++++ ./program228.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def all_bits_set_in_the_given_range(n,l,r):  
+ 
+-    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) 
++    num = (((1 << r) - 1) ^ ((1 << (l - 1)) + 1)) 
+ 
+     new_num = n & num
+ 
+
+# mutant 21
+--- ./program228.py
++++ ./program228.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,115 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (8)
+
+---- ./program177.py (8) ----
+
+# mutant 1
+--- ./program177.py
++++ ./program177.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def answer(L,R): 
+ 
+-    if (2 * L <= R): 
++    if (3 * L <= R): 
+ 
+         return (L ,2*L)
+ 
+
+# mutant 2
+--- ./program177.py
++++ ./program177.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def answer(L,R): 
+ 
+-    if (2 * L <= R): 
++    if (2 / L <= R): 
+ 
+         return (L ,2*L)
+ 
+
+# mutant 3
+--- ./program177.py
++++ ./program177.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def answer(L,R): 
+ 
+-    if (2 * L <= R): 
++    if (2 * L < R): 
+ 
+         return (L ,2*L)
+ 
+
+# mutant 4
+--- ./program177.py
++++ ./program177.py
+@@ -21,7 +21,7 @@
+ 
+     if (2 * L <= R): 
+ 
+-        return (L ,2*L)
++        return (L ,3*L)
+ 
+     else: 
+ 
+
+# mutant 5
+--- ./program177.py
++++ ./program177.py
+@@ -21,7 +21,7 @@
+ 
+     if (2 * L <= R): 
+ 
+-        return (L ,2*L)
++        return (L ,2/L)
+ 
+     else: 
+ 
+
+# mutant 6
+--- ./program177.py
++++ ./program177.py
+@@ -25,7 +25,7 @@
+ 
+     else: 
+ 
+-        return (-1) 
++        return (+1) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 7
+--- ./program177.py
++++ ./program177.py
+@@ -25,7 +25,7 @@
+ 
+     else: 
+ 
+-        return (-1) 
++        return (-2) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 9
+--- ./program177.py
++++ ./program177.py
+@@ -38,7 +38,7 @@
+             l, r),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program448.py (1) ----
+
+# mutant 27
+--- ./program448.py
++++ ./program448.py
+@@ -51,7 +51,7 @@
+ 
+ 		c = d 
+ 
+-		n = n-1
++		n = n+1
+ 
+ 	return sum
+ 
+
+
+Survived 🙁 (7)
+
+---- ./program448.py (7) ----
+
+# mutant 8
+--- ./program448.py
++++ ./program448.py
+@@ -25,7 +25,7 @@
+ 
+ 	c = 2
+ 
+-	if (n == 0): 
++	if (n == 1): 
+ 
+ 		return 3
+ 
+
+# mutant 9
+--- ./program448.py
++++ ./program448.py
+@@ -27,7 +27,7 @@
+ 
+ 	if (n == 0): 
+ 
+-		return 3
++		return 4
+ 
+ 	if (n == 1): 
+ 
+
+# mutant 11
+--- ./program448.py
++++ ./program448.py
+@@ -29,7 +29,7 @@
+ 
+ 		return 3
+ 
+-	if (n == 1): 
++	if (n == 2): 
+ 
+ 		return 3
+ 
+
+# mutant 12
+--- ./program448.py
++++ ./program448.py
+@@ -31,7 +31,7 @@
+ 
+ 	if (n == 1): 
+ 
+-		return 3
++		return 4
+ 
+ 	if (n == 2): 
+ 
+
+# mutant 14
+--- ./program448.py
++++ ./program448.py
+@@ -33,7 +33,7 @@
+ 
+ 		return 3
+ 
+-	if (n == 2): 
++	if (n == 3): 
+ 
+ 		return 5
+ 
+
+# mutant 15
+--- ./program448.py
++++ ./program448.py
+@@ -35,7 +35,7 @@
+ 
+ 	if (n == 2): 
+ 
+-		return 5
++		return 6
+ 
+ 	sum = 5
+ 
+
+# mutant 32
+--- ./program448.py
++++ ./program448.py
+@@ -67,7 +67,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

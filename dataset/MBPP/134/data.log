@@ -1,0 +1,193 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (14)
+
+---- ./program134.py (14) ----
+
+# mutant 1
+--- ./program134.py
++++ ./program134.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_last (arr,n,p): 
+ 
+-    _sum = 0
++    _sum = 1
+ 
+     for i in range(n): 
+ 
+
+# mutant 2
+--- ./program134.py
++++ ./program134.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_last (arr,n,p): 
+ 
+-    _sum = 0
++    _sum = None
+ 
+     for i in range(n): 
+ 
+
+# mutant 3
+--- ./program134.py
++++ ./program134.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(n): 
+ 
+-        _sum = _sum + arr[i] 
++        _sum = _sum - arr[i] 
+ 
+     if p == 1: 
+ 
+
+# mutant 4
+--- ./program134.py
++++ ./program134.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(n): 
+ 
+-        _sum = _sum + arr[i] 
++        _sum = None 
+ 
+     if p == 1: 
+ 
+
+# mutant 5
+--- ./program134.py
++++ ./program134.py
+@@ -25,7 +25,7 @@
+ 
+         _sum = _sum + arr[i] 
+ 
+-    if p == 1: 
++    if p != 1: 
+ 
+         if _sum % 2 == 0: 
+ 
+
+# mutant 6
+--- ./program134.py
++++ ./program134.py
+@@ -25,7 +25,7 @@
+ 
+         _sum = _sum + arr[i] 
+ 
+-    if p == 1: 
++    if p == 2: 
+ 
+         if _sum % 2 == 0: 
+ 
+
+# mutant 7
+--- ./program134.py
++++ ./program134.py
+@@ -27,7 +27,7 @@
+ 
+     if p == 1: 
+ 
+-        if _sum % 2 == 0: 
++        if _sum / 2 == 0: 
+ 
+             return "ODD"
+ 
+
+# mutant 8
+--- ./program134.py
++++ ./program134.py
+@@ -27,7 +27,7 @@
+ 
+     if p == 1: 
+ 
+-        if _sum % 2 == 0: 
++        if _sum % 3 == 0: 
+ 
+             return "ODD"
+ 
+
+# mutant 9
+--- ./program134.py
++++ ./program134.py
+@@ -27,7 +27,7 @@
+ 
+     if p == 1: 
+ 
+-        if _sum % 2 == 0: 
++        if _sum % 2 != 0: 
+ 
+             return "ODD"
+ 
+
+# mutant 10
+--- ./program134.py
++++ ./program134.py
+@@ -27,7 +27,7 @@
+ 
+     if p == 1: 
+ 
+-        if _sum % 2 == 0: 
++        if _sum % 2 == 1: 
+ 
+             return "ODD"
+ 
+
+# mutant 11
+--- ./program134.py
++++ ./program134.py
+@@ -29,7 +29,7 @@
+ 
+         if _sum % 2 == 0: 
+ 
+-            return "ODD"
++            return "XXODDXX"
+ 
+         else: 
+ 
+
+# mutant 12
+--- ./program134.py
++++ ./program134.py
+@@ -33,7 +33,7 @@
+ 
+         else: 
+ 
+-            return "EVEN"
++            return "XXEVENXX"
+ 
+     return "EVEN"
+ 
+
+# mutant 13
+--- ./program134.py
++++ ./program134.py
+@@ -35,7 +35,7 @@
+ 
+             return "EVEN"
+ 
+-    return "EVEN"
++    return "XXEVENXX"
+ 
+       
+ 
+
+# mutant 15
+--- ./program134.py
++++ ./program134.py
+@@ -50,7 +50,7 @@
+             arr, n, p),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

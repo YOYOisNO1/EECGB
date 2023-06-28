@@ -1,0 +1,328 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program392.py (2) ----
+
+# mutant 23
+--- ./program392.py
++++ ./program392.py
+@@ -44,7 +44,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 25
+--- ./program392.py
++++ ./program392.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+
+
+Survived 🙁 (22)
+
+---- ./program392.py (22) ----
+
+# mutant 1
+--- ./program392.py
++++ ./program392.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def get_max_sum (n):
+ 
+-	res = list()
++	res = None
+ 
+ 	res.append(0)
+ 
+
+# mutant 2
+--- ./program392.py
++++ ./program392.py
+@@ -21,7 +21,7 @@
+ 
+ 	res = list()
+ 
+-	res.append(0)
++	res.append(1)
+ 
+ 	res.append(1)
+ 
+
+# mutant 3
+--- ./program392.py
++++ ./program392.py
+@@ -23,7 +23,7 @@
+ 
+ 	res.append(0)
+ 
+-	res.append(1)
++	res.append(2)
+ 
+ 	i = 2
+ 
+
+# mutant 4
+--- ./program392.py
++++ ./program392.py
+@@ -25,7 +25,7 @@
+ 
+ 	res.append(1)
+ 
+-	i = 2
++	i = 3
+ 
+ 	while i<n + 1:
+ 
+
+# mutant 5
+--- ./program392.py
++++ ./program392.py
+@@ -25,7 +25,7 @@
+ 
+ 	res.append(1)
+ 
+-	i = 2
++	i = None
+ 
+ 	while i<n + 1:
+ 
+
+# mutant 6
+--- ./program392.py
++++ ./program392.py
+@@ -27,7 +27,7 @@
+ 
+ 	i = 2
+ 
+-	while i<n + 1:
++	while i<=n + 1:
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+
+# mutant 7
+--- ./program392.py
++++ ./program392.py
+@@ -27,7 +27,7 @@
+ 
+ 	i = 2
+ 
+-	while i<n + 1:
++	while i<n - 1:
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+
+# mutant 8
+--- ./program392.py
++++ ./program392.py
+@@ -27,7 +27,7 @@
+ 
+ 	i = 2
+ 
+-	while i<n + 1:
++	while i<n + 2:
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+
+# mutant 9
+--- ./program392.py
++++ ./program392.py
+@@ -29,7 +29,7 @@
+ 
+ 	while i<n + 1:
+ 
+-		res.append(max(i, (res[int(i / 2)] 
++		res.append(max(i, (res[int(i * 2)] 
+ 
+ 						+ res[int(i / 3)] +
+ 
+
+# mutant 10
+--- ./program392.py
++++ ./program392.py
+@@ -29,7 +29,7 @@
+ 
+ 	while i<n + 1:
+ 
+-		res.append(max(i, (res[int(i / 2)] 
++		res.append(max(i, (res[int(i / 3)] 
+ 
+ 						+ res[int(i / 3)] +
+ 
+
+# mutant 11
+--- ./program392.py
++++ ./program392.py
+@@ -31,7 +31,7 @@
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+-						+ res[int(i / 3)] +
++						- res[int(i / 3)] +
+ 
+ 							res[int(i / 4)]
+ 
+
+# mutant 12
+--- ./program392.py
++++ ./program392.py
+@@ -31,7 +31,7 @@
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+-						+ res[int(i / 3)] +
++						+ res[int(i * 3)] +
+ 
+ 							res[int(i / 4)]
+ 
+
+# mutant 13
+--- ./program392.py
++++ ./program392.py
+@@ -31,7 +31,7 @@
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+-						+ res[int(i / 3)] +
++						+ res[int(i / 4)] +
+ 
+ 							res[int(i / 4)]
+ 
+
+# mutant 14
+--- ./program392.py
++++ ./program392.py
+@@ -31,7 +31,7 @@
+ 
+ 		res.append(max(i, (res[int(i / 2)] 
+ 
+-						+ res[int(i / 3)] +
++						+ res[int(i / 3)] -
+ 
+ 							res[int(i / 4)]
+ 
+
+# mutant 15
+--- ./program392.py
++++ ./program392.py
+@@ -33,7 +33,7 @@
+ 
+ 						+ res[int(i / 3)] +
+ 
+-							res[int(i / 4)]
++							res[int(i * 4)]
+ 
+ 						+ res[int(i / 5)])))
+ 
+
+# mutant 16
+--- ./program392.py
++++ ./program392.py
+@@ -33,7 +33,7 @@
+ 
+ 						+ res[int(i / 3)] +
+ 
+-							res[int(i / 4)]
++							res[int(i / 5)]
+ 
+ 						+ res[int(i / 5)])))
+ 
+
+# mutant 17
+--- ./program392.py
++++ ./program392.py
+@@ -35,7 +35,7 @@
+ 
+ 							res[int(i / 4)]
+ 
+-						+ res[int(i / 5)])))
++						- res[int(i / 5)])))
+ 
+ 		i = i + 1
+ 
+
+# mutant 18
+--- ./program392.py
++++ ./program392.py
+@@ -35,7 +35,7 @@
+ 
+ 							res[int(i / 4)]
+ 
+-						+ res[int(i / 5)])))
++						+ res[int(i * 5)])))
+ 
+ 		i = i + 1
+ 
+
+# mutant 19
+--- ./program392.py
++++ ./program392.py
+@@ -35,7 +35,7 @@
+ 
+ 							res[int(i / 4)]
+ 
+-						+ res[int(i / 5)])))
++						+ res[int(i / 6)])))
+ 
+ 		i = i + 1
+ 
+
+# mutant 20
+--- ./program392.py
++++ ./program392.py
+@@ -37,7 +37,7 @@
+ 
+ 						+ res[int(i / 5)])))
+ 
+-		i = i + 1
++		i = i - 1
+ 
+ 	return res[n]
+ 
+
+# mutant 21
+--- ./program392.py
++++ ./program392.py
+@@ -37,7 +37,7 @@
+ 
+ 						+ res[int(i / 5)])))
+ 
+-		i = i + 1
++		i = i + 2
+ 
+ 	return res[n]
+ 
+
+# mutant 22
+--- ./program392.py
++++ ./program392.py
+@@ -37,7 +37,7 @@
+ 
+ 						+ res[int(i / 5)])))
+ 
+-		i = i + 1
++		i = None
+ 
+ 	return res[n]
+ 
+

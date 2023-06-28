@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program818.py (3) ----
+
+# mutant 4
+--- ./program818.py
++++ ./program818.py
+@@ -23,7 +23,7 @@
+ 
+       for i in range(len(str)):
+ 
+-          if str[i] >= 'a' and str[i] <= 'z': lower_ctr += 1     
++          if str[i] >= 'XXaXX' and str[i] <= 'z': lower_ctr += 1     
+ 
+       return  lower_ctr
+ 
+
+# mutant 5
+--- ./program818.py
++++ ./program818.py
+@@ -23,7 +23,7 @@
+ 
+       for i in range(len(str)):
+ 
+-          if str[i] >= 'a' and str[i] <= 'z': lower_ctr += 1     
++          if str[i] >= 'a' and str[i] < 'z': lower_ctr += 1     
+ 
+       return  lower_ctr
+ 
+
+# mutant 13
+--- ./program818.py
++++ ./program818.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

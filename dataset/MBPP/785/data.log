@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program785.py (4) ----
+
+# mutant 5
+--- ./program785.py
++++ ./program785.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tuple_str_int(test_str):
+ 
+-  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', '').split(', '))
++  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('XX...XX', '').split(', '))
+ 
+   return (res) 
+ 
+
+# mutant 6
+--- ./program785.py
++++ ./program785.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tuple_str_int(test_str):
+ 
+-  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', '').split(', '))
++  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', 'XXXX').split(', '))
+ 
+   return (res) 
+ 
+
+# mutant 8
+--- ./program785.py
++++ ./program785.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tuple_str_int(test_str):
+ 
+-  res = tuple(int(num) for num in test_str.replace('(', '').replace(')', '').replace('...', '').split(', '))
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 10
+--- ./program785.py
++++ ./program785.py
+@@ -34,7 +34,7 @@
+             test_str),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program915.py (4) ----
+
+# mutant 1
+--- ./program915.py
++++ ./program915.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def rearrange_numbs(array_nums):
+ 
+-  result = sorted(array_nums, key = lambda i: 0 if i == 0 else -1 / i)
++  result = sorted(array_nums, key = lambda i: 1 if i == 0 else -1 / i)
+ 
+   return result 
+ 
+
+# mutant 3
+--- ./program915.py
++++ ./program915.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def rearrange_numbs(array_nums):
+ 
+-  result = sorted(array_nums, key = lambda i: 0 if i == 0 else -1 / i)
++  result = sorted(array_nums, key = lambda i: 0 if i == 1 else -1 / i)
+ 
+   return result 
+ 
+
+# mutant 5
+--- ./program915.py
++++ ./program915.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def rearrange_numbs(array_nums):
+ 
+-  result = sorted(array_nums, key = lambda i: 0 if i == 0 else -1 / i)
++  result = sorted(array_nums, key = lambda i: 0 if i == 0 else -2 / i)
+ 
+   return result 
+ 
+
+# mutant 11
+--- ./program915.py
++++ ./program915.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

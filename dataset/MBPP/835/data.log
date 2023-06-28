@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program835.py (3) ----
+
+# mutant 5
+--- ./program835.py
++++ ./program835.py
+@@ -24,7 +24,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(x1, y1, x2, y2, expected):
+     try:
+
+# mutant 6
+--- ./program835.py
++++ ./program835.py
+@@ -24,7 +24,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(x1, y1, x2, y2, expected):
+     try:
+
+# mutant 8
+--- ./program835.py
++++ ./program835.py
+@@ -33,7 +33,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

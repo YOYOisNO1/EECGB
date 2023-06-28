@@ -1,0 +1,133 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program594.py (2) ----
+
+# mutant 1
+--- ./program594.py
++++ ./program594.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def diff_even_odd(list1):
+ 
+-    first_even = next((el for el in list1 if el%2==0),-1)
++    first_even = next((el for el in list1 if el/2==0),-1)
+ 
+     first_odd = next((el for el in list1 if el%2!=0),-1)
+ 
+
+# mutant 16
+--- ./program594.py
++++ ./program594.py
+@@ -28,7 +28,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(list1, expected):
+     try:
+
+
+Survived 🙁 (7)
+
+---- ./program594.py (7) ----
+
+# mutant 5
+--- ./program594.py
++++ ./program594.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def diff_even_odd(list1):
+ 
+-    first_even = next((el for el in list1 if el%2==0),-1)
++    first_even = next((el for el in list1 if el%2==0),+1)
+ 
+     first_odd = next((el for el in list1 if el%2!=0),-1)
+ 
+
+# mutant 6
+--- ./program594.py
++++ ./program594.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def diff_even_odd(list1):
+ 
+-    first_even = next((el for el in list1 if el%2==0),-1)
++    first_even = next((el for el in list1 if el%2==0),-2)
+ 
+     first_odd = next((el for el in list1 if el%2!=0),-1)
+ 
+
+# mutant 8
+--- ./program594.py
++++ ./program594.py
+@@ -21,7 +21,7 @@
+ 
+     first_even = next((el for el in list1 if el%2==0),-1)
+ 
+-    first_odd = next((el for el in list1 if el%2!=0),-1)
++    first_odd = next((el for el in list1 if el/2!=0),-1)
+ 
+     return (first_even-first_odd)
+ 
+
+# mutant 9
+--- ./program594.py
++++ ./program594.py
+@@ -21,7 +21,7 @@
+ 
+     first_even = next((el for el in list1 if el%2==0),-1)
+ 
+-    first_odd = next((el for el in list1 if el%2!=0),-1)
++    first_odd = next((el for el in list1 if el%3!=0),-1)
+ 
+     return (first_even-first_odd)
+ 
+
+# mutant 12
+--- ./program594.py
++++ ./program594.py
+@@ -21,7 +21,7 @@
+ 
+     first_even = next((el for el in list1 if el%2==0),-1)
+ 
+-    first_odd = next((el for el in list1 if el%2!=0),-1)
++    first_odd = next((el for el in list1 if el%2!=0),+1)
+ 
+     return (first_even-first_odd)
+ 
+
+# mutant 13
+--- ./program594.py
++++ ./program594.py
+@@ -21,7 +21,7 @@
+ 
+     first_even = next((el for el in list1 if el%2==0),-1)
+ 
+-    first_odd = next((el for el in list1 if el%2!=0),-1)
++    first_odd = next((el for el in list1 if el%2!=0),-2)
+ 
+     return (first_even-first_odd)
+ 
+
+# mutant 18
+--- ./program594.py
++++ ./program594.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

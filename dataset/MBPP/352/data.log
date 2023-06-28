@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program352.py (2) ----
+
+# mutant 2
+--- ./program352.py
++++ ./program352.py
+@@ -21,7 +21,7 @@
+ 
+     for i in range(len(str)):
+ 
+-        for j in range(i + 1,len(str)): 
++        for j in range(i + 2,len(str)): 
+ 
+             if (str[i] == str[j]):
+ 
+
+# mutant 8
+--- ./program352.py
++++ ./program352.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

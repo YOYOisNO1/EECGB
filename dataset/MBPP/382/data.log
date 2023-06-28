@@ -1,0 +1,211 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program382.py (2) ----
+
+# mutant 27
+--- ./program382.py
++++ ./program382.py
+@@ -41,7 +41,7 @@
+ 
+             right = mid - 1
+ 
+-        elif A[mid] >= A[left]:
++        elif A[mid] > A[left]:
+ 
+             left = mid + 1
+ 
+
+# mutant 28
+--- ./program382.py
++++ ./program382.py
+@@ -43,7 +43,7 @@
+ 
+         elif A[mid] >= A[left]:
+ 
+-            left = mid + 1
++            left = mid - 1
+ 
+     return -1
+ 
+
+
+Survived 🙁 (13)
+
+---- ./program382.py (13) ----
+
+# mutant 3
+--- ./program382.py
++++ ./program382.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_rotation_count(A):
+ 
+-    (left, right) = (0, len(A) - 1)
++    (left, right) = (0, len(A) - 2)
+ 
+     while left <= right:
+ 
+
+# mutant 6
+--- ./program382.py
++++ ./program382.py
+@@ -23,7 +23,7 @@
+ 
+     while left <= right:
+ 
+-        if A[left] <= A[right]:
++        if A[left] < A[right]:
+ 
+             return left
+ 
+
+# mutant 9
+--- ./program382.py
++++ ./program382.py
+@@ -27,7 +27,7 @@
+ 
+             return left
+ 
+-        mid = (left + right) // 2
++        mid = (left + right) // 3
+ 
+         next = (mid + 1) % len(A)
+ 
+
+# mutant 11
+--- ./program382.py
++++ ./program382.py
+@@ -29,7 +29,7 @@
+ 
+         mid = (left + right) // 2
+ 
+-        next = (mid + 1) % len(A)
++        next = (mid - 1) % len(A)
+ 
+         prev = (mid - 1 + len(A)) % len(A)
+ 
+
+# mutant 12
+--- ./program382.py
++++ ./program382.py
+@@ -29,7 +29,7 @@
+ 
+         mid = (left + right) // 2
+ 
+-        next = (mid + 1) % len(A)
++        next = (mid + 2) % len(A)
+ 
+         prev = (mid - 1 + len(A)) % len(A)
+ 
+
+# mutant 17
+--- ./program382.py
++++ ./program382.py
+@@ -31,7 +31,7 @@
+ 
+         next = (mid + 1) % len(A)
+ 
+-        prev = (mid - 1 + len(A)) % len(A)
++        prev = (mid - 1 - len(A)) % len(A)
+ 
+         if A[mid] <= A[next] and A[mid] <= A[prev]:
+ 
+
+# mutant 20
+--- ./program382.py
++++ ./program382.py
+@@ -33,7 +33,7 @@
+ 
+         prev = (mid - 1 + len(A)) % len(A)
+ 
+-        if A[mid] <= A[next] and A[mid] <= A[prev]:
++        if A[mid] < A[next] and A[mid] <= A[prev]:
+ 
+             return mid
+ 
+
+# mutant 21
+--- ./program382.py
++++ ./program382.py
+@@ -33,7 +33,7 @@
+ 
+         prev = (mid - 1 + len(A)) % len(A)
+ 
+-        if A[mid] <= A[next] and A[mid] <= A[prev]:
++        if A[mid] <= A[next] and A[mid] < A[prev]:
+ 
+             return mid
+ 
+
+# mutant 23
+--- ./program382.py
++++ ./program382.py
+@@ -37,7 +37,7 @@
+ 
+             return mid
+ 
+-        elif A[mid] <= A[right]:
++        elif A[mid] < A[right]:
+ 
+             right = mid - 1
+ 
+
+# mutant 24
+--- ./program382.py
++++ ./program382.py
+@@ -39,7 +39,7 @@
+ 
+         elif A[mid] <= A[right]:
+ 
+-            right = mid - 1
++            right = mid + 1
+ 
+         elif A[mid] >= A[left]:
+ 
+
+# mutant 31
+--- ./program382.py
++++ ./program382.py
+@@ -45,7 +45,7 @@
+ 
+             left = mid + 1
+ 
+-    return -1
++    return +1
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 32
+--- ./program382.py
++++ ./program382.py
+@@ -45,7 +45,7 @@
+ 
+             left = mid + 1
+ 
+-    return -1
++    return -2
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 35
+--- ./program382.py
++++ ./program382.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

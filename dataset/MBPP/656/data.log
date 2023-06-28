@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program656.py (1) ----
+
+# mutant 5
+--- ./program656.py
++++ ./program656.py
+@@ -27,7 +27,7 @@
+ 
+     for i in range(n): 
+ 
+-        sum = sum + abs(a[i] - b[i]) 
++        sum = None 
+ 
+     return sum
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program656.py (1) ----
+
+# mutant 8
+--- ./program656.py
++++ ./program656.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

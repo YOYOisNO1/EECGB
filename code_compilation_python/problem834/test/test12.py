@@ -1,3 +1,0 @@
-from ..program834 import program834
-def test12():
-    assert program834(100 49) == ['3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2', '3 3 2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2', '2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3']

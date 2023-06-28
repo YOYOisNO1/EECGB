@@ -1,5 +1,0 @@
-def program2682():
-    I=lambda:map(int,input().split())
-    n,c=I()
-    x=I()
-    print max(c,*(i-j for i,j in zip(x,x[1:]))-c

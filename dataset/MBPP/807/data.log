@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program807.py (2) ----
+
+# mutant 7
+--- ./program807.py
++++ ./program807.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def first_odd(nums):
+ 
+-  first_odd = next((el for el in nums if el%2!=0),-1)
++  first_odd = None
+ 
+   return first_odd
+ 
+
+# mutant 9
+--- ./program807.py
++++ ./program807.py
+@@ -34,7 +34,7 @@
+             nums),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (3)
+
+---- ./program807.py (3) ----
+
+# mutant 5
+--- ./program807.py
++++ ./program807.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def first_odd(nums):
+ 
+-  first_odd = next((el for el in nums if el%2!=0),-1)
++  first_odd = next((el for el in nums if el%2!=0),+1)
+ 
+   return first_odd
+ 
+
+# mutant 6
+--- ./program807.py
++++ ./program807.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def first_odd(nums):
+ 
+-  first_odd = next((el for el in nums if el%2!=0),-1)
++  first_odd = next((el for el in nums if el%2!=0),-2)
+ 
+   return first_odd
+ 
+
+# mutant 10
+--- ./program807.py
++++ ./program807.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

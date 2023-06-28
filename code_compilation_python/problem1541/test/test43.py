@@ -1,5 +1,0 @@
-from ..program1541 import program1541
-def test43():
-    assert program1541(-1000000000 1000000000
--1000000000 -1000000000
-1000000000 -1000000000) == ['LEFT']

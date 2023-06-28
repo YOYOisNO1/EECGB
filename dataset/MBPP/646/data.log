@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program646.py (3) ----
+
+# mutant 1
+--- ./program646.py
++++ ./program646.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def no_of_cubes(N,K):
+ 
+-    No = 0
++    No = 1
+ 
+     No = (N - K + 1)
+ 
+
+# mutant 2
+--- ./program646.py
++++ ./program646.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def no_of_cubes(N,K):
+ 
+-    No = 0
++    No = None
+ 
+     No = (N - K + 1)
+ 
+
+# mutant 11
+--- ./program646.py
++++ ./program646.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

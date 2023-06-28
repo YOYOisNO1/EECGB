@@ -1,0 +1,237 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program56.py (1) ----
+
+# mutant 3
+--- ./program56.py
++++ ./program56.py
+@@ -21,7 +21,7 @@
+ 
+     rev_num = 0
+ 
+-    while (num > 0):  
++    while (num >= 0):  
+ 
+         rev_num = (rev_num * 10 + num % 10) 
+ 
+
+
+Survived 🙁 (16)
+
+---- ./program56.py (16) ----
+
+# mutant 1
+--- ./program56.py
++++ ./program56.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def rev(num):    
+ 
+-    rev_num = 0
++    rev_num = 1
+ 
+     while (num > 0):  
+ 
+
+# mutant 4
+--- ./program56.py
++++ ./program56.py
+@@ -21,7 +21,7 @@
+ 
+     rev_num = 0
+ 
+-    while (num > 0):  
++    while (num > 1):  
+ 
+         rev_num = (rev_num * 10 + num % 10) 
+ 
+
+# mutant 5
+--- ./program56.py
++++ ./program56.py
+@@ -23,7 +23,7 @@
+ 
+     while (num > 0):  
+ 
+-        rev_num = (rev_num * 10 + num % 10) 
++        rev_num = (rev_num / 10 + num % 10) 
+ 
+         num = num // 10  
+ 
+
+# mutant 6
+--- ./program56.py
++++ ./program56.py
+@@ -23,7 +23,7 @@
+ 
+     while (num > 0):  
+ 
+-        rev_num = (rev_num * 10 + num % 10) 
++        rev_num = (rev_num * 11 + num % 10) 
+ 
+         num = num // 10  
+ 
+
+# mutant 7
+--- ./program56.py
++++ ./program56.py
+@@ -23,7 +23,7 @@
+ 
+     while (num > 0):  
+ 
+-        rev_num = (rev_num * 10 + num % 10) 
++        rev_num = (rev_num * 10 - num % 10) 
+ 
+         num = num // 10  
+ 
+
+# mutant 8
+--- ./program56.py
++++ ./program56.py
+@@ -23,7 +23,7 @@
+ 
+     while (num > 0):  
+ 
+-        rev_num = (rev_num * 10 + num % 10) 
++        rev_num = (rev_num * 10 + num / 10) 
+ 
+         num = num // 10  
+ 
+
+# mutant 9
+--- ./program56.py
++++ ./program56.py
+@@ -23,7 +23,7 @@
+ 
+     while (num > 0):  
+ 
+-        rev_num = (rev_num * 10 + num % 10) 
++        rev_num = (rev_num * 10 + num % 11) 
+ 
+         num = num // 10  
+ 
+
+# mutant 10
+--- ./program56.py
++++ ./program56.py
+@@ -23,7 +23,7 @@
+ 
+     while (num > 0):  
+ 
+-        rev_num = (rev_num * 10 + num % 10) 
++        rev_num = None 
+ 
+         num = num // 10  
+ 
+
+# mutant 11
+--- ./program56.py
++++ ./program56.py
+@@ -25,7 +25,7 @@
+ 
+         rev_num = (rev_num * 10 + num % 10) 
+ 
+-        num = num // 10  
++        num = num / 10  
+ 
+     return rev_num  
+ 
+
+# mutant 12
+--- ./program56.py
++++ ./program56.py
+@@ -25,7 +25,7 @@
+ 
+         rev_num = (rev_num * 10 + num % 10) 
+ 
+-        num = num // 10  
++        num = num // 11  
+ 
+     return rev_num  
+ 
+
+# mutant 14
+--- ./program56.py
++++ ./program56.py
+@@ -31,7 +31,7 @@
+ 
+ def check(n):    
+ 
+-    return (2 * rev(n) == n + 1)  
++    return (3 * rev(n) == n + 1)  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 15
+--- ./program56.py
++++ ./program56.py
+@@ -31,7 +31,7 @@
+ 
+ def check(n):    
+ 
+-    return (2 * rev(n) == n + 1)  
++    return (2 / rev(n) == n + 1)  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 16
+--- ./program56.py
++++ ./program56.py
+@@ -31,7 +31,7 @@
+ 
+ def check(n):    
+ 
+-    return (2 * rev(n) == n + 1)  
++    return (2 * rev(n) != n + 1)  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 17
+--- ./program56.py
++++ ./program56.py
+@@ -31,7 +31,7 @@
+ 
+ def check(n):    
+ 
+-    return (2 * rev(n) == n + 1)  
++    return (2 * rev(n) == n - 1)  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 18
+--- ./program56.py
++++ ./program56.py
+@@ -31,7 +31,7 @@
+ 
+ def check(n):    
+ 
+-    return (2 * rev(n) == n + 1)  
++    return (2 * rev(n) == n + 2)  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 20
+--- ./program56.py
++++ ./program56.py
+@@ -44,7 +44,7 @@
+             n),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

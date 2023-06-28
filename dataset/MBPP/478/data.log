@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program478.py (2) ----
+
+# mutant 2
+--- ./program478.py
++++ ./program478.py
+@@ -21,7 +21,7 @@
+ 
+ def remove_lowercase(str1):
+ 
+- remove_lower = lambda text: re.sub('[a-z]', '', text)
++ remove_lower = lambda text: re.sub('[a-z]', 'XXXX', text)
+ 
+  result =  remove_lower(str1)
+ 
+
+# mutant 6
+--- ./program478.py
++++ ./program478.py
+@@ -30,7 +30,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(str1, expected):
+     try:
+
+
+Survived 🙁 (1)
+
+---- ./program478.py (1) ----
+
+# mutant 8
+--- ./program478.py
++++ ./program478.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

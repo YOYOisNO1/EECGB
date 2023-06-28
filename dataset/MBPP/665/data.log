@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program665.py (2) ----
+
+# mutant 2
+--- ./program665.py
++++ ./program665.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def move_last(num_list):
+ 
+-    a = [num_list[0] for i in range(num_list.count(num_list[0]))]
++    a = [num_list[0] for i in range(num_list.count(num_list[1]))]
+ 
+     x = [ i for i in num_list if i != num_list[0]]
+ 
+
+# mutant 9
+--- ./program665.py
++++ ./program665.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

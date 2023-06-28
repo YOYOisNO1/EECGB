@@ -1,0 +1,224 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program223.py (1) ----
+
+# mutant 16
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i + n//2) <= (n -1)) and arr[i + n/2] == x:
+ 
+ 		return True
+ 
+
+
+Survived 🙁 (15)
+
+---- ./program223.py (15) ----
+
+# mutant 2
+--- ./program223.py
++++ ./program223.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_majority(arr, n, x):
+ 
+-	i = binary_search(arr, 0, n-1, x)
++	i = binary_search(arr, 0, n+1, x)
+ 
+ 	if i == -1:
+ 
+
+# mutant 3
+--- ./program223.py
++++ ./program223.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_majority(arr, n, x):
+ 
+-	i = binary_search(arr, 0, n-1, x)
++	i = binary_search(arr, 0, n-2, x)
+ 
+ 	if i == -1:
+ 
+
+# mutant 6
+--- ./program223.py
++++ ./program223.py
+@@ -21,7 +21,7 @@
+ 
+ 	i = binary_search(arr, 0, n-1, x)
+ 
+-	if i == -1:
++	if i == +1:
+ 
+ 		return False
+ 
+
+# mutant 7
+--- ./program223.py
++++ ./program223.py
+@@ -21,7 +21,7 @@
+ 
+ 	i = binary_search(arr, 0, n-1, x)
+ 
+-	if i == -1:
++	if i == -2:
+ 
+ 		return False
+ 
+
+# mutant 8
+--- ./program223.py
++++ ./program223.py
+@@ -23,7 +23,7 @@
+ 
+ 	if i == -1:
+ 
+-		return False
++		return True
+ 
+ 	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
+ 
+
+# mutant 9
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i - n//2) <= (n -1)) and arr[i + n//2] == x:
+ 
+ 		return True
+ 
+
+# mutant 10
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i + n/2) <= (n -1)) and arr[i + n//2] == x:
+ 
+ 		return True
+ 
+
+# mutant 11
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i + n//3) <= (n -1)) and arr[i + n//2] == x:
+ 
+ 		return True
+ 
+
+# mutant 12
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i + n//2) < (n -1)) and arr[i + n//2] == x:
+ 
+ 		return True
+ 
+
+# mutant 13
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i + n//2) <= (n +1)) and arr[i + n//2] == x:
+ 
+ 		return True
+ 
+
+# mutant 14
+--- ./program223.py
++++ ./program223.py
+@@ -25,7 +25,7 @@
+ 
+ 		return False
+ 
+-	if ((i + n//2) <= (n -1)) and arr[i + n//2] == x:
++	if ((i + n//2) <= (n -2)) and arr[i + n//2] == x:
+ 
+ 		return True
+ 
+
+# mutant 25
+--- ./program223.py
++++ ./program223.py
+@@ -37,7 +37,7 @@
+ 
+ 	if high >= low:
+ 
+-		mid = (low + high)//2 
++		mid = (low + high)//3 
+ 
+ 		if (mid == 0 or x > arr[mid-1]) and (arr[mid] == x):
+ 
+
+# mutant 40
+--- ./program223.py
++++ ./program223.py
+@@ -51,7 +51,7 @@
+ 
+ 			return binary_search(arr, low, (mid -1), x)
+ 
+-	return -1
++	return +1
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 41
+--- ./program223.py
++++ ./program223.py
+@@ -51,7 +51,7 @@
+ 
+ 			return binary_search(arr, low, (mid -1), x)
+ 
+-	return -1
++	return -2
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 44
+--- ./program223.py
++++ ./program223.py
+@@ -65,7 +65,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

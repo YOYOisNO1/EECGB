@@ -1,0 +1,141 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (10)
+
+---- ./program406.py (10) ----
+
+# mutant 2
+--- ./program406.py
++++ ./program406.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_parity(x): 
+ 
+-    y = x ^ (x >> 1); 
++    y = x ^ (x << 1); 
+ 
+     y = y ^ (y >> 2); 
+ 
+
+# mutant 3
+--- ./program406.py
++++ ./program406.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_parity(x): 
+ 
+-    y = x ^ (x >> 1); 
++    y = x ^ (x >> 2); 
+ 
+     y = y ^ (y >> 2); 
+ 
+
+# mutant 6
+--- ./program406.py
++++ ./program406.py
+@@ -21,7 +21,7 @@
+ 
+     y = x ^ (x >> 1); 
+ 
+-    y = y ^ (y >> 2); 
++    y = y ^ (y << 2); 
+ 
+     y = y ^ (y >> 4); 
+ 
+
+# mutant 10
+--- ./program406.py
++++ ./program406.py
+@@ -23,7 +23,7 @@
+ 
+     y = y ^ (y >> 2); 
+ 
+-    y = y ^ (y >> 4); 
++    y = y ^ (y << 4); 
+ 
+     y = y ^ (y >> 8); 
+ 
+
+# mutant 11
+--- ./program406.py
++++ ./program406.py
+@@ -23,7 +23,7 @@
+ 
+     y = y ^ (y >> 2); 
+ 
+-    y = y ^ (y >> 4); 
++    y = y ^ (y >> 5); 
+ 
+     y = y ^ (y >> 8); 
+ 
+
+# mutant 14
+--- ./program406.py
++++ ./program406.py
+@@ -25,7 +25,7 @@
+ 
+     y = y ^ (y >> 4); 
+ 
+-    y = y ^ (y >> 8); 
++    y = y ^ (y << 8); 
+ 
+     y = y ^ (y >> 16); 
+ 
+
+# mutant 15
+--- ./program406.py
++++ ./program406.py
+@@ -25,7 +25,7 @@
+ 
+     y = y ^ (y >> 4); 
+ 
+-    y = y ^ (y >> 8); 
++    y = y ^ (y >> 9); 
+ 
+     y = y ^ (y >> 16); 
+ 
+
+# mutant 18
+--- ./program406.py
++++ ./program406.py
+@@ -27,7 +27,7 @@
+ 
+     y = y ^ (y >> 8); 
+ 
+-    y = y ^ (y >> 16); 
++    y = y ^ (y << 16); 
+ 
+     if (y & 1): 
+ 
+
+# mutant 19
+--- ./program406.py
++++ ./program406.py
+@@ -27,7 +27,7 @@
+ 
+     y = y ^ (y >> 8); 
+ 
+-    y = y ^ (y >> 16); 
++    y = y ^ (y >> 17); 
+ 
+     if (y & 1): 
+ 
+
+# mutant 27
+--- ./program406.py
++++ ./program406.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

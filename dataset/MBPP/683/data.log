@@ -1,0 +1,159 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program683.py (2) ----
+
+# mutant 3
+--- ./program683.py
++++ ./program683.py
+@@ -21,7 +21,7 @@
+ 
+     i = 1 
+ 
+-    while i*i <= n : 
++    while i/i <= n : 
+ 
+         j = 1
+ 
+
+# mutant 7
+--- ./program683.py
++++ ./program683.py
+@@ -25,7 +25,7 @@
+ 
+         j = 1
+ 
+-        while (j*j <= n) : 
++        while (j/j <= n) : 
+ 
+             if (i*i+j*j == n) : 
+ 
+
+
+Survived 🙁 (9)
+
+---- ./program683.py (9) ----
+
+# mutant 1
+--- ./program683.py
++++ ./program683.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_square(n) : 
+ 
+-    i = 1 
++    i = 2 
+ 
+     while i*i <= n : 
+ 
+
+# mutant 4
+--- ./program683.py
++++ ./program683.py
+@@ -21,7 +21,7 @@
+ 
+     i = 1 
+ 
+-    while i*i <= n : 
++    while i*i < n : 
+ 
+         j = 1
+ 
+
+# mutant 5
+--- ./program683.py
++++ ./program683.py
+@@ -23,7 +23,7 @@
+ 
+     while i*i <= n : 
+ 
+-        j = 1
++        j = 2
+ 
+         while (j*j <= n) : 
+ 
+
+# mutant 8
+--- ./program683.py
++++ ./program683.py
+@@ -25,7 +25,7 @@
+ 
+         j = 1
+ 
+-        while (j*j <= n) : 
++        while (j*j < n) : 
+ 
+             if (i*i+j*j == n) : 
+ 
+
+# mutant 14
+--- ./program683.py
++++ ./program683.py
+@@ -31,7 +31,7 @@
+ 
+                 return True
+ 
+-            j = j+1
++            j = j-1
+ 
+         i = i+1     
+ 
+
+# mutant 15
+--- ./program683.py
++++ ./program683.py
+@@ -31,7 +31,7 @@
+ 
+                 return True
+ 
+-            j = j+1
++            j = j+2
+ 
+         i = i+1     
+ 
+
+# mutant 17
+--- ./program683.py
++++ ./program683.py
+@@ -33,7 +33,7 @@
+ 
+             j = j+1
+ 
+-        i = i+1     
++        i = i-1     
+ 
+     return False
+ 
+
+# mutant 18
+--- ./program683.py
++++ ./program683.py
+@@ -33,7 +33,7 @@
+ 
+             j = j+1
+ 
+-        i = i+1     
++        i = i+2     
+ 
+     return False
+ 
+
+# mutant 23
+--- ./program683.py
++++ ./program683.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

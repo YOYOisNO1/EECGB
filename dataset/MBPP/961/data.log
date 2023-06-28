@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program961.py (2) ----
+
+# mutant 13
+--- ./program961.py
++++ ./program961.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def roman_to_int(s):
+ 
+-        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
++        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'XXMXX': 1000}
+ 
+         int_val = 0
+ 
+
+# mutant 28
+--- ./program961.py
++++ ./program961.py
+@@ -27,7 +27,7 @@
+ 
+             if i > 0 and rom_val[s[i]] > rom_val[s[i - 1]]:
+ 
+-                int_val += rom_val[s[i]] - 2 * rom_val[s[i - 1]]
++                int_val += rom_val[s[i]] - 2 / rom_val[s[i - 1]]
+ 
+             else:
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program961.py (4) ----
+
+# mutant 11
+--- ./program961.py
++++ ./program961.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def roman_to_int(s):
+ 
+-        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
++        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'XXDXX': 500, 'M': 1000}
+ 
+         int_val = 0
+ 
+
+# mutant 12
+--- ./program961.py
++++ ./program961.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def roman_to_int(s):
+ 
+-        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
++        rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 501, 'M': 1000}
+ 
+         int_val = 0
+ 
+
+# mutant 19
+--- ./program961.py
++++ ./program961.py
+@@ -25,7 +25,7 @@
+ 
+         for i in range(len(s)):
+ 
+-            if i > 0 and rom_val[s[i]] > rom_val[s[i - 1]]:
++            if i > 1 and rom_val[s[i]] > rom_val[s[i - 1]]:
+ 
+                 int_val += rom_val[s[i]] - 2 * rom_val[s[i - 1]]
+ 
+
+# mutant 35
+--- ./program961.py
++++ ./program961.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

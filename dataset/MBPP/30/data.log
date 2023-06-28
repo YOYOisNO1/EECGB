@@ -1,0 +1,206 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (15)
+
+---- ./program30.py (15) ----
+
+# mutant 1
+--- ./program30.py
++++ ./program30.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_Equality(s): 
+ 
+-    return (ord(s[0]) == ord(s[len(s) - 1])); 
++    return (ord(s[1]) == ord(s[len(s) - 1])); 
+ 
+ def count_substring_with_equal_ends(s): 
+ 
+
+# mutant 2
+--- ./program30.py
++++ ./program30.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_Equality(s): 
+ 
+-    return (ord(s[0]) == ord(s[len(s) - 1])); 
++    return (ord(s[0]) != ord(s[len(s) - 1])); 
+ 
+ def count_substring_with_equal_ends(s): 
+ 
+
+# mutant 4
+--- ./program30.py
++++ ./program30.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_Equality(s): 
+ 
+-    return (ord(s[0]) == ord(s[len(s) - 1])); 
++    return (ord(s[0]) == ord(s[len(s) - 2])); 
+ 
+ def count_substring_with_equal_ends(s): 
+ 
+
+# mutant 5
+--- ./program30.py
++++ ./program30.py
+@@ -23,7 +23,7 @@
+ 
+ def count_substring_with_equal_ends(s): 
+ 
+-    result = 0; 
++    result = 1; 
+ 
+     n = len(s); 
+ 
+
+# mutant 6
+--- ./program30.py
++++ ./program30.py
+@@ -23,7 +23,7 @@
+ 
+ def count_substring_with_equal_ends(s): 
+ 
+-    result = 0; 
++    result = None; 
+ 
+     n = len(s); 
+ 
+
+# mutant 7
+--- ./program30.py
++++ ./program30.py
+@@ -25,7 +25,7 @@
+ 
+     result = 0; 
+ 
+-    n = len(s); 
++    n = None; 
+ 
+     for i in range(n): 
+ 
+
+# mutant 8
+--- ./program30.py
++++ ./program30.py
+@@ -29,7 +29,7 @@
+ 
+     for i in range(n): 
+ 
+-        for j in range(1,n-i+1):  
++        for j in range(2,n-i+1):  
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+
+# mutant 9
+--- ./program30.py
++++ ./program30.py
+@@ -29,7 +29,7 @@
+ 
+     for i in range(n): 
+ 
+-        for j in range(1,n-i+1):  
++        for j in range(1,n+i+1):  
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+
+# mutant 10
+--- ./program30.py
++++ ./program30.py
+@@ -29,7 +29,7 @@
+ 
+     for i in range(n): 
+ 
+-        for j in range(1,n-i+1):  
++        for j in range(1,n-i-1):  
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+
+# mutant 11
+--- ./program30.py
++++ ./program30.py
+@@ -29,7 +29,7 @@
+ 
+     for i in range(n): 
+ 
+-        for j in range(1,n-i+1):  
++        for j in range(1,n-i+2):  
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+
+# mutant 12
+--- ./program30.py
++++ ./program30.py
+@@ -31,7 +31,7 @@
+ 
+         for j in range(1,n-i+1):  
+ 
+-            if (check_Equality(s[i:i+j])): 
++            if (check_Equality(s[i:i-j])): 
+ 
+                 result+=1; 
+ 
+
+# mutant 13
+--- ./program30.py
++++ ./program30.py
+@@ -33,7 +33,7 @@
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+-                result+=1; 
++                result=1; 
+ 
+     return result; 
+ 
+
+# mutant 14
+--- ./program30.py
++++ ./program30.py
+@@ -33,7 +33,7 @@
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+-                result+=1; 
++                result-=1; 
+ 
+     return result; 
+ 
+
+# mutant 15
+--- ./program30.py
++++ ./program30.py
+@@ -33,7 +33,7 @@
+ 
+             if (check_Equality(s[i:i+j])): 
+ 
+-                result+=1; 
++                result+=2; 
+ 
+     return result; 
+ 
+
+# mutant 17
+--- ./program30.py
++++ ./program30.py
+@@ -48,7 +48,7 @@
+             s),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

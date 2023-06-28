@@ -1,3 +1,0 @@
-from ..program1476 import program1476
-def test62():
-    assert program1476(979748686171802330 281906901894586) == ['979699999999999999']

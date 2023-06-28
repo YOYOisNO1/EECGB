@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program806.py (3) ----
+
+# mutant 13
+--- ./program806.py
++++ ./program806.py
+@@ -35,7 +35,7 @@
+ 
+       cnt = 0
+ 
+-  if test_str[len(test_str) - 1].isupper():
++  if test_str[len(test_str) - 2].isupper():
+ 
+     res = cnt
+ 
+
+# mutant 15
+--- ./program806.py
++++ ./program806.py
+@@ -44,7 +44,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(test_str, expected):
+     try:
+
+# mutant 16
+--- ./program806.py
++++ ./program806.py
+@@ -52,7 +52,7 @@
+             test_str),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (5)
+
+---- ./program806.py (5) ----
+
+# mutant 1
+--- ./program806.py
++++ ./program806.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_run_uppercase(test_str):
+ 
+-  cnt = 0
++  cnt = 1
+ 
+   res = 0
+ 
+
+# mutant 3
+--- ./program806.py
++++ ./program806.py
+@@ -21,7 +21,7 @@
+ 
+   cnt = 0
+ 
+-  res = 0
++  res = 1
+ 
+   for idx in range(0, len(test_str)):
+ 
+
+# mutant 4
+--- ./program806.py
++++ ./program806.py
+@@ -21,7 +21,7 @@
+ 
+   cnt = 0
+ 
+-  res = 0
++  res = None
+ 
+   for idx in range(0, len(test_str)):
+ 
+
+# mutant 5
+--- ./program806.py
++++ ./program806.py
+@@ -23,7 +23,7 @@
+ 
+   res = 0
+ 
+-  for idx in range(0, len(test_str)):
++  for idx in range(1, len(test_str)):
+ 
+     if test_str[idx].isupper():
+ 
+
+# mutant 17
+--- ./program806.py
++++ ./program806.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

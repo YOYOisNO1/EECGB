@@ -1,0 +1,388 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (29)
+
+---- ./program735.py (29) ----
+
+# mutant 1
+--- ./program735.py
++++ ./program735.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_middle_bits(n):  
+ 
+-    n |= n >> 1; 
++    n = n >> 1; 
+ 
+     n |= n >> 2; 
+ 
+
+# mutant 2
+--- ./program735.py
++++ ./program735.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_middle_bits(n):  
+ 
+-    n |= n >> 1; 
++    n &= n >> 1; 
+ 
+     n |= n >> 2; 
+ 
+
+# mutant 3
+--- ./program735.py
++++ ./program735.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_middle_bits(n):  
+ 
+-    n |= n >> 1; 
++    n |= n << 1; 
+ 
+     n |= n >> 2; 
+ 
+
+# mutant 4
+--- ./program735.py
++++ ./program735.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_middle_bits(n):  
+ 
+-    n |= n >> 1; 
++    n |= n >> 2; 
+ 
+     n |= n >> 2; 
+ 
+
+# mutant 5
+--- ./program735.py
++++ ./program735.py
+@@ -21,7 +21,7 @@
+ 
+     n |= n >> 1; 
+ 
+-    n |= n >> 2; 
++    n = n >> 2; 
+ 
+     n |= n >> 4; 
+ 
+
+# mutant 6
+--- ./program735.py
++++ ./program735.py
+@@ -21,7 +21,7 @@
+ 
+     n |= n >> 1; 
+ 
+-    n |= n >> 2; 
++    n &= n >> 2; 
+ 
+     n |= n >> 4; 
+ 
+
+# mutant 7
+--- ./program735.py
++++ ./program735.py
+@@ -21,7 +21,7 @@
+ 
+     n |= n >> 1; 
+ 
+-    n |= n >> 2; 
++    n |= n << 2; 
+ 
+     n |= n >> 4; 
+ 
+
+# mutant 8
+--- ./program735.py
++++ ./program735.py
+@@ -21,7 +21,7 @@
+ 
+     n |= n >> 1; 
+ 
+-    n |= n >> 2; 
++    n |= n >> 3; 
+ 
+     n |= n >> 4; 
+ 
+
+# mutant 9
+--- ./program735.py
++++ ./program735.py
+@@ -23,7 +23,7 @@
+ 
+     n |= n >> 2; 
+ 
+-    n |= n >> 4; 
++    n = n >> 4; 
+ 
+     n |= n >> 8; 
+ 
+
+# mutant 10
+--- ./program735.py
++++ ./program735.py
+@@ -23,7 +23,7 @@
+ 
+     n |= n >> 2; 
+ 
+-    n |= n >> 4; 
++    n &= n >> 4; 
+ 
+     n |= n >> 8; 
+ 
+
+# mutant 11
+--- ./program735.py
++++ ./program735.py
+@@ -23,7 +23,7 @@
+ 
+     n |= n >> 2; 
+ 
+-    n |= n >> 4; 
++    n |= n << 4; 
+ 
+     n |= n >> 8; 
+ 
+
+# mutant 12
+--- ./program735.py
++++ ./program735.py
+@@ -23,7 +23,7 @@
+ 
+     n |= n >> 2; 
+ 
+-    n |= n >> 4; 
++    n |= n >> 5; 
+ 
+     n |= n >> 8; 
+ 
+
+# mutant 13
+--- ./program735.py
++++ ./program735.py
+@@ -25,7 +25,7 @@
+ 
+     n |= n >> 4; 
+ 
+-    n |= n >> 8; 
++    n = n >> 8; 
+ 
+     n |= n >> 16;  
+ 
+
+# mutant 14
+--- ./program735.py
++++ ./program735.py
+@@ -25,7 +25,7 @@
+ 
+     n |= n >> 4; 
+ 
+-    n |= n >> 8; 
++    n &= n >> 8; 
+ 
+     n |= n >> 16;  
+ 
+
+# mutant 15
+--- ./program735.py
++++ ./program735.py
+@@ -25,7 +25,7 @@
+ 
+     n |= n >> 4; 
+ 
+-    n |= n >> 8; 
++    n |= n << 8; 
+ 
+     n |= n >> 16;  
+ 
+
+# mutant 16
+--- ./program735.py
++++ ./program735.py
+@@ -25,7 +25,7 @@
+ 
+     n |= n >> 4; 
+ 
+-    n |= n >> 8; 
++    n |= n >> 9; 
+ 
+     n |= n >> 16;  
+ 
+
+# mutant 17
+--- ./program735.py
++++ ./program735.py
+@@ -27,7 +27,7 @@
+ 
+     n |= n >> 8; 
+ 
+-    n |= n >> 16;  
++    n = n >> 16;  
+ 
+     return (n >> 1) ^ 1
+ 
+
+# mutant 18
+--- ./program735.py
++++ ./program735.py
+@@ -27,7 +27,7 @@
+ 
+     n |= n >> 8; 
+ 
+-    n |= n >> 16;  
++    n &= n >> 16;  
+ 
+     return (n >> 1) ^ 1
+ 
+
+# mutant 19
+--- ./program735.py
++++ ./program735.py
+@@ -27,7 +27,7 @@
+ 
+     n |= n >> 8; 
+ 
+-    n |= n >> 16;  
++    n |= n << 16;  
+ 
+     return (n >> 1) ^ 1
+ 
+
+# mutant 20
+--- ./program735.py
++++ ./program735.py
+@@ -27,7 +27,7 @@
+ 
+     n |= n >> 8; 
+ 
+-    n |= n >> 16;  
++    n |= n >> 17;  
+ 
+     return (n >> 1) ^ 1
+ 
+
+# mutant 21
+--- ./program735.py
++++ ./program735.py
+@@ -29,7 +29,7 @@
+ 
+     n |= n >> 16;  
+ 
+-    return (n >> 1) ^ 1
++    return (n << 1) ^ 1
+ 
+ def toggle_middle_bits(n): 
+ 
+
+# mutant 22
+--- ./program735.py
++++ ./program735.py
+@@ -29,7 +29,7 @@
+ 
+     n |= n >> 16;  
+ 
+-    return (n >> 1) ^ 1
++    return (n >> 2) ^ 1
+ 
+ def toggle_middle_bits(n): 
+ 
+
+# mutant 23
+--- ./program735.py
++++ ./program735.py
+@@ -29,7 +29,7 @@
+ 
+     n |= n >> 16;  
+ 
+-    return (n >> 1) ^ 1
++    return (n >> 1) & 1
+ 
+ def toggle_middle_bits(n): 
+ 
+
+# mutant 24
+--- ./program735.py
++++ ./program735.py
+@@ -29,7 +29,7 @@
+ 
+     n |= n >> 16;  
+ 
+-    return (n >> 1) ^ 1
++    return (n >> 1) ^ 2
+ 
+ def toggle_middle_bits(n): 
+ 
+
+# mutant 25
+--- ./program735.py
++++ ./program735.py
+@@ -33,7 +33,7 @@
+ 
+ def toggle_middle_bits(n): 
+ 
+-    if (n == 1): 
++    if (n != 1): 
+ 
+         return 1
+ 
+
+# mutant 26
+--- ./program735.py
++++ ./program735.py
+@@ -33,7 +33,7 @@
+ 
+ def toggle_middle_bits(n): 
+ 
+-    if (n == 1): 
++    if (n == 2): 
+ 
+         return 1
+ 
+
+# mutant 27
+--- ./program735.py
++++ ./program735.py
+@@ -35,7 +35,7 @@
+ 
+     if (n == 1): 
+ 
+-        return 1
++        return 2
+ 
+     return n ^ set_middle_bits(n) 
+ 
+
+# mutant 28
+--- ./program735.py
++++ ./program735.py
+@@ -37,7 +37,7 @@
+ 
+         return 1
+ 
+-    return n ^ set_middle_bits(n) 
++    return n & set_middle_bits(n) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 30
+--- ./program735.py
++++ ./program735.py
+@@ -50,7 +50,7 @@
+             n),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

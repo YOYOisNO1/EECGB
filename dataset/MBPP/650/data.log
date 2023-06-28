@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program650.py (1) ----
+
+# mutant 2
+--- ./program650.py
++++ ./program650.py
+@@ -21,7 +21,7 @@
+ 
+     if (n != m):
+ 
+-        return False
++        return True
+ 
+     arr1.sort()
+ 
+
+
+Survived 🙁 (3)
+
+---- ./program650.py (3) ----
+
+# mutant 3
+--- ./program650.py
++++ ./program650.py
+@@ -27,7 +27,7 @@
+ 
+     arr2.sort()
+ 
+-    for i in range(0,n - 1):
++    for i in range(1,n - 1):
+ 
+         if (arr1[i] != arr2[i]):
+ 
+
+# mutant 5
+--- ./program650.py
++++ ./program650.py
+@@ -27,7 +27,7 @@
+ 
+     arr2.sort()
+ 
+-    for i in range(0,n - 1):
++    for i in range(0,n - 2):
+ 
+         if (arr1[i] != arr2[i]):
+ 
+
+# mutant 11
+--- ./program650.py
++++ ./program650.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

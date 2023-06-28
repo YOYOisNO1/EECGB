@@ -1,0 +1,258 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (19)
+
+---- ./program671.py (19) ----
+
+# mutant 2
+--- ./program671.py
++++ ./program671.py
+@@ -21,7 +21,7 @@
+ 
+ def get_Pos_Of_Right_most_Set_Bit(n): 
+ 
+-    return int(math.log2(n&-n)+1)   
++    return int(math.log2(n&+n)+1)   
+ 
+ def set_right_most_unset_bit(n): 
+ 
+
+# mutant 3
+--- ./program671.py
++++ ./program671.py
+@@ -21,7 +21,7 @@
+ 
+ def get_Pos_Of_Right_most_Set_Bit(n): 
+ 
+-    return int(math.log2(n&-n)+1)   
++    return int(math.log2(n&-n)-1)   
+ 
+ def set_right_most_unset_bit(n): 
+ 
+
+# mutant 4
+--- ./program671.py
++++ ./program671.py
+@@ -21,7 +21,7 @@
+ 
+ def get_Pos_Of_Right_most_Set_Bit(n): 
+ 
+-    return int(math.log2(n&-n)+1)   
++    return int(math.log2(n&-n)+2)   
+ 
+ def set_right_most_unset_bit(n): 
+ 
+
+# mutant 5
+--- ./program671.py
++++ ./program671.py
+@@ -25,7 +25,7 @@
+ 
+ def set_right_most_unset_bit(n): 
+ 
+-    if (n == 0): 
++    if (n != 0): 
+ 
+         return 1
+ 
+
+# mutant 6
+--- ./program671.py
++++ ./program671.py
+@@ -25,7 +25,7 @@
+ 
+ def set_right_most_unset_bit(n): 
+ 
+-    if (n == 0): 
++    if (n == 1): 
+ 
+         return 1
+ 
+
+# mutant 7
+--- ./program671.py
++++ ./program671.py
+@@ -27,7 +27,7 @@
+ 
+     if (n == 0): 
+ 
+-        return 1
++        return 2
+ 
+     if ((n & (n + 1)) == 0):     
+ 
+
+# mutant 8
+--- ./program671.py
++++ ./program671.py
+@@ -29,7 +29,7 @@
+ 
+         return 1
+ 
+-    if ((n & (n + 1)) == 0):     
++    if ((n | (n + 1)) == 0):     
+ 
+         return n 
+ 
+
+# mutant 9
+--- ./program671.py
++++ ./program671.py
+@@ -29,7 +29,7 @@
+ 
+         return 1
+ 
+-    if ((n & (n + 1)) == 0):     
++    if ((n & (n - 1)) == 0):     
+ 
+         return n 
+ 
+
+# mutant 10
+--- ./program671.py
++++ ./program671.py
+@@ -29,7 +29,7 @@
+ 
+         return 1
+ 
+-    if ((n & (n + 1)) == 0):     
++    if ((n & (n + 2)) == 0):     
+ 
+         return n 
+ 
+
+# mutant 11
+--- ./program671.py
++++ ./program671.py
+@@ -29,7 +29,7 @@
+ 
+         return 1
+ 
+-    if ((n & (n + 1)) == 0):     
++    if ((n & (n + 1)) != 0):     
+ 
+         return n 
+ 
+
+# mutant 12
+--- ./program671.py
++++ ./program671.py
+@@ -29,7 +29,7 @@
+ 
+         return 1
+ 
+-    if ((n & (n + 1)) == 0):     
++    if ((n & (n + 1)) == 1):     
+ 
+         return n 
+ 
+
+# mutant 13
+--- ./program671.py
++++ ./program671.py
+@@ -33,7 +33,7 @@
+ 
+         return n 
+ 
+-    pos = get_Pos_Of_Right_most_Set_Bit(~n)      
++    pos = get_Pos_Of_Right_most_Set_Bit(n)      
+ 
+     return ((1 << (pos - 1)) | n) 
+ 
+
+# mutant 14
+--- ./program671.py
++++ ./program671.py
+@@ -33,7 +33,7 @@
+ 
+         return n 
+ 
+-    pos = get_Pos_Of_Right_most_Set_Bit(~n)      
++    pos = None      
+ 
+     return ((1 << (pos - 1)) | n) 
+ 
+
+# mutant 15
+--- ./program671.py
++++ ./program671.py
+@@ -35,7 +35,7 @@
+ 
+     pos = get_Pos_Of_Right_most_Set_Bit(~n)      
+ 
+-    return ((1 << (pos - 1)) | n) 
++    return ((2 << (pos - 1)) | n) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 16
+--- ./program671.py
++++ ./program671.py
+@@ -35,7 +35,7 @@
+ 
+     pos = get_Pos_Of_Right_most_Set_Bit(~n)      
+ 
+-    return ((1 << (pos - 1)) | n) 
++    return ((1 >> (pos - 1)) | n) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 17
+--- ./program671.py
++++ ./program671.py
+@@ -35,7 +35,7 @@
+ 
+     pos = get_Pos_Of_Right_most_Set_Bit(~n)      
+ 
+-    return ((1 << (pos - 1)) | n) 
++    return ((1 << (pos + 1)) | n) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 18
+--- ./program671.py
++++ ./program671.py
+@@ -35,7 +35,7 @@
+ 
+     pos = get_Pos_Of_Right_most_Set_Bit(~n)      
+ 
+-    return ((1 << (pos - 1)) | n) 
++    return ((1 << (pos - 2)) | n) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 19
+--- ./program671.py
++++ ./program671.py
+@@ -35,7 +35,7 @@
+ 
+     pos = get_Pos_Of_Right_most_Set_Bit(~n)      
+ 
+-    return ((1 << (pos - 1)) | n) 
++    return ((1 << (pos - 1)) & n) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 21
+--- ./program671.py
++++ ./program671.py
+@@ -48,7 +48,7 @@
+             n),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

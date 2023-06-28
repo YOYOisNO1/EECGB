@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program603.py (1) ----
+
+# mutant 16
+--- ./program603.py
++++ ./program603.py
+@@ -39,7 +39,7 @@
+ 
+ 			remove_index = remove_index + first_ludic - 1
+ 
+-		index += 1
++		index = 1
+ 
+ 	return ludics
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program603.py (1) ----
+
+# mutant 21
+--- ./program603.py
++++ ./program603.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

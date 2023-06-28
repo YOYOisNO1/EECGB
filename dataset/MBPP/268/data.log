@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program268.py (3) ----
+
+# mutant 2
+--- ./program268.py
++++ ./program268.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_star_num(n): 
+ 
+-	return (6 * n * (n - 1) + 1) 
++	return (6 / n * (n - 1) + 1) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 7
+--- ./program268.py
++++ ./program268.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_star_num(n): 
+ 
+-	return (6 * n * (n - 1) + 1) 
++	return (6 * n * (n - 1) + 2) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program268.py
++++ ./program268.py
+@@ -24,7 +24,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(n, expected):
+     try:
+
+
+Survived 🙁 (1)
+
+---- ./program268.py (1) ----
+
+# mutant 10
+--- ./program268.py
++++ ./program268.py
+@@ -33,7 +33,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

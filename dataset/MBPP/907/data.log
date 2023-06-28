@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program907.py (3) ----
+
+# mutant 4
+--- ./program907.py
++++ ./program907.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def lucky_num(n):
+ 
+- List=range(-1,n*n+9,2)
++ List=range(-1,n*n-9,2)
+ 
+  i=2
+ 
+
+# mutant 5
+--- ./program907.py
++++ ./program907.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def lucky_num(n):
+ 
+- List=range(-1,n*n+9,2)
++ List=range(-1,n*n+10,2)
+ 
+  i=2
+ 
+
+# mutant 20
+--- ./program907.py
++++ ./program907.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program395.py (2) ----
+
+# mutant 7
+--- ./program395.py
++++ ./program395.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-      ctr[c] = 1 
++      ctr[c] = 2 
+ 
+       char_order.append(c)
+ 
+
+# mutant 8
+--- ./program395.py
++++ ./program395.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-      ctr[c] = 1 
++      ctr[c] = None 
+ 
+       char_order.append(c)
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program395.py (2) ----
+
+# mutant 5
+--- ./program395.py
++++ ./program395.py
+@@ -27,7 +27,7 @@
+ 
+     if c in ctr:
+ 
+-      ctr[c] += 1
++      ctr[c] -= 1
+ 
+     else:
+ 
+
+# mutant 6
+--- ./program395.py
++++ ./program395.py
+@@ -27,7 +27,7 @@
+ 
+     if c in ctr:
+ 
+-      ctr[c] += 1
++      ctr[c] += 2
+ 
+     else:
+ 
+

@@ -1,0 +1,700 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (53)
+
+---- ./program950.py (53) ----
+
+# mutant 1
+--- ./program950.py
++++ ./program950.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def chinese_zodiac(year):
+ 
+- if (year - 2000) % 12 == 0:
++ if (year + 2000) % 12 == 0:
+ 
+      sign = 'Dragon'
+ 
+
+# mutant 2
+--- ./program950.py
++++ ./program950.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def chinese_zodiac(year):
+ 
+- if (year - 2000) % 12 == 0:
++ if (year - 2001) % 12 == 0:
+ 
+      sign = 'Dragon'
+ 
+
+# mutant 3
+--- ./program950.py
++++ ./program950.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def chinese_zodiac(year):
+ 
+- if (year - 2000) % 12 == 0:
++ if (year - 2000) / 12 == 0:
+ 
+      sign = 'Dragon'
+ 
+
+# mutant 4
+--- ./program950.py
++++ ./program950.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def chinese_zodiac(year):
+ 
+- if (year - 2000) % 12 == 0:
++ if (year - 2000) % 13 == 0:
+ 
+      sign = 'Dragon'
+ 
+
+# mutant 6
+--- ./program950.py
++++ ./program950.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def chinese_zodiac(year):
+ 
+- if (year - 2000) % 12 == 0:
++ if (year - 2000) % 12 == 1:
+ 
+      sign = 'Dragon'
+ 
+
+# mutant 7
+--- ./program950.py
++++ ./program950.py
+@@ -21,7 +21,7 @@
+ 
+  if (year - 2000) % 12 == 0:
+ 
+-     sign = 'Dragon'
++     sign = 'XXDragonXX'
+ 
+  elif (year - 2000) % 12 == 1:
+ 
+
+# mutant 8
+--- ./program950.py
++++ ./program950.py
+@@ -21,7 +21,7 @@
+ 
+  if (year - 2000) % 12 == 0:
+ 
+-     sign = 'Dragon'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 1:
+ 
+
+# mutant 10
+--- ./program950.py
++++ ./program950.py
+@@ -23,7 +23,7 @@
+ 
+      sign = 'Dragon'
+ 
+- elif (year - 2000) % 12 == 1:
++ elif (year - 2001) % 12 == 1:
+ 
+      sign = 'Snake'
+ 
+
+# mutant 11
+--- ./program950.py
++++ ./program950.py
+@@ -23,7 +23,7 @@
+ 
+      sign = 'Dragon'
+ 
+- elif (year - 2000) % 12 == 1:
++ elif (year - 2000) / 12 == 1:
+ 
+      sign = 'Snake'
+ 
+
+# mutant 12
+--- ./program950.py
++++ ./program950.py
+@@ -23,7 +23,7 @@
+ 
+      sign = 'Dragon'
+ 
+- elif (year - 2000) % 12 == 1:
++ elif (year - 2000) % 13 == 1:
+ 
+      sign = 'Snake'
+ 
+
+# mutant 14
+--- ./program950.py
++++ ./program950.py
+@@ -23,7 +23,7 @@
+ 
+      sign = 'Dragon'
+ 
+- elif (year - 2000) % 12 == 1:
++ elif (year - 2000) % 12 == 2:
+ 
+      sign = 'Snake'
+ 
+
+# mutant 15
+--- ./program950.py
++++ ./program950.py
+@@ -25,7 +25,7 @@
+ 
+  elif (year - 2000) % 12 == 1:
+ 
+-     sign = 'Snake'
++     sign = 'XXSnakeXX'
+ 
+  elif (year - 2000) % 12 == 2:
+ 
+
+# mutant 16
+--- ./program950.py
++++ ./program950.py
+@@ -25,7 +25,7 @@
+ 
+  elif (year - 2000) % 12 == 1:
+ 
+-     sign = 'Snake'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 2:
+ 
+
+# mutant 18
+--- ./program950.py
++++ ./program950.py
+@@ -27,7 +27,7 @@
+ 
+      sign = 'Snake'
+ 
+- elif (year - 2000) % 12 == 2:
++ elif (year - 2001) % 12 == 2:
+ 
+      sign = 'Horse'
+ 
+
+# mutant 19
+--- ./program950.py
++++ ./program950.py
+@@ -27,7 +27,7 @@
+ 
+      sign = 'Snake'
+ 
+- elif (year - 2000) % 12 == 2:
++ elif (year - 2000) / 12 == 2:
+ 
+      sign = 'Horse'
+ 
+
+# mutant 20
+--- ./program950.py
++++ ./program950.py
+@@ -27,7 +27,7 @@
+ 
+      sign = 'Snake'
+ 
+- elif (year - 2000) % 12 == 2:
++ elif (year - 2000) % 13 == 2:
+ 
+      sign = 'Horse'
+ 
+
+# mutant 22
+--- ./program950.py
++++ ./program950.py
+@@ -27,7 +27,7 @@
+ 
+      sign = 'Snake'
+ 
+- elif (year - 2000) % 12 == 2:
++ elif (year - 2000) % 12 == 3:
+ 
+      sign = 'Horse'
+ 
+
+# mutant 23
+--- ./program950.py
++++ ./program950.py
+@@ -29,7 +29,7 @@
+ 
+  elif (year - 2000) % 12 == 2:
+ 
+-     sign = 'Horse'
++     sign = 'XXHorseXX'
+ 
+  elif (year - 2000) % 12 == 3:
+ 
+
+# mutant 24
+--- ./program950.py
++++ ./program950.py
+@@ -29,7 +29,7 @@
+ 
+  elif (year - 2000) % 12 == 2:
+ 
+-     sign = 'Horse'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 3:
+ 
+
+# mutant 25
+--- ./program950.py
++++ ./program950.py
+@@ -31,7 +31,7 @@
+ 
+      sign = 'Horse'
+ 
+- elif (year - 2000) % 12 == 3:
++ elif (year + 2000) % 12 == 3:
+ 
+      sign = 'sheep'
+ 
+
+# mutant 26
+--- ./program950.py
++++ ./program950.py
+@@ -31,7 +31,7 @@
+ 
+      sign = 'Horse'
+ 
+- elif (year - 2000) % 12 == 3:
++ elif (year - 2001) % 12 == 3:
+ 
+      sign = 'sheep'
+ 
+
+# mutant 27
+--- ./program950.py
++++ ./program950.py
+@@ -31,7 +31,7 @@
+ 
+      sign = 'Horse'
+ 
+- elif (year - 2000) % 12 == 3:
++ elif (year - 2000) / 12 == 3:
+ 
+      sign = 'sheep'
+ 
+
+# mutant 28
+--- ./program950.py
++++ ./program950.py
+@@ -31,7 +31,7 @@
+ 
+      sign = 'Horse'
+ 
+- elif (year - 2000) % 12 == 3:
++ elif (year - 2000) % 13 == 3:
+ 
+      sign = 'sheep'
+ 
+
+# mutant 30
+--- ./program950.py
++++ ./program950.py
+@@ -31,7 +31,7 @@
+ 
+      sign = 'Horse'
+ 
+- elif (year - 2000) % 12 == 3:
++ elif (year - 2000) % 12 == 4:
+ 
+      sign = 'sheep'
+ 
+
+# mutant 31
+--- ./program950.py
++++ ./program950.py
+@@ -33,7 +33,7 @@
+ 
+  elif (year - 2000) % 12 == 3:
+ 
+-     sign = 'sheep'
++     sign = 'XXsheepXX'
+ 
+  elif (year - 2000) % 12 == 4:
+ 
+
+# mutant 32
+--- ./program950.py
++++ ./program950.py
+@@ -33,7 +33,7 @@
+ 
+  elif (year - 2000) % 12 == 3:
+ 
+-     sign = 'sheep'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 4:
+ 
+
+# mutant 33
+--- ./program950.py
++++ ./program950.py
+@@ -35,7 +35,7 @@
+ 
+      sign = 'sheep'
+ 
+- elif (year - 2000) % 12 == 4:
++ elif (year + 2000) % 12 == 4:
+ 
+      sign = 'Monkey'
+ 
+
+# mutant 34
+--- ./program950.py
++++ ./program950.py
+@@ -35,7 +35,7 @@
+ 
+      sign = 'sheep'
+ 
+- elif (year - 2000) % 12 == 4:
++ elif (year - 2001) % 12 == 4:
+ 
+      sign = 'Monkey'
+ 
+
+# mutant 35
+--- ./program950.py
++++ ./program950.py
+@@ -35,7 +35,7 @@
+ 
+      sign = 'sheep'
+ 
+- elif (year - 2000) % 12 == 4:
++ elif (year - 2000) / 12 == 4:
+ 
+      sign = 'Monkey'
+ 
+
+# mutant 36
+--- ./program950.py
++++ ./program950.py
+@@ -35,7 +35,7 @@
+ 
+      sign = 'sheep'
+ 
+- elif (year - 2000) % 12 == 4:
++ elif (year - 2000) % 13 == 4:
+ 
+      sign = 'Monkey'
+ 
+
+# mutant 38
+--- ./program950.py
++++ ./program950.py
+@@ -35,7 +35,7 @@
+ 
+      sign = 'sheep'
+ 
+- elif (year - 2000) % 12 == 4:
++ elif (year - 2000) % 12 == 5:
+ 
+      sign = 'Monkey'
+ 
+
+# mutant 39
+--- ./program950.py
++++ ./program950.py
+@@ -37,7 +37,7 @@
+ 
+  elif (year - 2000) % 12 == 4:
+ 
+-     sign = 'Monkey'
++     sign = 'XXMonkeyXX'
+ 
+  elif (year - 2000) % 12 == 5:
+ 
+
+# mutant 40
+--- ./program950.py
++++ ./program950.py
+@@ -37,7 +37,7 @@
+ 
+  elif (year - 2000) % 12 == 4:
+ 
+-     sign = 'Monkey'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 5:
+ 
+
+# mutant 41
+--- ./program950.py
++++ ./program950.py
+@@ -39,7 +39,7 @@
+ 
+      sign = 'Monkey'
+ 
+- elif (year - 2000) % 12 == 5:
++ elif (year + 2000) % 12 == 5:
+ 
+      sign = 'Rooster'
+ 
+
+# mutant 43
+--- ./program950.py
++++ ./program950.py
+@@ -39,7 +39,7 @@
+ 
+      sign = 'Monkey'
+ 
+- elif (year - 2000) % 12 == 5:
++ elif (year - 2000) / 12 == 5:
+ 
+      sign = 'Rooster'
+ 
+
+# mutant 44
+--- ./program950.py
++++ ./program950.py
+@@ -39,7 +39,7 @@
+ 
+      sign = 'Monkey'
+ 
+- elif (year - 2000) % 12 == 5:
++ elif (year - 2000) % 13 == 5:
+ 
+      sign = 'Rooster'
+ 
+
+# mutant 47
+--- ./program950.py
++++ ./program950.py
+@@ -41,7 +41,7 @@
+ 
+  elif (year - 2000) % 12 == 5:
+ 
+-     sign = 'Rooster'
++     sign = 'XXRoosterXX'
+ 
+  elif (year - 2000) % 12 == 6:
+ 
+
+# mutant 48
+--- ./program950.py
++++ ./program950.py
+@@ -41,7 +41,7 @@
+ 
+  elif (year - 2000) % 12 == 5:
+ 
+-     sign = 'Rooster'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 6:
+ 
+
+# mutant 57
+--- ./program950.py
++++ ./program950.py
+@@ -47,7 +47,7 @@
+ 
+      sign = 'Dog'
+ 
+- elif (year - 2000) % 12 == 7:
++ elif (year + 2000) % 12 == 7:
+ 
+      sign = 'Pig'
+ 
+
+# mutant 58
+--- ./program950.py
++++ ./program950.py
+@@ -47,7 +47,7 @@
+ 
+      sign = 'Dog'
+ 
+- elif (year - 2000) % 12 == 7:
++ elif (year - 2001) % 12 == 7:
+ 
+      sign = 'Pig'
+ 
+
+# mutant 59
+--- ./program950.py
++++ ./program950.py
+@@ -47,7 +47,7 @@
+ 
+      sign = 'Dog'
+ 
+- elif (year - 2000) % 12 == 7:
++ elif (year - 2000) / 12 == 7:
+ 
+      sign = 'Pig'
+ 
+
+# mutant 60
+--- ./program950.py
++++ ./program950.py
+@@ -47,7 +47,7 @@
+ 
+      sign = 'Dog'
+ 
+- elif (year - 2000) % 12 == 7:
++ elif (year - 2000) % 13 == 7:
+ 
+      sign = 'Pig'
+ 
+
+# mutant 62
+--- ./program950.py
++++ ./program950.py
+@@ -47,7 +47,7 @@
+ 
+      sign = 'Dog'
+ 
+- elif (year - 2000) % 12 == 7:
++ elif (year - 2000) % 12 == 8:
+ 
+      sign = 'Pig'
+ 
+
+# mutant 63
+--- ./program950.py
++++ ./program950.py
+@@ -49,7 +49,7 @@
+ 
+  elif (year - 2000) % 12 == 7:
+ 
+-     sign = 'Pig'
++     sign = 'XXPigXX'
+ 
+  elif (year - 2000) % 12 == 8:
+ 
+
+# mutant 64
+--- ./program950.py
++++ ./program950.py
+@@ -49,7 +49,7 @@
+ 
+  elif (year - 2000) % 12 == 7:
+ 
+-     sign = 'Pig'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 8:
+ 
+
+# mutant 65
+--- ./program950.py
++++ ./program950.py
+@@ -51,7 +51,7 @@
+ 
+      sign = 'Pig'
+ 
+- elif (year - 2000) % 12 == 8:
++ elif (year + 2000) % 12 == 8:
+ 
+      sign = 'Rat'
+ 
+
+# mutant 67
+--- ./program950.py
++++ ./program950.py
+@@ -51,7 +51,7 @@
+ 
+      sign = 'Pig'
+ 
+- elif (year - 2000) % 12 == 8:
++ elif (year - 2000) / 12 == 8:
+ 
+      sign = 'Rat'
+ 
+
+# mutant 68
+--- ./program950.py
++++ ./program950.py
+@@ -51,7 +51,7 @@
+ 
+      sign = 'Pig'
+ 
+- elif (year - 2000) % 12 == 8:
++ elif (year - 2000) % 13 == 8:
+ 
+      sign = 'Rat'
+ 
+
+# mutant 71
+--- ./program950.py
++++ ./program950.py
+@@ -53,7 +53,7 @@
+ 
+  elif (year - 2000) % 12 == 8:
+ 
+-     sign = 'Rat'
++     sign = 'XXRatXX'
+ 
+  elif (year - 2000) % 12 == 9:
+ 
+
+# mutant 72
+--- ./program950.py
++++ ./program950.py
+@@ -53,7 +53,7 @@
+ 
+  elif (year - 2000) % 12 == 8:
+ 
+-     sign = 'Rat'
++     sign = None
+ 
+  elif (year - 2000) % 12 == 9:
+ 
+
+# mutant 89
+--- ./program950.py
++++ ./program950.py
+@@ -65,7 +65,7 @@
+ 
+  else:
+ 
+-     sign = 'Hare'
++     sign = 'XXHareXX'
+ 
+  return sign
+ 
+
+# mutant 90
+--- ./program950.py
++++ ./program950.py
+@@ -65,7 +65,7 @@
+ 
+  else:
+ 
+-     sign = 'Hare'
++     sign = None
+ 
+  return sign
+ 
+
+# mutant 93
+--- ./program950.py
++++ ./program950.py
+@@ -81,7 +81,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

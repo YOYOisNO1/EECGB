@@ -1,0 +1,115 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (8)
+
+---- ./program480.py (8) ----
+
+# mutant 1
+--- ./program480.py
++++ ./program480.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def get_max_occuring_char(str1):
+ 
+-  ASCII_SIZE = 256
++  ASCII_SIZE = 257
+ 
+   ctr = [0] * ASCII_SIZE
+ 
+
+# mutant 3
+--- ./program480.py
++++ ./program480.py
+@@ -21,7 +21,7 @@
+ 
+   ASCII_SIZE = 256
+ 
+-  ctr = [0] * ASCII_SIZE
++  ctr = [1] * ASCII_SIZE
+ 
+   max = -1
+ 
+
+# mutant 6
+--- ./program480.py
++++ ./program480.py
+@@ -23,7 +23,7 @@
+ 
+   ctr = [0] * ASCII_SIZE
+ 
+-  max = -1
++  max = +1
+ 
+   ch = ''
+ 
+
+# mutant 7
+--- ./program480.py
++++ ./program480.py
+@@ -23,7 +23,7 @@
+ 
+   ctr = [0] * ASCII_SIZE
+ 
+-  max = -1
++  max = -2
+ 
+   ch = ''
+ 
+
+# mutant 9
+--- ./program480.py
++++ ./program480.py
+@@ -25,7 +25,7 @@
+ 
+   max = -1
+ 
+-  ch = ''
++  ch = 'XXXX'
+ 
+   for i in str1:
+ 
+
+# mutant 10
+--- ./program480.py
++++ ./program480.py
+@@ -25,7 +25,7 @@
+ 
+   max = -1
+ 
+-  ch = ''
++  ch = None
+ 
+   for i in str1:
+ 
+
+# mutant 13
+--- ./program480.py
++++ ./program480.py
+@@ -29,7 +29,7 @@
+ 
+   for i in str1:
+ 
+-    ctr[ord(i)]+=1;
++    ctr[ord(i)]+=2;
+ 
+   for i in str1:
+ 
+
+# mutant 19
+--- ./program480.py
++++ ./program480.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

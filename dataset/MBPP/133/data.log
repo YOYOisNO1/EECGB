@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program133.py (3) ----
+
+# mutant 1
+--- ./program133.py
++++ ./program133.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_negativenum(nums):
+ 
+-  sum_negativenum = list(filter(lambda nums:nums<0,nums))
++  sum_negativenum = list(filter(lambda nums:nums<=0,nums))
+ 
+   return sum(sum_negativenum)
+ 
+
+# mutant 2
+--- ./program133.py
++++ ./program133.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_negativenum(nums):
+ 
+-  sum_negativenum = list(filter(lambda nums:nums<0,nums))
++  sum_negativenum = list(filter(lambda nums:nums<1,nums))
+ 
+   return sum(sum_negativenum)
+ 
+
+# mutant 7
+--- ./program133.py
++++ ./program133.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

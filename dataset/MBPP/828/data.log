@@ -1,0 +1,154 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (11)
+
+---- ./program828.py (11) ----
+
+# mutant 1
+--- ./program828.py
++++ ./program828.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_alpha_dig_spl(string):
+ 
+-  alphabets=digits = special = 0
++  alphabets=digits = special = 1
+ 
+   for i in range(len(string)):
+ 
+
+# mutant 3
+--- ./program828.py
++++ ./program828.py
+@@ -25,7 +25,7 @@
+ 
+     if(string[i].isalpha()):
+ 
+-        alphabets = alphabets + 1
++        alphabets = alphabets - 1
+ 
+     elif(string[i].isdigit()):
+ 
+
+# mutant 4
+--- ./program828.py
++++ ./program828.py
+@@ -25,7 +25,7 @@
+ 
+     if(string[i].isalpha()):
+ 
+-        alphabets = alphabets + 1
++        alphabets = alphabets + 2
+ 
+     elif(string[i].isdigit()):
+ 
+
+# mutant 5
+--- ./program828.py
++++ ./program828.py
+@@ -25,7 +25,7 @@
+ 
+     if(string[i].isalpha()):
+ 
+-        alphabets = alphabets + 1
++        alphabets = None
+ 
+     elif(string[i].isdigit()):
+ 
+
+# mutant 6
+--- ./program828.py
++++ ./program828.py
+@@ -29,7 +29,7 @@
+ 
+     elif(string[i].isdigit()):
+ 
+-        digits = digits + 1
++        digits = digits - 1
+ 
+     else:
+ 
+
+# mutant 7
+--- ./program828.py
++++ ./program828.py
+@@ -29,7 +29,7 @@
+ 
+     elif(string[i].isdigit()):
+ 
+-        digits = digits + 1
++        digits = digits + 2
+ 
+     else:
+ 
+
+# mutant 8
+--- ./program828.py
++++ ./program828.py
+@@ -29,7 +29,7 @@
+ 
+     elif(string[i].isdigit()):
+ 
+-        digits = digits + 1
++        digits = None
+ 
+     else:
+ 
+
+# mutant 9
+--- ./program828.py
++++ ./program828.py
+@@ -33,7 +33,7 @@
+ 
+     else:
+ 
+-        special = special + 1
++        special = special - 1
+ 
+   return (alphabets,digits,special)   
+ 
+
+# mutant 10
+--- ./program828.py
++++ ./program828.py
+@@ -33,7 +33,7 @@
+ 
+     else:
+ 
+-        special = special + 1
++        special = special + 2
+ 
+   return (alphabets,digits,special)   
+ 
+
+# mutant 11
+--- ./program828.py
++++ ./program828.py
+@@ -33,7 +33,7 @@
+ 
+     else:
+ 
+-        special = special + 1
++        special = None
+ 
+   return (alphabets,digits,special)   
+ 
+
+# mutant 13
+--- ./program828.py
++++ ./program828.py
+@@ -48,7 +48,7 @@
+             string_arg0),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

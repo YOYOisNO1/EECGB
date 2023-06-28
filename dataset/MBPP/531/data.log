@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program531.py (3) ----
+
+# mutant 5
+--- ./program531.py
++++ ./program531.py
+@@ -27,7 +27,7 @@
+ 
+     res = sys.maxsize 
+ 
+-    for i in range(0, m): 
++    for i in range(1, m): 
+ 
+         if (coins[i] <= V): 
+ 
+
+# mutant 12
+--- ./program531.py
++++ ./program531.py
+@@ -33,7 +33,7 @@
+ 
+             sub_res = min_coins(coins, m, V-coins[i]) 
+ 
+-            if (sub_res != sys.maxsize and sub_res + 1 < res): 
++            if (sub_res != sys.maxsize and sub_res + 1 <= res): 
+ 
+                 res = sub_res + 1  
+ 
+
+# mutant 19
+--- ./program531.py
++++ ./program531.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,224 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program153.py (2) ----
+
+# mutant 14
+--- ./program153.py
++++ ./program153.py
+@@ -26,7 +26,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(a, b, c, expected):
+     try:
+
+# mutant 16
+--- ./program153.py
++++ ./program153.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+
+
+Survived 🙁 (14)
+
+---- ./program153.py (14) ----
+
+# mutant 1
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((+b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 2
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b * (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 3
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (3 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 4
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 / a)),(((4 * a * c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 5
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((5 * a * c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 6
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 / a * c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 7
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 * a / c) - (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 8
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 * a * c) + (b * b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 9
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 * a * c) - (b / b)) / (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 10
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) * (4 * a))))
+ 
+   return vertex
+ 
+
+# mutant 11
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (5 * a))))
+ 
+   return vertex
+ 
+
+# mutant 12
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 / a))))
+ 
+   return vertex
+ 
+
+# mutant 13
+--- ./program153.py
++++ ./program153.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def parabola_vertex(a, b, c): 
+ 
+-  vertex=(((-b / (2 * a)),(((4 * a * c) - (b * b)) / (4 * a))))
++  vertex= None
+ 
+   return vertex
+ 
+
+# mutant 15
+--- ./program153.py
++++ ./program153.py
+@@ -34,7 +34,7 @@
+             a, b, c),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

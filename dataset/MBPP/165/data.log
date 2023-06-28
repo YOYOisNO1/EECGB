@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program165.py (4) ----
+
+# mutant 3
+--- ./program165.py
++++ ./program165.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str1)):
+ 
+-        if ((i == ord(str1[i]) - ord('A')) or 
++        if ((i != ord(str1[i]) - ord('A')) or 
+ 
+             (i == ord(str1[i]) - ord('a'))): 
+ 
+
+# mutant 6
+--- ./program165.py
++++ ./program165.py
+@@ -25,7 +25,7 @@
+ 
+         if ((i == ord(str1[i]) - ord('A')) or 
+ 
+-            (i == ord(str1[i]) - ord('a'))): 
++            (i != ord(str1[i]) - ord('a'))): 
+ 
+             count_chars += 1
+ 
+
+# mutant 8
+--- ./program165.py
++++ ./program165.py
+@@ -25,7 +25,7 @@
+ 
+         if ((i == ord(str1[i]) - ord('A')) or 
+ 
+-            (i == ord(str1[i]) - ord('a'))): 
++            (i == ord(str1[i]) - ord('XXaXX'))): 
+ 
+             count_chars += 1
+ 
+
+# mutant 12
+--- ./program165.py
++++ ./program165.py
+@@ -27,7 +27,7 @@
+ 
+             (i == ord(str1[i]) - ord('a'))): 
+ 
+-            count_chars += 1
++            count_chars += 2
+ 
+     return count_chars 
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program165.py (1) ----
+
+# mutant 15
+--- ./program165.py
++++ ./program165.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

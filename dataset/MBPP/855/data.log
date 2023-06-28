@@ -1,0 +1,177 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (5)
+
+---- ./program855.py (5) ----
+
+# mutant 4
+--- ./program855.py
++++ ./program855.py
+@@ -21,7 +21,7 @@
+ 
+     parity = 0
+ 
+-    while (x != 0): 
++    while (x != 1): 
+ 
+         x = x & (x - 1) 
+ 
+
+# mutant 5
+--- ./program855.py
++++ ./program855.py
+@@ -23,7 +23,7 @@
+ 
+     while (x != 0): 
+ 
+-        x = x & (x - 1) 
++        x = x | (x - 1) 
+ 
+         parity += 1
+ 
+
+# mutant 6
+--- ./program855.py
++++ ./program855.py
+@@ -23,7 +23,7 @@
+ 
+     while (x != 0): 
+ 
+-        x = x & (x - 1) 
++        x = x & (x + 1) 
+ 
+         parity += 1
+ 
+
+# mutant 7
+--- ./program855.py
++++ ./program855.py
+@@ -23,7 +23,7 @@
+ 
+     while (x != 0): 
+ 
+-        x = x & (x - 1) 
++        x = x & (x - 2) 
+ 
+         parity += 1
+ 
+
+# mutant 8
+--- ./program855.py
++++ ./program855.py
+@@ -23,7 +23,7 @@
+ 
+     while (x != 0): 
+ 
+-        x = x & (x - 1) 
++        x = None 
+ 
+         parity += 1
+ 
+
+
+Suspicious 🤔 (5)
+
+---- ./program855.py (5) ----
+
+# mutant 2
+--- ./program855.py
++++ ./program855.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_even_parity(x): 
+ 
+-    parity = 0
++    parity = None
+ 
+     while (x != 0): 
+ 
+
+# mutant 11
+--- ./program855.py
++++ ./program855.py
+@@ -25,7 +25,7 @@
+ 
+         x = x & (x - 1) 
+ 
+-        parity += 1
++        parity += 2
+ 
+     if (parity % 2 == 0): 
+ 
+
+# mutant 13
+--- ./program855.py
++++ ./program855.py
+@@ -27,7 +27,7 @@
+ 
+         parity += 1
+ 
+-    if (parity % 2 == 0): 
++    if (parity % 3 == 0): 
+ 
+         return True
+ 
+
+# mutant 15
+--- ./program855.py
++++ ./program855.py
+@@ -27,7 +27,7 @@
+ 
+         parity += 1
+ 
+-    if (parity % 2 == 0): 
++    if (parity % 2 == 1): 
+ 
+         return True
+ 
+
+# mutant 18
+--- ./program855.py
++++ ./program855.py
+@@ -38,7 +38,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(x, expected):
+     try:
+
+
+Survived 🙁 (2)
+
+---- ./program855.py (2) ----
+
+# mutant 10
+--- ./program855.py
++++ ./program855.py
+@@ -25,7 +25,7 @@
+ 
+         x = x & (x - 1) 
+ 
+-        parity += 1
++        parity -= 1
+ 
+     if (parity % 2 == 0): 
+ 
+
+# mutant 20
+--- ./program855.py
++++ ./program855.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

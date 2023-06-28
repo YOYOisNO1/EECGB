@@ -1,0 +1,146 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (7)
+
+---- ./program704.py (7) ----
+
+# mutant 2
+--- ./program704.py
++++ ./program704.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def harmonic_sum(n):
+ 
+-  if n < 2:
++  if n < 3:
+ 
+     return 1
+ 
+
+# mutant 4
+--- ./program704.py
++++ ./program704.py
+@@ -25,7 +25,7 @@
+ 
+   else:
+ 
+-    return 1 / n + (harmonic_sum(n - 1))
++    return 2 / n + (harmonic_sum(n - 1))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 5
+--- ./program704.py
++++ ./program704.py
+@@ -25,7 +25,7 @@
+ 
+   else:
+ 
+-    return 1 / n + (harmonic_sum(n - 1))
++    return 1 * n + (harmonic_sum(n - 1))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 6
+--- ./program704.py
++++ ./program704.py
+@@ -25,7 +25,7 @@
+ 
+   else:
+ 
+-    return 1 / n + (harmonic_sum(n - 1))
++    return 1 / n - (harmonic_sum(n - 1))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program704.py
++++ ./program704.py
+@@ -25,7 +25,7 @@
+ 
+   else:
+ 
+-    return 1 / n + (harmonic_sum(n - 1))
++    return 1 / n + (harmonic_sum(n - 2))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 9
+--- ./program704.py
++++ ./program704.py
+@@ -30,7 +30,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual + expected) < 1e-09
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 12
+--- ./program704.py
++++ ./program704.py
+@@ -38,7 +38,7 @@
+             n),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (3)
+
+---- ./program704.py (3) ----
+
+# mutant 10
+--- ./program704.py
++++ ./program704.py
+@@ -30,7 +30,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual - expected) <= 1e-09
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 11
+--- ./program704.py
++++ ./program704.py
+@@ -30,7 +30,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual - expected) < 2e-09
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 13
+--- ./program704.py
++++ ./program704.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

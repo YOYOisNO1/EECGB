@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program44.py (2) ----
+
+# mutant 3
+--- ./program44.py
++++ ./program44.py
+@@ -25,7 +25,7 @@
+ 
+         if re.search(patterns,  text):
+ 
+-                return 'Found a match!'
++                return 'XXFound a match!XX'
+ 
+         else:
+ 
+
+# mutant 6
+--- ./program44.py
++++ ./program44.py
+@@ -42,7 +42,7 @@
+             text),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program44.py (1) ----
+
+# mutant 7
+--- ./program44.py
++++ ./program44.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

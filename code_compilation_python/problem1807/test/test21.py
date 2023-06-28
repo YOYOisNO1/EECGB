@@ -1,4 +1,0 @@
-from ..program1807 import program1807
-def test21():
-    assert program1807(000X00000X00000X00000000000000
-000X00000X00000X00000000000000) == ['17']

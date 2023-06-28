@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program777.py (5) ----
+
+# mutant 9
+--- ./program777.py
++++ ./program777.py
+@@ -27,7 +27,7 @@
+ 
+         if (arr[i] != arr[i+1]): 
+ 
+-            sum = sum + arr[i+1]   
++            sum = sum - arr[i+1]   
+ 
+     return sum
+ 
+
+# mutant 10
+--- ./program777.py
++++ ./program777.py
+@@ -27,7 +27,7 @@
+ 
+         if (arr[i] != arr[i+1]): 
+ 
+-            sum = sum + arr[i+1]   
++            sum = sum + arr[i-1]   
+ 
+     return sum
+ 
+
+# mutant 11
+--- ./program777.py
++++ ./program777.py
+@@ -27,7 +27,7 @@
+ 
+         if (arr[i] != arr[i+1]): 
+ 
+-            sum = sum + arr[i+1]   
++            sum = sum + arr[i+2]   
+ 
+     return sum
+ 
+
+# mutant 12
+--- ./program777.py
++++ ./program777.py
+@@ -27,7 +27,7 @@
+ 
+         if (arr[i] != arr[i+1]): 
+ 
+-            sum = sum + arr[i+1]   
++            sum = None   
+ 
+     return sum
+ 
+
+# mutant 13
+--- ./program777.py
++++ ./program777.py
+@@ -34,7 +34,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(arr, n, expected):
+     try:
+
+
+Survived 🙁 (1)
+
+---- ./program777.py (1) ----
+
+# mutant 15
+--- ./program777.py
++++ ./program777.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

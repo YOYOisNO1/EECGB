@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program362.py (4) ----
+
+# mutant 1
+--- ./program362.py
++++ ./program362.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_occurrences(nums):
+ 
+-    max_val = 0
++    max_val = 1
+ 
+     result = nums[0] 
+ 
+
+# mutant 3
+--- ./program362.py
++++ ./program362.py
+@@ -21,7 +21,7 @@
+ 
+     max_val = 0
+ 
+-    result = nums[0] 
++    result = nums[1] 
+ 
+     for i in nums:
+ 
+
+# mutant 4
+--- ./program362.py
++++ ./program362.py
+@@ -21,7 +21,7 @@
+ 
+     max_val = 0
+ 
+-    result = nums[0] 
++    result = None 
+ 
+     for i in nums:
+ 
+
+# mutant 11
+--- ./program362.py
++++ ./program362.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

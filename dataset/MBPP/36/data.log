@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program36.py (2) ----
+
+# mutant 3
+--- ./program36.py
++++ ./program36.py
+@@ -21,7 +21,7 @@
+ 
+     while (N > 0) : 
+ 
+-        N -= 1;  
++        N = 1;  
+ 
+         p *= 10;  
+ 
+
+# mutant 4
+--- ./program36.py
++++ ./program36.py
+@@ -21,7 +21,7 @@
+ 
+     while (N > 0) : 
+ 
+-        N -= 1;  
++        N += 1;  
+ 
+         p *= 10;  
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program36.py (2) ----
+
+# mutant 5
+--- ./program36.py
++++ ./program36.py
+@@ -21,7 +21,7 @@
+ 
+     while (N > 0) : 
+ 
+-        N -= 1;  
++        N -= 2;  
+ 
+         p *= 10;  
+ 
+
+# mutant 15
+--- ./program36.py
++++ ./program36.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

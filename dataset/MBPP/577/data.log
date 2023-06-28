@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program577.py (6) ----
+
+# mutant 2
+--- ./program577.py
++++ ./program577.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def last_digit_factorial(n): 
+ 
+-    if (n == 0): return 1
++    if (n == 1): return 1
+ 
+     elif (n <= 2): return n  
+ 
+
+# mutant 3
+--- ./program577.py
++++ ./program577.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def last_digit_factorial(n): 
+ 
+-    if (n == 0): return 1
++    if (n == 0): return 2
+ 
+     elif (n <= 2): return n  
+ 
+
+# mutant 4
+--- ./program577.py
++++ ./program577.py
+@@ -21,7 +21,7 @@
+ 
+     if (n == 0): return 1
+ 
+-    elif (n <= 2): return n  
++    elif (n < 2): return n  
+ 
+     elif (n == 3): return 6
+ 
+
+# mutant 5
+--- ./program577.py
++++ ./program577.py
+@@ -21,7 +21,7 @@
+ 
+     if (n == 0): return 1
+ 
+-    elif (n <= 2): return n  
++    elif (n <= 3): return n  
+ 
+     elif (n == 3): return 6
+ 
+
+# mutant 8
+--- ./program577.py
++++ ./program577.py
+@@ -23,7 +23,7 @@
+ 
+     elif (n <= 2): return n  
+ 
+-    elif (n == 3): return 6
++    elif (n == 3): return 7
+ 
+     elif (n == 4): return 4 
+ 
+
+# mutant 15
+--- ./program577.py
++++ ./program577.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program178.py (3) ----
+
+# mutant 2
+--- ./program178.py
++++ ./program178.py
+@@ -29,7 +29,7 @@
+ 
+      else:
+ 
+-       return ('Not Matched!')
++       return ('XXNot Matched!XX')
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 3
+--- ./program178.py
++++ ./program178.py
+@@ -34,7 +34,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(patterns, text, expected):
+     try:
+
+# mutant 4
+--- ./program178.py
++++ ./program178.py
+@@ -42,7 +42,7 @@
+             patterns, text),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program178.py (1) ----
+
+# mutant 5
+--- ./program178.py
++++ ./program178.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

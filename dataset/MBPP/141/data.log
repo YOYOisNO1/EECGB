@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program141.py (1) ----
+
+# mutant 19
+--- ./program141.py
++++ ./program141.py
+@@ -29,7 +29,7 @@
+ 
+         nums = nums[arr_len-1::-1] + nums[arr_len:len(nums)]
+ 
+-        arr_len -= 1
++        arr_len += 1
+ 
+     return nums
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program141.py (2) ----
+
+# mutant 2
+--- ./program141.py
++++ ./program141.py
+@@ -21,7 +21,7 @@
+ 
+     arr_len = len(nums)
+ 
+-    while arr_len > 1:
++    while arr_len >= 1:
+ 
+         mi = nums.index(max(nums[0:arr_len]))
+ 
+
+# mutant 23
+--- ./program141.py
++++ ./program141.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

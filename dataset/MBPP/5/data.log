@@ -1,0 +1,289 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (12)
+
+---- ./program5.py (12) ----
+
+# mutant 7
+--- ./program5.py
++++ ./program5.py
+@@ -21,7 +21,7 @@
+ 
+ 	A = [0] * (n + 1) 
+ 
+-	B = [0] * (n + 1) 
++	B = [0] / (n + 1) 
+ 
+ 	A[0] = 1
+ 
+
+# mutant 21
+--- ./program5.py
++++ ./program5.py
+@@ -29,7 +29,7 @@
+ 
+ 	B[0] = 0
+ 
+-	B[1] = 1
++	B[1] = 2
+ 
+ 	for i in range(2, n+1): 
+ 
+
+# mutant 22
+--- ./program5.py
++++ ./program5.py
+@@ -29,7 +29,7 @@
+ 
+ 	B[0] = 0
+ 
+-	B[1] = 1
++	B[1] = None
+ 
+ 	for i in range(2, n+1): 
+ 
+
+# mutant 29
+--- ./program5.py
++++ ./program5.py
+@@ -33,7 +33,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		A[i] = A[i - 2] + 2 * B[i - 1] 
++		A[i] = A[i - 2] + 3 * B[i - 1] 
+ 
+ 		B[i] = A[i - 1] + B[i - 2] 
+ 
+
+# mutant 31
+--- ./program5.py
++++ ./program5.py
+@@ -33,7 +33,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		A[i] = A[i - 2] + 2 * B[i - 1] 
++		A[i] = A[i - 2] + 2 * B[i + 1] 
+ 
+ 		B[i] = A[i - 1] + B[i - 2] 
+ 
+
+# mutant 32
+--- ./program5.py
++++ ./program5.py
+@@ -33,7 +33,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		A[i] = A[i - 2] + 2 * B[i - 1] 
++		A[i] = A[i - 2] + 2 * B[i - 2] 
+ 
+ 		B[i] = A[i - 1] + B[i - 2] 
+ 
+
+# mutant 33
+--- ./program5.py
++++ ./program5.py
+@@ -33,7 +33,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		A[i] = A[i - 2] + 2 * B[i - 1] 
++		A[i] = None 
+ 
+ 		B[i] = A[i - 1] + B[i - 2] 
+ 
+
+# mutant 34
+--- ./program5.py
++++ ./program5.py
+@@ -35,7 +35,7 @@
+ 
+ 		A[i] = A[i - 2] + 2 * B[i - 1] 
+ 
+-		B[i] = A[i - 1] + B[i - 2] 
++		B[i] = A[i + 1] + B[i - 2] 
+ 
+ 	return A[n] 
+ 
+
+# mutant 37
+--- ./program5.py
++++ ./program5.py
+@@ -35,7 +35,7 @@
+ 
+ 		A[i] = A[i - 2] + 2 * B[i - 1] 
+ 
+-		B[i] = A[i - 1] + B[i - 2] 
++		B[i] = A[i - 1] + B[i + 2] 
+ 
+ 	return A[n] 
+ 
+
+# mutant 39
+--- ./program5.py
++++ ./program5.py
+@@ -35,7 +35,7 @@
+ 
+ 		A[i] = A[i - 2] + 2 * B[i - 1] 
+ 
+-		B[i] = A[i - 1] + B[i - 2] 
++		B[i] = None 
+ 
+ 	return A[n] 
+ 
+
+# mutant 40
+--- ./program5.py
++++ ./program5.py
+@@ -42,7 +42,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 41
+--- ./program5.py
++++ ./program5.py
+@@ -50,7 +50,7 @@
+             n),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (9)
+
+---- ./program5.py (9) ----
+
+# mutant 1
+--- ./program5.py
++++ ./program5.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_ways(n): 
+ 
+-	A = [0] * (n + 1) 
++	A = [1] * (n + 1) 
+ 
+ 	B = [0] * (n + 1) 
+ 
+
+# mutant 4
+--- ./program5.py
++++ ./program5.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_ways(n): 
+ 
+-	A = [0] * (n + 1) 
++	A = [0] * (n + 2) 
+ 
+ 	B = [0] * (n + 1) 
+ 
+
+# mutant 6
+--- ./program5.py
++++ ./program5.py
+@@ -21,7 +21,7 @@
+ 
+ 	A = [0] * (n + 1) 
+ 
+-	B = [0] * (n + 1) 
++	B = [1] * (n + 1) 
+ 
+ 	A[0] = 1
+ 
+
+# mutant 9
+--- ./program5.py
++++ ./program5.py
+@@ -21,7 +21,7 @@
+ 
+ 	A = [0] * (n + 1) 
+ 
+-	B = [0] * (n + 1) 
++	B = [0] * (n + 2) 
+ 
+ 	A[0] = 1
+ 
+
+# mutant 14
+--- ./program5.py
++++ ./program5.py
+@@ -25,7 +25,7 @@
+ 
+ 	A[0] = 1
+ 
+-	A[1] = 0
++	A[2] = 0
+ 
+ 	B[0] = 0
+ 
+
+# mutant 15
+--- ./program5.py
++++ ./program5.py
+@@ -25,7 +25,7 @@
+ 
+ 	A[0] = 1
+ 
+-	A[1] = 0
++	A[1] = 1
+ 
+ 	B[0] = 0
+ 
+
+# mutant 17
+--- ./program5.py
++++ ./program5.py
+@@ -27,7 +27,7 @@
+ 
+ 	A[1] = 0
+ 
+-	B[0] = 0
++	B[1] = 0
+ 
+ 	B[1] = 1
+ 
+
+# mutant 18
+--- ./program5.py
++++ ./program5.py
+@@ -27,7 +27,7 @@
+ 
+ 	A[1] = 0
+ 
+-	B[0] = 0
++	B[0] = 1
+ 
+ 	B[1] = 1
+ 
+
+# mutant 42
+--- ./program5.py
++++ ./program5.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

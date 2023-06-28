@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program433.py (3) ----
+
+# mutant 1
+--- ./program433.py
++++ ./program433.py
+@@ -21,7 +21,7 @@
+ 
+   arr.sort()
+ 
+-  if number > arr[-1]:
++  if number >= arr[-1]:
+ 
+     return ('Yes, the entered number is greater than those in the array')
+ 
+
+# mutant 3
+--- ./program433.py
++++ ./program433.py
+@@ -21,7 +21,7 @@
+ 
+   arr.sort()
+ 
+-  if number > arr[-1]:
++  if number > arr[-2]:
+ 
+     return ('Yes, the entered number is greater than those in the array')
+ 
+
+# mutant 8
+--- ./program433.py
++++ ./program433.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

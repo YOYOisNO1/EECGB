@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program542.py (3) ----
+
+# mutant 2
+--- ./program542.py
++++ ./program542.py
+@@ -21,7 +21,7 @@
+ 
+ def fill_spaces(text):
+ 
+-  return (re.sub("[ ,.]", ":", text))
++  return (re.sub("[ ,.]", "XX:XX", text))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 3
+--- ./program542.py
++++ ./program542.py
+@@ -26,7 +26,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(text, expected):
+     try:
+
+# mutant 4
+--- ./program542.py
++++ ./program542.py
+@@ -34,7 +34,7 @@
+             text),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program542.py (1) ----
+
+# mutant 5
+--- ./program542.py
++++ ./program542.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

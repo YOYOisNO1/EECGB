@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program866.py (6) ----
+
+# mutant 6
+--- ./program866.py
++++ ./program866.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb(monthname2):
+ 
+-  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
++  if(monthname2=="January" or monthname2=="March"or monthname2=="XXMayXX" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
+ 
+     return True
+ 
+
+# mutant 8
+--- ./program866.py
++++ ./program866.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb(monthname2):
+ 
+-  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
++  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="XXJulyXX" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
+ 
+     return True
+ 
+
+# mutant 10
+--- ./program866.py
++++ ./program866.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb(monthname2):
+ 
+-  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
++  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="XXAugestXX" or monthname2=="October" or monthname2=="December"):
+ 
+     return True
+ 
+
+# mutant 12
+--- ./program866.py
++++ ./program866.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb(monthname2):
+ 
+-  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
++  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="XXOctoberXX" or monthname2=="December"):
+ 
+     return True
+ 
+
+# mutant 14
+--- ./program866.py
++++ ./program866.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb(monthname2):
+ 
+-  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="December"):
++  if(monthname2=="January" or monthname2=="March"or monthname2=="May" or monthname2=="July" or monthname2=="Augest" or monthname2=="October" or monthname2=="XXDecemberXX"):
+ 
+     return True
+ 
+
+# mutant 20
+--- ./program866.py
++++ ./program866.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

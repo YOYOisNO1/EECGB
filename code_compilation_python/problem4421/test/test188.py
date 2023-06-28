@@ -1,5 +1,0 @@
-from ..program4421 import program4421
-def test188():
-    assert program4421(2517677 8638224
--75757217 -17117074
--2847910 1342478) == ['YES']

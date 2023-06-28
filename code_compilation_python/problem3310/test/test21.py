@@ -1,3 +1,0 @@
-from ..program3310 import program3310
-def test21():
-    assert program3310(100140049 17000 27000) == ['600840294\n20014 30021', '600840294\r\n20014 30021']

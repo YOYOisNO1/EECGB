@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program97.py (1) ----
+
+# mutant 10
+--- ./program97.py
++++ ./program97.py
+@@ -35,7 +35,7 @@
+ 
+             value = 1
+ 
+-            dic_data[key] = value
++            dic_data[key] = None
+ 
+     return dic_data
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program97.py (1) ----
+
+# mutant 13
+--- ./program97.py
++++ ./program97.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

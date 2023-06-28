@@ -1,0 +1,224 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program822.py (2) ----
+
+# mutant 14
+--- ./program822.py
++++ ./program822.py
+@@ -35,7 +35,7 @@
+ 
+     elif not re.search("[0-9]",p):
+ 
+-        break
++        continue
+ 
+     elif not re.search("[A-Z]",p):
+ 
+
+# mutant 17
+--- ./program822.py
++++ ./program822.py
+@@ -39,7 +39,7 @@
+ 
+     elif not re.search("[A-Z]",p):
+ 
+-        break
++        continue
+ 
+     elif not re.search("[$#@]",p):
+ 
+
+
+Survived 🙁 (14)
+
+---- ./program822.py (14) ----
+
+# mutant 3
+--- ./program822.py
++++ ./program822.py
+@@ -25,7 +25,7 @@
+ 
+  while x:  
+ 
+-    if (len(p)<6 or len(p)>12):
++    if (len(p)<=6 or len(p)>12):
+ 
+         break
+ 
+
+# mutant 4
+--- ./program822.py
++++ ./program822.py
+@@ -25,7 +25,7 @@
+ 
+  while x:  
+ 
+-    if (len(p)<6 or len(p)>12):
++    if (len(p)<7 or len(p)>12):
+ 
+         break
+ 
+
+# mutant 5
+--- ./program822.py
++++ ./program822.py
+@@ -25,7 +25,7 @@
+ 
+  while x:  
+ 
+-    if (len(p)<6 or len(p)>12):
++    if (len(p)<6 or len(p)>=12):
+ 
+         break
+ 
+
+# mutant 6
+--- ./program822.py
++++ ./program822.py
+@@ -25,7 +25,7 @@
+ 
+  while x:  
+ 
+-    if (len(p)<6 or len(p)>12):
++    if (len(p)<6 or len(p)>13):
+ 
+         break
+ 
+
+# mutant 7
+--- ./program822.py
++++ ./program822.py
+@@ -25,7 +25,7 @@
+ 
+  while x:  
+ 
+-    if (len(p)<6 or len(p)>12):
++    if (len(p)<6 and len(p)>12):
+ 
+         break
+ 
+
+# mutant 8
+--- ./program822.py
++++ ./program822.py
+@@ -27,7 +27,7 @@
+ 
+     if (len(p)<6 or len(p)>12):
+ 
+-        break
++        continue
+ 
+     elif not re.search("[a-z]",p):
+ 
+
+# mutant 11
+--- ./program822.py
++++ ./program822.py
+@@ -31,7 +31,7 @@
+ 
+     elif not re.search("[a-z]",p):
+ 
+-        break
++        continue
+ 
+     elif not re.search("[0-9]",p):
+ 
+
+# mutant 20
+--- ./program822.py
++++ ./program822.py
+@@ -43,7 +43,7 @@
+ 
+     elif not re.search("[$#@]",p):
+ 
+-        break
++        continue
+ 
+     elif re.search("\s",p):
+ 
+
+# mutant 21
+--- ./program822.py
++++ ./program822.py
+@@ -45,7 +45,7 @@
+ 
+         break
+ 
+-    elif re.search("\s",p):
++    elif re.search("XX\sXX",p):
+ 
+         break
+ 
+
+# mutant 22
+--- ./program822.py
++++ ./program822.py
+@@ -47,7 +47,7 @@
+ 
+     elif re.search("\s",p):
+ 
+-        break
++        continue
+ 
+     else:
+ 
+
+# mutant 24
+--- ./program822.py
++++ ./program822.py
+@@ -53,7 +53,7 @@
+ 
+         return True
+ 
+-        x=False
++        x=True
+ 
+         break
+ 
+
+# mutant 25
+--- ./program822.py
++++ ./program822.py
+@@ -53,7 +53,7 @@
+ 
+         return True
+ 
+-        x=False
++        x= None
+ 
+         break
+ 
+
+# mutant 26
+--- ./program822.py
++++ ./program822.py
+@@ -55,7 +55,7 @@
+ 
+         x=False
+ 
+-        break
++        continue
+ 
+ 
+ 
+
+# mutant 30
+--- ./program822.py
++++ ./program822.py
+@@ -75,7 +75,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

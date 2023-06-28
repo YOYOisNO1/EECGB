@@ -1,4 +1,0 @@
-from ..program1018 import program1018
-def test62():
-    assert program1018(rosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefranci
-rosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefrancirosefranci) == ['100']

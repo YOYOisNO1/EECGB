@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program389.py (1) ----
+
+# mutant 8
+--- ./program389.py
++++ ./program389.py
+@@ -27,7 +27,7 @@
+ 
+ 		return 1
+ 
+-	return find_lucas(n - 1) + find_lucas(n - 2) 
++	return find_lucas(n - 2) + find_lucas(n - 2) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+
+Survived 🙁 (1)
+
+---- ./program389.py (1) ----
+
+# mutant 14
+--- ./program389.py
++++ ./program389.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

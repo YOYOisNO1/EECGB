@@ -1,0 +1,86 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program365.py (1) ----
+
+# mutant 5
+--- ./program365.py
++++ ./program365.py
+@@ -23,7 +23,7 @@
+ 
+     while n != 0:
+ 
+-        n //= 10
++        n = 10
+ 
+         count += 1
+ 
+
+
+Suspicious 🤔 (3)
+
+---- ./program365.py (3) ----
+
+# mutant 2
+--- ./program365.py
++++ ./program365.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_digit(n):
+ 
+-    count = 0
++    count = None
+ 
+     while n != 0:
+ 
+
+# mutant 4
+--- ./program365.py
++++ ./program365.py
+@@ -21,7 +21,7 @@
+ 
+     count = 0
+ 
+-    while n != 0:
++    while n != 1:
+ 
+         n //= 10
+ 
+
+# mutant 6
+--- ./program365.py
++++ ./program365.py
+@@ -23,7 +23,7 @@
+ 
+     while n != 0:
+ 
+-        n //= 10
++        n /= 10
+ 
+         count += 1
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program365.py (1) ----
+
+# mutant 13
+--- ./program365.py
++++ ./program365.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

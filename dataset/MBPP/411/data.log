@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program411.py (2) ----
+
+# mutant 2
+--- ./program411.py
++++ ./program411.py
+@@ -21,7 +21,7 @@
+ 
+ def snake_to_camel(word):
+ 
+-  return ''.join(x.capitalize() or '_' for x in word.split('_'))
++  return ''.join(x.capitalize() or 'XX_XX' for x in word.split('_'))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 7
+--- ./program411.py
++++ ./program411.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

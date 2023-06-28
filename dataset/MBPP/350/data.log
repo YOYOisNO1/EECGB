@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program350.py (1) ----
+
+# mutant 16
+--- ./program350.py
++++ ./program350.py
+@@ -35,7 +35,7 @@
+ 
+             maxOcc = arr[i] 
+ 
+-    return n - maxOcc 
++    return n + maxOcc 
+ 
+ # TESTING CODE 
+ # ============================================
+
+
+Survived 🙁 (4)
+
+---- ./program350.py (4) ----
+
+# mutant 1
+--- ./program350.py
++++ ./program350.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def minimum_length(s) : 
+ 
+-    maxOcc = 0
++    maxOcc = 1
+ 
+     n = len(s) 
+ 
+
+# mutant 6
+--- ./program350.py
++++ ./program350.py
+@@ -23,7 +23,7 @@
+ 
+     n = len(s) 
+ 
+-    arr = [0]*26
++    arr = [0]*27
+ 
+     for i in range(n) : 
+ 
+
+# mutant 14
+--- ./program350.py
++++ ./program350.py
+@@ -31,7 +31,7 @@
+ 
+     for i in range(26) : 
+ 
+-        if arr[i] > maxOcc : 
++        if arr[i] >= maxOcc : 
+ 
+             maxOcc = arr[i] 
+ 
+
+# mutant 19
+--- ./program350.py
++++ ./program350.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,4 +1,0 @@
-from ..program3426 import program3426
-def test15():
-    assert program3426(26
-vvvnnsnnnpsnnswwspncvshtncwphaphmwnwkhvvhuvctvnehemowkmtzissswjaxuuvphzrmfzihamdqmmyhhijbitlipgltyy) == ['YES\r\nvvv\nnn\nsnnn\npsnns\nwwspn\ncvs\nh\ntncwph\naph\nmwnw\nkhvvh\nuvctvn\nehem\nowkmt\nz\nisssw\nja\nxuuvphz\nrm\nfziham\nd\nqmm\nyhhij\nbit\nlip\ngltyy', 'YES\r\nvvv\r\nnn\r\nsnnn\r\npsnns\r\nwwspn\r\ncvs\r\nh\r\ntncwph\r\naph\r\nmwnw\r\nkhvvh\r\nuvctvn\r\nehem\r\nowkmt\r\nz\r\nisssw\r\nja\r\nxuuvphz\r\nrm\r\nfziham\r\nd\r\nqmm\r\nyhhij\r\nbit\r\nlip\r\ngltyy', 'YES\r\n\r\nvvv\r\nnn\r\nsnnn\r\npsnns\r\nwwspn\r\ncvs\r\nh\r\ntncwph\r\naph\r\nmwnw\r\nkhvvh\r\nuvctvn\r\nehem\r\nowkmt\r\nz\r\nisssw\r\nja\r\nxuuvphz\r\nrm\r\nfziham\r\nd\r\nqmm\r\nyhhij\r\nbit\r\nlip\r\ngltyy']

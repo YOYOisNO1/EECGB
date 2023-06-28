@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program559.py (7) ----
+
+# mutant 1
+--- ./program559.py
++++ ./program559.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_sub_array_sum(a, size):
+ 
+-  max_so_far = 0
++  max_so_far = 1
+ 
+   max_ending_here = 0
+ 
+
+# mutant 3
+--- ./program559.py
++++ ./program559.py
+@@ -21,7 +21,7 @@
+ 
+   max_so_far = 0
+ 
+-  max_ending_here = 0
++  max_ending_here = 1
+ 
+   for i in range(0, size):
+ 
+
+# mutant 5
+--- ./program559.py
++++ ./program559.py
+@@ -23,7 +23,7 @@
+ 
+   max_ending_here = 0
+ 
+-  for i in range(0, size):
++  for i in range(1, size):
+ 
+     max_ending_here = max_ending_here + a[i]
+ 
+
+# mutant 8
+--- ./program559.py
++++ ./program559.py
+@@ -27,7 +27,7 @@
+ 
+     max_ending_here = max_ending_here + a[i]
+ 
+-    if max_ending_here < 0:
++    if max_ending_here <= 0:
+ 
+       max_ending_here = 0
+ 
+
+# mutant 9
+--- ./program559.py
++++ ./program559.py
+@@ -27,7 +27,7 @@
+ 
+     max_ending_here = max_ending_here + a[i]
+ 
+-    if max_ending_here < 0:
++    if max_ending_here < 1:
+ 
+       max_ending_here = 0
+ 
+
+# mutant 12
+--- ./program559.py
++++ ./program559.py
+@@ -31,7 +31,7 @@
+ 
+       max_ending_here = 0
+ 
+-    elif (max_so_far < max_ending_here):
++    elif (max_so_far <= max_ending_here):
+ 
+       max_so_far = max_ending_here
+ 
+
+# mutant 16
+--- ./program559.py
++++ ./program559.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

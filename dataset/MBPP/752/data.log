@@ -1,0 +1,159 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (7)
+
+---- ./program752.py (7) ----
+
+# mutant 5
+--- ./program752.py
++++ ./program752.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def jacobsthal_num(n): 
+ 
+-	dp = [0] * (n + 1) 
++	dp = None 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 7
+--- ./program752.py
++++ ./program752.py
+@@ -21,7 +21,7 @@
+ 
+ 	dp = [0] * (n + 1) 
+ 
+-	dp[0] = 0
++	dp[0] = 1
+ 
+ 	dp[1] = 1
+ 
+
+# mutant 18
+--- ./program752.py
++++ ./program752.py
+@@ -27,7 +27,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		dp[i] = dp[i - 1] + 2 * dp[i - 2] 
++		dp[i] = dp[i - 1] + 3 * dp[i - 2] 
+ 
+ 	return dp[n]
+ 
+
+# mutant 20
+--- ./program752.py
++++ ./program752.py
+@@ -27,7 +27,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		dp[i] = dp[i - 1] + 2 * dp[i - 2] 
++		dp[i] = dp[i - 1] + 2 * dp[i + 2] 
+ 
+ 	return dp[n]
+ 
+
+# mutant 21
+--- ./program752.py
++++ ./program752.py
+@@ -27,7 +27,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		dp[i] = dp[i - 1] + 2 * dp[i - 2] 
++		dp[i] = dp[i - 1] + 2 * dp[i - 3] 
+ 
+ 	return dp[n]
+ 
+
+# mutant 22
+--- ./program752.py
++++ ./program752.py
+@@ -27,7 +27,7 @@
+ 
+ 	for i in range(2, n+1): 
+ 
+-		dp[i] = dp[i - 1] + 2 * dp[i - 2] 
++		dp[i] = None 
+ 
+ 	return dp[n]
+ 
+
+# mutant 23
+--- ./program752.py
++++ ./program752.py
+@@ -34,7 +34,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(n, expected):
+     try:
+
+
+Survived 🙁 (4)
+
+---- ./program752.py (4) ----
+
+# mutant 1
+--- ./program752.py
++++ ./program752.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def jacobsthal_num(n): 
+ 
+-	dp = [0] * (n + 1) 
++	dp = [1] * (n + 1) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 4
+--- ./program752.py
++++ ./program752.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def jacobsthal_num(n): 
+ 
+-	dp = [0] * (n + 1) 
++	dp = [0] * (n + 2) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 6
+--- ./program752.py
++++ ./program752.py
+@@ -21,7 +21,7 @@
+ 
+ 	dp = [0] * (n + 1) 
+ 
+-	dp[0] = 0
++	dp[1] = 0
+ 
+ 	dp[1] = 1
+ 
+
+# mutant 25
+--- ./program752.py
++++ ./program752.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

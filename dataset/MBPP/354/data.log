@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program354.py (1) ----
+
+# mutant 3
+--- ./program354.py
++++ ./program354.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tn_ap(a,n,d):
+ 
+-  tn = a + (n - 1) * d
++  tn = a + (n - 2) * d
+ 
+   return tn
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program354.py (1) ----
+
+# mutant 8
+--- ./program354.py
++++ ./program354.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,172 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program826.py (2) ----
+
+# mutant 2
+--- ./program826.py
++++ ./program826.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_type_of_triangle(a,b,c): 
+ 
+-    sqa = pow(a,2) 
++    sqa = None 
+ 
+     sqb = pow(b,2) 
+ 
+
+# mutant 4
+--- ./program826.py
++++ ./program826.py
+@@ -21,7 +21,7 @@
+ 
+     sqa = pow(a,2) 
+ 
+-    sqb = pow(b,2) 
++    sqb = None 
+ 
+     sqc = pow(c,2) 
+ 
+
+
+Survived 🙁 (10)
+
+---- ./program826.py (10) ----
+
+# mutant 1
+--- ./program826.py
++++ ./program826.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_type_of_triangle(a,b,c): 
+ 
+-    sqa = pow(a,2) 
++    sqa = pow(a,3) 
+ 
+     sqb = pow(b,2) 
+ 
+
+# mutant 8
+--- ./program826.py
++++ ./program826.py
+@@ -25,7 +25,7 @@
+ 
+     sqc = pow(c,2) 
+ 
+-    if (sqa == sqa + sqb or sqb == sqa + sqc or sqc == sqa + sqb): 
++    if (sqa == sqa - sqb or sqb == sqa + sqc or sqc == sqa + sqb): 
+ 
+         return ("Right-angled Triangle") 
+ 
+
+# mutant 10
+--- ./program826.py
++++ ./program826.py
+@@ -25,7 +25,7 @@
+ 
+     sqc = pow(c,2) 
+ 
+-    if (sqa == sqa + sqb or sqb == sqa + sqc or sqc == sqa + sqb): 
++    if (sqa == sqa + sqb or sqb == sqa - sqc or sqc == sqa + sqb): 
+ 
+         return ("Right-angled Triangle") 
+ 
+
+# mutant 12
+--- ./program826.py
++++ ./program826.py
+@@ -25,7 +25,7 @@
+ 
+     sqc = pow(c,2) 
+ 
+-    if (sqa == sqa + sqb or sqb == sqa + sqc or sqc == sqa + sqb): 
++    if (sqa == sqa + sqb or sqb == sqa + sqc or sqc == sqa - sqb): 
+ 
+         return ("Right-angled Triangle") 
+ 
+
+# mutant 13
+--- ./program826.py
++++ ./program826.py
+@@ -25,7 +25,7 @@
+ 
+     sqc = pow(c,2) 
+ 
+-    if (sqa == sqa + sqb or sqb == sqa + sqc or sqc == sqa + sqb): 
++    if (sqa == sqa + sqb and sqb == sqa + sqc or sqc == sqa + sqb): 
+ 
+         return ("Right-angled Triangle") 
+ 
+
+# mutant 15
+--- ./program826.py
++++ ./program826.py
+@@ -29,7 +29,7 @@
+ 
+         return ("Right-angled Triangle") 
+ 
+-    elif (sqa > sqc + sqb or sqb > sqa + sqc or sqc > sqa + sqb): 
++    elif (sqa >= sqc + sqb or sqb > sqa + sqc or sqc > sqa + sqb): 
+ 
+         return ("Obtuse-angled Triangle") 
+ 
+
+# mutant 17
+--- ./program826.py
++++ ./program826.py
+@@ -29,7 +29,7 @@
+ 
+         return ("Right-angled Triangle") 
+ 
+-    elif (sqa > sqc + sqb or sqb > sqa + sqc or sqc > sqa + sqb): 
++    elif (sqa > sqc + sqb or sqb >= sqa + sqc or sqc > sqa + sqb): 
+ 
+         return ("Obtuse-angled Triangle") 
+ 
+
+# mutant 19
+--- ./program826.py
++++ ./program826.py
+@@ -29,7 +29,7 @@
+ 
+         return ("Right-angled Triangle") 
+ 
+-    elif (sqa > sqc + sqb or sqb > sqa + sqc or sqc > sqa + sqb): 
++    elif (sqa > sqc + sqb or sqb > sqa + sqc or sqc >= sqa + sqb): 
+ 
+         return ("Obtuse-angled Triangle") 
+ 
+
+# mutant 21
+--- ./program826.py
++++ ./program826.py
+@@ -29,7 +29,7 @@
+ 
+         return ("Right-angled Triangle") 
+ 
+-    elif (sqa > sqc + sqb or sqb > sqa + sqc or sqc > sqa + sqb): 
++    elif (sqa > sqc + sqb and sqb > sqa + sqc or sqc > sqa + sqb): 
+ 
+         return ("Obtuse-angled Triangle") 
+ 
+
+# mutant 26
+--- ./program826.py
++++ ./program826.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

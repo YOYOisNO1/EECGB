@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program76.py (2) ----
+
+# mutant 1
+--- ./program76.py
++++ ./program76.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_squares(m,n):
+ 
+-    if(n < m):
++    if(n <= m):
+ 
+         temp = m
+ 
+
+# mutant 25
+--- ./program76.py
++++ ./program76.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,3 +1,0 @@
-from ..program190 import program190
-def test29():
-    assert program190(1000000000000000000 1000000000000000000) == ['1\r\n1000000000000000000']

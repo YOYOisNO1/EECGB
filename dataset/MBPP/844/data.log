@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program844.py (6) ----
+
+# mutant 1
+--- ./program844.py
++++ ./program844.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def get_number(n, k): 
+ 
+-    arr = [0] * n; 
++    arr = [1] * n; 
+ 
+     i = 0; 
+ 
+
+# mutant 8
+--- ./program844.py
++++ ./program844.py
+@@ -25,7 +25,7 @@
+ 
+     odd = 1; 
+ 
+-    while (odd <= n):   
++    while (odd < n):   
+ 
+         arr[i] = odd; 
+ 
+
+# mutant 18
+--- ./program844.py
++++ ./program844.py
+@@ -35,7 +35,7 @@
+ 
+     even = 2; 
+ 
+-    while (even <= n): 
++    while (even < n): 
+ 
+         arr[i] = even; 
+ 
+
+# mutant 21
+--- ./program844.py
++++ ./program844.py
+@@ -39,7 +39,7 @@
+ 
+         arr[i] = even; 
+ 
+-        i += 1;
++        i -= 1;
+ 
+         even += 2; 
+ 
+
+# mutant 25
+--- ./program844.py
++++ ./program844.py
+@@ -41,7 +41,7 @@
+ 
+         i += 1;
+ 
+-        even += 2; 
++        even += 3; 
+ 
+     return arr[k - 1]; 
+ 
+
+# mutant 30
+--- ./program844.py
++++ ./program844.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

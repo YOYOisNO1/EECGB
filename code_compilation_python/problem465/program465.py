@@ -1,2 +1,0 @@
-def program465():
-    (a>=b and a>=c and a<b+c) or (a>=b and a>=d and a<b+d) or (a>=d and a>=c and a<c+d) or (b>=a and b>=c and b<a+c) or (b>=a and b>=d and b<a+d) or (b>=c and b>=d and b<c+d) or (c>=a and c>=d and c<a+d) or (c>=a and c>=b and c<a+b)or (c>=b and c>=d and c<b+d) or (d>=a and d>=b and d<a+b) or (d>=a and d>=c and d<a+c) or (d>=c and d>=b and d<c+b):

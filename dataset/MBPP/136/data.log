@@ -1,0 +1,323 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (24)
+
+---- ./program136.py (24) ----
+
+# mutant 1
+--- ./program136.py
++++ ./program136.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def cal_electbill(units):
+ 
+- if(units < 50):
++ if(units <= 50):
+ 
+     amount = units * 2.60
+ 
+
+# mutant 2
+--- ./program136.py
++++ ./program136.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def cal_electbill(units):
+ 
+- if(units < 50):
++ if(units < 51):
+ 
+     amount = units * 2.60
+ 
+
+# mutant 3
+--- ./program136.py
++++ ./program136.py
+@@ -21,7 +21,7 @@
+ 
+  if(units < 50):
+ 
+-    amount = units * 2.60
++    amount = units / 2.60
+ 
+     surcharge = 25
+ 
+
+# mutant 4
+--- ./program136.py
++++ ./program136.py
+@@ -21,7 +21,7 @@
+ 
+  if(units < 50):
+ 
+-    amount = units * 2.60
++    amount = units * 3.6
+ 
+     surcharge = 25
+ 
+
+# mutant 5
+--- ./program136.py
++++ ./program136.py
+@@ -21,7 +21,7 @@
+ 
+  if(units < 50):
+ 
+-    amount = units * 2.60
++    amount = None
+ 
+     surcharge = 25
+ 
+
+# mutant 6
+--- ./program136.py
++++ ./program136.py
+@@ -23,7 +23,7 @@
+ 
+     amount = units * 2.60
+ 
+-    surcharge = 25
++    surcharge = 26
+ 
+  elif(units <= 100):
+ 
+
+# mutant 7
+--- ./program136.py
++++ ./program136.py
+@@ -23,7 +23,7 @@
+ 
+     amount = units * 2.60
+ 
+-    surcharge = 25
++    surcharge = None
+ 
+  elif(units <= 100):
+ 
+
+# mutant 9
+--- ./program136.py
++++ ./program136.py
+@@ -25,7 +25,7 @@
+ 
+     surcharge = 25
+ 
+- elif(units <= 100):
++ elif(units <= 101):
+ 
+     amount = 130 + ((units - 50) * 3.25)
+ 
+
+# mutant 19
+--- ./program136.py
++++ ./program136.py
+@@ -31,7 +31,7 @@
+ 
+     surcharge = 35
+ 
+- elif(units <= 200):
++ elif(units < 200):
+ 
+     amount = 130 + 162.50 + ((units - 100) * 5.26)
+ 
+
+# mutant 20
+--- ./program136.py
++++ ./program136.py
+@@ -31,7 +31,7 @@
+ 
+     surcharge = 35
+ 
+- elif(units <= 200):
++ elif(units <= 201):
+ 
+     amount = 130 + 162.50 + ((units - 100) * 5.26)
+ 
+
+# mutant 21
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 131 + 162.50 + ((units - 100) * 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 22
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 - 162.50 + ((units - 100) * 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 23
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 + 163.5 + ((units - 100) * 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 24
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 + 162.50 - ((units - 100) * 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 25
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 + 162.50 + ((units + 100) * 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 26
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 + 162.50 + ((units - 101) * 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 27
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 + 162.50 + ((units - 100) / 5.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 28
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = 130 + 162.50 + ((units - 100) * 6.26)
+ 
+     surcharge = 45
+ 
+
+# mutant 29
+--- ./program136.py
++++ ./program136.py
+@@ -33,7 +33,7 @@
+ 
+  elif(units <= 200):
+ 
+-    amount = 130 + 162.50 + ((units - 100) * 5.26)
++    amount = None
+ 
+     surcharge = 45
+ 
+
+# mutant 30
+--- ./program136.py
++++ ./program136.py
+@@ -35,7 +35,7 @@
+ 
+     amount = 130 + 162.50 + ((units - 100) * 5.26)
+ 
+-    surcharge = 45
++    surcharge = 46
+ 
+  else:
+ 
+
+# mutant 31
+--- ./program136.py
++++ ./program136.py
+@@ -35,7 +35,7 @@
+ 
+     amount = 130 + 162.50 + ((units - 100) * 5.26)
+ 
+-    surcharge = 45
++    surcharge = None
+ 
+  else:
+ 
+
+# mutant 48
+--- ./program136.py
++++ ./program136.py
+@@ -50,7 +50,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(units, expected):
+     try:
+
+# mutant 49
+--- ./program136.py
++++ ./program136.py
+@@ -50,7 +50,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(units, expected):
+     try:
+
+# mutant 51
+--- ./program136.py
++++ ./program136.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

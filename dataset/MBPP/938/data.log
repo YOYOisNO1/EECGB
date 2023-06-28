@@ -1,0 +1,336 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (25)
+
+---- ./program938.py (25) ----
+
+# mutant 2
+--- ./program938.py
++++ ./program938.py
+@@ -25,7 +25,7 @@
+ 
+ 	diff = sys.maxsize 
+ 
+-	res_i = 0
++	res_i = 1
+ 
+ 	res_j = 0
+ 
+
+# mutant 3
+--- ./program938.py
++++ ./program938.py
+@@ -25,7 +25,7 @@
+ 
+ 	diff = sys.maxsize 
+ 
+-	res_i = 0
++	res_i = None
+ 
+ 	res_j = 0
+ 
+
+# mutant 4
+--- ./program938.py
++++ ./program938.py
+@@ -27,7 +27,7 @@
+ 
+ 	res_i = 0
+ 
+-	res_j = 0
++	res_j = 1
+ 
+ 	res_k = 0
+ 
+
+# mutant 5
+--- ./program938.py
++++ ./program938.py
+@@ -27,7 +27,7 @@
+ 
+ 	res_i = 0
+ 
+-	res_j = 0
++	res_j = None
+ 
+ 	res_k = 0
+ 
+
+# mutant 6
+--- ./program938.py
++++ ./program938.py
+@@ -29,7 +29,7 @@
+ 
+ 	res_j = 0
+ 
+-	res_k = 0
++	res_k = 1
+ 
+ 	i = 0
+ 
+
+# mutant 7
+--- ./program938.py
++++ ./program938.py
+@@ -29,7 +29,7 @@
+ 
+ 	res_j = 0
+ 
+-	res_k = 0
++	res_k = None
+ 
+ 	i = 0
+ 
+
+# mutant 8
+--- ./program938.py
++++ ./program938.py
+@@ -31,7 +31,7 @@
+ 
+ 	res_k = 0
+ 
+-	i = 0
++	i = 1
+ 
+ 	j = 0
+ 
+
+# mutant 10
+--- ./program938.py
++++ ./program938.py
+@@ -33,7 +33,7 @@
+ 
+ 	i = 0
+ 
+-	j = 0
++	j = 1
+ 
+ 	k = 0
+ 
+
+# mutant 12
+--- ./program938.py
++++ ./program938.py
+@@ -35,7 +35,7 @@
+ 
+ 	j = 0
+ 
+-	k = 0
++	k = 1
+ 
+ 	while(i < p and j < q and k < r): 
+ 
+
+# mutant 15
+--- ./program938.py
++++ ./program938.py
+@@ -37,7 +37,7 @@
+ 
+ 	k = 0
+ 
+-	while(i < p and j < q and k < r): 
++	while(i < p and j <= q and k < r): 
+ 
+ 		minimum = min(A[i], min(B[j], C[k])) 
+ 
+
+# mutant 16
+--- ./program938.py
++++ ./program938.py
+@@ -37,7 +37,7 @@
+ 
+ 	k = 0
+ 
+-	while(i < p and j < q and k < r): 
++	while(i < p and j < q and k <= r): 
+ 
+ 		minimum = min(A[i], min(B[j], C[k])) 
+ 
+
+# mutant 20
+--- ./program938.py
++++ ./program938.py
+@@ -43,7 +43,7 @@
+ 
+ 		maximum = max(A[i], max(B[j], C[k])); 
+ 
+-		if maximum-minimum < diff: 
++		if maximum+minimum < diff: 
+ 
+ 			res_i = i 
+ 
+
+# mutant 21
+--- ./program938.py
++++ ./program938.py
+@@ -43,7 +43,7 @@
+ 
+ 		maximum = max(A[i], max(B[j], C[k])); 
+ 
+-		if maximum-minimum < diff: 
++		if maximum-minimum <= diff: 
+ 
+ 			res_i = i 
+ 
+
+# mutant 25
+--- ./program938.py
++++ ./program938.py
+@@ -51,7 +51,7 @@
+ 
+ 			res_k = k 
+ 
+-			diff = maximum - minimum; 
++			diff = maximum + minimum; 
+ 
+ 		if diff == 0: 
+ 
+
+# mutant 27
+--- ./program938.py
++++ ./program938.py
+@@ -53,7 +53,7 @@
+ 
+ 			diff = maximum - minimum; 
+ 
+-		if diff == 0: 
++		if diff != 0: 
+ 
+ 			break
+ 
+
+# mutant 28
+--- ./program938.py
++++ ./program938.py
+@@ -53,7 +53,7 @@
+ 
+ 			diff = maximum - minimum; 
+ 
+-		if diff == 0: 
++		if diff == 1: 
+ 
+ 			break
+ 
+
+# mutant 29
+--- ./program938.py
++++ ./program938.py
+@@ -55,7 +55,7 @@
+ 
+ 		if diff == 0: 
+ 
+-			break
++			continue
+ 
+ 		if A[i] == minimum: 
+ 
+
+# mutant 30
+--- ./program938.py
++++ ./program938.py
+@@ -57,7 +57,7 @@
+ 
+ 			break
+ 
+-		if A[i] == minimum: 
++		if A[i] != minimum: 
+ 
+ 			i = i+1
+ 
+
+# mutant 32
+--- ./program938.py
++++ ./program938.py
+@@ -59,7 +59,7 @@
+ 
+ 		if A[i] == minimum: 
+ 
+-			i = i+1
++			i = i+2
+ 
+ 		elif B[j] == minimum: 
+ 
+
+# mutant 34
+--- ./program938.py
++++ ./program938.py
+@@ -61,7 +61,7 @@
+ 
+ 			i = i+1
+ 
+-		elif B[j] == minimum: 
++		elif B[j] != minimum: 
+ 
+ 			j = j+1
+ 
+
+# mutant 35
+--- ./program938.py
++++ ./program938.py
+@@ -63,7 +63,7 @@
+ 
+ 		elif B[j] == minimum: 
+ 
+-			j = j+1
++			j = j-1
+ 
+ 		else: 
+ 
+
+# mutant 36
+--- ./program938.py
++++ ./program938.py
+@@ -63,7 +63,7 @@
+ 
+ 		elif B[j] == minimum: 
+ 
+-			j = j+1
++			j = j+2
+ 
+ 		else: 
+ 
+
+# mutant 38
+--- ./program938.py
++++ ./program938.py
+@@ -67,7 +67,7 @@
+ 
+ 		else: 
+ 
+-			k = k+1
++			k = k-1
+ 
+ 	return A[res_i],B[res_j],C[res_k]
+ 
+
+# mutant 39
+--- ./program938.py
++++ ./program938.py
+@@ -67,7 +67,7 @@
+ 
+ 		else: 
+ 
+-			k = k+1
++			k = k+2
+ 
+ 	return A[res_i],B[res_j],C[res_k]
+ 
+
+# mutant 42
+--- ./program938.py
++++ ./program938.py
+@@ -82,7 +82,7 @@
+             a, b, c, p, q, r),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

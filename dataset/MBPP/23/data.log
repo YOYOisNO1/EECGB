@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program23.py (4) ----
+
+# mutant 5
+--- ./program23.py
++++ ./program23.py
+@@ -23,7 +23,7 @@
+ 
+     for x in list1: 
+ 
+-        sum = 0 
++        sum = None 
+ 
+         for y in x: 
+ 
+
+# mutant 6
+--- ./program23.py
++++ ./program23.py
+@@ -27,7 +27,7 @@
+ 
+         for y in x: 
+ 
+-            sum+= y      
++            sum= y      
+ 
+         maxi = max(sum,maxi)     
+ 
+
+# mutant 7
+--- ./program23.py
++++ ./program23.py
+@@ -27,7 +27,7 @@
+ 
+         for y in x: 
+ 
+-            sum+= y      
++            sum-= y      
+ 
+         maxi = max(sum,maxi)     
+ 
+
+# mutant 9
+--- ./program23.py
++++ ./program23.py
+@@ -36,7 +36,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(list1, expected):
+     try:
+
+
+Survived 🙁 (2)
+
+---- ./program23.py (2) ----
+
+# mutant 2
+--- ./program23.py
++++ ./program23.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def maximum_sum(list1): 
+ 
+-    maxi = -100000
++    maxi = -100001
+ 
+     for x in list1: 
+ 
+
+# mutant 11
+--- ./program23.py
++++ ./program23.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

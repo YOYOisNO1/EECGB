@@ -1,4 +1,0 @@
-from ..program1015 import program1015
-def test7():
-    assert program1015(kbuwmzldbajqgbdyeqqyuvdwsdzvjicqgsadjgruebcsxuhgftlykvuevsldvapqoxkrwjbwjjqquogxkpradzauxxlhrayprgnwxwumabxdojztankeqmraeqbbggrltdvcpiozbrvwhxhjpurwachimqrxrplcavtpaqzemxhrvagbngyqhacuxfbpkwqxyixdfmrj
-kbmrxrplcavtpaqemxhagbghacuxbpkwqxidmj) == ['150']

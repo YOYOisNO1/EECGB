@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program766.py (4) ----
+
+# mutant 3
+--- ./program766.py
++++ ./program766.py
+@@ -21,7 +21,7 @@
+ 
+     temp = []
+ 
+-    for i in range(len(l1) - 1):
++    for i in range(len(l1) - 2):
+ 
+         current_element, next_element = l1[i], l1[i + 1]
+ 
+
+# mutant 4
+--- ./program766.py
++++ ./program766.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(l1) - 1):
+ 
+-        current_element, next_element = l1[i], l1[i + 1]
++        current_element, next_element = l1[i], l1[i - 1]
+ 
+         x = (current_element, next_element)
+ 
+
+# mutant 7
+--- ./program766.py
++++ ./program766.py
+@@ -25,7 +25,7 @@
+ 
+         current_element, next_element = l1[i], l1[i + 1]
+ 
+-        x = (current_element, next_element)
++        x = None
+ 
+         temp.append(x)
+ 
+
+# mutant 9
+--- ./program766.py
++++ ./program766.py
+@@ -42,7 +42,7 @@
+             l1),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

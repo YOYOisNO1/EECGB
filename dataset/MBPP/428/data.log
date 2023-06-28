@@ -1,0 +1,107 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program428.py (3) ----
+
+# mutant 4
+--- ./program428.py
++++ ./program428.py
+@@ -21,7 +21,7 @@
+ 
+     gap = len(my_list) // 2
+ 
+-    while gap > 0:
++    while gap >= 0:
+ 
+         for i in range(gap, len(my_list)):
+ 
+
+# mutant 14
+--- ./program428.py
++++ ./program428.py
+@@ -33,7 +33,7 @@
+ 
+                 my_list[j] = my_list[j - gap]
+ 
+-                j -= gap
++                j = gap
+ 
+             my_list[j] = current_item
+ 
+
+# mutant 17
+--- ./program428.py
++++ ./program428.py
+@@ -37,7 +37,7 @@
+ 
+             my_list[j] = current_item
+ 
+-        gap //= 2
++        gap = 2
+ 
+ 
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program428.py (4) ----
+
+# mutant 2
+--- ./program428.py
++++ ./program428.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def shell_sort(my_list):
+ 
+-    gap = len(my_list) // 2
++    gap = len(my_list) // 3
+ 
+     while gap > 0:
+ 
+
+# mutant 10
+--- ./program428.py
++++ ./program428.py
+@@ -29,7 +29,7 @@
+ 
+             j = i
+ 
+-            while j >= gap and my_list[j - gap] > current_item:
++            while j >= gap and my_list[j - gap] >= current_item:
+ 
+                 my_list[j] = my_list[j - gap]
+ 
+
+# mutant 19
+--- ./program428.py
++++ ./program428.py
+@@ -37,7 +37,7 @@
+ 
+             my_list[j] = current_item
+ 
+-        gap //= 2
++        gap //= 3
+ 
+ 
+ 
+
+# mutant 22
+--- ./program428.py
++++ ./program428.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program92.py (4) ----
+
+# mutant 1
+--- ./program92.py
++++ ./program92.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_undulating(n): 
+ 
+-	if (len(n) <= 2): 
++	if (len(n) < 2): 
+ 
+ 		return False
+ 
+
+# mutant 3
+--- ./program92.py
++++ ./program92.py
+@@ -21,7 +21,7 @@
+ 
+ 	if (len(n) <= 2): 
+ 
+-		return False
++		return True
+ 
+ 	for i in range(2, len(n)): 
+ 
+
+# mutant 4
+--- ./program92.py
++++ ./program92.py
+@@ -23,7 +23,7 @@
+ 
+ 		return False
+ 
+-	for i in range(2, len(n)): 
++	for i in range(3, len(n)): 
+ 
+ 		if (n[i - 2] != n[i]): 
+ 
+
+# mutant 12
+--- ./program92.py
++++ ./program92.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

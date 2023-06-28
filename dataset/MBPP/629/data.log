@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program629.py (1) ----
+
+# mutant 5
+--- ./program629.py
++++ ./program629.py
+@@ -23,7 +23,7 @@
+ 
+     for i in list: 
+ 
+-        if (i % 2 == 0): 
++        if (i % 2 == 1): 
+ 
+             ev_li.append(i)  
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program629.py (1) ----
+
+# mutant 8
+--- ./program629.py
++++ ./program629.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

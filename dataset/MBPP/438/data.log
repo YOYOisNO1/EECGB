@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program438.py (4) ----
+
+# mutant 4
+--- ./program438.py
++++ ./program438.py
+@@ -23,7 +23,7 @@
+ 
+   for idx in range(0, len(test_list)):
+ 
+-    for iidx in range(idx + 1, len(test_list)):
++    for iidx in range(idx - 1, len(test_list)):
+ 
+       if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
+ 
+
+# mutant 5
+--- ./program438.py
++++ ./program438.py
+@@ -23,7 +23,7 @@
+ 
+   for idx in range(0, len(test_list)):
+ 
+-    for iidx in range(idx + 1, len(test_list)):
++    for iidx in range(idx + 2, len(test_list)):
+ 
+       if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
+ 
+
+# mutant 12
+--- ./program438.py
++++ ./program438.py
+@@ -25,7 +25,7 @@
+ 
+     for iidx in range(idx + 1, len(test_list)):
+ 
+-      if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
++      if test_list[iidx][0] == test_list[idx][1] or test_list[idx][1] == test_list[iidx][0]:
+ 
+         res += 1
+ 
+
+# mutant 18
+--- ./program438.py
++++ ./program438.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

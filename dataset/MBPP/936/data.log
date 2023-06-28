@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program936.py (2) ----
+
+# mutant 2
+--- ./program936.py
++++ ./program936.py
+@@ -21,7 +21,7 @@
+ 
+   temp = dict(test_list)
+ 
+-  res = [(key, temp[key]) for key in ord_list]
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 4
+--- ./program936.py
++++ ./program936.py
+@@ -36,7 +36,7 @@
+             test_list, ord_list),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

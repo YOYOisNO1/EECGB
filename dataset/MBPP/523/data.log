@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program523.py (4) ----
+
+# mutant 4
+--- ./program523.py
++++ ./program523.py
+@@ -23,7 +23,7 @@
+ 
+     lambda str1: any(x.isupper() for x in str1) or 'String must have 1 upper case character.',
+ 
+-    lambda str1: any(x.islower() for x in str1) or 'String must have 1 lower case character.',
++    lambda str1: any(x.islower() for x in str1) or 'XXString must have 1 lower case character.XX',
+ 
+     lambda str1: any(x.isdigit() for x in str1) or 'String must have 1 number.',
+ 
+
+# mutant 10
+--- ./program523.py
++++ ./program523.py
+@@ -27,7 +27,7 @@
+ 
+     lambda str1: any(x.isdigit() for x in str1) or 'String must have 1 number.',
+ 
+-    lambda str1: len(str1) >= 7                 or 'String length should be atleast 8.',]
++    lambda str1: len(str1) > 7                 or 'String length should be atleast 8.',]
+ 
+     result = [x for x in [i(str1) for i in messg] if x != True]
+ 
+
+# mutant 11
+--- ./program523.py
++++ ./program523.py
+@@ -27,7 +27,7 @@
+ 
+     lambda str1: any(x.isdigit() for x in str1) or 'String must have 1 number.',
+ 
+-    lambda str1: len(str1) >= 7                 or 'String length should be atleast 8.',]
++    lambda str1: len(str1) >= 8                 or 'String length should be atleast 8.',]
+ 
+     result = [x for x in [i(str1) for i in messg] if x != True]
+ 
+
+# mutant 23
+--- ./program523.py
++++ ./program523.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

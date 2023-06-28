@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program31.py (3) ----
+
+# mutant 4
+--- ./program31.py
++++ ./program31.py
+@@ -27,7 +27,7 @@
+ 
+         for i in row:
+ 
+-            d[i] += 1
++            d[i] += 2
+ 
+     temp = []
+ 
+
+# mutant 7
+--- ./program31.py
++++ ./program31.py
+@@ -39,7 +39,7 @@
+ 
+             temp.append((v, key))
+ 
+-            if len(temp) == k:
++            if len(temp) != k:
+ 
+                 heapq.heapify(temp)
+ 
+
+# mutant 15
+--- ./program31.py
++++ ./program31.py
+@@ -73,7 +73,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

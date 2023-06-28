@@ -1,3 +1,0 @@
-from ..program4825 import program4825
-def test54():
-    assert program4825(fmcoiedmkifjggbhoimbejefjlkbniaifggfbidagmalbkndmgnbmicflccfgnihmmlbnbnjfmccmiohhealagomakbahcbnegmkcnojaoddobahnagocjhfbkecjchhmfjefnmjdjejjhfjdnnoahlgibibgmlfloffkjkdokkchbnfhhhbcdcjddaongmlaodcngomohjgkcjkilimfhhajcoknkiljlcmfflbnahgbdoeiggamokjiadnecn...) == ['0']

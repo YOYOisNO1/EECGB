@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program80.py (2) ----
+
+# mutant 5
+--- ./program80.py
++++ ./program80.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tetrahedral_number(n): 
+ 
+-	return (n * (n + 1) * (n + 2)) / 6
++	return (n * (n + 1) * (n - 2)) / 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program80.py
++++ ./program80.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tetrahedral_number(n): 
+ 
+-	return (n * (n + 1) * (n + 2)) / 6
++	return (n * (n + 1) * (n + 2)) / 7
+ 
+ # TESTING CODE 
+ # ============================================
+
+
+Survived 🙁 (3)
+
+---- ./program80.py (3) ----
+
+# mutant 10
+--- ./program80.py
++++ ./program80.py
+@@ -24,7 +24,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 11
+--- ./program80.py
++++ ./program80.py
+@@ -24,7 +24,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(n, expected):
+     try:
+
+# mutant 13
+--- ./program80.py
++++ ./program80.py
+@@ -33,7 +33,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

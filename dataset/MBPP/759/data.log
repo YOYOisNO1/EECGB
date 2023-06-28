@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program759.py (2) ----
+
+# mutant 2
+--- ./program759.py
++++ ./program759.py
+@@ -23,7 +23,7 @@
+ 
+     dnumre = re.compile(r"""^[0-9]+(\.[0-9]{1,2})?$""")
+ 
+-    result = dnumre.search(num)
++    result = None
+ 
+     return bool(result)
+ 
+
+# mutant 3
+--- ./program759.py
++++ ./program759.py
+@@ -30,7 +30,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(num, expected):
+     try:
+
+
+Survived 🙁 (1)
+
+---- ./program759.py (1) ----
+
+# mutant 5
+--- ./program759.py
++++ ./program759.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

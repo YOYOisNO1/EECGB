@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program33.py (1) ----
+
+# mutant 15
+--- ./program33.py
++++ ./program33.py
+@@ -31,7 +31,7 @@
+ 
+         B_Number += rem*c  
+ 
+-        N //= 2 
++        N = 2 
+ 
+         cnt += 1
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program33.py (1) ----
+
+# mutant 23
+--- ./program33.py
++++ ./program33.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

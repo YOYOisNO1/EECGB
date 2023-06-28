@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program75.py (5) ----
+
+# mutant 1
+--- ./program75.py
++++ ./program75.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_tuples(test_list, K):
+ 
+-  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]
++  res = [sub for sub in test_list if all(ele / K == 0 for ele in sub)]
+ 
+   return (str(res)) 
+ 
+
+# mutant 2
+--- ./program75.py
++++ ./program75.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_tuples(test_list, K):
+ 
+-  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]
++  res = [sub for sub in test_list if all(ele % K != 0 for ele in sub)]
+ 
+   return (str(res)) 
+ 
+
+# mutant 3
+--- ./program75.py
++++ ./program75.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_tuples(test_list, K):
+ 
+-  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]
++  res = [sub for sub in test_list if all(ele % K == 1 for ele in sub)]
+ 
+   return (str(res)) 
+ 
+
+# mutant 4
+--- ./program75.py
++++ ./program75.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_tuples(test_list, K):
+ 
+-  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]
++  res = None
+ 
+   return (str(res)) 
+ 
+
+# mutant 6
+--- ./program75.py
++++ ./program75.py
+@@ -34,7 +34,7 @@
+             test_list, k),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

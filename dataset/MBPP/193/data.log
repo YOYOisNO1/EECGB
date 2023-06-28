@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program193.py (2) ----
+
+# mutant 1
+--- ./program193.py
++++ ./program193.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def remove_tuple(test_tup):
+ 
+-  res = tuple(set(test_tup))
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 3
+--- ./program193.py
++++ ./program193.py
+@@ -34,7 +34,7 @@
+             test_tup),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

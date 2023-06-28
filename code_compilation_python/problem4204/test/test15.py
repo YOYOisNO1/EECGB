@@ -1,8 +1,0 @@
-from ..program4204 import program4204
-def test15():
-    assert program4204(53000
-AUSTRALIA'S M-3 MONEY SUPPLY RISE 1.5 PCT IN MARCH
-SYDNEY, April 24 - Australia's M-3 money supply growth was
-1.5 pct in March and 11.3 pct in the 12 months to March, the
-Reserve Bank said.
-This compared with a revised rise of 0.5 pct in Februa...) == ['2']

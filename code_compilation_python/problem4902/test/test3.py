@@ -1,5 +1,0 @@
-from ..program4902 import program4902
-def test3():
-    assert program4902(15 10
-8560 6244 9607 5137 7187 3217 5527 9919 282 8748 3529 6110 5767 521 3393
-OWRWOORWRORWWRO) == ['64282']

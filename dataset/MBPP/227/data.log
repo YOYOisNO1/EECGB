@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program227.py (6) ----
+
+# mutant 1
+--- ./program227.py
++++ ./program227.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def min_of_three(a,b,c): 
+ 
+-      if (a <= b) and (a <= c): 
++      if (a < b) and (a <= c): 
+ 
+         smallest = a 
+ 
+
+# mutant 2
+--- ./program227.py
++++ ./program227.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def min_of_three(a,b,c): 
+ 
+-      if (a <= b) and (a <= c): 
++      if (a <= b) and (a < c): 
+ 
+         smallest = a 
+ 
+
+# mutant 4
+--- ./program227.py
++++ ./program227.py
+@@ -21,7 +21,7 @@
+ 
+       if (a <= b) and (a <= c): 
+ 
+-        smallest = a 
++        smallest = None 
+ 
+       elif (b <= a) and (b <= c): 
+ 
+
+# mutant 5
+--- ./program227.py
++++ ./program227.py
+@@ -23,7 +23,7 @@
+ 
+         smallest = a 
+ 
+-      elif (b <= a) and (b <= c): 
++      elif (b < a) and (b <= c): 
+ 
+         smallest = b 
+ 
+
+# mutant 6
+--- ./program227.py
++++ ./program227.py
+@@ -23,7 +23,7 @@
+ 
+         smallest = a 
+ 
+-      elif (b <= a) and (b <= c): 
++      elif (b <= a) and (b < c): 
+ 
+         smallest = b 
+ 
+
+# mutant 12
+--- ./program227.py
++++ ./program227.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

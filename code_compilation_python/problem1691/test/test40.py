@@ -1,4 +1,0 @@
-from ..program1691 import program1691
-def test40():
-    assert program1691(v >
-3) == ['cw']

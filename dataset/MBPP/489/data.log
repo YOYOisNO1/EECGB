@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program489.py (3) ----
+
+# mutant 3
+--- ./program489.py
++++ ./program489.py
+@@ -21,7 +21,7 @@
+ 
+     mn = arr[0] 
+ 
+-    freq = 1
++    freq = 2
+ 
+     for i in range(1,n): 
+ 
+
+# mutant 4
+--- ./program489.py
++++ ./program489.py
+@@ -21,7 +21,7 @@
+ 
+     mn = arr[0] 
+ 
+-    freq = 1
++    freq = None
+ 
+     for i in range(1,n): 
+ 
+
+# mutant 16
+--- ./program489.py
++++ ./program489.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program587.py (2) ----
+
+# mutant 1
+--- ./program587.py
++++ ./program587.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def list_tuple(listx):
+ 
+-  tuplex = tuple(listx)
++  tuplex = None
+ 
+   return tuplex
+ 
+
+# mutant 3
+--- ./program587.py
++++ ./program587.py
+@@ -34,7 +34,7 @@
+             listx),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program127.py (6) ----
+
+# mutant 1
+--- ./program127.py
++++ ./program127.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def multiply_int(x, y):
+ 
+-    if y < 0:
++    if y <= 0:
+ 
+         return -multiply_int(x, -y)
+ 
+
+# mutant 2
+--- ./program127.py
++++ ./program127.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def multiply_int(x, y):
+ 
+-    if y < 0:
++    if y < 1:
+ 
+         return -multiply_int(x, -y)
+ 
+
+# mutant 3
+--- ./program127.py
++++ ./program127.py
+@@ -21,7 +21,7 @@
+ 
+     if y < 0:
+ 
+-        return -multiply_int(x, -y)
++        return +multiply_int(x, -y)
+ 
+     elif y == 0:
+ 
+
+# mutant 4
+--- ./program127.py
++++ ./program127.py
+@@ -21,7 +21,7 @@
+ 
+     if y < 0:
+ 
+-        return -multiply_int(x, -y)
++        return -multiply_int(x, +y)
+ 
+     elif y == 0:
+ 
+
+# mutant 7
+--- ./program127.py
++++ ./program127.py
+@@ -25,7 +25,7 @@
+ 
+     elif y == 0:
+ 
+-        return 0
++        return 1
+ 
+     elif y == 1:
+ 
+
+# mutant 15
+--- ./program127.py
++++ ./program127.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

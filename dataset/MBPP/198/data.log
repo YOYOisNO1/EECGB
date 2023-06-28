@@ -1,0 +1,172 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program198.py (2) ----
+
+# mutant 11
+--- ./program198.py
++++ ./program198.py
+@@ -25,7 +25,7 @@
+ 
+         return -1 
+ 
+-    area = (3 * math.sqrt(3) * pow(a, 2)) / (4 * b);  
++    area = (3 * math.sqrt(3) / pow(a, 2)) / (4 * b);  
+ 
+     return area 
+ 
+
+# mutant 15
+--- ./program198.py
++++ ./program198.py
+@@ -25,7 +25,7 @@
+ 
+         return -1 
+ 
+-    area = (3 * math.sqrt(3) * pow(a, 2)) / (4 * b);  
++    area = (3 * math.sqrt(3) * pow(a, 2)) / (4 / b);  
+ 
+     return area 
+ 
+
+
+Survived 🙁 (10)
+
+---- ./program198.py (10) ----
+
+# mutant 1
+--- ./program198.py
++++ ./program198.py
+@@ -21,7 +21,7 @@
+ 
+ def largest_triangle(a,b): 
+ 
+-    if (a < 0 or b < 0): 
++    if (a <= 0 or b < 0): 
+ 
+         return -1 
+ 
+
+# mutant 2
+--- ./program198.py
++++ ./program198.py
+@@ -21,7 +21,7 @@
+ 
+ def largest_triangle(a,b): 
+ 
+-    if (a < 0 or b < 0): 
++    if (a < 1 or b < 0): 
+ 
+         return -1 
+ 
+
+# mutant 3
+--- ./program198.py
++++ ./program198.py
+@@ -21,7 +21,7 @@
+ 
+ def largest_triangle(a,b): 
+ 
+-    if (a < 0 or b < 0): 
++    if (a < 0 or b <= 0): 
+ 
+         return -1 
+ 
+
+# mutant 4
+--- ./program198.py
++++ ./program198.py
+@@ -21,7 +21,7 @@
+ 
+ def largest_triangle(a,b): 
+ 
+-    if (a < 0 or b < 0): 
++    if (a < 0 or b < 1): 
+ 
+         return -1 
+ 
+
+# mutant 5
+--- ./program198.py
++++ ./program198.py
+@@ -21,7 +21,7 @@
+ 
+ def largest_triangle(a,b): 
+ 
+-    if (a < 0 or b < 0): 
++    if (a < 0 and b < 0): 
+ 
+         return -1 
+ 
+
+# mutant 6
+--- ./program198.py
++++ ./program198.py
+@@ -23,7 +23,7 @@
+ 
+     if (a < 0 or b < 0): 
+ 
+-        return -1 
++        return +1 
+ 
+     area = (3 * math.sqrt(3) * pow(a, 2)) / (4 * b);  
+ 
+
+# mutant 7
+--- ./program198.py
++++ ./program198.py
+@@ -23,7 +23,7 @@
+ 
+     if (a < 0 or b < 0): 
+ 
+-        return -1 
++        return -2 
+ 
+     area = (3 * math.sqrt(3) * pow(a, 2)) / (4 * b);  
+ 
+
+# mutant 18
+--- ./program198.py
++++ ./program198.py
+@@ -32,7 +32,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual - expected) <= 1e-09
+ 
+ def driver(a, b, expected):
+     try:
+
+# mutant 19
+--- ./program198.py
++++ ./program198.py
+@@ -32,7 +32,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual - expected) < 2e-09
+ 
+ def driver(a, b, expected):
+     try:
+
+# mutant 21
+--- ./program198.py
++++ ./program198.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

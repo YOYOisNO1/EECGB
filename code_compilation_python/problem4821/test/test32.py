@@ -1,3 +1,0 @@
-from ..program4821 import program4821
-def test32():
-    assert program4821(bbgeabgabfbacdddcggcgadddefafgaagaeeafbggaacbdffgcdfddbabecefdfbdbabgcgcbfdbbgcefffcdcdffbeeebcffgagafbcaaafffeagfddgbacgagaecdeeefegbaebbfgfedbfbabdbacdaafbacdefffaaebbcgcfabdeaeddeecbcebcaceadcbggabbbdgffdecbdcdcfbcdeadcgddafbgddaecedgfddeffgfcecfggccfg...) == ['775080914']

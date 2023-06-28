@@ -1,0 +1,193 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (14)
+
+---- ./program107.py (14) ----
+
+# mutant 4
+--- ./program107.py
++++ ./program107.py
+@@ -21,7 +21,7 @@
+ 
+     count = 0;  
+ 
+-    for i in range(L,R + 1) : 
++    for i in range(L,R + 2) : 
+ 
+         if (i >= 10 and i <= 15) : 
+ 
+
+# mutant 13
+--- ./program107.py
++++ ./program107.py
+@@ -27,7 +27,7 @@
+ 
+             count += 1;  
+ 
+-        elif (i > 15) : 
++        elif (i >= 15) : 
+ 
+             k = i;  
+ 
+
+# mutant 14
+--- ./program107.py
++++ ./program107.py
+@@ -27,7 +27,7 @@
+ 
+             count += 1;  
+ 
+-        elif (i > 15) : 
++        elif (i > 16) : 
+ 
+             k = i;  
+ 
+
+# mutant 16
+--- ./program107.py
++++ ./program107.py
+@@ -31,7 +31,7 @@
+ 
+             k = i;  
+ 
+-            while (k != 0) :  
++            while (k == 0) :  
+ 
+                 if (k % 16 >= 10) : 
+ 
+
+# mutant 17
+--- ./program107.py
++++ ./program107.py
+@@ -31,7 +31,7 @@
+ 
+             k = i;  
+ 
+-            while (k != 0) :  
++            while (k != 1) :  
+ 
+                 if (k % 16 >= 10) : 
+ 
+
+# mutant 18
+--- ./program107.py
++++ ./program107.py
+@@ -33,7 +33,7 @@
+ 
+             while (k != 0) :  
+ 
+-                if (k % 16 >= 10) : 
++                if (k / 16 >= 10) : 
+ 
+                     count += 1;  
+ 
+
+# mutant 20
+--- ./program107.py
++++ ./program107.py
+@@ -33,7 +33,7 @@
+ 
+             while (k != 0) :  
+ 
+-                if (k % 16 >= 10) : 
++                if (k % 16 > 10) : 
+ 
+                     count += 1;  
+ 
+
+# mutant 21
+--- ./program107.py
++++ ./program107.py
+@@ -33,7 +33,7 @@
+ 
+             while (k != 0) :  
+ 
+-                if (k % 16 >= 10) : 
++                if (k % 16 >= 11) : 
+ 
+                     count += 1;  
+ 
+
+# mutant 22
+--- ./program107.py
++++ ./program107.py
+@@ -35,7 +35,7 @@
+ 
+                 if (k % 16 >= 10) : 
+ 
+-                    count += 1;  
++                    count = 1;  
+ 
+                 k = k // 16;  
+ 
+
+# mutant 23
+--- ./program107.py
++++ ./program107.py
+@@ -35,7 +35,7 @@
+ 
+                 if (k % 16 >= 10) : 
+ 
+-                    count += 1;  
++                    count -= 1;  
+ 
+                 k = k // 16;  
+ 
+
+# mutant 24
+--- ./program107.py
++++ ./program107.py
+@@ -35,7 +35,7 @@
+ 
+                 if (k % 16 >= 10) : 
+ 
+-                    count += 1;  
++                    count += 2;  
+ 
+                 k = k // 16;  
+ 
+
+# mutant 25
+--- ./program107.py
++++ ./program107.py
+@@ -37,7 +37,7 @@
+ 
+                     count += 1;  
+ 
+-                k = k // 16;  
++                k = k / 16;  
+ 
+     return count;  
+ 
+
+# mutant 26
+--- ./program107.py
++++ ./program107.py
+@@ -37,7 +37,7 @@
+ 
+                     count += 1;  
+ 
+-                k = k // 16;  
++                k = k // 17;  
+ 
+     return count;  
+ 
+
+# mutant 30
+--- ./program107.py
++++ ./program107.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

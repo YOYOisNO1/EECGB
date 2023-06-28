@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program277.py (1) ----
+
+# mutant 2
+--- ./program277.py
++++ ./program277.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def dict_filter(dict,n):
+ 
+- result = {key:value for (key, value) in dict.items() if value >=n}
++ result = None
+ 
+  return result
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program277.py (1) ----
+
+# mutant 5
+--- ./program277.py
++++ ./program277.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

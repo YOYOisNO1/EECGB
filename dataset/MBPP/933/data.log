@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program933.py (4) ----
+
+# mutant 1
+--- ./program933.py
++++ ./program933.py
+@@ -21,7 +21,7 @@
+ 
+ def camel_to_snake(text):
+ 
+-  str1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', text)
++  str1 = re.sub('XX(.)([A-Z][a-z]+)XX', r'\1_\2', text)
+ 
+   return re.sub('([a-z0-9])([A-Z])', r'\1_\2', str1).lower()
+ 
+
+# mutant 4
+--- ./program933.py
++++ ./program933.py
+@@ -23,7 +23,7 @@
+ 
+   str1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', text)
+ 
+-  return re.sub('([a-z0-9])([A-Z])', r'\1_\2', str1).lower()
++  return re.sub('XX([a-z0-9])([A-Z])XX', r'\1_\2', str1).lower()
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 5
+--- ./program933.py
++++ ./program933.py
+@@ -23,7 +23,7 @@
+ 
+   str1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', text)
+ 
+-  return re.sub('([a-z0-9])([A-Z])', r'\1_\2', str1).lower()
++  return re.sub('([a-z0-9])([A-Z])', r'XX\1_\2XX', str1).lower()
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program933.py
++++ ./program933.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

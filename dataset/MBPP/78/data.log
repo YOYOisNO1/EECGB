@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program78.py (5) ----
+
+# mutant 9
+--- ./program78.py
++++ ./program78.py
+@@ -23,7 +23,7 @@
+ 
+         return (n + 1) / 2
+ 
+-    count = bin(n).count('1') 
++    count = bin(n).count('XX1XX') 
+ 
+     ans = n / 2
+ 
+
+# mutant 18
+--- ./program78.py
++++ ./program78.py
+@@ -29,7 +29,7 @@
+ 
+     if (count % 2 != 0): 
+ 
+-        ans += 1
++        ans = 1
+ 
+     return ans 
+ 
+
+# mutant 19
+--- ./program78.py
++++ ./program78.py
+@@ -29,7 +29,7 @@
+ 
+     if (count % 2 != 0): 
+ 
+-        ans += 1
++        ans -= 1
+ 
+     return ans 
+ 
+
+# mutant 20
+--- ./program78.py
++++ ./program78.py
+@@ -29,7 +29,7 @@
+ 
+     if (count % 2 != 0): 
+ 
+-        ans += 1
++        ans += 2
+ 
+     return ans 
+ 
+
+# mutant 23
+--- ./program78.py
++++ ./program78.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

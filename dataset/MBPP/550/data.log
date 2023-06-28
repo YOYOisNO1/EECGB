@@ -1,0 +1,154 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (11)
+
+---- ./program550.py (11) ----
+
+# mutant 2
+--- ./program550.py
++++ ./program550.py
+@@ -21,7 +21,7 @@
+ 
+     if (high < low): 
+ 
+-        return arr[0] 
++        return arr[1] 
+ 
+     if (high == low): 
+ 
+
+# mutant 7
+--- ./program550.py
++++ ./program550.py
+@@ -27,7 +27,7 @@
+ 
+         return arr[low] 
+ 
+-    mid = low + (high - low) // 2 
++    mid = low + (high - low) // 3 
+ 
+     if (mid < high and arr[mid + 1] < arr[mid]): 
+ 
+
+# mutant 9
+--- ./program550.py
++++ ./program550.py
+@@ -29,7 +29,7 @@
+ 
+     mid = low + (high - low) // 2 
+ 
+-    if (mid < high and arr[mid + 1] < arr[mid]): 
++    if (mid <= high and arr[mid + 1] < arr[mid]): 
+ 
+         return arr[mid] 
+ 
+
+# mutant 12
+--- ./program550.py
++++ ./program550.py
+@@ -29,7 +29,7 @@
+ 
+     mid = low + (high - low) // 2 
+ 
+-    if (mid < high and arr[mid + 1] < arr[mid]): 
++    if (mid < high and arr[mid + 1] <= arr[mid]): 
+ 
+         return arr[mid] 
+ 
+
+# mutant 14
+--- ./program550.py
++++ ./program550.py
+@@ -33,7 +33,7 @@
+ 
+         return arr[mid] 
+ 
+-    if (mid > low and arr[mid] < arr[mid - 1]): 
++    if (mid >= low and arr[mid] < arr[mid - 1]): 
+ 
+         return arr[mid - 1]  
+ 
+
+# mutant 15
+--- ./program550.py
++++ ./program550.py
+@@ -33,7 +33,7 @@
+ 
+         return arr[mid] 
+ 
+-    if (mid > low and arr[mid] < arr[mid - 1]): 
++    if (mid > low and arr[mid] <= arr[mid - 1]): 
+ 
+         return arr[mid - 1]  
+ 
+
+# mutant 19
+--- ./program550.py
++++ ./program550.py
+@@ -35,7 +35,7 @@
+ 
+     if (mid > low and arr[mid] < arr[mid - 1]): 
+ 
+-        return arr[mid - 1]  
++        return arr[mid + 1]  
+ 
+     if (arr[low] > arr[mid]): 
+ 
+
+# mutant 20
+--- ./program550.py
++++ ./program550.py
+@@ -35,7 +35,7 @@
+ 
+     if (mid > low and arr[mid] < arr[mid - 1]): 
+ 
+-        return arr[mid - 1]  
++        return arr[mid - 2]  
+ 
+     if (arr[low] > arr[mid]): 
+ 
+
+# mutant 22
+--- ./program550.py
++++ ./program550.py
+@@ -39,7 +39,7 @@
+ 
+     if (arr[low] > arr[mid]): 
+ 
+-        return find_max(arr,low,mid - 1) 
++        return find_max(arr,low,mid + 1) 
+ 
+     else: 
+ 
+
+# mutant 23
+--- ./program550.py
++++ ./program550.py
+@@ -39,7 +39,7 @@
+ 
+     if (arr[low] > arr[mid]): 
+ 
+-        return find_max(arr,low,mid - 1) 
++        return find_max(arr,low,mid - 2) 
+ 
+     else: 
+ 
+
+# mutant 28
+--- ./program550.py
++++ ./program550.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

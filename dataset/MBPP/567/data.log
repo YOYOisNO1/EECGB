@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program567.py (2) ----
+
+# mutant 1
+--- ./program567.py
++++ ./program567.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def issort_list(list1):
+ 
+-    result = all(list1[i] <= list1[i+1] for i in range(len(list1)-1))
++    result = all(list1[i] < list1[i+1] for i in range(len(list1)-1))
+ 
+     return result
+ 
+
+# mutant 9
+--- ./program567.py
++++ ./program567.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+
