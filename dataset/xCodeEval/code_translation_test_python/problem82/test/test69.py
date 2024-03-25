@@ -1,6 +1,0 @@
-from ..program82 import program82
-def test69():
-    assert program82(4 4
-1 3 1 3
-9 3
-1 1 0 1 2 2 2 2 1) == ['<']

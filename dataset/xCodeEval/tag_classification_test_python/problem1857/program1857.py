@@ -1,3 +1,0 @@
-def program1857():
-    a, b = map(int, input().split())
-    print(a) if a == b else 2

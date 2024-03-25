@@ -1,4 +1,0 @@
-from ..program3584 import program3584
-def test33():
-    assert program3584(31 33
-BBGGBBGGBGBBBBGGBGBBBGBGGBBGBBB) == ['GGGGGGGGGGGGBBBBBBBBBBBBBBBBBBB']

@@ -1,8 +1,0 @@
-from ..program6064 import program6064
-def test121():
-    assert program6064(5
-2 4
-3 4
-1 4
-2 1
-3 2) == ['WIN']

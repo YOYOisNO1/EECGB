@@ -1,4 +1,0 @@
-from ..program301 import program301
-def test124():
-    assert program301(562949953421311 562949953421311 32 32 999 999
-1023175 1023175 1) == ['0']

@@ -1,4 +1,0 @@
-from ..program4640 import program4640
-def test12():
-    assert program4640(73 2
-DEBECECBBADAADEAABEAEEEAEBEAEBCDDBABBAEBACCBEEBBAEADEECACEDEEDABACDCDBBBD) == ['YES', 'yes']

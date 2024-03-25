@@ -1,4 +1,0 @@
-from ..program2345 import program2345
-def test38():
-    assert program2345(35
-3 4 11 4 4 2 3 4 3 9 7 10 2 7 8 3 11 3 6 4 6 7 11 10 8 7 6 7 2 8 5 3 2 2 168) == ['0']

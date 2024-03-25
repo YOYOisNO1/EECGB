@@ -1,4 +1,0 @@
-def program3119():
-    n = int(input()); s = input()[::-1];
-    s1 = ('0'*100+bin((int(s,2)+1))[2:])[-n:]
-    print(sum([s1[i]!=) s[i]for i in range(n)])

@@ -1,4 +1,0 @@
-from ..program1793 import program1793
-def test30():
-    assert program1793(10
-100 90 80 70 60 50 40 30 20 10) == ['10 20 30 40 50 60 70 80 90 100']

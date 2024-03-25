@@ -1,4 +1,0 @@
-from ..program3236 import program3236
-def test82():
-    assert program3236(5 787787787
-123456789 234567890 345678901 456789012 1) == ['49236737']

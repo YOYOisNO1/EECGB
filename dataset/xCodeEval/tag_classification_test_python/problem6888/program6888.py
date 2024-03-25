@@ -1,6 +1,0 @@
-def program6888():
-    n,m = map(int,input().split())
-    res = 0
-    for a in range (2,n+1,2):
-        for b in range (2,m+1,2): res = res + (m-b+1)*(n-a+1)
-    print(res)

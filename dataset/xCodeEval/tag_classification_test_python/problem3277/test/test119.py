@@ -1,7 +1,0 @@
-from ..program3277 import program3277
-def test119():
-    assert program3277(4
-15000 South
-15000 South
-15000 North
-15000 North) == ['NO', 'no']

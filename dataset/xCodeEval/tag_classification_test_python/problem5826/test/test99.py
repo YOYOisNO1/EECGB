@@ -1,4 +1,0 @@
-from ..program5826 import program5826
-def test99():
-    assert program5826(536870912 536870912
-387420489 387420489) == ['58\r\n128 536870912\r\n262144 262144']

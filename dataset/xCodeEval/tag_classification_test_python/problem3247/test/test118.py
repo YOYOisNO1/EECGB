@@ -1,4 +1,0 @@
-from ..program3247 import program3247
-def test118():
-    assert program3247(4 9397683889583 17 39 9920 3984
-1 9397683889587 357111987818129) == ['2']

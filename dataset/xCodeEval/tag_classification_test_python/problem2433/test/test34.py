@@ -1,4 +1,0 @@
-from ..program2433 import program2433
-def test34():
-    assert program2433(2
-q_) == ['1\r\n0', '1 0']

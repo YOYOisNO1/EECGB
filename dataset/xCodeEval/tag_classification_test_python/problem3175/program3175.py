@@ -1,6 +1,0 @@
-def program3175():
-    a = input()
-    for b in xrange(1,20):
-        if "8" in str(a+b):
-            print(b)
-            break

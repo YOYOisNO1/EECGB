@@ -1,4 +1,0 @@
-from ..program2348 import program2348
-def test9():
-    assert program2348(aanerbaqslfmqmuciqbxyznkevukvznpkmxlcorpmrenwxhzfgbmlfpxtkqpxdrmcqcmbf
-aanebbaqkgfiimcciqbaoznkeqqkrgapdillccrfeienwbcvfgbmlfbimkqchcrmclcmbf) == ['zzzzbzzzkgziizczzzzaozzzzqqzrgazdilzzczfeizzzbcvzzzzzzbimzzchczzzlzzzz', 'bbofbcbrkggiincdjrcaozolfqqlrgaqdilmdcsfeifoxbcvghcnmgbimlrchcsndldncg', 'aanebbaqkgfiimcciqbaoznkeqqkrgapdillccrfeienwbcvfgbmlfbimkqchcrmclcmbf']

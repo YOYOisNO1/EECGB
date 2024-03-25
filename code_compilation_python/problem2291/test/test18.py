@@ -1,8 +1,0 @@
-from ..program2291 import program2291
-def test18():
-    assert program2291(5
-313997256 313997255
-224581770 224581769
-549346780 476752290
-60559465837 28745119200
-274287972 274287971) == ['YES\r\nNO\r\nNO\r\nNO\r\nYES', 'yes\r\nno\r\nno\r\nno\r\nyes']

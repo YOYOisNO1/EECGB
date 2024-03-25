@@ -1,3 +1,0 @@
-from ..program3478 import program3478
-def test27():
-    assert program3478(180 174 53) == ['13/45']

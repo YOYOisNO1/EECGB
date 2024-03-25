@@ -1,4 +1,0 @@
-from ..program2841 import program2841
-def test7():
-    assert program2841(104
-xxXxXxxXXXxxXxXxxXXXxxxXxxXXXxxXXXxXxXxXXxxXxxxxxXXXXxXXXXxXXXxxxXxxxxxxxXxxXxXXxxXXXXxXXXxxXXXXXXXXXxXX) == ['4 xxxxxxxxxXxxXxXxxXXXxxxXxxXXXxxXXXxXxXxXXxxXxxxxxXXXXxXXXXxXXXxxxXxxxxxxxXxxXxXXxxXXXXxXXXxxXXXXXXXXXxXX', '4\r\nxxxxxxxxxXxxXxXxxXXXxxxXxxXXXxxXXXxXxXxXXxxXxxxxxXXXXxXXXXxXXXxxxXxxxxxxxXxxXxXXxxXXXXxXXXxxXXXXXXXXXxXX', '4\r\nxxXxXxxXXXxxXxXxxXXXxxxXxxXXXxxXXXxXxXxXXxxXxxxxxXXXXxXXXXxXXXxxxXxxxxxxxXxxXxXXxxXXXXxXXXxxXXXXXXXxxxxx']

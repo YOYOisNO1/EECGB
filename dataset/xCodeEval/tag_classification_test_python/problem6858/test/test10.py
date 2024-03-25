@@ -1,4 +1,0 @@
-from ..program6858 import program6858
-def test10():
-    assert program6858(5
-AD 5S KH AH KS) == ['YES']

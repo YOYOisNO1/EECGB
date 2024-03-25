@@ -1,3 +1,0 @@
-from ..program2280 import program2280
-def test19():
-    assert program2280(10000010100000001000110001010100001001001010011) == ['YES']

@@ -1,3 +1,0 @@
-from ..program891 import program891
-def test22():
-    assert program891(CODEFORCEVENMDBQLSVPQIIBGSHBVOPYZXNWVSTVWDRONUREYJJIJIPMEBPQDCPFS) == ['YES']

@@ -1,4 +1,0 @@
-from ..program1771 import program1771
-def test22():
-    assert program1771(qmrzsrvfllfraflralrwlcfjxupnlomnbeuvipcyxxmksztljxqaoqnptwwemhgswpovpnvoqajaqzxpmtqarpgdrgwuuferbhjjowmljtaoiidzkrcaawzomruigpwzgsksgdkbdbrjwaszgdwreyztdctwacfmujdgxvjqoclueiwdgvjcfpfbpmbbmcufjiitndis
-qmrzsrflrrwlfjxupnlmevipcyxxmkstljaoqnptweswpovpnvoqajaxptarpgdgwufbhjjoljtiidcawzorugpwzgskgddbrazdwreyztdctcujgxvjqlewvjpfpmbbcjtndis) == ['7']

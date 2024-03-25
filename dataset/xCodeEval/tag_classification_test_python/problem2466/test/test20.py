@@ -1,4 +1,0 @@
-from ..program2466 import program2466
-def test20():
-    assert program2466(255
-jNufi_Tql(Q)()_Rm(_RS)w()(Q)_(_)(c)Eme()()()J(vKJ_)(X_si)()g(u)(_)n()F()a()(_)(U)fx(c__qivDE)J(__pS_k)r()(N_Z_cW__)__z_LgHJE_()s_()BCKMgJ(eW)_t(oGp)()kl()(_)_(__tn_W_Y)dD()(_)_()()x_(u)(W)(T)E(_LF_DkdIx)sx__(Q_)(bL)V(_)(oKrE)__(_)(fW_)_z_()()O(O)_()cacQg_) == ['6 31', '6\r\n31']

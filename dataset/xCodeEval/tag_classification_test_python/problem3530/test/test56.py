@@ -1,3 +1,0 @@
-from ..program3530 import program3530
-def test56():
-    assert program3530(10 11 10) == ['2']

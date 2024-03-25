@@ -1,3 +1,0 @@
-from ..program233 import program233
-def test34():
-    assert program233(xqjqmenkodmlhzyzmmvofdngktygbbxbzpluzcohohmalkoeuwfikblltaaigv) == ['NO']

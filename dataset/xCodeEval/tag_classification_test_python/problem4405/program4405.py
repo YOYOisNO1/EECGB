@@ -1,5 +1,0 @@
-def program4405():
-    s = input()
-    p = s[1:-1].replace('dot','.')
-    i = p.find('at')
-    print(s[0]+p[:i]+'@'+p[i+2:]+s[-1])

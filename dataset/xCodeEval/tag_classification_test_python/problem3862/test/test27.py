@@ -1,4 +1,0 @@
-from ..program3862 import program3862
-def test27():
-    assert program3862(100 79
-aagwekyovbviiqeuakbqbqifwavkfkutoriovgfmittulhwojaptacekdirgqoovlleeoqkkdukpadygfwavppohgdrmymmulgci) == ['YES']

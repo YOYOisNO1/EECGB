@@ -1,8 +1,0 @@
-def program2550():
-    a,b,c=map(int,input().split())
-    for j in range(c//a+1):
-    	if((c-j*a)%b==0):
-    		print("YES")
-    		break
-    else:
-    	print("NO")

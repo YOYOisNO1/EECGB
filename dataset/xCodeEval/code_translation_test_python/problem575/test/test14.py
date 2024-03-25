@@ -1,3 +1,0 @@
-from ..program575 import program575
-def test14():
-    assert program575(2147483646) == ['int']

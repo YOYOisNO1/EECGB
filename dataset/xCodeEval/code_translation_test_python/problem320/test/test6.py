@@ -1,3 +1,0 @@
-from ..program320 import program320
-def test6():
-    assert program320(WUBJKDWUBWUBWBIRAQKFWUBWUBYEWUBWUBWUBWVWUBWUB) == ['JKD  WBIRAQKF  YE   WV', 'JKD WBIRAQKF YE WV']

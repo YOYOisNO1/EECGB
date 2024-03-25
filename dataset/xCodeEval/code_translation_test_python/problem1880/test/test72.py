@@ -1,3 +1,0 @@
-from ..program1880 import program1880
-def test72():
-    assert program1880(eefhbehghbhgcddcdbhcgeccebfacdhbaaeedhbgdacfgeefdadghhfdeffefebgddfgdcgbgahhhfhdbabfgcdbbaaffgggehaebffbghhghgfgfabbefddfeecfhedddfggbgffhbbfaefhaebabfbhaddcbffbhfebfbgcafbcbgbaaagcecdhffbfcacfdhhcahcgadeeddbhahhcbacgbadhffehadgbfhdhbeefgbeebbeafbfcggbhhf...) == ['844834789']

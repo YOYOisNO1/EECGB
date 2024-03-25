@@ -1,3 +1,0 @@
-from ..program4439 import program4439
-def test39():
-    assert program4439(sdfuiopguoidfbhuihsregftuioheguodpsfhgvuherasuihfsduphguatwruheruopsghuiofhbvjudfbdpiuthrupwrkgfhdat) == ['sdfuiopguoidfbhuihsregftuioheguodpsfhgvuherasuihfsduphgu@wruheruopsghuiofhbvjudfbdpiuthrupwrkgfhdat']

@@ -1,4 +1,0 @@
-from ..program3811 import program3811
-def test86():
-    assert program3811(415335582799619283
-133117803602859310) == ['132999887655543321']

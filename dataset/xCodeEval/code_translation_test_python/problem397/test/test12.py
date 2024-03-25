@@ -1,3 +1,0 @@
-from ..program397 import program397
-def test12():
-    assert program397(63) == ['Rajesh']

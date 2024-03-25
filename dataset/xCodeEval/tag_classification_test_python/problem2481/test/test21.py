@@ -1,4 +1,0 @@
-from ..program2481 import program2481
-def test21():
-    assert program2481(255
-a()J()f()vAL()(pV)(Ve)()()c()()(Wtg)(_)DW(D)()()sEXF()(_B)V(_W)Z_a_(_)U(tb)(u)I()Z()_()()()cw()ZW()Z()V()A(T)_a()()_jL(V)()(z)()Tn()y()(B)uEf()(B)()()p()()(B_)nz(Xs)(o)T()()IkH()()(pJ)()()()()()E()z()Ja_()Z()(Q)(_)(N)()c()p()g(_)l()()Q()()U()()()()(aZ)m()) == ['4 20', '4\r\n20']

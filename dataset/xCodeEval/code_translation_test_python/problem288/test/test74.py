@@ -1,5 +1,0 @@
-from ..program288 import program288
-def test74():
-    assert program288(10
-5 4 9 1 8 7
-5 6 10 3 5 2) == ['21 2']

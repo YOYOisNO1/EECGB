@@ -1,3 +1,0 @@
-from ..program561 import program561
-def test18():
-    assert program561(gxandbtgpbknxvnkjaajknvxnkbpgtbdnaxg) == ['35']

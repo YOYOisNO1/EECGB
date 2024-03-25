@@ -1,3 +1,0 @@
-from ..program843 import program843
-def test75():
-    assert program843(i6a.,8jb,n0kv4.1!7h?p.96pnhhgy6cl7dg7e4o6o384ys3z.t71kkq,,w,oqi4?u,,m5!rzu6wym_4hm,ohjy!.vvksl?pt,,1) == ['Too weak']

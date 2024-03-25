@@ -1,8 +1,0 @@
-def program6885():
-    w, h = map(int, input().split())
-    w_ =  h_ = 0
-    for i in xrange(w):
-        w_ += (w - i) / 2
-    for i in xrange(h):
-        h_ += (h - i) / 2
-    print(w_) * h_

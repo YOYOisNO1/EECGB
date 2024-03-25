@@ -1,4 +1,0 @@
-def program1230():
-    s=input()
-    t=s[1:-1].replace('at','@',1).replace('dot','.')
-    print(s[0]+t+s[-1])

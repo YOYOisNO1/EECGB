@@ -1,3 +1,0 @@
-from ..program824 import program824
-def test50():
-    assert program824(E?BIVQUPQQEJNMINFD?NKV?IROHPTGUIPMEVYPII?LZJMRI?FTKKKBHPOVQZZSAPDDWVSPVHOBT) == ['-1']

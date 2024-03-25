@@ -1,3 +1,0 @@
-from ..program1484 import program1484
-def test43():
-    assert program1484(BC?) == ['810']

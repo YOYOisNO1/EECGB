@@ -1,4 +1,0 @@
-from ..program1672 import program1672
-def test2():
-    assert program1672(40
-04) == ['WRONG_ANSWER']

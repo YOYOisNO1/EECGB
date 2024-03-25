@@ -1,5 +1,0 @@
-from ..program3003 import program3003
-def test17():
-    assert program3003(36 48 42
-45 41 66
-26 64 1) == ['001\r\n111\r\n010']

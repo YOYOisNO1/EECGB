@@ -1,4 +1,0 @@
-def gcd(x, y): return 0 if y == 0 else x // y + gcd(y, x % y)
-    x, y = list(map(int, input().split()))
-    print(gcd(x, y))
-    # 1

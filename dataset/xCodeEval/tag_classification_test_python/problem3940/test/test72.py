@@ -1,3 +1,0 @@
-from ..program3940 import program3940
-def test72():
-    assert program3940(982276216 982276216) == ['YES']

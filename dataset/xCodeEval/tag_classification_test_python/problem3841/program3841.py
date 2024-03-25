@@ -1,3 +1,0 @@
-def program3841():
-    f = ['', '1/1', '5/6', '2/3', '1/2', '1/3', '1/6']
-    print(f[max(int(x)) for x in input().split())]

@@ -1,5 +1,0 @@
-from ..program859 import program859
-def test48():
-    assert program859(1 2 4
-3
-4 1) == ['5']

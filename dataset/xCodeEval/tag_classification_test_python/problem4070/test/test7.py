@@ -1,3 +1,0 @@
-from ..program4070 import program4070
-def test7():
-    assert program4070(WUBKSDHEMIXUJWUBWUBRWUBWUBWUBSWUBWUBWUBHWUBWUBWUB) == ['KSDHEMIXUJ  R   S   H', 'KSDHEMIXUJ R S H']

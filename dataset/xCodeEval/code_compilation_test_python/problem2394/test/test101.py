@@ -1,4 +1,0 @@
-from ..program2394 import program2394
-def test101():
-    assert program2394(4444222277779999
-4444222277771111) == ['4442999977774222']

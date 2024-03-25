@@ -1,4 +1,0 @@
-from ..program2737 import program2737
-def test16():
-    assert program2737(92 52
-9 85 44 13 27 61 8 1 28 41 6 14 70 67 39 71 56 80 34 21 5 10 40 73 63 38 90 57 37 36 82 86 65 46 7 54 81 12 45 49 83 59 64 26 62 25 60 24 91 47 53 55) == ['1 1 1 1 1 1 1 8 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9', '1\r\n1\r\n1\r\n1\r\n1\r\n1\r\n1\r\n8\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9\r\n9']

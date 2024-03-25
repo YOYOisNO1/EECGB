@@ -1,3 +1,0 @@
-from ..program179 import program179
-def test19():
-    assert program179(774477) == ['114']

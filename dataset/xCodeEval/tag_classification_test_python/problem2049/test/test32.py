@@ -1,3 +1,0 @@
-from ..program2049 import program2049
-def test32():
-    assert program2049(1 100 100) == ['0']

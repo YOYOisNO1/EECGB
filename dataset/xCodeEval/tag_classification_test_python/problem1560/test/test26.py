@@ -1,4 +1,0 @@
-from ..program1560 import program1560
-def test26():
-    assert program1560(jrpogrcuhqdpmyzpuabuhaptlxaeiqjxhqkmuzsjbhqxvdtoocrkusaeasqdwlunomwzww
-spvgaswympzlscnumemgiznngnxqgccbubmxgqmaakbnyngkxlxjjsafricchhpecdjgxw) == ['krpogrcuhqdpmyzpuabuhaptlxaeiqjxhqkmuzsjbhqxvdtoocrkusaeasqdwlunomwzww', 'jrpogrcuhqdpmyzpuabuhaptlxaeiqjxhqkmuzsjbhqxvdtoocrkusaeasqdwlunomwzwx', 'ksqphrevireqnzaqvbcvhcqumybfjrkyirlnvatkciryweuppdslvsaectrexmvopnxawy']

@@ -1,8 +1,0 @@
-from ..program4203 import program4203
-def test12():
-    assert program4203(50000
-TAIWAN ANNOUNCES NEW ROUND OF IMPORT TARIFF CUTS
-TAIPEI, April 11 - Taiwan announced plans for another round
-of import tariff cuts on 862 foreign goods shortly before trade
-talks with Washington which officials described as a move to
-help balan...) == ['3']

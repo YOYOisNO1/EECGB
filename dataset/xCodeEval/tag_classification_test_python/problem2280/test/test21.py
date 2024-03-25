@@ -1,3 +1,0 @@
-from ..program2280 import program2280
-def test21():
-    assert program2280(00100000100100101110011001011011101110110110010100) == ['NO']

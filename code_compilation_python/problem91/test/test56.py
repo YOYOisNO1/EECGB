@@ -1,3 +1,0 @@
-from ..program91 import program91
-def test56():
-    assert program91(413850294331656955 1 413850294331656955) == ['1/413850294331656955']

@@ -1,3 +1,0 @@
-from ..program4289 import program4289
-def test112():
-    assert program4289(pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp) == ['YES\r\nppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp', 'YES\r\nppppppppppppppppppppppppppppppppppppppppppppppppppp']

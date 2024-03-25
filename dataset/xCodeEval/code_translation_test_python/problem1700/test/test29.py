@@ -1,4 +1,0 @@
-from ..program1700 import program1700
-def test29():
-    assert program1700(1
-99) == ['BitLGM']

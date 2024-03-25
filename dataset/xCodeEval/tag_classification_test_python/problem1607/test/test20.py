@@ -1,3 +1,0 @@
-from ..program1607 import program1607
-def test20():
-    assert program1607(sKLje,:q>-D,;NvQ3,qN3-N&tPx0nL/,>Ca|z"k2S{NF7btLa3_TyXG4XZ:`(t&"'^M|@qObZxv) == ['YES']

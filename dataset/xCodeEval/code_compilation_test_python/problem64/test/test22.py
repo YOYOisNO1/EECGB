@@ -1,3 +1,0 @@
-from ..program64 import program64
-def test22():
-    assert program64(6131066257802) == ['ccccccccccccccccccccooooooooooooooooooodddddddddddddddddddeeeeeeeeeeeeeeeeeeefffffffffffffffffffooooooooooooooooooorrrrrrrrrrrrrrrrrrrccccccccccccccccccceeeeeeeeeeeeeeeeeeesssssssssssssssssss']

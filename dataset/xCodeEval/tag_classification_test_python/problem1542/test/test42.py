@@ -1,3 +1,0 @@
-from ..program1542 import program1542
-def test42():
-    assert program1542(362064657893189225 54298707317247) == ['362059999999999999']

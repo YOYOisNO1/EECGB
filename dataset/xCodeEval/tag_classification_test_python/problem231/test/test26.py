@@ -1,3 +1,0 @@
-from ..program231 import program231
-def test26():
-    assert program231(wshiaunnqnqxodholbipwhhjmyeblhgpeleblklpzwhdunmpqkbuzloetmwwxmeltkrcomulxauzlwmlklldjodozxryghsnwgcz) == ['YES']

@@ -1,4 +1,0 @@
-from ..program197 import program197
-def test12():
-    assert program197(50 13
-10011010100010100111010000010000000000010100000101) == ['5']

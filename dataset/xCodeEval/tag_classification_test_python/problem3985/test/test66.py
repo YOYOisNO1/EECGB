@@ -1,3 +1,0 @@
-from ..program3985 import program3985
-def test66():
-    assert program3985(13057 13059) == ['NO']

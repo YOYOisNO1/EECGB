@@ -1,3 +1,0 @@
-from ..program264 import program264
-def test0():
-    assert program264(1) == ['20']

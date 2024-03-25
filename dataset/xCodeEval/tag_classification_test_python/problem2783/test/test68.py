@@ -1,4 +1,0 @@
-from ..program2783 import program2783
-def test68():
-    assert program2783(2
-1 -1) == ['YES\r\n2\r\n1 1\r\n2 2', 'YES\n2\n1 1\n2 2']

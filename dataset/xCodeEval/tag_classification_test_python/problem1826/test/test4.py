@@ -1,6 +1,0 @@
-from ..program1826 import program1826
-def test4():
-    assert program1826(3
-1
-52
-76) == ['NO\r\nYES\r\nYES']

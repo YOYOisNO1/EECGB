@@ -1,3 +1,0 @@
-from ..program232 import program232
-def test29():
-    assert program232(iaagrdhhelxpdegueiulflquvlzidoprzkehthkldaytrjwhyhprwjxlltinxvuilxohqgjqcvkkdcuoliekcnlilwgqlnlzouoo) == ['YES']

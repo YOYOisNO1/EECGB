@@ -1,3 +1,0 @@
-from ..program909 import program909
-def test58():
-    assert program909(1000000000000000000000000000000000000) == ['YES\n0', 'YES\r\n0', 'YES\r\n1000000000000000000000000000000000000']

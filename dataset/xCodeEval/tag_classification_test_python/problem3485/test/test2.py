@@ -1,4 +1,0 @@
-from ..program3485 import program3485
-def test2():
-    assert program3485(1 9
-10) == ['-1']

@@ -1,3 +1,0 @@
-from ..program4748 import program4748
-def test8():
-    assert program4748(10) == ['64']

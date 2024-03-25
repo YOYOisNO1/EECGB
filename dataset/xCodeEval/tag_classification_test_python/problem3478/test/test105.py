@@ -1,3 +1,0 @@
-from ..program3478 import program3478
-def test105():
-    assert program3478(12345678910 123456789101112131 123456789101112132) == ['1/1']

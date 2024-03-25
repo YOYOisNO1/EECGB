@@ -1,6 +1,0 @@
-def program175():
-    import itertools
-    s = input()
-    com = list(itertools.combinations(s, 3))
-    com = ["".join(list(i)) for i in com]
-    print(com.count("QAQ"))

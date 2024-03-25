@@ -1,3 +1,0 @@
-from ..program4077 import program4077
-def test0():
-    assert program4077(14 34) == ['50']

@@ -1,3 +1,0 @@
-from ..program392 import program392
-def test35():
-    assert program392(-2 0 -2) == ['NO']

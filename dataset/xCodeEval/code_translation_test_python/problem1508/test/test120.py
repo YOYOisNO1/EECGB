@@ -1,3 +1,0 @@
-from ..program1508 import program1508
-def test120():
-    assert program1508(31288011 27242802 -934902606 343371553 926119543 -195542560) == ['44']

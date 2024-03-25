@@ -1,7 +1,0 @@
-def program463():
-    n=int(input())
-    l=[int(i) for i in input().split()]
-    if (n%2!=0 and l[0]%2!=0 and l[-1]%2!=0):
-        print(('Yes'))
-    else:
-        print(('No'))

@@ -1,7 +1,0 @@
-from ..program3221 import program3221
-def test7():
-    assert program3221(6 4
-ca a
-be f
-ad a
-cf a) == ['3']

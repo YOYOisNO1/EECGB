@@ -1,5 +1,0 @@
-def program5229():
-    t = input()
-    f, s = input().split()
-    r = '6789TJQKA'
-    print(['NO',) 'YES'][f[1] == t and not s[1] == t or f[1] == s[1] and r.find(f[0]) > r.find(s[0])]

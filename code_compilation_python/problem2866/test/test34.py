@@ -1,3 +1,0 @@
-from ..program2866 import program2866
-def test34():
-    assert program2866(74747474747474747474747774747474747474747474747474) == ['7']

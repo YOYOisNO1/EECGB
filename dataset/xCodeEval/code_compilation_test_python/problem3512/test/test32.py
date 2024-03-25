@@ -1,3 +1,0 @@
-from ..program3512 import program3512
-def test32():
-    assert program3512(PCCPCPPCCCCCPCCCPCCCPPCCCCCPPPCCPPPPPPPPCPPPCCPPCPPCPCP) == ['26']

@@ -1,3 +1,0 @@
-from ..program7660 import program7660
-def test96():
-    assert program7660(500 995 1 1 1 1) == ['500 0']

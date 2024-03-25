@@ -1,9 +1,0 @@
-def program1821():
-    n = input()
-    n-=1
-    
-    while n>=5:
-    	n -= 5
-    	n /= 2
-    
-    print(["Sheldon","Leonard","Penny","Rajesh","Howard"][n])

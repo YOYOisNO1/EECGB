@@ -1,8 +1,0 @@
-def program967():
-    w,h = map(int, input().split())
-    s1 = s2 = 0
-    for i in range(0, w):
-        s1 += (w - i) / 2
-    for i in range(0, h):
-        s2 += (h - i) / 2
-    print(s1) * s2

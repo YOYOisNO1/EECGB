@@ -1,3 +1,0 @@
-from ..program2162 import program2162
-def test12():
-    assert program2162(ftprrurururrurururuurrururruuru) == ['ftp://r.ru/rururrurururuurrururruuru']

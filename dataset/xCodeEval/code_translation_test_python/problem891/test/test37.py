@@ -1,3 +1,0 @@
-from ..program891 import program891
-def test37():
-    assert program891(FORCESXCODE) == ['NO']

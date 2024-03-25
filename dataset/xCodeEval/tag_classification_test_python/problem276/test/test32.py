@@ -1,4 +1,0 @@
-from ..program276 import program276
-def test32():
-    assert program276(29
-21 11 10 25 2 5 9 16 29 8 17 4 15 13 6 22 7 24 19 12 18 20 1 3 23 28 27 14 26) == ['22']

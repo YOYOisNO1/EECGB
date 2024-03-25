@@ -1,3 +1,0 @@
-from ..program3963 import program3963
-def test32():
-    assert program3963(-411495869 33834652 -234317741 925065546) == ['78953311241547728']

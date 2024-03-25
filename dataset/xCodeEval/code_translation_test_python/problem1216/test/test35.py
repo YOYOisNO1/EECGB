@@ -1,3 +1,0 @@
-from ..program1216 import program1216
-def test35():
-    assert program1216(atatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatat) == ['at@atatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatatat']

@@ -1,5 +1,0 @@
-from ..program6754 import program6754
-def test87():
-    assert program6754(ssgqcodnqgfbhqsgineioafkkhcmmmihbiefialidgkffrhaiekebpieqgpplmsgmghphjsfgpscrbcgrssbccqroffnfgkfohljdarbpqmkolldcjcfhpodeqmgbdddlgoolesecdqsochdfgjsmorbnmiinjlpda
-ljdarbpqmkolldcjcfhpodeqmgbdddlgoolesecdqsochdfgjsmorbnmiinjlpdassgqcodnqgfbhqsgineioafkkhcmmmihbiefialidgkffrhaiekebpieqgpplmsgmghphjsfgpscrbcgrssbccqroffnfgkfoh
-50897) == ['222669762']

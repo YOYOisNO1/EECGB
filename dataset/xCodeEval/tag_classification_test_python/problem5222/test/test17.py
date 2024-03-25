@@ -1,4 +1,0 @@
-from ..program5222 import program5222
-def test17():
-    assert program5222(50
-44747747774474747747747447777447774747447477444474) == ['YES']

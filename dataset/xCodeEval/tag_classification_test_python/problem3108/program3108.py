@@ -1,4 +1,0 @@
-def program3108():
-    a,b=map(int,input().split())
-    if a<b:a,b=b,a
-    print(a-1,b)

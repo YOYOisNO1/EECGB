@@ -1,4 +1,0 @@
-from ..program1104 import program1104
-def test48():
-    assert program1104(4
-2 2 -2 -2) == ['8']

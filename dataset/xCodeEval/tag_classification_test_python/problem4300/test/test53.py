@@ -1,4 +1,0 @@
-from ..program4300 import program4300
-def test53():
-    assert program4300(y?f*sp*f*ha?ji*e?j*ac?w*iag*h*ei*w?xp*d*qol?b*vz*mx?l*n?nxw?n?mu*syi*tb
-26) == ['shjaiaexqovmxlnnxwnmusyitb', 'shjaiaexqovmnxmsyiiiiiiitb', 'shjaiaexpdqobvzmlnxmusyitb']

@@ -1,3 +1,0 @@
-from ..program178 import program178
-def test12():
-    assert program178(QQKWQAQAAAAAAAAGAAVAQUEQQUMQMAQQQNQLAMAAAUAEAAEMAAA) == ['411']

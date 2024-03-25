@@ -1,3 +1,0 @@
-from ..program1330 import program1330
-def test5():
-    assert program1330(14 6615308) == ['7\n\n', '7', '7\n', '\n7\n\n', '7 \n', '7\n\n', '7 \n\n', '7\n']

@@ -1,3 +1,0 @@
-from ..program911 import program911
-def test36():
-    assert program911(495773842562930245 17116719198640) == ['495769999999999999']

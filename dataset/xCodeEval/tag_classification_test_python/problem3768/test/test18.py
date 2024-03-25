@@ -1,3 +1,0 @@
-from ..program3768 import program3768
-def test18():
-    assert program3768(racecar) == ['raceecar']

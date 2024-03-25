@@ -1,3 +1,0 @@
-from ..program3158 import program3158
-def test27():
-    assert program3158(191597366 33903 33828) == ['1149610752\r\n33984 33828', '1149610752\n33984 33828']

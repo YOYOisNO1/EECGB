@@ -1,4 +1,0 @@
-from ..program3923 import program3923
-def test82():
-    assert program3923(5 787787787
-123456789 234567890 345678901 456789012 1) == ['49236737']

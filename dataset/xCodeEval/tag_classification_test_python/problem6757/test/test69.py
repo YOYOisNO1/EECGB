@@ -1,3 +1,0 @@
-from ..program6757 import program6757
-def test69():
-    assert program6757(100 123 1 2 1007) == ['100']

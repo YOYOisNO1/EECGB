@@ -1,6 +1,0 @@
-def program352():
-    s = list(input())
-    s[1],s[2] = s[2],s[1]
-    s[4],s[2] = s[2],s[4]
-    s = int(''.join(s)) ** 5 % 100000
-    print("%05d") % (s,)

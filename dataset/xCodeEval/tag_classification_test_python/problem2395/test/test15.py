@@ -1,3 +1,0 @@
-from ..program2395 import program2395
-def test15():
-    assert program2395(22438808523154336905543301642540261833729318191) == ['4']

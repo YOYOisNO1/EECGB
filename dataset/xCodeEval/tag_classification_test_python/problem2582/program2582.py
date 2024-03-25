@@ -1,7 +1,0 @@
-def program2582():
-    n,a,b = input().split()
-    n,a,b = int(n),int(a),int(b)
-    mn = []
-    for x in range(1,n):
-        mn.append(min(a//x,b//(n-x)))
-    print(max(mn))

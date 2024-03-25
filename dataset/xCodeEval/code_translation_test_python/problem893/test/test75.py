@@ -1,3 +1,0 @@
-from ..program893 import program893
-def test75():
-    assert program893(9 9 435779695685310822 697902619874412541) == ['262122924189101720']

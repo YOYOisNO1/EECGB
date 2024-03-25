@@ -1,3 +1,0 @@
-from ..program208 import program208
-def test44():
-    assert program208(409853735661743839 413850294331656955 413850294331656955) == ['1/1']

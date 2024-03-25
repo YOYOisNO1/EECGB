@@ -1,3 +1,0 @@
-from ..program1018 import program1018
-def test32():
-    assert program1018(4 997 413) == ['NO']

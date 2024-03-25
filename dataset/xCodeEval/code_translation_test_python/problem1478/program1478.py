@@ -1,6 +1,0 @@
-def program1478():
-    n, m = map(int, input().split())
-    x = input()
-    b = lambda h, w: ((h + 1) / 2) * ((w + 1) / 2) + (h / 2) * (w / 2) if h > 0 and w > 0 else 0
-    h, w = n - x - x, m - x - x
-    print(b(h) + 2, w + 2) - b(h, w)

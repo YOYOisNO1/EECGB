@@ -1,7 +1,0 @@
-from ..program4486 import program4486
-def test23():
-    assert program4486(6 4
-6 5
-4 5
-2 1
-3 2) == ['1 3\r\n3 4\r\n4 2\r\n2 5', '5 2\r\n2 4\r\n4 3\r\n3 1', '2 6\r\n3 4\r\n3 5\r\n4 6', '2 6\r\n6 3\r\n3 4\r\n4 1', '4 1\r\n1 5\r\n5 2\r\n2 6']

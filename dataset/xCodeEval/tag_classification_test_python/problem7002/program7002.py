@@ -1,2 +1,0 @@
-def program7002():
-    a=input()+1;print(a/36,a/3%12)

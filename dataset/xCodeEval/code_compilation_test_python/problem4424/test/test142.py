@@ -1,5 +1,0 @@
-from ..program4424 import program4424
-def test142():
-    assert program4424(80358706 0
-23898082 -87631921
--48798084 88174414) == ['NO']

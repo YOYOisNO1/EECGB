@@ -1,5 +1,0 @@
-def program6005():
-    n = int(input())
-    lst = [int(i) for i in input().split()]
-    for elem in lst:
-        print(sorted(lst)[sorted(lst).index(elem)-1])

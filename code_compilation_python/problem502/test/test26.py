@@ -1,5 +1,0 @@
-from ..program502 import program502
-def test26():
-    assert program502(ZWCOJFORBPHXCOVJIDPKVECMHVHCOC
-TEV
-JVGTBFTLFVIEPCCHODOFOMCVZHWXVCPEH) == ['NO']

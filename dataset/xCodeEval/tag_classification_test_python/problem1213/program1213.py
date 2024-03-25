@@ -1,3 +1,0 @@
-def program1213():
-    n,k = list(map(int,input().split()))
-    print((n+k)-(n%k))

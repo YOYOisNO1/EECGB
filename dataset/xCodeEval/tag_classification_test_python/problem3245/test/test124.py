@@ -1,4 +1,0 @@
-from ..program3245 import program3245
-def test124():
-    assert program3245(562949953421311 562949953421311 32 32 999 999
-1023175 1023175 1) == ['0']

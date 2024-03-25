@@ -1,8 +1,0 @@
-from ..program4462 import program4462
-def test37():
-    assert program4462(5 8
-2C 2D 2S 2H 3C 3D 3S 3H
-4C 4D 4S 4H 5C 5D 5S 5H
-8C 9C TC JC 7D 6H 9H J2
-KC QC AC AS 7S JS TH QH
-6C 7C J1 JH 6S 8H KH AH) == ['Solution exists.\nReplace J1 with JD and J2 with 7H.\nPut the first square to (3, 6).\nPut the second square to (3, 1).', 'Solution exists.\r\nReplace J1 with JD and J2 with 7H.\r\nPut the first square to (3, 1).\r\nPut the second square to (3, 6).']

@@ -1,8 +1,0 @@
-def program2161():
-    import re
-    s = input().strip()
-    m = re.match(r"(ftp|http)(\w+)(ru)(\w*)", s)
-    ans = m.groups()[0] + "://" + m.groups()[1] + '.' + m.groups()[2]
-    if m.groups()[3]:
-        ans += "/" + m.groups()[3]
-    print(ans)

@@ -1,4 +1,0 @@
-from ..program2656 import program2656
-def test45():
-    assert program2656(TFTTFFFFFFFTTTFTFFFTTTFTFFFTFTFTFFFTFTFTTTFTTFFTFTTFTFFTFTF
-8) == ['34']

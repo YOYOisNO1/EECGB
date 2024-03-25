@@ -1,3 +1,0 @@
-from ..program942 import program942
-def test30():
-    assert program942(6 24) == ['Hanako']

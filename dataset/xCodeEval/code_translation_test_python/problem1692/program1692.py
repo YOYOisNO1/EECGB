@@ -1,4 +1,0 @@
-def program1692():
-    from math import factorial as F
-    n, w, b = map(lambda x : int(x), input().split())
-    print(F(w+b-3)/F(n-3)/F(w+b-n)*(w-1)*F(w)*F(b)%(10**9+9))

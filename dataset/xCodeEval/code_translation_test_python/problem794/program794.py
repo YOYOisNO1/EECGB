@@ -1,2 +1,0 @@
-def program794():
-    import itertools as I;m,d,r,s,M,S,f=lambda x,y:x*y,reduce,range,str(input()),map,sum,lambda x:d(m,r(x,1,-1),1);print(S((f(S(x))-f(S(x)-1)*x[0])/d(m,M(f,x))for) x in I.product(*[r(y/max(y,1),y+1)for y in[s.count(str(u))for u in r(10)]]))

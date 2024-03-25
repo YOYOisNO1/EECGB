@@ -1,3 +1,0 @@
-from ..program943 import program943
-def test14():
-    assert program943(190) == ['1']

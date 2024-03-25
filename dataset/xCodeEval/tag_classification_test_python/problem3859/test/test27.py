@@ -1,4 +1,0 @@
-from ..program3859 import program3859
-def test27():
-    assert program3859(10
-BBBBWBBWBB) == ['3\r\n4 2 2', '3 \r\n 4 2 2', '3\n4 2 2']

@@ -1,3 +1,0 @@
-from ..program4047 import program4047
-def test22():
-    assert program4047(96918 775344422) == ['YES\r\n7\r\n96918 193836 1938361 3876722 38767221 387672211 775344422']

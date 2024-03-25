@@ -1,4 +1,0 @@
-from ..program1847 import program1847
-def test21():
-    assert program1847(10
-ABC ABc AB) == ['3']

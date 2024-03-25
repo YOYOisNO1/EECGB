@@ -1,9 +1,0 @@
-from ..program4616 import program4616
-def test6():
-    assert program4616(5 6
-CGTTGAA
-ATTATGAACC
-TTA
-TCAG
-CCGAGG
-T) == ['6']

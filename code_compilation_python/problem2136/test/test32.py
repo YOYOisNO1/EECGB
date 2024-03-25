@@ -1,5 +1,0 @@
-from ..program2136 import program2136
-def test32():
-    assert program2136(353770247 742032246
-391091420 742032246
-113505964 105784687) == ['2']

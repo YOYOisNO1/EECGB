@@ -1,3 +1,0 @@
-from ..program1180 import program1180
-def test21():
-    assert program1180(h4) == ['5']

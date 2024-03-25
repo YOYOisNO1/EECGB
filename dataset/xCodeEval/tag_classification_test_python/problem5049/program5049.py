@@ -1,9 +1,0 @@
-def program5049():
-    s, k, f = input(), int(input()), 0
-    for i in xrange((len(s)+k)/2, 0, -1):
-    	for j in xrange((len(s)+k)-2*i+1):
-    		if all(k+i >= len(s) or s[k] == s[k+i] for k in xrange(j, j+i)):
-    			f = 1
-    			break
-    	if f: break
-    print(i*2)

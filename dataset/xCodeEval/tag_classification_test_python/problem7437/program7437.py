@@ -1,4 +1,0 @@
-def rookfields(tuple, result, king): return ({(tuple[0], i) for i in range((king[1] if king[0]==tuple[0] and king[1]< tuple[1] else 0), (king[1] if king[0]==tuple[0] and king[1] > tuple[1] else 8))} | {(i, tuple[1]) for i in range((king[0] if king[1] == tuple[1] and king[0] < tuple[0] else 0),(king[0] if king[1] == tuple[1] and king[0] > tuple[0] else 8))})-{tuple}
-def kingfields(tuple, fields):  return {(tuple[0]+i,tuple[1]+j) for i,j in fields if tuple[0]+i >= 0 and tuple[0]+i <= 7 and tuple[1]+j >= 0 and tuple[1]+j <= 7}
-    inp,themap,kingf = [({'a':0, 'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7}[i[0]], int(i[1])-1) for i in input().split(" ")], [[True for _ in range(8)] for __ in range(8)], [(-1,-1),(-1,0),(-1,1),(0,-1),(0,0),(0,1),(1,-1),(1,0),(1,1)]
-    print("CHECKMATE") if kingfields(inp[3], kingf) < rookfields(inp[0], set(), inp[2]).union(rookfields(inp[1], set(), inp[2])).union(kingfields(inp[2], kingf)) else print("OTHER")

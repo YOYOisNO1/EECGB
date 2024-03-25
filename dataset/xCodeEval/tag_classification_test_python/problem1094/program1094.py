@@ -1,8 +1,0 @@
-def program1094():
-    n = int(input())
-    a1, a2, a3 = list(map(int, input().split()))
-    b1, b2, b3 = list(map(int, input().split()))
-    
-    maxmum = min(a1, b2) + min(a2, b3) + min(a3, b1)
-    minimum = max(0, a1 - b1 - b3, a2 - b2 - b1, a3 - b3 - b2)
-    print(minimum, maxmum)

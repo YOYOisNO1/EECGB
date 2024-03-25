@@ -1,6 +1,0 @@
-def program5249():
-    n, m, k = map(int , input().split())
-    if k == 1 or n < k: x = n
-    elif n == k: x = n//2 + n%2
-    else: x = 1 + k%2
-    print((m) ** x)%(10 ** 9 + 7)

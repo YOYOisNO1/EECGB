@@ -1,3 +1,0 @@
-from ..program6485 import program6485
-def test100():
-    assert program6485(10000 10002 96487781 -692179874 182133670 357089051) == ['56746']

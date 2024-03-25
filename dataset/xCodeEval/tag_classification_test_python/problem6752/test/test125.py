@@ -1,5 +1,0 @@
-from ..program6752 import program6752
-def test125():
-    assert program6752(lnxjsxjjfbrhijshlptgogxstvaybbueilocmaqwhlauulubpwtjtsdktgrowgbkhdotemhstqtxnpspmxjxrqymonnpcvrendrfxbwqxeedyamwvyyytxtmorkovoeklkabyexrfseimlaqlibaoaaeae
-alxckgrkneuqrqstpxormswxsyhaaoebqhfspyqjbxgytrpdoybxmmenllxxrrjtxtvhaoidjmaekiflxykmpnwageytemoewalwihbunbnvomqbututijjvdsbelrxestajokwysctfptalvegdahlboo
-44031) == ['0']

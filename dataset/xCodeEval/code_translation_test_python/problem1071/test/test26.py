@@ -1,3 +1,0 @@
-from ..program1071 import program1071
-def test26():
-    assert program1071(21) == ['18\n', '18', '18\r\n']

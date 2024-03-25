@@ -1,4 +1,0 @@
-from ..program505 import program505
-def test25():
-    assert program505(10
-15 28 39 48 55 60 63 64 74 82) == ['90']

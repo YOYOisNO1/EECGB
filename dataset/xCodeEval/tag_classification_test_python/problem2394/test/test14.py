@@ -1,3 +1,0 @@
-from ..program2394 import program2394
-def test14():
-    assert program2394(86145305734278927901987281894864719533015270066521) == ['7']

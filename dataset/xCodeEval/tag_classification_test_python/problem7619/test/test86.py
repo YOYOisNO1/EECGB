@@ -1,8 +1,0 @@
-from ..program7619 import program7619
-def test86():
-    assert program7619(5
-21 12 16 3 10
-23 19 24 2 6
-5 17 22 4 13
-18 11 7 20 1
-9 8 15 25 14) == ['37 3']

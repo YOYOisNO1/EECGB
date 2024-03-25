@@ -1,4 +1,0 @@
-from ..program1245 import program1245
-def test12():
-    assert program1245(18
-101111001111000110) == ['1\n101111001111000110', '1\r\n101111001111000110']

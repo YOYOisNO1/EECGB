@@ -1,4 +1,0 @@
-from ..program3238 import program3238
-def test12():
-    assert program3238(15
-nnnnnntnttttttqqnqqynnqqwwnnnwneenhwtyhhoqeyeqyeuthwtnhtpnphhwetjhouhwnpojvvovoswwjryrwerbwwpbvrwvjj) == ['YES\r\nnnnnnn\r\ntntttttt\r\nqqnqq\r\nynnqq\r\nwwnnnwn\r\neen\r\nhwtyhh\r\noqeyeqye\r\nuthwtnht\r\npnphhwet\r\njhouhwnpoj\r\nvvovo\r\nswwj\r\nryrwer\r\nbwwpbvrwvjj', 'YES\r\nnnnnnn\ntntttttt\nqqnqq\nynnqq\nwwnnnwn\neen\nhwtyhh\noqeyeqye\nuthwtnht\npnphhwet\njhouhwnpoj\nvvovo\nswwj\nryrwer\nbwwpbvrwvjj', 'YES\r\n\r\nnnnnnn\r\ntntttttt\r\nqqnqq\r\nynnqq\r\nwwnnnwn\r\neen\r\nhwtyhh\r\noqeyeqye\r\nuthwtnht\r\npnphhwet\r\njhouhwnpoj\r\nvvovo\r\nswwj\r\nryrwer\r\nbwwpbvrwvjj']

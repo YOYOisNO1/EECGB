@@ -1,3 +1,0 @@
-from ..program3739 import program3739
-def test33():
-    assert program3739(33) == ['88888888888888884', '88888888888888886', '88888888888888880']

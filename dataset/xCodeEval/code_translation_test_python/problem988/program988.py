@@ -1,6 +1,0 @@
-def program988():
-    a = min([int(x) for x in input().split()])
-    if a%2 == 0:
-        print('Malvika')
-    else:
-        print('Akshat')

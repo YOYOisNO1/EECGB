@@ -1,4 +1,0 @@
-from ..program5050 import program5050
-def test3():
-    assert program5050(zwvrx
-3) == ['6']

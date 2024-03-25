@@ -1,4 +1,0 @@
-from ..program2909 import program2909
-def test1():
-    assert program2909(8
-abcdefgh) == ['8']

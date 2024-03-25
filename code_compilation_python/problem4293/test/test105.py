@@ -1,3 +1,0 @@
-from ..program4293 import program4293
-def test105():
-    assert program4293(mrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdreps) == ['YES\r\nmrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdreps', 'YES\r\nmrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdrepsprwlwwjewemrjdreps']

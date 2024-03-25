@@ -1,9 +1,0 @@
-def program1578():
-    s=map(int, input().split())
-    l=s.pop()
-    an=((l+1)*(l+2)*(l+3))/6
-    for i in range(l+1):
-        for j in s:
-            x = min(j+j-sum(s)+i, l-i)
-            if x>=0: an -= ((x+1)*(x+2))/2
-    print(an)

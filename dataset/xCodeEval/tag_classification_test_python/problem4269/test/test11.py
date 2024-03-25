@@ -1,3 +1,0 @@
-from ..program4269 import program4269
-def test11():
-    assert program4269(yehcqdlllqpuxdsaicyjjxiylahgxbygmsopjbxhtimzkashs) == ['49']

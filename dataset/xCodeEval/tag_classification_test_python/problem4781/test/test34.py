@@ -1,7 +1,0 @@
-from ..program4781 import program4781
-def test34():
-    assert program4781(KIBOL BERLAND 4:4
-NFYTBPXIOQP BERLAND 4:1
-NFYTBPXIOQP KIBOL 8:6
-OBEVWLAJRL KIBOL 4:6
-OBEVWLAJRL NFYTBPXIOQP 0:7) == ['11:8']

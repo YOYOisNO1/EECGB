@@ -1,4 +1,0 @@
-from ..program2740 import program2740
-def test31():
-    assert program2740(vxpqullmcbegsdskddortcvxyqlbvxmmkhevovnezubvpvnrcajpxraeaxizgaowtfkzywvhnbgzsxbhkaipcmoumtikkiyyaivg
-gviayyikkitmuomcpiakhbxszgbnhvwyzkftwoagzixaearxpjacrnvpvbuzenvovehkmmxvblqyxvctroddksdsgebcmlluqpxv) == ['YES']

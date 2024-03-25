@@ -1,3 +1,0 @@
-from ..program4420 import program4420
-def test1():
-    assert program4420(dotdotdotatdotdotat) == ['dot..@..at']

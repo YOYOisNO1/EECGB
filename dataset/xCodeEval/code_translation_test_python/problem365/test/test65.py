@@ -1,3 +1,0 @@
-from ..program365 import program365
-def test65():
-    assert program365(621282132 311996010 98597740967720109) == ['305259691 311996002']

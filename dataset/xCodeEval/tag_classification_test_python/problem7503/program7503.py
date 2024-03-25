@@ -1,7 +1,0 @@
-def program7503():
-    n,a,b,c=map(int,input().split())
-    w=0
-    for i in range(0,min(n,c*2)+1,2):
-      j=n-i
-      w+=max(0,min(a/2,j)+min(b,j)-j+1)
-    print(w)

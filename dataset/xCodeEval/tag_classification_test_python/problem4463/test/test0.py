@@ -1,7 +1,0 @@
-from ..program4463 import program4463
-def test0():
-    assert program4463(4 6
-2S 3S 4S 7S 8S AS
-5H 6H 7H 5S TC AC
-8H 9H TH 7C 8C 9C
-2D 2C 3C 4C 5C 6C) == ['No solution.']

@@ -1,4 +1,0 @@
-from ..program1684 import program1684
-def test41():
-    assert program1684(3
-edc) == ['NO']

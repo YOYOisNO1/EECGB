@@ -1,3 +1,0 @@
-from ..program291 import program291
-def test1():
-    assert program291(3 10 3) == ['YES']

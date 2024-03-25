@@ -1,3 +1,0 @@
-from ..program891 import program891
-def test45():
-    assert program891(AXODEFORCES) == ['NO']

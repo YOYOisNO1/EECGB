@@ -1,4 +1,0 @@
-from ..program3242 import program3242
-def test28():
-    assert program3242(26
-cccccccaacwwaxxaacczacnnnqqwnaggzqrwagcnabxnrcvgjqjamqzgdntzanaxvjfwqlvdttuzjoxiwtkqvrydospmpeirhg) == ['YES\r\nccccccc\r\naac\r\nwwa\r\nxxaacc\r\nzac\r\nnnn\r\nqqwna\r\nggzq\r\nrwagcna\r\nbxnrc\r\nvg\r\njqja\r\nmqzg\r\ndn\r\ntzanaxvj\r\nfwq\r\nlvdtt\r\nuzj\r\nox\r\niwt\r\nkqvr\r\nydo\r\ns\r\npmp\r\neir\r\nhg', 'YES\r\n\r\nccccccc\r\naac\r\nwwa\r\nxxaacc\r\nzac\r\nnnn\r\nqqwna\r\nggzq\r\nrwagcna\r\nbxnrc\r\nvg\r\njqja\r\nmqzg\r\ndn\r\ntzanaxvj\r\nfwq\r\nlvdtt\r\nuzj\r\nox\r\niwt\r\nkqvr\r\nydo\r\ns\r\npmp\r\neir\r\nhg', 'YES\r\nccccccc\naac\nwwa\nxxaacc\nzac\nnnn\nqqwna\nggzq\nrwagcna\nbxnrc\nvg\njqja\nmqzg\ndn\ntzanaxvj\nfwq\nlvdtt\nuzj\nox\niwt\nkqvr\nydo\ns\npmp\neir\nhg']

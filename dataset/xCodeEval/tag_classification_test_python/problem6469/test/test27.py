@@ -1,4 +1,0 @@
-from ..program6469 import program6469
-def test27():
-    assert program6469(5
-G4 W5 Y4 Y4 R5) == ['3']

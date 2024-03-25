@@ -1,5 +1,0 @@
-from ..program8094 import program8094
-def test75():
-    assert program8094(10
-ababbbaaab
-2 1 1 1 2 2 2 1 1 1) == ['11']

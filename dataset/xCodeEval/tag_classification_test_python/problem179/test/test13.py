@@ -1,3 +1,0 @@
-from ..program179 import program179
-def test13():
-    assert program179(QQUMQAYAUAAGWAAAQSDAVAAQAAAASKQJJQQQQMAWAYYAAAAAAEAJAXWQQ) == ['625']

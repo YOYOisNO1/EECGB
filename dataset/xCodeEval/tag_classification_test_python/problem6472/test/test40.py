@@ -1,4 +1,0 @@
-from ..program6472 import program6472
-def test40():
-    assert program6472(35
-W4 Y5 Y3 Y3 R5 W3 R5 W2 R5 Y2 R2 Y2 G2 G3 Y4 Y4 R4 Y3 G2 W2 R2 R3 Y3 W5 W2 G4 R3 R3 W2 W5 Y4 R3 W2 R4 R2) == ['6']

@@ -1,3 +1,0 @@
-from ..program500 import program500
-def test32():
-    assert program500(34 86 90) == ['13515']

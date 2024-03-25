@@ -1,3 +1,0 @@
-from ..program770 import program770
-def test13():
-    assert program770(QQUMQAYAUAAGWAAAQSDAVAAQAAAASKQJJQQQQMAWAYYAAAAAAEAJAXWQQ) == ['625']

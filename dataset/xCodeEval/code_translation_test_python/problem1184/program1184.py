@@ -1,6 +1,0 @@
-def program1184():
-    n = int(input())
-    ans = n*(n-1)*(n-2)*(n-3)*(n-4)
-    ans *= ans
-    ans //= 120
-    print(ans)

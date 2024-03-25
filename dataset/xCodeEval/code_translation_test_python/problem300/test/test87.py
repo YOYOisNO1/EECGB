@@ -1,4 +1,0 @@
-from ..program300 import program300
-def test87():
-    assert program300(1212207179472885 4 2 2 4416 8451
-1212207179472883 4 8485450256400294) == ['4']

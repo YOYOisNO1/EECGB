@@ -1,4 +1,0 @@
-from ..program4938 import program4938
-def test43():
-    assert program4938(64
-VVKKVAVBVCVDVEVFVGVHVIVJVKVLVMVNVOVPVQVRVSVTVUVVVWVXVYVZVVVKKKKK) == ['7']

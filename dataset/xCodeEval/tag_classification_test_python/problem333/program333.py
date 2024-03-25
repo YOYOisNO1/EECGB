@@ -1,4 +1,0 @@
-def program333():
-    x=[2,7,2,3,3,4,2,5,1,2]
-    s=input()
-    print(x[int(s[0])]*x[int(s[1])])

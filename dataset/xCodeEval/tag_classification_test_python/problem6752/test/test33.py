@@ -1,3 +1,0 @@
-from ..program6752 import program6752
-def test33():
-    assert program6752(hffhihcdgdafhibhidgabdibiebcgaihfdgfddifihhbdbdidcidadghhbffhidccaddchdefgbaeeaeafdfaigdecbdffdbaeeddcdefaeggebdgehhdcicbfabhbdbffdeidbddicececbfhgcdcccibbhcgaafhdcfeebbeehicadaceiaffiageiaceebedchiadfabgfhcdcaddacbfgfhghehhhbhaebcaibcficgiacfbeedheigheee...) == ['669250782']

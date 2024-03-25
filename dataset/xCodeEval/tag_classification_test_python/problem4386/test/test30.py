@@ -1,3 +1,0 @@
-from ..program4386 import program4386
-def test30():
-    assert program4386(atatat) == ['at@at']

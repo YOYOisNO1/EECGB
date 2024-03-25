@@ -1,5 +1,0 @@
-from ..program686 import program686
-def test9():
-    assert program686(6 1
-4 2 7 3 1 8
-9) == ['']

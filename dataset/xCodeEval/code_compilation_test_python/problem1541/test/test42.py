@@ -1,5 +1,0 @@
-from ..program1541 import program1541
-def test42():
-    assert program1541(0 0
-100000007 0
-100000007 -999999999) == ['RIGHT']

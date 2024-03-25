@@ -1,8 +1,0 @@
-from ..program757 import program757
-def test32():
-    assert program757(5
-2 4
-3 1
-4 5
-5 3
-1 2) == ['FAIL']

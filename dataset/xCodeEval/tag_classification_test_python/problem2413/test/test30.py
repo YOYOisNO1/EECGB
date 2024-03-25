@@ -1,4 +1,0 @@
-from ..program2413 import program2413
-def test30():
-    assert program2413(1
-a) == ['1\r\n0', '1 0']

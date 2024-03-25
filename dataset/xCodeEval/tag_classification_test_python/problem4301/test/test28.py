@@ -1,5 +1,0 @@
-from ..program4301 import program4301
-def test28():
-    assert program4301(1 7 2 8
-0 0 1 1
-1 4 2 9) == ['NO']

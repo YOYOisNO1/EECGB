@@ -1,4 +1,0 @@
-from ..program115 import program115
-def test28():
-    assert program115(100
-Y?CYMYMYMYCYMY?CMCYMYMC?MYCY?CMCYCYMCM?YCMCYMYCYCY?MYMYCYCYCM?CYMYMY?CY?MYCYCY?M?YMYCY?CMCMCY?CY?M?C) == ['No', 'NO']

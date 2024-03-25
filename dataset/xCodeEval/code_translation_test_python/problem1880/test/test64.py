@@ -1,3 +1,0 @@
-from ..program1880 import program1880
-def test64():
-    assert program1880(aigbdfeedcadiddafbgdffaaidbigifahgieghchddeggbigeabfiibfaefdcifebchichiehefiihieehdebcgigcihiabeaiediaeifadgbdfcebaighfceachfebdbiiffgfebeeaaaigidhcgibegfddaaaiiidgbbaeecdcediehfedifggfebhehfbbdceffihfdaabgfaaehfeeaheagfhhddaehffgheffagcdhgeadhigfbifiiifd...) == ['0']

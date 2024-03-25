@@ -1,9 +1,0 @@
-def program5497():
-    N,H=map(int,input().split())
-    d=[[0]*(N+1) for i in[0]*(N+1)]
-    d[0][0]=1
-    for n in range(1,N+1):
-     for i in range(n):
-    	for j in range(i+1):
-    	 for k in range(n-i):d[n][1+max(j,k)]+=d[i][j]*d[n-i-1][k]
-    print(sum(d[N][H:]))

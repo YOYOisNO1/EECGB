@@ -1,9 +1,0 @@
-def program4441():
-    a=input()
-    b=a.find('dot', 1, len(a)-1)
-    while b!=-1:
-        a=a[:b]+'.'+a[b+3:]
-        b=a.find('dot', 1, len(a)-1)
-    b=a.find('at', 1, len(a)-1)
-    a=a[:b]+'@'+a[b+2:]
-    print(a)

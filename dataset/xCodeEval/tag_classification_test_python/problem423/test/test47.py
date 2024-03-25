@@ -1,5 +1,0 @@
-from ..program423 import program423
-def test47():
-    assert program423(CHTAZVHGSHCVIBK
-EQINEBKXEPYJSAZIMLDF
-ZCZZZZDZMCZZEZDZZEZZZZQZZBZZZOZZCZE) == ['NO']

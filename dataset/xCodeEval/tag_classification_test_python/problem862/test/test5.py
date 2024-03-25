@@ -1,3 +1,0 @@
-from ..program862 import program862
-def test5():
-    assert program862(500 1 1) == ['1497 500', '1497\r\n500']

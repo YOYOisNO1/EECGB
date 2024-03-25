@@ -1,8 +1,0 @@
-from ..program758 import program758
-def test131():
-    assert program758(5
-2 5
-1 5
-1 3
-3 5
-1 2) == ['WIN']

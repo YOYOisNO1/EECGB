@@ -1,4 +1,0 @@
-from ..program4105 import program4105
-def test26():
-    assert program4105(9
-998877665544332211) == ['MHMHMHMHMHMHMHMHMH', 'HMHMHMHMHMHMHMHMHM', 'HMHMHMHMMHHMHMHMHM']

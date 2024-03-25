@@ -1,4 +1,0 @@
-from ..program1045 import program1045
-def test81():
-    assert program1045(10123456789013451
-26666666666666666) == ['26598754433111100']

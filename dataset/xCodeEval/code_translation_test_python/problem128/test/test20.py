@@ -1,3 +1,0 @@
-from ..program128 import program128
-def test20():
-    assert program128(100 100 50 50 500 500) == ['Poor Inna and pony!']

@@ -1,4 +1,0 @@
-from ..program301 import program301
-def test113():
-    assert program301(6032819087 1 37 54 40701833 53203002
-6032819091 1 305789686150168) == ['4']

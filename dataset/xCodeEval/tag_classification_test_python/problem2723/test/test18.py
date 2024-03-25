@@ -1,4 +1,0 @@
-from ..program2723 import program2723
-def test18():
-    assert program2723(21:00
-01:00) == ['20:00']

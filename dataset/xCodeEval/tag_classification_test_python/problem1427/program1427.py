@@ -1,6 +1,0 @@
-def program1427():
-    n,c=int(input())+1,0
-    l=sum(list(map(int,input().split())))
-    for i in range(1,6):
-    	if (l+i)%n!=1:c+=1
-    print(c)

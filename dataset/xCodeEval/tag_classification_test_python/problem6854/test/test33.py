@@ -1,4 +1,0 @@
-from ..program6854 import program6854
-def test33():
-    assert program6854(52
-9D 5D TC 4D 7D 3D JD 5C 7D TD 5D TD 6H TD TD AD 6D AD TD 2C TD TS TD TD 2H 7D TD QD 2D 2H AC 9D 2D 2C QC AD 2D 4C JC 2D AD 5D 5C AC AD 6C 8D 4D 7C 8C JC AC) == ['NO']

@@ -1,4 +1,0 @@
-from ..program633 import program633
-def test33():
-    assert program633(35
-G3 G2 G5 G2 W2 G3 W2 W5 Y5 G5 W2 W2 W2 G5 Y2 G5 W5 W3 W2 Y2 G5 W5 W3 W5 Y2 Y5 W2 W2 W3 Y3 G2 W3 G5 G3 W2) == ['4']

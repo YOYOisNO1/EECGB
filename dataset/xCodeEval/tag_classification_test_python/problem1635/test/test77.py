@@ -1,3 +1,0 @@
-from ..program1635 import program1635
-def test77():
-    assert program1635(Hi7zYuVXCPhaho68YgCMzzgLILM6toQTJq8akMqqrnUn6ZCD36iA1yVVpvlsIiMpCu!1QZd4ycIrQ5Kcrhk5k0jTrwdAAEEP_T2f) == ['Correct']

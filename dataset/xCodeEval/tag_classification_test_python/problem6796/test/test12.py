@@ -1,4 +1,0 @@
-from ..program6796 import program6796
-def test12():
-    assert program6796(9
-a??d?fgh???????beaabaih????c??) == ['aacdafghiabaaebbeaabaihgfadcaa']

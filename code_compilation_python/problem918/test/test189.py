@@ -1,3 +1,0 @@
-from ..program918 import program918
-def test189():
-    assert program918(11 37) == ['10\n\n', '10', '10\n\n', '10 \n', '10\n', '10 \n\n', '10\n']

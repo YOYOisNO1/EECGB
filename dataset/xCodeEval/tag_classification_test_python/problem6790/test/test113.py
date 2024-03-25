@@ -1,3 +1,0 @@
-from ..program6790 import program6790
-def test113():
-    assert program6790(50 50 1 1 5 2) == ['First']

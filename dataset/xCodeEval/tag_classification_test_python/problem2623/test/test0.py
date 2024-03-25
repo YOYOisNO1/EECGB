@@ -1,3 +1,0 @@
-from ..program2623 import program2623
-def test0():
-    assert program2623(4 of week) == ['52']

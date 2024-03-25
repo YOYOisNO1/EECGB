@@ -1,4 +1,0 @@
-from ..program2465 import program2465
-def test22():
-    assert program2465(255
-Af________T_C____t_p(_Ug___Fr_Wg_)j_____x__j_a___Q_____(__p_____M)__J__jj____E__J(_W____eT)__wtm____T____Z_c_____C____P_____k___(___ql_X_B_________l____L_______F___m___p_S__DI______w)_f__r_lGG_m__SJ(__q__G_____s___s___o_______bg____f____vZ___rg_k___C____)) == ['3\r\n29', '3 29']

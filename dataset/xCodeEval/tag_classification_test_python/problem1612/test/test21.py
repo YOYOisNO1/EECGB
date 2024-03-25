@@ -1,3 +1,0 @@
-from ..program1612 import program1612
-def test21():
-    assert program1612(%z:c@1ZsQ@\6U/NQ+M9R>,$bwG`U1+C\18^:S},;kw!&4r|z`) == ['YES']

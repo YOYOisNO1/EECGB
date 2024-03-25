@@ -1,4 +1,0 @@
-from ..program300 import program300
-def test43():
-    assert program300(38 70 2 2 67 88
-6838924170055088 456766390500883 9176106261147424) == ['44']

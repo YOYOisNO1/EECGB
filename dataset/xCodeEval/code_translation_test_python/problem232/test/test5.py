@@ -1,5 +1,0 @@
-from ..program232 import program232
-def test5():
-    assert program232(100 100 100
-100 100 100
-1) == ['NO']

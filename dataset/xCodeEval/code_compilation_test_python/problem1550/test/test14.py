@@ -1,8 +1,0 @@
-from ..program1550 import program1550
-def test14():
-    assert program1550(5
-12750 0 25688 1
-1094 0 12750 1
-0 0 956 1
-956 0 1094 1
-25688 0 31400 1) == ['NO']

@@ -1,5 +1,0 @@
-from ..program4780 import program4780
-def test1():
-    assert program4780(3 2
-+ 1
-- 2) == ['1\r\n3']

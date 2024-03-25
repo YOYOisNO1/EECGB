@@ -1,4 +1,0 @@
-from ..program1268 import program1268
-def test44():
-    assert program1268(71 36 1 10
-7 10 8 1 3 8 5 7 3 10 8 1 6 4 5 7 8 2 4 3 4 10 8 5 1 2 8 8 10 10 4 3 7 9 7 8) == ['Correct']

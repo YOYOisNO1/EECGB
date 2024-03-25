@@ -1,7 +1,0 @@
-from ..program4781 import program4781
-def test0():
-    assert program4781(AERLAND DERLAND 2:1
-DERLAND CERLAND 0:3
-CERLAND AERLAND 0:1
-AERLAND BERLAND 2:0
-DERLAND BERLAND 4:0) == ['6:0']

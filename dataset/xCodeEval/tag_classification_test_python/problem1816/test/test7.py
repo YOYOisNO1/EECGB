@@ -1,6 +1,0 @@
-from ..program1816 import program1816
-def test7():
-    assert program1816(A.G_R__iT_ow_Y__Sm_al__u_____l_ltK
-B.CWRe__h__cbCF
-C._QJ_dVHCL_g_WBsMO__LC____hMNE_DoO__xea_ec
-D.___Zh_) == ['D']

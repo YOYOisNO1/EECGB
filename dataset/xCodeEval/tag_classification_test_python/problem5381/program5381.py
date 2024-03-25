@@ -1,3 +1,0 @@
-    MOD = 10**9+7
-def f(n, k):good = (n-1) & 1;maybe = (pow(2, n-1, MOD) + 1 - 2*good) % MOD;all_ = pow(2, n, MOD);return (good * (pow(all_, k, MOD) - pow(maybe, k, MOD)) * pow(all_ - maybe, MOD-2, MOD) + pow(maybe, k, MOD)) % MOD
-    for _ in range(int(input())):n, k = map(int, input().split());print(f(n, k))

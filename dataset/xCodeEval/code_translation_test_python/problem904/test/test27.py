@@ -1,4 +1,0 @@
-from ..program904 import program904
-def test27():
-    assert program904(pofvbxtueyzxgzcrthooeacytrsysourmdvkfhebuqpoofbixkxrveqijcluhgaqbeljezhpeiffpeaejkvvuhbhrlhlwuwpkbmgejmrelsnzlrubrgmqowtfucbjzvqoqcbvrqqljzvlscrrulfahdijkzosggdocqmhpbszktbucsfnfurklmlnxcshtdjhrherwxr
-pofvbxtuezgrtooacytrssoumdvkuobxr) == ['151']

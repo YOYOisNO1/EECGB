@@ -1,3 +1,0 @@
-def program863():
-    i = input().split(" ")
-    print(str((int(i[0])-1)*(2*int(i[1])+1))+" "+str(int(i[0])*int(i[2])))

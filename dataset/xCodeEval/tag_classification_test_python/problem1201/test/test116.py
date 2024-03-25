@@ -1,5 +1,0 @@
-from ..program1201 import program1201
-def test116():
-    assert program1201(X.0
-0XX
-..0) == ['first']

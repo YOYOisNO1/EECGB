@@ -1,2 +1,0 @@
-def program6627():
-    print(max(((int(input())+45)%360-1)//90,0))

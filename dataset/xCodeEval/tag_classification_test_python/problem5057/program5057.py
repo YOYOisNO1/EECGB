@@ -1,7 +1,0 @@
-def program5057():
-    n,d=map(int,input().split())
-    l=sum(map(int,input().split()))
-    if l+n*10-10>d: 
-        print(-1)
-    else: 
-        print((d-l)//5)

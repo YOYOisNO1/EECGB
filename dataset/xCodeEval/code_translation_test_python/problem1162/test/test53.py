@@ -1,3 +1,0 @@
-from ..program1162 import program1162
-def test53():
-    assert program1162(RRRUUULLLDD) == ['BUG']

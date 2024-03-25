@@ -1,3 +1,0 @@
-from ..program4165 import program4165
-def test38():
-    assert program4165(1000000000000000000 2) == ['61\r\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 1 1 0 0 0 0 1 0 0 0 1 0 0 1', '61\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n1\r\n0\r\n0\r\n1\r\n0\r\n1\r\n0\r\n0\r\n0\r\n1\r\n1\r\n1\r\n1\r\n1\r\n0\r\n0\r\n1\r\n0\r\n1\r\n1\r\n1\r\n1\r\n1\r\n1\r\n0\r\n1\r\n0\r\n0\r\n1\r\n1\r\n1\r\n0\r\n0\r\n0\r\n0\r\n1\r\n0\r\n0\r\n0\r\n1\r\n0\r\n0\r\n1']

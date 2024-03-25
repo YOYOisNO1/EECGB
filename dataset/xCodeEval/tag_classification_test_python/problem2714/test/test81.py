@@ -1,3 +1,0 @@
-from ..program2714 import program2714
-def test81():
-    assert program2714(497151 591228) == ['Hanako']

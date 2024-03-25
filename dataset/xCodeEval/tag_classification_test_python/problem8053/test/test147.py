@@ -1,5 +1,0 @@
-from ..program8053 import program8053
-def test147():
-    assert program8053(10 13
--13 10
-0 0) == ['YES']

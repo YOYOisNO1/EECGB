@@ -1,3 +1,0 @@
-from ..program3765 import program3765
-def test7():
-    assert program3765(shuseki) == ['NA']

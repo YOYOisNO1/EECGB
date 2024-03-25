@@ -1,3 +1,0 @@
-def program7087():
-    print(max(1, 4 * int(int(input()) * 2 ** 0.5)))
-    

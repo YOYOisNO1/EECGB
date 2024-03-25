@@ -1,3 +1,0 @@
-from ..program615 import program615
-def test26():
-    assert program615(1063740 2675928 277215 2022291 204933 298547) == ['0 1183193 1024665 2675928']

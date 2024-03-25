@@ -1,3 +1,0 @@
-from ..program3101 import program3101
-def test18():
-    assert program3101(GGG) == ['0']

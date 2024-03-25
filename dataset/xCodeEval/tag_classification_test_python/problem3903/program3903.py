@@ -1,4 +1,0 @@
-def program3903():
-    r=p=1
-    for d in map(int,input()[::-1]):r=max(d*r,d*p-p);p*=9
-    print(max(r,p//9))

@@ -1,5 +1,0 @@
-def program540():
-    nn = input().split()
-    k = int(nn[0])#5
-    n = int(nn[1])#3 6
-    print(k+n-(k%n))

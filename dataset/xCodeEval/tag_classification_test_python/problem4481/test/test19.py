@@ -1,3 +1,0 @@
-from ..program4481 import program4481
-def test19():
-    assert program4481(9728000000000) == ['ccccccccccccccccccccooooooooooooooooooooddddddddddddddddddddeeeeeeeeeeeeeeeeeeeeffffffffffffffffffffoooooooooooooooooooorrrrrrrrrrrrrrrrrrrrcccccccccccccccccccceeeeeeeeeeeeeeeeeeeesssssssssssssssssss']

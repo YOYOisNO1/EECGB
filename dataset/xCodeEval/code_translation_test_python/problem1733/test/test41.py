@@ -1,3 +1,0 @@
-from ..program1733 import program1733
-def test41():
-    assert program1733(40 43 40 9 38 28) == ['Second']

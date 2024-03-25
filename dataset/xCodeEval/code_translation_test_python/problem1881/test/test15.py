@@ -1,3 +1,0 @@
-from ..program1881 import program1881
-def test15():
-    assert program1881(cdaadaaccbadcdcbcabadabbadadadbcadddcacbddddcbddcdaaaadbdbdacabbcacabdbcaacbccddddddcbcdcbdabdcabdadaccdbbcbbabbcaccdacccdddbacbcaabcdaadaaccbadcdcbcabadabbadadadbcadddcacbddddcbddcdaaaadbdbdacabbcacabdbcaacbccddddddcbcdcbdabdcabdadaccdbbcbbabbcaccdacccdd...) == ['0']

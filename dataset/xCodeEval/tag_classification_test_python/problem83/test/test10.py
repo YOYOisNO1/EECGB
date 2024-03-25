@@ -1,3 +1,0 @@
-from ..program83 import program83
-def test10():
-    assert program83(tgcdptnkc) == ['IGNORE HIM!']

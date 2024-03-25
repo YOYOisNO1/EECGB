@@ -1,3 +1,0 @@
-from ..program1877 import program1877
-def test49():
-    assert program1877(8 8) == ['2-type\r\n1']

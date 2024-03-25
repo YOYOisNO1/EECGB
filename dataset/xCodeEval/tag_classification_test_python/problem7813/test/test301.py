@@ -1,3 +1,0 @@
-from ..program7813 import program7813
-def test301():
-    assert program7813(684178606868566272 94369463016353968) == ['428076049041859423']

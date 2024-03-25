@@ -1,3 +1,0 @@
-from ..program255 import program255
-def test33():
-    assert program255(PslvVpgpN BXkMFBEVXsyZFIQbBEFxGkYTeXKrOdcmhbiTUatYRUoYAayrchqbksswIlfIjerZPqptvCGnMUhyrQSvwltRhFzA?) == ['YES']

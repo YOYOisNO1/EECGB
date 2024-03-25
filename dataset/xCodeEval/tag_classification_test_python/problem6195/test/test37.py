@@ -1,3 +1,0 @@
-from ..program6195 import program6195
-def test37():
-    assert program6195(6 7 4 1) == ['2 2 6', '2\r\n2\r\n6']

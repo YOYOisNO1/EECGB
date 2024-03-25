@@ -1,3 +1,0 @@
-from ..program2512 import program2512
-def test15():
-    assert program2512(29 99) == ['23125873']

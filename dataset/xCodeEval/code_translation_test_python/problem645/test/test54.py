@@ -1,3 +1,0 @@
-from ..program645 import program645
-def test54():
-    assert program645(SllbRLdZ6@.T.E3x.BE2nIv.5db_.38./zgVGNjpldr) == ['NO']

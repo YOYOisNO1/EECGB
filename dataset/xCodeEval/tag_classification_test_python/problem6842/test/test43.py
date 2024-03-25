@@ -1,4 +1,0 @@
-from ..program6842 import program6842
-def test43():
-    assert program6842(52
-7H 5S 5S JS 5H 5C 5S 5H 2S 5S 9S 3S 2S 5S 2S 2S 5S 4S 3S 5S 7H 3S 5S 7S 4S 2S TS 2S 3S 3S 3S 3S 3S 3S 2S 7S 3S 2S 2S 2S 2S 2S 5S 2H 2C 4S 2S 2S 4S 7S 2S 2S) == ['YES']

@@ -1,3 +1,0 @@
-from ..program1283 import program1283
-def test16():
-    assert program1283(1000000000000 77777777777) == ['6 466666666662 533333333332']

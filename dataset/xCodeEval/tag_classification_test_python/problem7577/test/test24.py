@@ -1,5 +1,0 @@
-from ..program7577 import program7577
-def test24():
-    assert program7577(7 1 7
-to head
-011001001000100000000000000100001100000001100000000010000010011) == ['Controller 24']

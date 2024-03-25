@@ -1,3 +1,0 @@
-from ..program5102 import program5102
-def test57():
-    assert program5102(0X5) == ['0\n\n', '0\n', '0', '0\n']

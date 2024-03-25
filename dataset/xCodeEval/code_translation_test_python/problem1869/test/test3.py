@@ -1,4 +1,0 @@
-from ..program1869 import program1869
-def test3():
-    assert program1869(55 60 883964366 47 37
-8 14 8 11) == ['575284735\n', '575284735\n', '575284735']

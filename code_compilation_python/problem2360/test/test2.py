@@ -1,4 +1,0 @@
-from ..program2360 import program2360
-def test2():
-    assert program2360(3
-1 2 1) == ['BitLGM']

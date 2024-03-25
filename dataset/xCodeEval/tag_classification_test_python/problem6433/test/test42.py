@@ -1,4 +1,0 @@
-from ..program6433 import program6433
-def test42():
-    assert program6433(11
-3657071886390583694504) == ['HHHHHHHHHHHMMMMMMMMMMM', 'MMMMMMMMMMMHHHHHHHHHHH']

@@ -1,3 +1,0 @@
-from ..program1632 import program1632
-def test18():
-    assert program1632(XZX) == ['Too weak']

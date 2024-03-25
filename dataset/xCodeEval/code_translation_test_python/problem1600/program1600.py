@@ -1,3 +1,0 @@
-def program1600():
-    t, s = [input().replace('6', '9').replace('2', '5') for i in range(2)]
-    print(min([s.count(i)/t.count(i)) for i in t])

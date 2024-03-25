@@ -1,3 +1,0 @@
-from ..program3020 import program3020
-def test27():
-    assert program3020(0 576460752303423488) == ['2\r\n288230376151711744 288230376151711744']

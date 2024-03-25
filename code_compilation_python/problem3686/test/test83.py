@@ -1,6 +1,0 @@
-from ..program3686 import program3686
-def test83():
-    assert program3686(2 19
-4 8
-8 18
-7 8 6 8 4 11 9 1) == ['<']

@@ -1,6 +1,0 @@
-def program1611():
-    n, m = map(int, input().split())
-    for i in xrange(1, 3000001):
-    	if i/2 >= n and i/3 >= m and i/2 + i/3 - i/6 >= n+m:
-    		print(i)
-    		break

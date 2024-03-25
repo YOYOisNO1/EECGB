@@ -1,4 +1,0 @@
-from ..program1383 import program1383
-def test21():
-    assert program1383(90812
-010289) == ['WRONG_ANSWER']

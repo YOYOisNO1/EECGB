@@ -1,6 +1,0 @@
-def program652():
-    R=lambda:map(int,input().split())
-    a,b,c=R()
-    u,v,w=R()
-    Z=lambda x,y,z:not x and not y and z
-    print(1) if a*v-u*b else 0 if Z(a,b,c) or Z(u,v,w) or c*v-w*b or a*w-u*c else -1

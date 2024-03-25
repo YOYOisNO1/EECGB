@@ -1,4 +1,0 @@
-from ..program8162 import program8162
-def test44():
-    assert program8162(1
-IAO'11378) == ['111378']

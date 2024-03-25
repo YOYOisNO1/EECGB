@@ -1,4 +1,0 @@
-from ..program4257 import program4257
-def test11():
-    assert program4257(39 37
-2 5 17 24 19 33 35 16 20 3 1 34 10 36 15 37 14 8 28 21 13 31 30 29 7 25 32 12 6 27 22 4 11 39 18 9 26) == ['1\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2\r\n2', '1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2']

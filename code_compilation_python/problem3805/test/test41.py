@@ -1,8 +1,0 @@
-from ..program3805 import program3805
-def test41():
-    assert program3805(5
-1 2
-4 3
-5 1
-3 5
-2 4) == ['FAIL']

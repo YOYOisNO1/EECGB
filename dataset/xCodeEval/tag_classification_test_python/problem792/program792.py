@@ -1,8 +1,0 @@
-def program792():
-    a,b = map(int,input().split())
-    c = 0
-    for l in range(2, 64):
-        for i in range(1, l):
-            y = int('1'*i + '0' + '1'*(l-i-1), 2)
-            if a<=y<=b: c+=1
-    print(c)

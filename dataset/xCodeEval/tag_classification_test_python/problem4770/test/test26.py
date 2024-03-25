@@ -1,5 +1,0 @@
-from ..program4770 import program4770
-def test26():
-    assert program4770(10
-436 442 197 740 550 361 317 473 843 982
-788 683 32 402 305 396 823 206 739 967) == ['YES', 'Yes']

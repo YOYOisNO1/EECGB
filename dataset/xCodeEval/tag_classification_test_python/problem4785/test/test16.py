@@ -1,7 +1,0 @@
-from ..program4785 import program4785
-def test16():
-    assert program4785(CFJGYQ BERLAND 5:0
-HYTCIPDD BERLAND 5:9
-HYTCIPDD CFJGYQ 3:6
-UWHSJOSRWKXU CFJGYQ 4:1
-UWHSJOSRWKXU HYTCIPDD 8:1) == ['6:0']

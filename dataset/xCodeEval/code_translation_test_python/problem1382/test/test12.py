@@ -1,4 +1,0 @@
-from ..program1382 import program1382
-def test12():
-    assert program1382(111111111
-111111111) == ['OK']

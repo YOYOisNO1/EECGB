@@ -1,9 +1,0 @@
-def program5862():
-    a, b = input ().split ()
-    p = max (map (int, a + b)) + 1
-    s = int (a, p) + int (b, p)
-    ans = 0
-    while s > 0:
-        ans += 1
-        s /= p
-    print(ans)

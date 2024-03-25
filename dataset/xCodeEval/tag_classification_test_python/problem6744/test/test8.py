@@ -1,5 +1,0 @@
-from ..program6744 import program6744
-def test8():
-    assert program6744(200 0
-adagbgbcbdbbfdcdgfgagefceahdaafdcabfefcgbgecfgbggcfgbfbdabedfehdffhhcfeheacfgacdbbcgacagceaaeaefhfbadcbbfeffeacbhcebhdafgcedcfbdahadcbcdaadbeachbafebecbfhecdcfgabfdbgdcaghhhfahgeeahchbbcdfdfcffffgcdbh
-ag) == ['232']

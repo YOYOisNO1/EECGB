@@ -1,4 +1,0 @@
-from ..program301 import program301
-def test22():
-    assert program301(100000000 100000000 10 2 1 0
-1000000000000 640000 10000000000000000) == ['8']

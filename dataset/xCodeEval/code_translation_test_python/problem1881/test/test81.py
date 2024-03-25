@@ -1,3 +1,0 @@
-from ..program1881 import program1881
-def test81():
-    assert program1881(abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababa...) == ['181209233']

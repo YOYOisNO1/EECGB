@@ -1,4 +1,0 @@
-from ..program1700 import program1700
-def test59():
-    assert program1700(2
-13 8) == ['BitAryo']

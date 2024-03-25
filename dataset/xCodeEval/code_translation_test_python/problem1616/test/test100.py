@@ -1,3 +1,0 @@
-from ..program1616 import program1616
-def test100():
-    assert program1616(735463638 620656007 878587644 536507630 -1556948056 1714374073) == ['0']

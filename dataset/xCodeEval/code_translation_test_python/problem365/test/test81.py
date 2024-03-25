@@ -1,3 +1,0 @@
-from ..program365 import program365
-def test81():
-    assert program365(1000000000 1000000000 1999999998) == ['1000000000 1000000000']

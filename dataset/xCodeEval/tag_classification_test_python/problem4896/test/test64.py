@@ -1,3 +1,0 @@
-from ..program4896 import program4896
-def test64():
-    assert program4896(1000000000000 4 3 1) == ['0 4 999999999996', '1 1 999999999998']

@@ -1,4 +1,0 @@
-from ..program1164 import program1164
-def test26():
-    assert program1164(15
-987654329876543) == ['777777555533333333332222222222222']

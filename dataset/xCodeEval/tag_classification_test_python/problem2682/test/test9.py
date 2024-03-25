@@ -1,5 +1,0 @@
-from ..program2682 import program2682
-def test9():
-    assert program2682(899431605 238425805
-899431605 339067352
-940909482 333612216) == ['3']

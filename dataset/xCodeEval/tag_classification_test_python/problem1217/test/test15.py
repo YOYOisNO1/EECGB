@@ -1,3 +1,0 @@
-from ..program1217 import program1217
-def test15():
-    assert program1217(3 2794 -3354) == ['5\r\n165733932 308990694 392855398 415958984 999999980']

@@ -1,8 +1,0 @@
-from ..program3663 import program3663
-def test25():
-    assert program3663(5
-61150570394 22605752451
-64903938253 57679397316
-79673778456 37950907361
-59209507183 35302232713
-88726603470 50246884625) == ['NO\r\nNO\r\nNO\r\nNO\r\nNO', 'no\r\nno\r\nno\r\nno\r\nno']

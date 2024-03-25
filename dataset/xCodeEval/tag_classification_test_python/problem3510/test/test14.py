@@ -1,3 +1,0 @@
-from ..program3510 import program3510
-def test14():
-    assert program3510(832040 514229) == ['1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B1A1B']

@@ -1,4 +1,0 @@
-from ..program2392 import program2392
-def test126():
-    assert program2392(112233445566778890
-123456789123456788) == ['123456789123456780']

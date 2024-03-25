@@ -1,5 +1,0 @@
-from ..program6228 import program6228
-def test39():
-    assert program6228(13 90
-9 18 23 30 31 36 39 44 58 59 74 82 87
-1 6 18 27 32 39 40 45 48 53 67 68 83) == ['YES']

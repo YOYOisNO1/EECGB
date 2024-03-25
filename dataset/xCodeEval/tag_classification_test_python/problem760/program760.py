@@ -1,5 +1,0 @@
-def program760():
-    from math import sqrt
-    
-    a,b,c = map(int, str(input()).split())
-    print(int(4*sqrt(((a*b)/c)+((a*c)/b)+((b*c)/a)+2*(a+b+c))))

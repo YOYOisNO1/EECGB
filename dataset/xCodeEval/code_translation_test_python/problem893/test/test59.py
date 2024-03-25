@@ -1,3 +1,0 @@
-from ..program893 import program893
-def test59():
-    assert program893(9 4 866389615074294253 992899492208527253) == ['126509877134233001']

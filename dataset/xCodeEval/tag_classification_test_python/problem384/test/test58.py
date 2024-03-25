@@ -1,3 +1,0 @@
-from ..program384 import program384
-def test58():
-    assert program384(3 1000 1000 3) == ['9']

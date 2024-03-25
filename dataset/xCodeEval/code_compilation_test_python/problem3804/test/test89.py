@@ -1,5 +1,0 @@
-from ..program3804 import program3804
-def test89():
-    assert program3804(2
-3 4
-5 2) == ['WIN']

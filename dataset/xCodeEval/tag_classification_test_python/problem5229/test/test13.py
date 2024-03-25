@@ -1,4 +1,0 @@
-from ..program5229 import program5229
-def test13():
-    assert program5229(S
-8H 9H) == ['NO']

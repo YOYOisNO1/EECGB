@@ -1,8 +1,0 @@
-def program1714():
-    a = int(input())
-    p, ans = 1, 0
-    while a > 0:
-    	a -= p
-    	p *= 2
-    	ans += 1
-    print(ans) 

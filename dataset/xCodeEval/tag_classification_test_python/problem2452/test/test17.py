@@ -1,4 +1,0 @@
-from ..program2452 import program2452
-def test17():
-    assert program2452(255
-T___J(M_XZJlr_lH___mqJA_p__kW)ko__F_M_Aro__ZA_G_M_P_____j_V(J_Jk_dkR_ta_lbIUhKFfo_y_DluW)IVFj_gouRfMhabn()_e___q_vo__QPEGBI_TpVVI_clPwwb_m_yL_cMVKgi___RJb_J_f____tPCyntLOr_s_x_N_SyqQw_zP_mycsW_o_c_o_Yzb_UVa_ATd(BYH_gl___Y__Uzok_Y_IA_XL_D__bkJ____e__K_quk)) == ['10 25', '10\r\n25']

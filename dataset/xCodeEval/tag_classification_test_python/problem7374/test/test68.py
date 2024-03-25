@@ -1,7 +1,0 @@
-from ..program7374 import program7374
-def test68():
-    assert program7374(4 4
-2 1
-1 4
-2 3
-3 1) == ['Yes\r\nbaac', 'Yes\r\nbcca']

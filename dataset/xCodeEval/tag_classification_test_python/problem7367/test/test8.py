@@ -1,4 +1,0 @@
-from ..program7367 import program7367
-def test8():
-    assert program7367(70 3
-YNNNYYYNY?YYNYYNYYN?NYYYYYYYYYYYYYNYYNNYYYYYYYNYYNNNY??YYNYYYYYYYYNYYN) == ['YES']

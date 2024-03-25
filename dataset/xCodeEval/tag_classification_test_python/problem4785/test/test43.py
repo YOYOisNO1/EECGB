@@ -1,7 +1,0 @@
-from ..program4785 import program4785
-def test43():
-    assert program4785(CRWEYDMET BERLAND 6:2
-J CRWEYDMET 5:4
-LYUTZZCGW BERLAND 8:4
-LYUTZZCGW CRWEYDMET 3:4
-LYUTZZCGW J 2:2) == ['IMPOSSIBLE']

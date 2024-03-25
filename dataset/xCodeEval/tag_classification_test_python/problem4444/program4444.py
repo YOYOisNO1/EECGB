@@ -1,8 +1,0 @@
-def program4444():
-    r=input()
-    if len(r)==1:print(r;exit())
-    s,f=r[0],r[-1]
-    r=r[1:-1]
-    if '@' not in r: r=r.replace('at','@',1)
-    r=r.replace('dot','.')
-    print(s+r+f)

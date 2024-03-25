@@ -1,3 +1,0 @@
-from ..program1608 import program1608
-def test46():
-    assert program1608(")1cL>{o\dcYJzu?CefyN^bGRviOH&P7rJS3PT4:0V3F)%\}L=AJouYsj_>j2|7^1NWu*%NbOP>ngv-ls<;b-4Sd3Na0R) == ['YES']

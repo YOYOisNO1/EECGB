@@ -1,3 +1,0 @@
-from ..program1019 import program1019
-def test68():
-    assert program1019(44 44) == ['YES\n', 'YES \n\n', 'YES', 'yes\n', 'YES\n', 'Yes\n', 'yEs\n', 'yES\n', 'YES\n\n']

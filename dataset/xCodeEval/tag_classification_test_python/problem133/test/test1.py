@@ -1,3 +1,0 @@
-from ..program133 import program133
-def test1():
-    assert program133(130) == ['short']

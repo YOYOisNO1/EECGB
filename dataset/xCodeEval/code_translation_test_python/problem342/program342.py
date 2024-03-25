@@ -1,5 +1,0 @@
-def program342():
-    a = input()
-    b = input()
-    if int(str(a).replace('0','')) + int(str(b).replace('0','')) == int(str(a+b).replace('0','')) : print("YES")
-    else : print("NO")

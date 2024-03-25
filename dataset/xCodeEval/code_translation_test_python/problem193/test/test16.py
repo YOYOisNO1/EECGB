@@ -1,3 +1,0 @@
-from ..program193 import program193
-def test16():
-    assert program193(<]D7NMA)yZe=`?RbP5lsa.l_Mg^V:"-0x+$3c,q&L%18Ku<HcA\s!^OQblk^x{35S'>yz8cKgVHWZ]kV0>_) == ['YES']

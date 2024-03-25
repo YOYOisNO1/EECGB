@@ -1,3 +1,0 @@
-from ..program1085 import program1085
-def test45():
-    assert program1085(7685166910821197056344900917707673568669808490600751439157) == ['BigInteger']

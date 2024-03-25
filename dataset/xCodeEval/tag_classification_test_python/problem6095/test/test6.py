@@ -1,3 +1,0 @@
-from ..program6095 import program6095
-def test6():
-    assert program6095(1000000000000000000d) == ['3999999999999999994']

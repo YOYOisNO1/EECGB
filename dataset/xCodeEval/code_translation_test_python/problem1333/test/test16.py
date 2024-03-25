@@ -1,4 +1,0 @@
-from ..program1333 import program1333
-def test16():
-    assert program1333(TTTFTFTTTFTTFFTFFFFTTTFFFFTTFTFTFFFTTTTFFTTTFFTFTFTFFTTTFFTTFFTFT
-27) == ['58']

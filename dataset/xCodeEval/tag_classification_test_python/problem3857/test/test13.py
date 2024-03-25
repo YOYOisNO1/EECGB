@@ -1,4 +1,0 @@
-from ..program3857 import program3857
-def test13():
-    assert program3857(3
-BWB) == ['2 \r\n 1 1', '2\r\n1 1', '2\n1 1']

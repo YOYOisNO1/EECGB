@@ -1,4 +1,0 @@
-from ..program1016 import program1016
-def test30():
-    assert program1016(kxzkueqzheeolprfncwxyxgqqlocajzkusopvpwowdxubsvvtfvnrkyijoxqjawzkvfkainowbxdzcxbgrywttplukaorxvtimqxonumuvsqyfobzorqqsohazhjyvscjhtlgbmetpigfzhtcjipiorcrcsvvdofflgkqzymdxbeaozrgcjxrgtkxrzpshjesucdwhds
-kzkqeeolprcxyxgqqloazkuspwouvvvnkyoxjzvkinowxdzbrytluaorximxnmvfoboqqsozjvschtlgbetizhcjipirccvffgkzyxbeozgctkzpsheus) == ['5']

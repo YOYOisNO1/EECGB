@@ -1,4 +1,0 @@
-from ..program3619 import program3619
-def test32():
-    assert program3619(30 50
-BGGBBGGGGGGGGBBGGGBBGGBBBGBBGG) == ['GGGGGGGGGGGGGGGGGGBBBBBBBBBBBB']

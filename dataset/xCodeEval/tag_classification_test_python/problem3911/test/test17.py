@@ -1,3 +1,0 @@
-from ..program3911 import program3911
-def test17():
-    assert program3911(4 1000000000) == ['NO']

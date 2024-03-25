@@ -1,3 +1,0 @@
-from ..program1819 import program1819
-def test3():
-    assert program1819(2) == ['Leonard']

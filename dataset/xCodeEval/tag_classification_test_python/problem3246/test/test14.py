@@ -1,4 +1,0 @@
-from ..program3246 import program3246
-def test14():
-    assert program3246(1 9999999999999997 2 2 1 0
-1 9999999999999999 10000000000000000) == ['1']

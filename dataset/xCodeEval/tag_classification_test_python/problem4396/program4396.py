@@ -1,8 +1,0 @@
-def program4396():
-    # http://codeforces.com/problemset/status/41/problem/C
-    
-    # main
-    
-    s = input();
-    t = s[1:-1].replace("dot", ".").replace("at", "@", 1);
-    print(s[0]) + t + s[-1]
