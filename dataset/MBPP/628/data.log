@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program628.py (6) ----
+
+# mutant 1
+--- ./program628.py
++++ ./program628.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-MAX=1000;
++MAX=1001;
+ 
+ def replace_spaces(string):
+ 
+
+# mutant 11
+--- ./program628.py
++++ ./program628.py
+@@ -29,7 +29,7 @@
+ 
+   new_length = i + space_count*2
+ 
+-  if new_length > MAX:
++  if new_length >= MAX:
+ 
+     return -1
+ 
+
+# mutant 12
+--- ./program628.py
++++ ./program628.py
+@@ -31,7 +31,7 @@
+ 
+   if new_length > MAX:
+ 
+-    return -1
++    return +1
+ 
+   index = new_length-1
+ 
+
+# mutant 13
+--- ./program628.py
++++ ./program628.py
+@@ -31,7 +31,7 @@
+ 
+   if new_length > MAX:
+ 
+-    return -1
++    return -2
+ 
+   index = new_length-1
+ 
+
+# mutant 22
+--- ./program628.py
++++ ./program628.py
+@@ -39,7 +39,7 @@
+ 
+   for f in range(i-2, new_length-2):
+ 
+-    string.append('0')
++    string.append('XX0XX')
+ 
+   for j in range(i-1, 0, -1):
+ 
+
+# mutant 50
+--- ./program628.py
++++ ./program628.py
+@@ -73,7 +73,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

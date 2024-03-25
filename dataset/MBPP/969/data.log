@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program969.py (6) ----
+
+# mutant 4
+--- ./program969.py
++++ ./program969.py
+@@ -23,7 +23,7 @@
+ 
+   for sub in test_list:
+ 
+-    if res and res[-1][0] == sub[0]:
++    if res and res[-1][1] == sub[0]:
+ 
+       res[-1].extend(sub[1:])
+ 
+
+# mutant 5
+--- ./program969.py
++++ ./program969.py
+@@ -23,7 +23,7 @@
+ 
+   for sub in test_list:
+ 
+-    if res and res[-1][0] == sub[0]:
++    if res and res[-1][0] != sub[0]:
+ 
+       res[-1].extend(sub[1:])
+ 
+
+# mutant 6
+--- ./program969.py
++++ ./program969.py
+@@ -23,7 +23,7 @@
+ 
+   for sub in test_list:
+ 
+-    if res and res[-1][0] == sub[0]:
++    if res and res[-1][0] == sub[1]:
+ 
+       res[-1].extend(sub[1:])
+ 
+
+# mutant 10
+--- ./program969.py
++++ ./program969.py
+@@ -25,7 +25,7 @@
+ 
+     if res and res[-1][0] == sub[0]:
+ 
+-      res[-1].extend(sub[1:])
++      res[-1].extend(sub[2:])
+ 
+     else:
+ 
+
+# mutant 11
+--- ./program969.py
++++ ./program969.py
+@@ -31,7 +31,7 @@
+ 
+       res.append([ele for ele in sub])
+ 
+-  res = list(map(tuple, res))
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 13
+--- ./program969.py
++++ ./program969.py
+@@ -46,7 +46,7 @@
+             test_list),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

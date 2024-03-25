@@ -1,0 +1,263 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program148.py (1) ----
+
+# mutant 7
+--- ./program148.py
++++ ./program148.py
+@@ -25,7 +25,7 @@
+ 
+         ans += x % 10
+ 
+-        x //= 10  
++        x = 10  
+ 
+     return ans 
+ 
+
+
+Survived 🙁 (18)
+
+---- ./program148.py (18) ----
+
+# mutant 3
+--- ./program148.py
++++ ./program148.py
+@@ -23,7 +23,7 @@
+ 
+     while x : 
+ 
+-        ans += x % 10
++        ans = x % 10
+ 
+         x //= 10  
+ 
+
+# mutant 6
+--- ./program148.py
++++ ./program148.py
+@@ -23,7 +23,7 @@
+ 
+     while x : 
+ 
+-        ans += x % 10
++        ans += x % 11
+ 
+         x //= 10  
+ 
+
+# mutant 9
+--- ./program148.py
++++ ./program148.py
+@@ -25,7 +25,7 @@
+ 
+         ans += x % 10
+ 
+-        x //= 10  
++        x //= 11  
+ 
+     return ans 
+ 
+
+# mutant 10
+--- ./program148.py
++++ ./program148.py
+@@ -31,7 +31,7 @@
+ 
+ def closest(x) : 
+ 
+-    ans = 0
++    ans = 1
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+
+# mutant 11
+--- ./program148.py
++++ ./program148.py
+@@ -31,7 +31,7 @@
+ 
+ def closest(x) : 
+ 
+-    ans = 0
++    ans = None
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+
+# mutant 12
+--- ./program148.py
++++ ./program148.py
+@@ -33,7 +33,7 @@
+ 
+     ans = 0
+ 
+-    while (ans * 10 + 9 <= x) : 
++    while (ans / 10 + 9 <= x) : 
+ 
+         ans = ans * 10 + 9  
+ 
+
+# mutant 13
+--- ./program148.py
++++ ./program148.py
+@@ -33,7 +33,7 @@
+ 
+     ans = 0
+ 
+-    while (ans * 10 + 9 <= x) : 
++    while (ans * 11 + 9 <= x) : 
+ 
+         ans = ans * 10 + 9  
+ 
+
+# mutant 14
+--- ./program148.py
++++ ./program148.py
+@@ -33,7 +33,7 @@
+ 
+     ans = 0
+ 
+-    while (ans * 10 + 9 <= x) : 
++    while (ans * 10 - 9 <= x) : 
+ 
+         ans = ans * 10 + 9  
+ 
+
+# mutant 15
+--- ./program148.py
++++ ./program148.py
+@@ -33,7 +33,7 @@
+ 
+     ans = 0
+ 
+-    while (ans * 10 + 9 <= x) : 
++    while (ans * 10 + 10 <= x) : 
+ 
+         ans = ans * 10 + 9  
+ 
+
+# mutant 16
+--- ./program148.py
++++ ./program148.py
+@@ -33,7 +33,7 @@
+ 
+     ans = 0
+ 
+-    while (ans * 10 + 9 <= x) : 
++    while (ans * 10 + 9 < x) : 
+ 
+         ans = ans * 10 + 9  
+ 
+
+# mutant 17
+--- ./program148.py
++++ ./program148.py
+@@ -35,7 +35,7 @@
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+-        ans = ans * 10 + 9  
++        ans = ans / 10 + 9  
+ 
+     return ans   
+ 
+
+# mutant 18
+--- ./program148.py
++++ ./program148.py
+@@ -35,7 +35,7 @@
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+-        ans = ans * 10 + 9  
++        ans = ans * 11 + 9  
+ 
+     return ans   
+ 
+
+# mutant 19
+--- ./program148.py
++++ ./program148.py
+@@ -35,7 +35,7 @@
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+-        ans = ans * 10 + 9  
++        ans = ans * 10 - 9  
+ 
+     return ans   
+ 
+
+# mutant 20
+--- ./program148.py
++++ ./program148.py
+@@ -35,7 +35,7 @@
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+-        ans = ans * 10 + 9  
++        ans = ans * 10 + 10  
+ 
+     return ans   
+ 
+
+# mutant 21
+--- ./program148.py
++++ ./program148.py
+@@ -35,7 +35,7 @@
+ 
+     while (ans * 10 + 9 <= x) : 
+ 
+-        ans = ans * 10 + 9  
++        ans = None  
+ 
+     return ans   
+ 
+
+# mutant 22
+--- ./program148.py
++++ ./program148.py
+@@ -41,7 +41,7 @@
+ 
+ def sum_digits_twoparts(N) : 
+ 
+-    A = closest(N)  
++    A = None  
+ 
+     return sum_digits_single(A) + sum_digits_single(N - A) 
+ 
+
+# mutant 23
+--- ./program148.py
++++ ./program148.py
+@@ -43,7 +43,7 @@
+ 
+     A = closest(N)  
+ 
+-    return sum_digits_single(A) + sum_digits_single(N - A) 
++    return sum_digits_single(A) - sum_digits_single(N - A) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 24
+--- ./program148.py
++++ ./program148.py
+@@ -43,7 +43,7 @@
+ 
+     A = closest(N)  
+ 
+-    return sum_digits_single(A) + sum_digits_single(N - A) 
++    return sum_digits_single(A) + sum_digits_single(N + A) 
+ 
+ # TESTING CODE 
+ # ============================================
+

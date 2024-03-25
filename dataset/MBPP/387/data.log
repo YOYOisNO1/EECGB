@@ -1,0 +1,193 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (14)
+
+---- ./program387.py (14) ----
+
+# mutant 3
+--- ./program387.py
++++ ./program387.py
+@@ -21,7 +21,7 @@
+ 
+     l = len(N) 
+ 
+-    if (N[l-1] =='0'or N[l-1] =='2'or 
++    if (N[l-2] =='0'or N[l-1] =='2'or 
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+
+# mutant 5
+--- ./program387.py
++++ ./program387.py
+@@ -21,7 +21,7 @@
+ 
+     l = len(N) 
+ 
+-    if (N[l-1] =='0'or N[l-1] =='2'or 
++    if (N[l-1] =='XX0XX'or N[l-1] =='2'or 
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+
+# mutant 7
+--- ./program387.py
++++ ./program387.py
+@@ -21,7 +21,7 @@
+ 
+     l = len(N) 
+ 
+-    if (N[l-1] =='0'or N[l-1] =='2'or 
++    if (N[l-1] =='0'or N[l-2] =='2'or 
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+
+# mutant 9
+--- ./program387.py
++++ ./program387.py
+@@ -21,7 +21,7 @@
+ 
+     l = len(N) 
+ 
+-    if (N[l-1] =='0'or N[l-1] =='2'or 
++    if (N[l-1] =='0'or N[l-1] =='XX2XX'or 
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+
+# mutant 13
+--- ./program387.py
++++ ./program387.py
+@@ -23,7 +23,7 @@
+ 
+     if (N[l-1] =='0'or N[l-1] =='2'or 
+ 
+-        N[l-1] =='4'or N[l-1] =='6'or 
++        N[l-1] =='XX4XX'or N[l-1] =='6'or 
+ 
+         N[l-1] =='8'or N[l-1] =='A'or 
+ 
+
+# mutant 15
+--- ./program387.py
++++ ./program387.py
+@@ -23,7 +23,7 @@
+ 
+     if (N[l-1] =='0'or N[l-1] =='2'or 
+ 
+-        N[l-1] =='4'or N[l-1] =='6'or 
++        N[l-1] =='4'or N[l-2] =='6'or 
+ 
+         N[l-1] =='8'or N[l-1] =='A'or 
+ 
+
+# mutant 17
+--- ./program387.py
++++ ./program387.py
+@@ -23,7 +23,7 @@
+ 
+     if (N[l-1] =='0'or N[l-1] =='2'or 
+ 
+-        N[l-1] =='4'or N[l-1] =='6'or 
++        N[l-1] =='4'or N[l-1] =='XX6XX'or 
+ 
+         N[l-1] =='8'or N[l-1] =='A'or 
+ 
+
+# mutant 19
+--- ./program387.py
++++ ./program387.py
+@@ -25,7 +25,7 @@
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+-        N[l-1] =='8'or N[l-1] =='A'or 
++        N[l-2] =='8'or N[l-1] =='A'or 
+ 
+         N[l-1] =='C'or N[l-1] =='E'): 
+ 
+
+# mutant 21
+--- ./program387.py
++++ ./program387.py
+@@ -25,7 +25,7 @@
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+-        N[l-1] =='8'or N[l-1] =='A'or 
++        N[l-1] =='XX8XX'or N[l-1] =='A'or 
+ 
+         N[l-1] =='C'or N[l-1] =='E'): 
+ 
+
+# mutant 25
+--- ./program387.py
++++ ./program387.py
+@@ -25,7 +25,7 @@
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+-        N[l-1] =='8'or N[l-1] =='A'or 
++        N[l-1] =='8'or N[l-1] =='XXAXX'or 
+ 
+         N[l-1] =='C'or N[l-1] =='E'): 
+ 
+
+# mutant 31
+--- ./program387.py
++++ ./program387.py
+@@ -27,7 +27,7 @@
+ 
+         N[l-1] =='8'or N[l-1] =='A'or 
+ 
+-        N[l-1] =='C'or N[l-1] =='E'): 
++        N[l-1] =='C'or N[l-2] =='E'): 
+ 
+         return ("Even") 
+ 
+
+# mutant 33
+--- ./program387.py
++++ ./program387.py
+@@ -27,7 +27,7 @@
+ 
+         N[l-1] =='8'or N[l-1] =='A'or 
+ 
+-        N[l-1] =='C'or N[l-1] =='E'): 
++        N[l-1] =='C'or N[l-1] =='XXEXX'): 
+ 
+         return ("Even") 
+ 
+
+# mutant 34
+--- ./program387.py
++++ ./program387.py
+@@ -21,7 +21,7 @@
+ 
+     l = len(N) 
+ 
+-    if (N[l-1] =='0'or N[l-1] =='2'or 
++    if (N[l-1] =='0' and N[l-1] =='2'or 
+ 
+         N[l-1] =='4'or N[l-1] =='6'or 
+ 
+
+# mutant 39
+--- ./program387.py
++++ ./program387.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

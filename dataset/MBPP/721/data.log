@@ -1,0 +1,232 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (17)
+
+---- ./program721.py (17) ----
+
+# mutant 1
+--- ./program721.py
++++ ./program721.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-M = 100
++M = 101
+ 
+ def max_average_of_path(cost, N): 
+ 
+
+# mutant 2
+--- ./program721.py
++++ ./program721.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-M = 100
++M = None
+ 
+ def max_average_of_path(cost, N): 
+ 
+
+# mutant 3
+--- ./program721.py
++++ ./program721.py
+@@ -21,7 +21,7 @@
+ 
+ def max_average_of_path(cost, N): 
+ 
+-	dp = [[0 for i in range(N + 1)] for j in range(N + 1)] 
++	dp = [[1 for i in range(N + 1)] for j in range(N + 1)] 
+ 
+ 	dp[0][0] = cost[0][0] 
+ 
+
+# mutant 5
+--- ./program721.py
++++ ./program721.py
+@@ -21,7 +21,7 @@
+ 
+ def max_average_of_path(cost, N): 
+ 
+-	dp = [[0 for i in range(N + 1)] for j in range(N + 1)] 
++	dp = [[0 for i in range(N + 2)] for j in range(N + 1)] 
+ 
+ 	dp[0][0] = cost[0][0] 
+ 
+
+# mutant 7
+--- ./program721.py
++++ ./program721.py
+@@ -21,7 +21,7 @@
+ 
+ def max_average_of_path(cost, N): 
+ 
+-	dp = [[0 for i in range(N + 1)] for j in range(N + 1)] 
++	dp = [[0 for i in range(N + 1)] for j in range(N + 2)] 
+ 
+ 	dp[0][0] = cost[0][0] 
+ 
+
+# mutant 22
+--- ./program721.py
++++ ./program721.py
+@@ -29,7 +29,7 @@
+ 
+ 		dp[i][0] = dp[i - 1][0] + cost[i][0] 
+ 
+-	for j in range(1, N): 
++	for j in range(2, N): 
+ 
+ 		dp[0][j] = dp[0][j - 1] + cost[0][j] 
+ 
+
+# mutant 23
+--- ./program721.py
++++ ./program721.py
+@@ -31,7 +31,7 @@
+ 
+ 	for j in range(1, N): 
+ 
+-		dp[0][j] = dp[0][j - 1] + cost[0][j] 
++		dp[1][j] = dp[0][j - 1] + cost[0][j] 
+ 
+ 	for i in range(1, N): 
+ 
+
+# mutant 25
+--- ./program721.py
++++ ./program721.py
+@@ -31,7 +31,7 @@
+ 
+ 	for j in range(1, N): 
+ 
+-		dp[0][j] = dp[0][j - 1] + cost[0][j] 
++		dp[0][j] = dp[0][j + 1] + cost[0][j] 
+ 
+ 	for i in range(1, N): 
+ 
+
+# mutant 26
+--- ./program721.py
++++ ./program721.py
+@@ -31,7 +31,7 @@
+ 
+ 	for j in range(1, N): 
+ 
+-		dp[0][j] = dp[0][j - 1] + cost[0][j] 
++		dp[0][j] = dp[0][j - 2] + cost[0][j] 
+ 
+ 	for i in range(1, N): 
+ 
+
+# mutant 27
+--- ./program721.py
++++ ./program721.py
+@@ -31,7 +31,7 @@
+ 
+ 	for j in range(1, N): 
+ 
+-		dp[0][j] = dp[0][j - 1] + cost[0][j] 
++		dp[0][j] = dp[0][j - 1] - cost[0][j] 
+ 
+ 	for i in range(1, N): 
+ 
+
+# mutant 28
+--- ./program721.py
++++ ./program721.py
+@@ -31,7 +31,7 @@
+ 
+ 	for j in range(1, N): 
+ 
+-		dp[0][j] = dp[0][j - 1] + cost[0][j] 
++		dp[0][j] = dp[0][j - 1] + cost[1][j] 
+ 
+ 	for i in range(1, N): 
+ 
+
+# mutant 30
+--- ./program721.py
++++ ./program721.py
+@@ -33,7 +33,7 @@
+ 
+ 		dp[0][j] = dp[0][j - 1] + cost[0][j] 
+ 
+-	for i in range(1, N): 
++	for i in range(2, N): 
+ 
+ 		for j in range(1, N): 
+ 
+
+# mutant 32
+--- ./program721.py
++++ ./program721.py
+@@ -37,7 +37,7 @@
+ 
+ 		for j in range(1, N): 
+ 
+-			dp[i][j] = max(dp[i - 1][j], 
++			dp[i][j] = max(dp[i + 1][j], 
+ 
+ 						dp[i][j - 1]) + cost[i][j] 
+ 
+
+# mutant 33
+--- ./program721.py
++++ ./program721.py
+@@ -37,7 +37,7 @@
+ 
+ 		for j in range(1, N): 
+ 
+-			dp[i][j] = max(dp[i - 1][j], 
++			dp[i][j] = max(dp[i - 2][j], 
+ 
+ 						dp[i][j - 1]) + cost[i][j] 
+ 
+
+# mutant 48
+--- ./program721.py
++++ ./program721.py
+@@ -46,7 +46,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(cost, n, expected):
+     try:
+
+# mutant 49
+--- ./program721.py
++++ ./program721.py
+@@ -46,7 +46,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(cost, n, expected):
+     try:
+
+# mutant 51
+--- ./program721.py
++++ ./program721.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

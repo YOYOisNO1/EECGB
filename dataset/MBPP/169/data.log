@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program169.py (3) ----
+
+# mutant 1
+--- ./program169.py
++++ ./program169.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def get_pell(n): 
+ 
+-	if (n <= 2): 
++	if (n < 2): 
+ 
+ 		return n 
+ 
+
+# mutant 2
+--- ./program169.py
++++ ./program169.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def get_pell(n): 
+ 
+-	if (n <= 2): 
++	if (n <= 3): 
+ 
+ 		return n 
+ 
+
+# mutant 18
+--- ./program169.py
++++ ./program169.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

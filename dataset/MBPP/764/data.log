@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program764.py (4) ----
+
+# mutant 3
+--- ./program764.py
++++ ./program764.py
+@@ -23,7 +23,7 @@
+ 
+       for i in range(len(str)):
+ 
+-          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     
++          if str[i] > '0' and str[i] <= '9': number_ctr += 1     
+ 
+       return  number_ctr
+ 
+
+# mutant 5
+--- ./program764.py
++++ ./program764.py
+@@ -23,7 +23,7 @@
+ 
+       for i in range(len(str)):
+ 
+-          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     
++          if str[i] >= '0' and str[i] < '9': number_ctr += 1     
+ 
+       return  number_ctr
+ 
+
+# mutant 6
+--- ./program764.py
++++ ./program764.py
+@@ -23,7 +23,7 @@
+ 
+       for i in range(len(str)):
+ 
+-          if str[i] >= '0' and str[i] <= '9': number_ctr += 1     
++          if str[i] >= '0' and str[i] <= 'XX9XX': number_ctr += 1     
+ 
+       return  number_ctr
+ 
+
+# mutant 13
+--- ./program764.py
++++ ./program764.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

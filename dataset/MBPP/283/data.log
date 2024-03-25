@@ -1,0 +1,107 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program283.py (5) ----
+
+# mutant 10
+--- ./program283.py
++++ ./program283.py
+@@ -29,7 +29,7 @@
+ 
+             if (temp % 10 == i): 
+ 
+-                count+=1;  
++                count+=2;  
+ 
+             if (count > i): 
+ 
+
+# mutant 11
+--- ./program283.py
++++ ./program283.py
+@@ -31,7 +31,7 @@
+ 
+                 count+=1;  
+ 
+-            if (count > i): 
++            if (count >= i): 
+ 
+                 return False
+ 
+
+# mutant 15
+--- ./program283.py
++++ ./program283.py
+@@ -35,7 +35,7 @@
+ 
+                 return False
+ 
+-            temp //= 10; 
++            temp //= 11; 
+ 
+     return True
+ 
+
+# mutant 16
+--- ./program283.py
++++ ./program283.py
+@@ -37,7 +37,7 @@
+ 
+             temp //= 10; 
+ 
+-    return True
++    return False
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 17
+--- ./program283.py
++++ ./program283.py
+@@ -42,7 +42,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(n, expected):
+     try:
+
+
+Survived 🙁 (2)
+
+---- ./program283.py (2) ----
+
+# mutant 1
+--- ./program283.py
++++ ./program283.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def validate(n): 
+ 
+-    for i in range(10): 
++    for i in range(11): 
+ 
+         temp = n;  
+ 
+
+# mutant 19
+--- ./program283.py
++++ ./program283.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

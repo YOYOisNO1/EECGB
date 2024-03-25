@@ -1,0 +1,242 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program685.py (3) ----
+
+# mutant 18
+--- ./program685.py
++++ ./program685.py
+@@ -33,7 +33,7 @@
+ 
+                 prime[i] = False
+ 
+-                i += p 
++                i = p 
+ 
+         p += 1    
+ 
+
+# mutant 20
+--- ./program685.py
++++ ./program685.py
+@@ -35,7 +35,7 @@
+ 
+                 i += p 
+ 
+-        p += 1    
++        p = 1    
+ 
+     sum = 0
+ 
+
+# mutant 21
+--- ./program685.py
++++ ./program685.py
+@@ -35,7 +35,7 @@
+ 
+                 i += p 
+ 
+-        p += 1    
++        p -= 1    
+ 
+     sum = 0
+ 
+
+
+Suspicious 🤔 (10)
+
+---- ./program685.py (10) ----
+
+# mutant 3
+--- ./program685.py
++++ ./program685.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_of_primes(n): 
+ 
+-    prime = [True] * (n + 1)  
++    prime = [True] * (n - 1)  
+ 
+     p = 2
+ 
+
+# mutant 6
+--- ./program685.py
++++ ./program685.py
+@@ -21,7 +21,7 @@
+ 
+     prime = [True] * (n + 1)  
+ 
+-    p = 2
++    p = 3
+ 
+     while p * p <= n: 
+ 
+
+# mutant 7
+--- ./program685.py
++++ ./program685.py
+@@ -21,7 +21,7 @@
+ 
+     prime = [True] * (n + 1)  
+ 
+-    p = 2
++    p = None
+ 
+     while p * p <= n: 
+ 
+
+# mutant 13
+--- ./program685.py
++++ ./program685.py
+@@ -27,7 +27,7 @@
+ 
+         if prime[p] == True:  
+ 
+-            i = p * 2
++            i = p * 3
+ 
+             while i <= n: 
+ 
+
+# mutant 14
+--- ./program685.py
++++ ./program685.py
+@@ -27,7 +27,7 @@
+ 
+         if prime[p] == True:  
+ 
+-            i = p * 2
++            i = None
+ 
+             while i <= n: 
+ 
+
+# mutant 15
+--- ./program685.py
++++ ./program685.py
+@@ -29,7 +29,7 @@
+ 
+             i = p * 2
+ 
+-            while i <= n: 
++            while i < n: 
+ 
+                 prime[i] = False
+ 
+
+# mutant 16
+--- ./program685.py
++++ ./program685.py
+@@ -31,7 +31,7 @@
+ 
+             while i <= n: 
+ 
+-                prime[i] = False
++                prime[i] = True
+ 
+                 i += p 
+ 
+
+# mutant 22
+--- ./program685.py
++++ ./program685.py
+@@ -35,7 +35,7 @@
+ 
+                 i += p 
+ 
+-        p += 1    
++        p += 2    
+ 
+     sum = 0
+ 
+
+# mutant 23
+--- ./program685.py
++++ ./program685.py
+@@ -37,7 +37,7 @@
+ 
+         p += 1    
+ 
+-    sum = 0
++    sum = 1
+ 
+     for i in range (2,n + 1): 
+ 
+
+# mutant 25
+--- ./program685.py
++++ ./program685.py
+@@ -39,7 +39,7 @@
+ 
+     sum = 0
+ 
+-    for i in range (2,n + 1): 
++    for i in range (3,n + 1): 
+ 
+         if(prime[i]): 
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program685.py (4) ----
+
+# mutant 4
+--- ./program685.py
++++ ./program685.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_of_primes(n): 
+ 
+-    prime = [True] * (n + 1)  
++    prime = [True] * (n + 2)  
+ 
+     p = 2
+ 
+
+# mutant 9
+--- ./program685.py
++++ ./program685.py
+@@ -23,7 +23,7 @@
+ 
+     p = 2
+ 
+-    while p * p <= n: 
++    while p * p < n: 
+ 
+         if prime[p] == True:  
+ 
+
+# mutant 17
+--- ./program685.py
++++ ./program685.py
+@@ -31,7 +31,7 @@
+ 
+             while i <= n: 
+ 
+-                prime[i] = False
++                prime[i] = None
+ 
+                 i += p 
+ 
+
+# mutant 32
+--- ./program685.py
++++ ./program685.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

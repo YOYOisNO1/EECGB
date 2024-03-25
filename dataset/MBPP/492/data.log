@@ -1,0 +1,185 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (7)
+
+---- ./program492.py (7) ----
+
+# mutant 10
+--- ./program492.py
++++ ./program492.py
+@@ -25,7 +25,7 @@
+ 
+ 	found = False
+ 
+-	while( first<=last and not found):
++	while( first<=last or not found):
+ 
+ 		mid = (first + last)//2
+ 
+
+# mutant 11
+--- ./program492.py
++++ ./program492.py
+@@ -27,7 +27,7 @@
+ 
+ 	while( first<=last and not found):
+ 
+-		mid = (first + last)//2
++		mid = (first - last)//2
+ 
+ 		if item_list[mid] == item :
+ 
+
+# mutant 13
+--- ./program492.py
++++ ./program492.py
+@@ -27,7 +27,7 @@
+ 
+ 	while( first<=last and not found):
+ 
+-		mid = (first + last)//2
++		mid = (first + last)//3
+ 
+ 		if item_list[mid] == item :
+ 
+
+# mutant 16
+--- ./program492.py
++++ ./program492.py
+@@ -31,7 +31,7 @@
+ 
+ 		if item_list[mid] == item :
+ 
+-			found = True
++			found = False
+ 
+ 		else:
+ 
+
+# mutant 17
+--- ./program492.py
++++ ./program492.py
+@@ -31,7 +31,7 @@
+ 
+ 		if item_list[mid] == item :
+ 
+-			found = True
++			found = None
+ 
+ 		else:
+ 
+
+# mutant 19
+--- ./program492.py
++++ ./program492.py
+@@ -37,7 +37,7 @@
+ 
+ 			if item < item_list[mid]:
+ 
+-				last = mid - 1
++				last = mid + 1
+ 
+ 			else:
+ 
+
+# mutant 22
+--- ./program492.py
++++ ./program492.py
+@@ -41,7 +41,7 @@
+ 
+ 			else:
+ 
+-				first = mid + 1	
++				first = mid - 1	
+ 
+ 	return found
+ 
+
+
+Survived 🙁 (6)
+
+---- ./program492.py (6) ----
+
+# mutant 1
+--- ./program492.py
++++ ./program492.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def binary_search(item_list,item):
+ 
+-	first = 0
++	first = 1
+ 
+ 	last = len(item_list)-1
+ 
+
+# mutant 4
+--- ./program492.py
++++ ./program492.py
+@@ -21,7 +21,7 @@
+ 
+ 	first = 0
+ 
+-	last = len(item_list)-1
++	last = len(item_list)-2
+ 
+ 	found = False
+ 
+
+# mutant 8
+--- ./program492.py
++++ ./program492.py
+@@ -25,7 +25,7 @@
+ 
+ 	found = False
+ 
+-	while( first<=last and not found):
++	while( first<last and not found):
+ 
+ 		mid = (first + last)//2
+ 
+
+# mutant 18
+--- ./program492.py
++++ ./program492.py
+@@ -35,7 +35,7 @@
+ 
+ 		else:
+ 
+-			if item < item_list[mid]:
++			if item <= item_list[mid]:
+ 
+ 				last = mid - 1
+ 
+
+# mutant 20
+--- ./program492.py
++++ ./program492.py
+@@ -37,7 +37,7 @@
+ 
+ 			if item < item_list[mid]:
+ 
+-				last = mid - 1
++				last = mid - 2
+ 
+ 			else:
+ 
+
+# mutant 27
+--- ./program492.py
++++ ./program492.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

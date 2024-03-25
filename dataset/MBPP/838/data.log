@@ -1,0 +1,141 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (10)
+
+---- ./program838.py (10) ----
+
+# mutant 18
+--- ./program838.py
++++ ./program838.py
+@@ -29,7 +29,7 @@
+ 
+         elif (s1[i] == '1' and s2[i] == '0') : 
+ 
+-            c1 += 1;  
++            c1 = 1;  
+ 
+     result = c0 // 2 + c1 // 2;  
+ 
+
+# mutant 23
+--- ./program838.py
++++ ./program838.py
+@@ -31,7 +31,7 @@
+ 
+             c1 += 1;  
+ 
+-    result = c0 // 2 + c1 // 2;  
++    result = c0 // 2 - c1 // 2;  
+ 
+     if (c0 % 2 == 0 and c1 % 2 == 0) : 
+ 
+
+# mutant 25
+--- ./program838.py
++++ ./program838.py
+@@ -31,7 +31,7 @@
+ 
+             c1 += 1;  
+ 
+-    result = c0 // 2 + c1 // 2;  
++    result = c0 // 2 + c1 // 3;  
+ 
+     if (c0 % 2 == 0 and c1 % 2 == 0) : 
+ 
+
+# mutant 31
+--- ./program838.py
++++ ./program838.py
+@@ -33,7 +33,7 @@
+ 
+     result = c0 // 2 + c1 // 2;  
+ 
+-    if (c0 % 2 == 0 and c1 % 2 == 0) : 
++    if (c0 % 2 == 0 and c1 / 2 == 0) : 
+ 
+         return result;  
+ 
+
+# mutant 32
+--- ./program838.py
++++ ./program838.py
+@@ -33,7 +33,7 @@
+ 
+     result = c0 // 2 + c1 // 2;  
+ 
+-    if (c0 % 2 == 0 and c1 % 2 == 0) : 
++    if (c0 % 2 == 0 and c1 % 3 == 0) : 
+ 
+         return result;  
+ 
+
+# mutant 35
+--- ./program838.py
++++ ./program838.py
+@@ -33,7 +33,7 @@
+ 
+     result = c0 // 2 + c1 // 2;  
+ 
+-    if (c0 % 2 == 0 and c1 % 2 == 0) : 
++    if (c0 % 2 == 0 or c1 % 2 == 0) : 
+ 
+         return result;  
+ 
+
+# mutant 36
+--- ./program838.py
++++ ./program838.py
+@@ -37,7 +37,7 @@
+ 
+         return result;  
+ 
+-    elif ((c0 + c1) % 2 == 0) : 
++    elif ((c0 - c1) % 2 == 0) : 
+ 
+         return result + 2;  
+ 
+
+# mutant 43
+--- ./program838.py
++++ ./program838.py
+@@ -43,7 +43,7 @@
+ 
+     else : 
+ 
+-        return -1;  
++        return +1;  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 44
+--- ./program838.py
++++ ./program838.py
+@@ -43,7 +43,7 @@
+ 
+     else : 
+ 
+-        return -1;  
++        return -2;  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 47
+--- ./program838.py
++++ ./program838.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,159 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (10)
+
+---- ./program449.py (10) ----
+
+# mutant 1
+--- ./program449.py
++++ ./program449.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_triangle(x1,y1,x2,y2,x3,y3): 
+ 
+-    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
++    a = (x1/(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
+ 
+     if a == 0: 
+ 
+
+# mutant 3
+--- ./program449.py
++++ ./program449.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_triangle(x1,y1,x2,y2,x3,y3): 
+ 
+-    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
++    a = (x1*(y2-y3)-x2*(y3-y1)+x3*(y1-y2))   
+ 
+     if a == 0: 
+ 
+
+# mutant 4
+--- ./program449.py
++++ ./program449.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_triangle(x1,y1,x2,y2,x3,y3): 
+ 
+-    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
++    a = (x1*(y2-y3)+x2/(y3-y1)+x3*(y1-y2))   
+ 
+     if a == 0: 
+ 
+
+# mutant 7
+--- ./program449.py
++++ ./program449.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_triangle(x1,y1,x2,y2,x3,y3): 
+ 
+-    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
++    a = (x1*(y2-y3)+x2*(y3-y1)+x3/(y1-y2))   
+ 
+     if a == 0: 
+ 
+
+# mutant 8
+--- ./program449.py
++++ ./program449.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_triangle(x1,y1,x2,y2,x3,y3): 
+ 
+-    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
++    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1+y2))   
+ 
+     if a == 0: 
+ 
+
+# mutant 9
+--- ./program449.py
++++ ./program449.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_triangle(x1,y1,x2,y2,x3,y3): 
+ 
+-    a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
++    a = None   
+ 
+     if a == 0: 
+ 
+
+# mutant 10
+--- ./program449.py
++++ ./program449.py
+@@ -21,7 +21,7 @@
+ 
+     a = (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))   
+ 
+-    if a == 0: 
++    if a != 0: 
+ 
+         return ('No') 
+ 
+
+# mutant 12
+--- ./program449.py
++++ ./program449.py
+@@ -23,7 +23,7 @@
+ 
+     if a == 0: 
+ 
+-        return ('No') 
++        return ('XXNoXX') 
+ 
+     else: 
+ 
+
+# mutant 14
+--- ./program449.py
++++ ./program449.py
+@@ -32,7 +32,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(x1, y1, x2, y2, x3, y3, expected):
+     try:
+
+# mutant 15
+--- ./program449.py
++++ ./program449.py
+@@ -40,7 +40,7 @@
+             x1, y1, x2, y2, x3, y3),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program449.py (1) ----
+
+# mutant 16
+--- ./program449.py
++++ ./program449.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

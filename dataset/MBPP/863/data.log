@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program863.py (5) ----
+
+# mutant 1
+--- ./program863.py
++++ ./program863.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_longest_conseq_subseq(arr, n): 
+ 
+-	ans = 0
++	ans = 1
+ 
+ 	count = 0
+ 
+
+# mutant 3
+--- ./program863.py
++++ ./program863.py
+@@ -21,7 +21,7 @@
+ 
+ 	ans = 0
+ 
+-	count = 0
++	count = 1
+ 
+ 	arr.sort() 
+ 
+
+# mutant 4
+--- ./program863.py
++++ ./program863.py
+@@ -21,7 +21,7 @@
+ 
+ 	ans = 0
+ 
+-	count = 0
++	count = None
+ 
+ 	arr.sort() 
+ 
+
+# mutant 11
+--- ./program863.py
++++ ./program863.py
+@@ -37,7 +37,7 @@
+ 
+ 	for i in range(len(v)): 
+ 
+-		if (i > 0 and v[i] == v[i - 1] + 1): 
++		if (i >= 0 and v[i] == v[i - 1] + 1): 
+ 
+ 			count += 1
+ 
+
+# mutant 27
+--- ./program863.py
++++ ./program863.py
+@@ -61,7 +61,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

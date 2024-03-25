@@ -1,0 +1,172 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program316.py (3) ----
+
+# mutant 11
+--- ./program316.py
++++ ./program316.py
+@@ -25,7 +25,7 @@
+ 
+     while left <= right:
+ 
+-        mid = (left + right) // 2
++        mid = (left + right) // 3
+ 
+         if x == A[mid]:
+ 
+
+# mutant 15
+--- ./program316.py
++++ ./program316.py
+@@ -31,7 +31,7 @@
+ 
+             result = mid
+ 
+-            left = mid + 1
++            left = mid - 1
+ 
+         elif x < A[mid]:
+ 
+
+# mutant 19
+--- ./program316.py
++++ ./program316.py
+@@ -35,7 +35,7 @@
+ 
+         elif x < A[mid]:
+ 
+-            right = mid - 1
++            right = mid + 1
+ 
+         else:
+ 
+
+
+Survived 🙁 (9)
+
+---- ./program316.py (9) ----
+
+# mutant 1
+--- ./program316.py
++++ ./program316.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_last_occurrence(A, x):
+ 
+-    (left, right) = (0, len(A) - 1)
++    (left, right) = (1, len(A) - 1)
+ 
+     result = -1
+ 
+
+# mutant 5
+--- ./program316.py
++++ ./program316.py
+@@ -21,7 +21,7 @@
+ 
+     (left, right) = (0, len(A) - 1)
+ 
+-    result = -1
++    result = +1
+ 
+     while left <= right:
+ 
+
+# mutant 6
+--- ./program316.py
++++ ./program316.py
+@@ -21,7 +21,7 @@
+ 
+     (left, right) = (0, len(A) - 1)
+ 
+-    result = -1
++    result = -2
+ 
+     while left <= right:
+ 
+
+# mutant 7
+--- ./program316.py
++++ ./program316.py
+@@ -21,7 +21,7 @@
+ 
+     (left, right) = (0, len(A) - 1)
+ 
+-    result = -1
++    result = None
+ 
+     while left <= right:
+ 
+
+# mutant 16
+--- ./program316.py
++++ ./program316.py
+@@ -31,7 +31,7 @@
+ 
+             result = mid
+ 
+-            left = mid + 1
++            left = mid + 2
+ 
+         elif x < A[mid]:
+ 
+
+# mutant 18
+--- ./program316.py
++++ ./program316.py
+@@ -33,7 +33,7 @@
+ 
+             left = mid + 1
+ 
+-        elif x < A[mid]:
++        elif x <= A[mid]:
+ 
+             right = mid - 1
+ 
+
+# mutant 22
+--- ./program316.py
++++ ./program316.py
+@@ -39,7 +39,7 @@
+ 
+         else:
+ 
+-            left = mid + 1
++            left = mid - 1
+ 
+     return result 
+ 
+
+# mutant 23
+--- ./program316.py
++++ ./program316.py
+@@ -39,7 +39,7 @@
+ 
+         else:
+ 
+-            left = mid + 1
++            left = mid + 2
+ 
+     return result 
+ 
+
+# mutant 27
+--- ./program316.py
++++ ./program316.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

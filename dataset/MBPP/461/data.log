@@ -1,0 +1,133 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program461.py (4) ----
+
+# mutant 4
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'XXAXX' and str[i] <= 'Z': upper_ctr += 1
+ 
+           return upper_ctr
+ 
+
+# mutant 7
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'A' or str[i] <= 'Z': upper_ctr += 1
+ 
+           return upper_ctr
+ 
+
+# mutant 9
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr -= 1
+ 
+           return upper_ctr
+ 
+
+# mutant 10
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 2
+ 
+           return upper_ctr
+ 
+
+
+Survived 🙁 (5)
+
+---- ./program461.py (5) ----
+
+# mutant 3
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] > 'A' and str[i] <= 'Z': upper_ctr += 1
+ 
+           return upper_ctr
+ 
+
+# mutant 5
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'A' and str[i] < 'Z': upper_ctr += 1
+ 
+           return upper_ctr
+ 
+
+# mutant 6
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'A' and str[i] <= 'XXZXX': upper_ctr += 1
+ 
+           return upper_ctr
+ 
+
+# mutant 8
+--- ./program461.py
++++ ./program461.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(len(str)):
+ 
+-          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
++          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr = 1
+ 
+           return upper_ctr
+ 
+
+# mutant 13
+--- ./program461.py
++++ ./program461.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

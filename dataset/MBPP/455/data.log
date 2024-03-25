@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program455.py (7) ----
+
+# mutant 4
+--- ./program455.py
++++ ./program455.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb_number(monthnum2):
+ 
+-  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
++  if(monthnum2==1 or monthnum2==4 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
+ 
+     return True
+ 
+
+# mutant 8
+--- ./program455.py
++++ ./program455.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb_number(monthnum2):
+ 
+-  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
++  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==8 or monthnum2==8 or monthnum2==10 or monthnum2==12):
+ 
+     return True
+ 
+
+# mutant 10
+--- ./program455.py
++++ ./program455.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb_number(monthnum2):
+ 
+-  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
++  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==9 or monthnum2==10 or monthnum2==12):
+ 
+     return True
+ 
+
+# mutant 12
+--- ./program455.py
++++ ./program455.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb_number(monthnum2):
+ 
+-  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
++  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==11 or monthnum2==12):
+ 
+     return True
+ 
+
+# mutant 14
+--- ./program455.py
++++ ./program455.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb_number(monthnum2):
+ 
+-  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
++  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==13):
+ 
+     return True
+ 
+
+# mutant 15
+--- ./program455.py
++++ ./program455.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumb_number(monthnum2):
+ 
+-  if(monthnum2==1 or monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
++  if(monthnum2==1 and monthnum2==3 or monthnum2==5 or monthnum2==7 or monthnum2==8 or monthnum2==10 or monthnum2==12):
+ 
+     return True
+ 
+
+# mutant 20
+--- ./program455.py
++++ ./program455.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program388.py (5) ----
+
+# mutant 1
+--- ./program388.py
++++ ./program388.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def highest_power_of_2(n): 
+ 
+-    res = 0; 
++    res = 1; 
+ 
+     for i in range(n, 0, -1): 
+ 
+
+# mutant 2
+--- ./program388.py
++++ ./program388.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def highest_power_of_2(n): 
+ 
+-    res = 0; 
++    res = None; 
+ 
+     for i in range(n, 0, -1): 
+ 
+
+# mutant 3
+--- ./program388.py
++++ ./program388.py
+@@ -21,7 +21,7 @@
+ 
+     res = 0; 
+ 
+-    for i in range(n, 0, -1): 
++    for i in range(n, 1, -1): 
+ 
+         if ((i & (i - 1)) == 0): 
+ 
+
+# mutant 8
+--- ./program388.py
++++ ./program388.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(n, 0, -1): 
+ 
+-        if ((i & (i - 1)) == 0): 
++        if ((i & (i - 2)) == 0): 
+ 
+             res = i; 
+ 
+
+# mutant 15
+--- ./program388.py
++++ ./program388.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program452.py (1) ----
+
+# mutant 2
+--- ./program452.py
++++ ./program452.py
+@@ -21,7 +21,7 @@
+ 
+   if(sale_amount > actual_cost):
+ 
+-    amount = sale_amount - actual_cost
++    amount = sale_amount + actual_cost
+ 
+     return amount
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program452.py (2) ----
+
+# mutant 1
+--- ./program452.py
++++ ./program452.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def loss_amount(actual_cost,sale_amount): 
+ 
+-  if(sale_amount > actual_cost):
++  if(sale_amount >= actual_cost):
+ 
+     amount = sale_amount - actual_cost
+ 
+
+# mutant 6
+--- ./program452.py
++++ ./program452.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

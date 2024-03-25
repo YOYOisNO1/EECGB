@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program125.py (6) ----
+
+# mutant 1
+--- ./program125.py
++++ ./program125.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_length(string, n): 
+ 
+-	current_sum = 0
++	current_sum = 1
+ 
+ 	max_sum = 0
+ 
+
+# mutant 3
+--- ./program125.py
++++ ./program125.py
+@@ -21,7 +21,7 @@
+ 
+ 	current_sum = 0
+ 
+-	max_sum = 0
++	max_sum = 1
+ 
+ 	for i in range(n): 
+ 
+
+# mutant 12
+--- ./program125.py
++++ ./program125.py
+@@ -27,7 +27,7 @@
+ 
+ 		current_sum += (1 if string[i] == '0' else -1) 
+ 
+-		if current_sum < 0: 
++		if current_sum <= 0: 
+ 
+ 			current_sum = 0
+ 
+
+# mutant 13
+--- ./program125.py
++++ ./program125.py
+@@ -27,7 +27,7 @@
+ 
+ 		current_sum += (1 if string[i] == '0' else -1) 
+ 
+-		if current_sum < 0: 
++		if current_sum < 1: 
+ 
+ 			current_sum = 0
+ 
+
+# mutant 17
+--- ./program125.py
++++ ./program125.py
+@@ -33,7 +33,7 @@
+ 
+ 		max_sum = max(current_sum, max_sum) 
+ 
+-	return max_sum if max_sum else 0
++	return max_sum if max_sum else 1
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 20
+--- ./program125.py
++++ ./program125.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

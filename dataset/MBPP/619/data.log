@@ -1,0 +1,133 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (8)
+
+---- ./program619.py (8) ----
+
+# mutant 1
+--- ./program619.py
++++ ./program619.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def move_num(test_str):
+ 
+-  res = ''
++  res = 'XXXX'
+ 
+   dig = ''
+ 
+
+# mutant 4
+--- ./program619.py
++++ ./program619.py
+@@ -21,7 +21,7 @@
+ 
+   res = ''
+ 
+-  dig = ''
++  dig = None
+ 
+   for ele in test_str:
+ 
+
+# mutant 5
+--- ./program619.py
++++ ./program619.py
+@@ -27,7 +27,7 @@
+ 
+     if ele.isdigit():
+ 
+-      dig += ele
++      dig = ele
+ 
+     else:
+ 
+
+# mutant 6
+--- ./program619.py
++++ ./program619.py
+@@ -27,7 +27,7 @@
+ 
+     if ele.isdigit():
+ 
+-      dig += ele
++      dig -= ele
+ 
+     else:
+ 
+
+# mutant 7
+--- ./program619.py
++++ ./program619.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-      res += ele
++      res = ele
+ 
+   res += dig
+ 
+
+# mutant 8
+--- ./program619.py
++++ ./program619.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-      res += ele
++      res -= ele
+ 
+   res += dig
+ 
+
+# mutant 10
+--- ./program619.py
++++ ./program619.py
+@@ -33,7 +33,7 @@
+ 
+       res += ele
+ 
+-  res += dig
++  res -= dig
+ 
+   return (res) 
+ 
+
+# mutant 11
+--- ./program619.py
++++ ./program619.py
+@@ -40,7 +40,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(test_str, expected):
+     try:
+
+
+Survived 🙁 (1)
+
+---- ./program619.py (1) ----
+
+# mutant 13
+--- ./program619.py
++++ ./program619.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

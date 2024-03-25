@@ -1,0 +1,107 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program710.py (2) ----
+
+# mutant 5
+--- ./program710.py
++++ ./program710.py
+@@ -26,7 +26,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(test_tup, expected):
+     try:
+
+# mutant 7
+--- ./program710.py
++++ ./program710.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+
+
+Survived 🙁 (5)
+
+---- ./program710.py (5) ----
+
+# mutant 1
+--- ./program710.py
++++ ./program710.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def front_and_rear(test_tup):
+ 
+-  res = (test_tup[0], test_tup[-1])
++  res = (test_tup[1], test_tup[-1])
+ 
+   return (res) 
+ 
+
+# mutant 2
+--- ./program710.py
++++ ./program710.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def front_and_rear(test_tup):
+ 
+-  res = (test_tup[0], test_tup[-1])
++  res = (test_tup[0], test_tup[+1])
+ 
+   return (res) 
+ 
+
+# mutant 3
+--- ./program710.py
++++ ./program710.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def front_and_rear(test_tup):
+ 
+-  res = (test_tup[0], test_tup[-1])
++  res = (test_tup[0], test_tup[-2])
+ 
+   return (res) 
+ 
+
+# mutant 4
+--- ./program710.py
++++ ./program710.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def front_and_rear(test_tup):
+ 
+-  res = (test_tup[0], test_tup[-1])
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 6
+--- ./program710.py
++++ ./program710.py
+@@ -34,7 +34,7 @@
+             test_tup),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

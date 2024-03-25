@@ -1,0 +1,224 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program850.py (4) ----
+
+# mutant 3
+--- ./program850.py
++++ ./program850.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_triangleexists(a,b,c): 
+ 
+-    if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
++    if(a != 0 and b == 0 and c != 0 and (a + b + c)== 180): 
+ 
+         if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+
+# mutant 10
+--- ./program850.py
++++ ./program850.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_triangleexists(a,b,c): 
+ 
+-    if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
++    if(a != 0 and b != 0 and c != 0 and (a + b + c)== 181): 
+ 
+         if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+
+# mutant 19
+--- ./program850.py
++++ ./program850.py
+@@ -23,7 +23,7 @@
+ 
+         if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+-            return True 
++            return False 
+ 
+         else:
+ 
+
+# mutant 22
+--- ./program850.py
++++ ./program850.py
+@@ -36,7 +36,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(a, b, c, expected):
+     try:
+
+
+Survived 🙁 (12)
+
+---- ./program850.py (12) ----
+
+# mutant 2
+--- ./program850.py
++++ ./program850.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_triangleexists(a,b,c): 
+ 
+-    if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
++    if(a != 1 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+         if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+
+# mutant 4
+--- ./program850.py
++++ ./program850.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_triangleexists(a,b,c): 
+ 
+-    if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
++    if(a != 0 and b != 1 and c != 0 and (a + b + c)== 180): 
+ 
+         if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+
+# mutant 6
+--- ./program850.py
++++ ./program850.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_triangleexists(a,b,c): 
+ 
+-    if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
++    if(a != 0 and b != 0 and c != 1 and (a + b + c)== 180): 
+ 
+         if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+
+# mutant 12
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a - b)>= c or (b + c)>= a or (a + c)>= b): 
+ 
+             return True 
+ 
+
+# mutant 13
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a + b)> c or (b + c)>= a or (a + c)>= b): 
+ 
+             return True 
+ 
+
+# mutant 14
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a + b)>= c or (b - c)>= a or (a + c)>= b): 
+ 
+             return True 
+ 
+
+# mutant 15
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a + b)>= c or (b + c)> a or (a + c)>= b): 
+ 
+             return True 
+ 
+
+# mutant 16
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a + b)>= c or (b + c)>= a or (a - c)>= b): 
+ 
+             return True 
+ 
+
+# mutant 17
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a + b)>= c or (b + c)>= a or (a + c)> b): 
+ 
+             return True 
+ 
+
+# mutant 18
+--- ./program850.py
++++ ./program850.py
+@@ -21,7 +21,7 @@
+ 
+     if(a != 0 and b != 0 and c != 0 and (a + b + c)== 180): 
+ 
+-        if((a + b)>= c or (b + c)>= a or (a + c)>= b): 
++        if((a + b)>= c and (b + c)>= a or (a + c)>= b): 
+ 
+             return True 
+ 
+
+# mutant 20
+--- ./program850.py
++++ ./program850.py
+@@ -27,7 +27,7 @@
+ 
+         else:
+ 
+-            return False
++            return True
+ 
+     else:
+ 
+
+# mutant 24
+--- ./program850.py
++++ ./program850.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

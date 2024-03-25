@@ -1,0 +1,159 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program207.py (3) ----
+
+# mutant 9
+--- ./program207.py
++++ ./program207.py
+@@ -23,7 +23,7 @@
+ 
+ 	dp = [[0 for k in range(n+1)] for l in range(n+1)] 
+ 
+-	for i in range(1, n+1): 
++	for i in range(1, n-1): 
+ 
+ 		for j in range(1, n+1): 
+ 
+
+# mutant 17
+--- ./program207.py
++++ ./program207.py
+@@ -27,7 +27,7 @@
+ 
+ 		for j in range(1, n+1): 
+ 
+-			if (str[i-1] == str[j-1] and i != j): 
++			if (str[i-1] == str[j+1] and i != j): 
+ 
+ 				dp[i][j] = 1 + dp[i-1][j-1] 
+ 
+
+# mutant 20
+--- ./program207.py
++++ ./program207.py
+@@ -27,7 +27,7 @@
+ 
+ 		for j in range(1, n+1): 
+ 
+-			if (str[i-1] == str[j-1] and i != j): 
++			if (str[i-1] == str[j-1] or i != j): 
+ 
+ 				dp[i][j] = 1 + dp[i-1][j-1] 
+ 
+
+
+Survived 🙁 (8)
+
+---- ./program207.py (8) ----
+
+# mutant 4
+--- ./program207.py
++++ ./program207.py
+@@ -21,7 +21,7 @@
+ 
+ 	n = len(str) 
+ 
+-	dp = [[0 for k in range(n+1)] for l in range(n+1)] 
++	dp = [[0 for k in range(n+2)] for l in range(n+1)] 
+ 
+ 	for i in range(1, n+1): 
+ 
+
+# mutant 6
+--- ./program207.py
++++ ./program207.py
+@@ -21,7 +21,7 @@
+ 
+ 	n = len(str) 
+ 
+-	dp = [[0 for k in range(n+1)] for l in range(n+1)] 
++	dp = [[0 for k in range(n+1)] for l in range(n+2)] 
+ 
+ 	for i in range(1, n+1): 
+ 
+
+# mutant 8
+--- ./program207.py
++++ ./program207.py
+@@ -23,7 +23,7 @@
+ 
+ 	dp = [[0 for k in range(n+1)] for l in range(n+1)] 
+ 
+-	for i in range(1, n+1): 
++	for i in range(2, n+1): 
+ 
+ 		for j in range(1, n+1): 
+ 
+
+# mutant 11
+--- ./program207.py
++++ ./program207.py
+@@ -25,7 +25,7 @@
+ 
+ 	for i in range(1, n+1): 
+ 
+-		for j in range(1, n+1): 
++		for j in range(2, n+1): 
+ 
+ 			if (str[i-1] == str[j-1] and i != j): 
+ 
+
+# mutant 24
+--- ./program207.py
++++ ./program207.py
+@@ -29,7 +29,7 @@
+ 
+ 			if (str[i-1] == str[j-1] and i != j): 
+ 
+-				dp[i][j] = 1 + dp[i-1][j-1] 
++				dp[i][j] = 1 + dp[i-2][j-1] 
+ 
+ 			else: 
+ 
+
+# mutant 29
+--- ./program207.py
++++ ./program207.py
+@@ -33,7 +33,7 @@
+ 
+ 			else: 
+ 
+-				dp[i][j] = max(dp[i][j-1], dp[i-1][j]) 
++				dp[i][j] = max(dp[i][j-2], dp[i-1][j]) 
+ 
+ 	return dp[n][n]
+ 
+
+# mutant 31
+--- ./program207.py
++++ ./program207.py
+@@ -33,7 +33,7 @@
+ 
+ 			else: 
+ 
+-				dp[i][j] = max(dp[i][j-1], dp[i-1][j]) 
++				dp[i][j] = max(dp[i][j-1], dp[i-2][j]) 
+ 
+ 	return dp[n][n]
+ 
+
+# mutant 35
+--- ./program207.py
++++ ./program207.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

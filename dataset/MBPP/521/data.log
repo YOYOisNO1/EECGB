@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program521.py (2) ----
+
+# mutant 3
+--- ./program521.py
++++ ./program521.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_isosceles(x,y,z):
+ 
+-  if x!=y & y!=z & z!=x:
++  if x!=y & y==z & z!=x:
+ 
+ 	   return True
+ 
+
+# mutant 9
+--- ./program521.py
++++ ./program521.py
+@@ -38,7 +38,7 @@
+             x, y, z),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (3)
+
+---- ./program521.py (3) ----
+
+# mutant 2
+--- ./program521.py
++++ ./program521.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_isosceles(x,y,z):
+ 
+-  if x!=y & y!=z & z!=x:
++  if x!=y | y!=z & z!=x:
+ 
+ 	   return True
+ 
+
+# mutant 4
+--- ./program521.py
++++ ./program521.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_isosceles(x,y,z):
+ 
+-  if x!=y & y!=z & z!=x:
++  if x!=y & y!=z | z!=x:
+ 
+ 	   return True
+ 
+
+# mutant 10
+--- ./program521.py
++++ ./program521.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program605.py (1) ----
+
+# mutant 4
+--- ./program605.py
++++ ./program605.py
+@@ -21,7 +21,7 @@
+ 
+   if num >=1:
+ 
+-   for i in range(2, num//2):
++   for i in range(2, num/2):
+ 
+      if (num % i) == 0:
+ 
+
+
+Survived 🙁 (5)
+
+---- ./program605.py (5) ----
+
+# mutant 1
+--- ./program605.py
++++ ./program605.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def prime_num(num):
+ 
+-  if num >=1:
++  if num >1:
+ 
+    for i in range(2, num//2):
+ 
+
+# mutant 2
+--- ./program605.py
++++ ./program605.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def prime_num(num):
+ 
+-  if num >=1:
++  if num >=2:
+ 
+    for i in range(2, num//2):
+ 
+
+# mutant 6
+--- ./program605.py
++++ ./program605.py
+@@ -23,7 +23,7 @@
+ 
+    for i in range(2, num//2):
+ 
+-     if (num % i) == 0:
++     if (num / i) == 0:
+ 
+                 return False
+ 
+
+# mutant 9
+--- ./program605.py
++++ ./program605.py
+@@ -25,7 +25,7 @@
+ 
+      if (num % i) == 0:
+ 
+-                return False
++                return True
+ 
+      else:
+ 
+
+# mutant 14
+--- ./program605.py
++++ ./program605.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

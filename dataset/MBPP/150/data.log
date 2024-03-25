@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program150.py (7) ----
+
+# mutant 2
+--- ./program150.py
++++ ./program150.py
+@@ -21,7 +21,7 @@
+ 
+     if (a == b): 
+ 
+-        return True
++        return False
+ 
+     if ((b - a) * c > 0 and (b - a) % c == 0): 
+ 
+
+# mutant 3
+--- ./program150.py
++++ ./program150.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    if ((b - a) * c > 0 and (b - a) % c == 0): 
++    if ((b + a) * c > 0 and (b - a) % c == 0): 
+ 
+         return True
+ 
+
+# mutant 4
+--- ./program150.py
++++ ./program150.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    if ((b - a) * c > 0 and (b - a) % c == 0): 
++    if ((b - a) / c > 0 and (b - a) % c == 0): 
+ 
+         return True
+ 
+
+# mutant 5
+--- ./program150.py
++++ ./program150.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    if ((b - a) * c > 0 and (b - a) % c == 0): 
++    if ((b - a) * c >= 0 and (b - a) % c == 0): 
+ 
+         return True
+ 
+
+# mutant 6
+--- ./program150.py
++++ ./program150.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    if ((b - a) * c > 0 and (b - a) % c == 0): 
++    if ((b - a) * c > 1 and (b - a) % c == 0): 
+ 
+         return True
+ 
+
+# mutant 11
+--- ./program150.py
++++ ./program150.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    if ((b - a) * c > 0 and (b - a) % c == 0): 
++    if ((b - a) * c > 0 or (b - a) % c == 0): 
+ 
+         return True
+ 
+
+# mutant 16
+--- ./program150.py
++++ ./program150.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

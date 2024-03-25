@@ -1,0 +1,278 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program971.py (5) ----
+
+# mutant 3
+--- ./program971.py
++++ ./program971.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def maximum_segments(n, a, b, c) : 
+ 
+-	dp = [-1] * (n + 10) 
++	dp = [-1] / (n + 10) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 6
+--- ./program971.py
++++ ./program971.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def maximum_segments(n, a, b, c) : 
+ 
+-	dp = [-1] * (n + 10) 
++	dp = None 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 9
+--- ./program971.py
++++ ./program971.py
+@@ -21,7 +21,7 @@
+ 
+ 	dp = [-1] * (n + 10) 
+ 
+-	dp[0] = 0
++	dp[0] = None
+ 
+ 	for i in range(0, n) : 
+ 
+
+# mutant 20
+--- ./program971.py
++++ ./program971.py
+@@ -29,9 +29,7 @@
+ 
+ 			if(i + a <= n ): 
+ 
+-				dp[i + a] = max(dp[i] + 1, 
+-
+-							dp[i + a]) 
++				dp[i + a] = None 
+ 
+ 			if(i + b <= n ): 
+ 
+
+# mutant 32
+--- ./program971.py
++++ ./program971.py
+@@ -41,7 +41,7 @@
+ 
+ 			if(i + c <= n ): 
+ 
+-				dp[i + c] = max(dp[i] + 1, 
++				dp[i + c] = max(dp[i] + 2, 
+ 
+ 							dp[i + c]) 
+ 
+
+
+Survived 🙁 (15)
+
+---- ./program971.py (15) ----
+
+# mutant 2
+--- ./program971.py
++++ ./program971.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def maximum_segments(n, a, b, c) : 
+ 
+-	dp = [-1] * (n + 10) 
++	dp = [-2] * (n + 10) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 5
+--- ./program971.py
++++ ./program971.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def maximum_segments(n, a, b, c) : 
+ 
+-	dp = [-1] * (n + 10) 
++	dp = [-1] * (n + 11) 
+ 
+ 	dp[0] = 0
+ 
+
+# mutant 13
+--- ./program971.py
++++ ./program971.py
+@@ -25,7 +25,7 @@
+ 
+ 	for i in range(0, n) : 
+ 
+-		if (dp[i] != -1) : 
++		if (dp[i] != -2) : 
+ 
+ 			if(i + a <= n ): 
+ 
+
+# mutant 15
+--- ./program971.py
++++ ./program971.py
+@@ -27,7 +27,7 @@
+ 
+ 		if (dp[i] != -1) : 
+ 
+-			if(i + a <= n ): 
++			if(i + a < n ): 
+ 
+ 				dp[i + a] = max(dp[i] + 1, 
+ 
+
+# mutant 16
+--- ./program971.py
++++ ./program971.py
+@@ -29,7 +29,7 @@
+ 
+ 			if(i + a <= n ): 
+ 
+-				dp[i + a] = max(dp[i] + 1, 
++				dp[i - a] = max(dp[i] + 1, 
+ 
+ 							dp[i + a]) 
+ 
+
+# mutant 17
+--- ./program971.py
++++ ./program971.py
+@@ -29,7 +29,7 @@
+ 
+ 			if(i + a <= n ): 
+ 
+-				dp[i + a] = max(dp[i] + 1, 
++				dp[i + a] = max(dp[i] - 1, 
+ 
+ 							dp[i + a]) 
+ 
+
+# mutant 19
+--- ./program971.py
++++ ./program971.py
+@@ -31,7 +31,7 @@
+ 
+ 				dp[i + a] = max(dp[i] + 1, 
+ 
+-							dp[i + a]) 
++							dp[i - a]) 
+ 
+ 			if(i + b <= n ): 
+ 
+
+# mutant 21
+--- ./program971.py
++++ ./program971.py
+@@ -33,7 +33,7 @@
+ 
+ 							dp[i + a]) 
+ 
+-			if(i + b <= n ): 
++			if(i - b <= n ): 
+ 
+ 				dp[i + b] = max(dp[i] + 1, 
+ 
+
+# mutant 26
+--- ./program971.py
++++ ./program971.py
+@@ -37,7 +37,7 @@
+ 
+ 				dp[i + b] = max(dp[i] + 1, 
+ 
+-							dp[i + b]) 
++							dp[i - b]) 
+ 
+ 			if(i + c <= n ): 
+ 
+
+# mutant 28
+--- ./program971.py
++++ ./program971.py
+@@ -39,7 +39,7 @@
+ 
+ 							dp[i + b]) 
+ 
+-			if(i + c <= n ): 
++			if(i - c <= n ): 
+ 
+ 				dp[i + c] = max(dp[i] + 1, 
+ 
+
+# mutant 29
+--- ./program971.py
++++ ./program971.py
+@@ -39,7 +39,7 @@
+ 
+ 							dp[i + b]) 
+ 
+-			if(i + c <= n ): 
++			if(i + c < n ): 
+ 
+ 				dp[i + c] = max(dp[i] + 1, 
+ 
+
+# mutant 30
+--- ./program971.py
++++ ./program971.py
+@@ -41,7 +41,7 @@
+ 
+ 			if(i + c <= n ): 
+ 
+-				dp[i + c] = max(dp[i] + 1, 
++				dp[i - c] = max(dp[i] + 1, 
+ 
+ 							dp[i + c]) 
+ 
+
+# mutant 31
+--- ./program971.py
++++ ./program971.py
+@@ -41,7 +41,7 @@
+ 
+ 			if(i + c <= n ): 
+ 
+-				dp[i + c] = max(dp[i] + 1, 
++				dp[i + c] = max(dp[i] - 1, 
+ 
+ 							dp[i + c]) 
+ 
+
+# mutant 33
+--- ./program971.py
++++ ./program971.py
+@@ -43,7 +43,7 @@
+ 
+ 				dp[i + c] = max(dp[i] + 1, 
+ 
+-							dp[i + c]) 
++							dp[i - c]) 
+ 
+ 	return dp[n]
+ 
+
+# mutant 37
+--- ./program971.py
++++ ./program971.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

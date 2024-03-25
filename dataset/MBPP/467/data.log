@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program467.py (1) ----
+
+# mutant 17
+--- ./program467.py
++++ ./program467.py
+@@ -33,7 +33,7 @@
+ 
+         countval= countval*10;
+ 
+-        deciNum //= 8; 
++        deciNum = 8; 
+ 
+     return (octalNum)
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program467.py (2) ----
+
+# mutant 5
+--- ./program467.py
++++ ./program467.py
+@@ -23,7 +23,7 @@
+ 
+     countval = 1;
+ 
+-    dNo = deciNum;
++    dNo = None;
+ 
+     while (deciNum!= 0):
+ 
+
+# mutant 22
+--- ./program467.py
++++ ./program467.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

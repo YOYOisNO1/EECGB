@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program402.py (2) ----
+
+# mutant 6
+--- ./program402.py
++++ ./program402.py
+@@ -21,7 +21,7 @@
+ 
+     C = [0 for i in range(r+1)]   
+ 
+-    C[0] = 1
++    C[0] = 2
+ 
+     for i in range(1, n+1): 
+ 
+
+# mutant 8
+--- ./program402.py
++++ ./program402.py
+@@ -23,7 +23,7 @@
+ 
+     C[0] = 1
+ 
+-    for i in range(1, n+1): 
++    for i in range(2, n+1): 
+ 
+         for j in range(min(i, r), 0, -1): 
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program402.py (2) ----
+
+# mutant 3
+--- ./program402.py
++++ ./program402.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def ncr_modp(n, r, p): 
+ 
+-    C = [0 for i in range(r+1)]   
++    C = [0 for i in range(r+2)]   
+ 
+     C[0] = 1
+ 
+
+# mutant 21
+--- ./program402.py
++++ ./program402.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

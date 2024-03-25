@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program147.py (3) ----
+
+# mutant 7
+--- ./program147.py
++++ ./program147.py
+@@ -21,7 +21,7 @@
+ 
+ 	for i in range(m-1, -1, -1): 
+ 
+-		for j in range(i+1): 
++		for j in range(i-1): 
+ 
+ 			if (tri[i+1][j] > tri[i+1][j+1]): 
+ 
+
+# mutant 8
+--- ./program147.py
++++ ./program147.py
+@@ -21,7 +21,7 @@
+ 
+ 	for i in range(m-1, -1, -1): 
+ 
+-		for j in range(i+1): 
++		for j in range(i+2): 
+ 
+ 			if (tri[i+1][j] > tri[i+1][j+1]): 
+ 
+
+# mutant 9
+--- ./program147.py
++++ ./program147.py
+@@ -23,7 +23,7 @@
+ 
+ 		for j in range(i+1): 
+ 
+-			if (tri[i+1][j] > tri[i+1][j+1]): 
++			if (tri[i-1][j] > tri[i+1][j+1]): 
+ 
+ 				tri[i][j] += tri[i+1][j] 
+ 
+
+
+Survived 🙁 (3)
+
+---- ./program147.py (3) ----
+
+# mutant 4
+--- ./program147.py
++++ ./program147.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_path_sum(tri, m, n): 
+ 
+-	for i in range(m-1, -1, -1): 
++	for i in range(m-1, -2, -1): 
+ 
+ 		for j in range(i+1): 
+ 
+
+# mutant 11
+--- ./program147.py
++++ ./program147.py
+@@ -23,7 +23,7 @@
+ 
+ 		for j in range(i+1): 
+ 
+-			if (tri[i+1][j] > tri[i+1][j+1]): 
++			if (tri[i+1][j] >= tri[i+1][j+1]): 
+ 
+ 				tri[i][j] += tri[i+1][j] 
+ 
+
+# mutant 30
+--- ./program147.py
++++ ./program147.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

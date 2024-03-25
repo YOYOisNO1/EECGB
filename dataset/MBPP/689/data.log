@@ -1,0 +1,115 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (8)
+
+---- ./program689.py (8) ----
+
+# mutant 1
+--- ./program689.py
++++ ./program689.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def min_jumps(arr, n):
+ 
+-	jumps = [0 for i in range(n)]
++	jumps = [1 for i in range(n)]
+ 
+ 	if (n == 0) or (arr[0] == 0):
+ 
+
+# mutant 4
+--- ./program689.py
++++ ./program689.py
+@@ -21,7 +21,7 @@
+ 
+ 	jumps = [0 for i in range(n)]
+ 
+-	if (n == 0) or (arr[0] == 0):
++	if (n == 1) or (arr[0] == 0):
+ 
+ 		return float('inf')
+ 
+
+# mutant 5
+--- ./program689.py
++++ ./program689.py
+@@ -21,7 +21,7 @@
+ 
+ 	jumps = [0 for i in range(n)]
+ 
+-	if (n == 0) or (arr[0] == 0):
++	if (n == 0) or (arr[1] == 0):
+ 
+ 		return float('inf')
+ 
+
+# mutant 8
+--- ./program689.py
++++ ./program689.py
+@@ -21,7 +21,7 @@
+ 
+ 	jumps = [0 for i in range(n)]
+ 
+-	if (n == 0) or (arr[0] == 0):
++	if (n == 0) and (arr[0] == 0):
+ 
+ 		return float('inf')
+ 
+
+# mutant 9
+--- ./program689.py
++++ ./program689.py
+@@ -23,7 +23,7 @@
+ 
+ 	if (n == 0) or (arr[0] == 0):
+ 
+-		return float('inf')
++		return float('XXinfXX')
+ 
+ 	jumps[0] = 0
+ 
+
+# mutant 10
+--- ./program689.py
++++ ./program689.py
+@@ -25,7 +25,7 @@
+ 
+ 		return float('inf')
+ 
+-	jumps[0] = 0
++	jumps[1] = 0
+ 
+ 	for i in range(1, n):
+ 
+
+# mutant 24
+--- ./program689.py
++++ ./program689.py
+@@ -37,7 +37,7 @@
+ 
+ 				jumps[i] = min(jumps[i], jumps[j] + 1)
+ 
+-				break
++				continue
+ 
+ 	return jumps[n-1]
+ 
+
+# mutant 29
+--- ./program689.py
++++ ./program689.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

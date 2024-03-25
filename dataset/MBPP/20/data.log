@@ -1,0 +1,146 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program20.py (1) ----
+
+# mutant 18
+--- ./program20.py
++++ ./program20.py
+@@ -33,7 +33,7 @@
+ 
+ 	while (x % 2 == 0): 
+ 
+-		x = x/2
++		x = x*2
+ 
+ 		p = p + 1
+ 
+
+
+Survived 🙁 (9)
+
+---- ./program20.py (9) ----
+
+# mutant 1
+--- ./program20.py
++++ ./program20.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_woodall(x): 
+ 
+-	if (x % 2 == 0): 
++	if (x / 2 == 0): 
+ 
+ 		return False
+ 
+
+# mutant 2
+--- ./program20.py
++++ ./program20.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_woodall(x): 
+ 
+-	if (x % 2 == 0): 
++	if (x % 3 == 0): 
+ 
+ 		return False
+ 
+
+# mutant 6
+--- ./program20.py
++++ ./program20.py
+@@ -23,7 +23,7 @@
+ 
+ 		return False
+ 
+-	if (x == 1): 
++	if (x != 1): 
+ 
+ 		return True
+ 
+
+# mutant 7
+--- ./program20.py
++++ ./program20.py
+@@ -23,7 +23,7 @@
+ 
+ 		return False
+ 
+-	if (x == 1): 
++	if (x == 2): 
+ 
+ 		return True
+ 
+
+# mutant 8
+--- ./program20.py
++++ ./program20.py
+@@ -25,7 +25,7 @@
+ 
+ 	if (x == 1): 
+ 
+-		return True
++		return False
+ 
+ 	x = x + 1 
+ 
+
+# mutant 15
+--- ./program20.py
++++ ./program20.py
+@@ -31,7 +31,7 @@
+ 
+ 	p = 0
+ 
+-	while (x % 2 == 0): 
++	while (x % 3 == 0): 
+ 
+ 		x = x/2
+ 
+
+# mutant 24
+--- ./program20.py
++++ ./program20.py
+@@ -37,7 +37,7 @@
+ 
+ 		p = p + 1
+ 
+-		if (p == x): 
++		if (p != x): 
+ 
+ 			return True
+ 
+
+# mutant 26
+--- ./program20.py
++++ ./program20.py
+@@ -41,7 +41,7 @@
+ 
+ 			return True
+ 
+-	return False
++	return True
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 29
+--- ./program20.py
++++ ./program20.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,167 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (12)
+
+---- ./program397.py (12) ----
+
+# mutant 1
+--- ./program397.py
++++ ./program397.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def median_numbers(a,b,c):
+ 
+- if a > b:
++ if a >= b:
+ 
+     if a < c:
+ 
+
+# mutant 2
+--- ./program397.py
++++ ./program397.py
+@@ -21,7 +21,7 @@
+ 
+  if a > b:
+ 
+-    if a < c:
++    if a <= c:
+ 
+         median = a
+ 
+
+# mutant 4
+--- ./program397.py
++++ ./program397.py
+@@ -25,7 +25,7 @@
+ 
+         median = a
+ 
+-    elif b > c:
++    elif b >= c:
+ 
+         median = b
+ 
+
+# mutant 5
+--- ./program397.py
++++ ./program397.py
+@@ -27,7 +27,7 @@
+ 
+     elif b > c:
+ 
+-        median = b
++        median = None
+ 
+     else:
+ 
+
+# mutant 6
+--- ./program397.py
++++ ./program397.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-        median = c
++        median = None
+ 
+  else:
+ 
+
+# mutant 7
+--- ./program397.py
++++ ./program397.py
+@@ -35,7 +35,7 @@
+ 
+  else:
+ 
+-    if a > c:
++    if a >= c:
+ 
+         median = a
+ 
+
+# mutant 8
+--- ./program397.py
++++ ./program397.py
+@@ -37,7 +37,7 @@
+ 
+     if a > c:
+ 
+-        median = a
++        median = None
+ 
+     elif b < c:
+ 
+
+# mutant 9
+--- ./program397.py
++++ ./program397.py
+@@ -39,7 +39,7 @@
+ 
+         median = a
+ 
+-    elif b < c:
++    elif b <= c:
+ 
+         median = b
+ 
+
+# mutant 11
+--- ./program397.py
++++ ./program397.py
+@@ -45,7 +45,7 @@
+ 
+     else:
+ 
+-        median = c
++        median = None
+ 
+  return median
+ 
+
+# mutant 13
+--- ./program397.py
++++ ./program397.py
+@@ -52,7 +52,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(a, b, c, expected):
+     try:
+
+# mutant 14
+--- ./program397.py
++++ ./program397.py
+@@ -52,7 +52,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(a, b, c, expected):
+     try:
+
+# mutant 16
+--- ./program397.py
++++ ./program397.py
+@@ -61,7 +61,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program543.py (1) ----
+
+# mutant 5
+--- ./program543.py
++++ ./program543.py
+@@ -23,7 +23,7 @@
+ 
+     count = 0
+ 
+-    while(number > 0):
++    while(number >= 0):
+ 
+         number = number // 10
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program543.py (2) ----
+
+# mutant 1
+--- ./program543.py
++++ ./program543.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_digits(num1,num2):
+ 
+-    number=num1+num2
++    number=num1-num2
+ 
+     count = 0
+ 
+
+# mutant 15
+--- ./program543.py
++++ ./program543.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

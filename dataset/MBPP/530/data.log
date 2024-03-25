@@ -1,0 +1,133 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (6)
+
+---- ./program530.py (6) ----
+
+# mutant 5
+--- ./program530.py
++++ ./program530.py
+@@ -27,7 +27,7 @@
+ 
+     for x in nums:
+ 
+-        if x < 0:
++        if x < 1:
+ 
+             n1 += 1
+ 
+
+# mutant 6
+--- ./program530.py
++++ ./program530.py
+@@ -29,7 +29,7 @@
+ 
+         if x < 0:
+ 
+-            n1 += 1
++            n1 = 1
+ 
+         else:
+ 
+
+# mutant 7
+--- ./program530.py
++++ ./program530.py
+@@ -29,7 +29,7 @@
+ 
+         if x < 0:
+ 
+-            n1 += 1
++            n1 -= 1
+ 
+         else:
+ 
+
+# mutant 8
+--- ./program530.py
++++ ./program530.py
+@@ -29,7 +29,7 @@
+ 
+         if x < 0:
+ 
+-            n1 += 1
++            n1 += 2
+ 
+         else:
+ 
+
+# mutant 9
+--- ./program530.py
++++ ./program530.py
+@@ -35,7 +35,7 @@
+ 
+           None
+ 
+-    return round(n1/n,2)
++    return round(n1*n,2)
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 11
+--- ./program530.py
++++ ./program530.py
+@@ -40,7 +40,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual + expected) < 1e-06
+ 
+ def driver(nums, expected):
+     try:
+
+
+Survived 🙁 (3)
+
+---- ./program530.py (3) ----
+
+# mutant 12
+--- ./program530.py
++++ ./program530.py
+@@ -40,7 +40,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(nums, expected):
+     try:
+
+# mutant 13
+--- ./program530.py
++++ ./program530.py
+@@ -40,7 +40,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(nums, expected):
+     try:
+
+# mutant 15
+--- ./program530.py
++++ ./program530.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program884.py (3) ----
+
+# mutant 6
+--- ./program884.py
++++ ./program884.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def all_bits_set_in_the_given_range(n,l,r): 
+ 
+-    num = ((1 << r) - 1) ^ ((1 << (l - 1)) - 1) 
++    num = ((1 << r) - 1) ^ ((2 << (l - 1)) - 1) 
+ 
+     new_num = n & num 
+ 
+
+# mutant 10
+--- ./program884.py
++++ ./program884.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def all_bits_set_in_the_given_range(n,l,r): 
+ 
+-    num = ((1 << r) - 1) ^ ((1 << (l - 1)) - 1) 
++    num = ((1 << r) - 1) ^ ((1 << (l - 1)) + 1) 
+ 
+     new_num = n & num 
+ 
+
+# mutant 20
+--- ./program884.py
++++ ./program884.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program802.py (3) ----
+
+# mutant 2
+--- ./program802.py
++++ ./program802.py
+@@ -21,7 +21,7 @@
+ 
+     for i in range (1,n): 
+ 
+-        if (arr[i] < arr[i - 1]): 
++        if (arr[i] <= arr[i - 1]): 
+ 
+             return i  
+ 
+
+# mutant 5
+--- ./program802.py
++++ ./program802.py
+@@ -25,7 +25,7 @@
+ 
+             return i  
+ 
+-    return 0
++    return 1
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program802.py
++++ ./program802.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

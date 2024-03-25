@@ -1,0 +1,203 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (6)
+
+---- ./program876.py (6) ----
+
+# mutant 5
+--- ./program876.py
++++ ./program876.py
+@@ -29,7 +29,7 @@
+ 
+    while(True):
+ 
+-       if((z % x == 0) and (z % y == 0)):
++       if((z / x == 0) and (z % y == 0)):
+ 
+            lcm = z
+ 
+
+# mutant 7
+--- ./program876.py
++++ ./program876.py
+@@ -29,7 +29,7 @@
+ 
+    while(True):
+ 
+-       if((z % x == 0) and (z % y == 0)):
++       if((z % x == 1) and (z % y == 0)):
+ 
+            lcm = z
+ 
+
+# mutant 8
+--- ./program876.py
++++ ./program876.py
+@@ -29,7 +29,7 @@
+ 
+    while(True):
+ 
+-       if((z % x == 0) and (z % y == 0)):
++       if((z % x == 0) and (z / y == 0)):
+ 
+            lcm = z
+ 
+
+# mutant 10
+--- ./program876.py
++++ ./program876.py
+@@ -29,7 +29,7 @@
+ 
+    while(True):
+ 
+-       if((z % x == 0) and (z % y == 0)):
++       if((z % x == 0) and (z % y == 1)):
+ 
+            lcm = z
+ 
+
+# mutant 13
+--- ./program876.py
++++ ./program876.py
+@@ -33,7 +33,7 @@
+ 
+            lcm = z
+ 
+-           break
++           continue
+ 
+        z += 1
+ 
+
+# mutant 14
+--- ./program876.py
++++ ./program876.py
+@@ -35,7 +35,7 @@
+ 
+            break
+ 
+-       z += 1
++       z = 1
+ 
+    return lcm
+ 
+
+
+Suspicious 🤔 (4)
+
+---- ./program876.py (4) ----
+
+# mutant 4
+--- ./program876.py
++++ ./program876.py
+@@ -27,7 +27,7 @@
+ 
+        z = y
+ 
+-   while(True):
++   while(False):
+ 
+        if((z % x == 0) and (z % y == 0)):
+ 
+
+# mutant 11
+--- ./program876.py
++++ ./program876.py
+@@ -29,7 +29,7 @@
+ 
+    while(True):
+ 
+-       if((z % x == 0) and (z % y == 0)):
++       if((z % x == 0) or (z % y == 0)):
+ 
+            lcm = z
+ 
+
+# mutant 12
+--- ./program876.py
++++ ./program876.py
+@@ -31,7 +31,7 @@
+ 
+        if((z % x == 0) and (z % y == 0)):
+ 
+-           lcm = z
++           lcm = None
+ 
+            break
+ 
+
+# mutant 18
+--- ./program876.py
++++ ./program876.py
+@@ -50,7 +50,7 @@
+             x, y),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (4)
+
+---- ./program876.py (4) ----
+
+# mutant 1
+--- ./program876.py
++++ ./program876.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def lcm(x, y):
+ 
+-   if x > y:
++   if x >= y:
+ 
+        z = x
+ 
+
+# mutant 2
+--- ./program876.py
++++ ./program876.py
+@@ -21,7 +21,7 @@
+ 
+    if x > y:
+ 
+-       z = x
++       z = None
+ 
+    else:
+ 
+
+# mutant 16
+--- ./program876.py
++++ ./program876.py
+@@ -35,7 +35,7 @@
+ 
+            break
+ 
+-       z += 1
++       z += 2
+ 
+    return lcm
+ 
+
+# mutant 19
+--- ./program876.py
++++ ./program876.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

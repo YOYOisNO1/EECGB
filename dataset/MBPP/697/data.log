@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program697.py (2) ----
+
+# mutant 3
+--- ./program697.py
++++ ./program697.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_even(array_nums):
+ 
+-   count_even = len(list(filter(lambda x: (x%2 == 0) , array_nums)))
++   count_even = len(list(filter(lambda x: (x%2 != 0) , array_nums)))
+ 
+    return count_even
+ 
+
+# mutant 4
+--- ./program697.py
++++ ./program697.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_even(array_nums):
+ 
+-   count_even = len(list(filter(lambda x: (x%2 == 0) , array_nums)))
++   count_even = len(list(filter(lambda x: (x%2 == 1) , array_nums)))
+ 
+    return count_even
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program697.py (1) ----
+
+# mutant 9
+--- ./program697.py
++++ ./program697.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

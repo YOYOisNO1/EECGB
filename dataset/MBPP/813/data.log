@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program813.py (2) ----
+
+# mutant 1
+--- ./program813.py
++++ ./program813.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def string_length(str1):
+ 
+-    count = 0
++    count = 1
+ 
+     for char in str1:
+ 
+
+# mutant 3
+--- ./program813.py
++++ ./program813.py
+@@ -23,7 +23,7 @@
+ 
+     for char in str1:
+ 
+-        count += 1
++        count = 1
+ 
+     return count
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program813.py (1) ----
+
+# mutant 8
+--- ./program813.py
++++ ./program813.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

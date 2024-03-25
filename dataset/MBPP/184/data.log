@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program184.py (2) ----
+
+# mutant 1
+--- ./program184.py
++++ ./program184.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def greater_specificnum(list,num):
+ 
+- greater_specificnum=all(x >= num for x in list)
++ greater_specificnum=all(x > num for x in list)
+ 
+  return greater_specificnum
+ 
+
+# mutant 5
+--- ./program184.py
++++ ./program184.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,211 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (12)
+
+---- ./program11.py (12) ----
+
+# mutant 5
+--- ./program11.py
++++ ./program11.py
+@@ -23,7 +23,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = s[0 : i] + s[i + 2:] 
+ 
+             break
+ 
+
+# mutant 6
+--- ./program11.py
++++ ./program11.py
+@@ -23,7 +23,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = None 
+ 
+             break
+ 
+
+# mutant 7
+--- ./program11.py
++++ ./program11.py
+@@ -25,7 +25,7 @@
+ 
+             s = s[0 : i] + s[i + 1:] 
+ 
+-            break
++            continue
+ 
+     for i in range(len(s) - 1,-1,-1):  
+ 
+
+# mutant 8
+--- ./program11.py
++++ ./program11.py
+@@ -27,7 +27,7 @@
+ 
+             break
+ 
+-    for i in range(len(s) - 1,-1,-1):  
++    for i in range(len(s) + 1,-1,-1):  
+ 
+         if (s[i] == ch): 
+ 
+
+# mutant 9
+--- ./program11.py
++++ ./program11.py
+@@ -27,7 +27,7 @@
+ 
+             break
+ 
+-    for i in range(len(s) - 1,-1,-1):  
++    for i in range(len(s) - 2,-1,-1):  
+ 
+         if (s[i] == ch): 
+ 
+
+# mutant 10
+--- ./program11.py
++++ ./program11.py
+@@ -27,7 +27,7 @@
+ 
+             break
+ 
+-    for i in range(len(s) - 1,-1,-1):  
++    for i in range(len(s) - 1,+1,-1):  
+ 
+         if (s[i] == ch): 
+ 
+
+# mutant 13
+--- ./program11.py
++++ ./program11.py
+@@ -27,7 +27,7 @@
+ 
+             break
+ 
+-    for i in range(len(s) - 1,-1,-1):  
++    for i in range(len(s) - 1,-1,-2):  
+ 
+         if (s[i] == ch): 
+ 
+
+# mutant 15
+--- ./program11.py
++++ ./program11.py
+@@ -31,7 +31,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = s[1 : i] + s[i + 1:] 
+ 
+             break
+ 
+
+# mutant 16
+--- ./program11.py
++++ ./program11.py
+@@ -31,7 +31,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = s[0 : i] - s[i + 1:] 
+ 
+             break
+ 
+
+# mutant 17
+--- ./program11.py
++++ ./program11.py
+@@ -31,7 +31,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = s[0 : i] + s[i - 1:] 
+ 
+             break
+ 
+
+# mutant 18
+--- ./program11.py
++++ ./program11.py
+@@ -31,7 +31,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = s[0 : i] + s[i + 2:] 
+ 
+             break
+ 
+
+# mutant 19
+--- ./program11.py
++++ ./program11.py
+@@ -31,7 +31,7 @@
+ 
+         if (s[i] == ch): 
+ 
+-            s = s[0 : i] + s[i + 1:] 
++            s = None 
+ 
+             break
+ 
+
+
+Survived 🙁 (3)
+
+---- ./program11.py (3) ----
+
+# mutant 11
+--- ./program11.py
++++ ./program11.py
+@@ -27,7 +27,7 @@
+ 
+             break
+ 
+-    for i in range(len(s) - 1,-1,-1):  
++    for i in range(len(s) - 1,-2,-1):  
+ 
+         if (s[i] == ch): 
+ 
+
+# mutant 20
+--- ./program11.py
++++ ./program11.py
+@@ -33,7 +33,7 @@
+ 
+             s = s[0 : i] + s[i + 1:] 
+ 
+-            break
++            continue
+ 
+     return s 
+ 
+
+# mutant 23
+--- ./program11.py
++++ ./program11.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

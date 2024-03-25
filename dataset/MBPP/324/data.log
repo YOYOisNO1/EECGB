@@ -1,0 +1,128 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (9)
+
+---- ./program324.py (9) ----
+
+# mutant 1
+--- ./program324.py
++++ ./program324.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_of_alternates(test_tuple):
+ 
+-  sum1 = 0
++  sum1 = 1
+ 
+   sum2 = 0
+ 
+
+# mutant 3
+--- ./program324.py
++++ ./program324.py
+@@ -21,7 +21,7 @@
+ 
+   sum1 = 0
+ 
+-  sum2 = 0
++  sum2 = 1
+ 
+   for idx, ele in enumerate(test_tuple):
+ 
+
+# mutant 5
+--- ./program324.py
++++ ./program324.py
+@@ -25,7 +25,7 @@
+ 
+   for idx, ele in enumerate(test_tuple):
+ 
+-    if idx % 2:
++    if idx / 2:
+ 
+       sum1 += ele
+ 
+
+# mutant 6
+--- ./program324.py
++++ ./program324.py
+@@ -25,7 +25,7 @@
+ 
+   for idx, ele in enumerate(test_tuple):
+ 
+-    if idx % 2:
++    if idx % 3:
+ 
+       sum1 += ele
+ 
+
+# mutant 7
+--- ./program324.py
++++ ./program324.py
+@@ -27,7 +27,7 @@
+ 
+     if idx % 2:
+ 
+-      sum1 += ele
++      sum1 = ele
+ 
+     else:
+ 
+
+# mutant 8
+--- ./program324.py
++++ ./program324.py
+@@ -27,7 +27,7 @@
+ 
+     if idx % 2:
+ 
+-      sum1 += ele
++      sum1 -= ele
+ 
+     else:
+ 
+
+# mutant 9
+--- ./program324.py
++++ ./program324.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-      sum2 += ele
++      sum2 = ele
+ 
+   return ((sum1),(sum2)) 
+ 
+
+# mutant 10
+--- ./program324.py
++++ ./program324.py
+@@ -31,7 +31,7 @@
+ 
+     else:
+ 
+-      sum2 += ele
++      sum2 -= ele
+ 
+   return ((sum1),(sum2)) 
+ 
+
+# mutant 12
+--- ./program324.py
++++ ./program324.py
+@@ -46,7 +46,7 @@
+             test_tuple),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

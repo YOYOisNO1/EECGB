@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program617.py (5) ----
+
+# mutant 4
+--- ./program617.py
++++ ./program617.py
+@@ -25,7 +25,7 @@
+ 
+     b = max(temp, b) 
+ 
+-    if (d >= b): 
++    if (d > b): 
+ 
+         return (d + b - 1) / b 
+ 
+
+# mutant 14
+--- ./program617.py
++++ ./program617.py
+@@ -39,7 +39,7 @@
+ 
+     else:
+ 
+-        return 2
++        return 3
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 16
+--- ./program617.py
++++ ./program617.py
+@@ -44,7 +44,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) <= 1e-06
+ 
+ def driver(a, b, d, expected):
+     try:
+
+# mutant 17
+--- ./program617.py
++++ ./program617.py
+@@ -44,7 +44,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-06
++    return abs(actual - expected) < 2e-06
+ 
+ def driver(a, b, d, expected):
+     try:
+
+# mutant 19
+--- ./program617.py
++++ ./program617.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

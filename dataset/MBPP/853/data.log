@@ -1,0 +1,154 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (11)
+
+---- ./program853.py (11) ----
+
+# mutant 7
+--- ./program853.py
++++ ./program853.py
+@@ -25,7 +25,7 @@
+ 
+     while n % 2 == 0: 
+ 
+-        n = n // 2 
++        n = n / 2 
+ 
+     for i in range(3,int(math.sqrt(n) + 1)): 
+ 
+
+# mutant 12
+--- ./program853.py
++++ ./program853.py
+@@ -27,7 +27,7 @@
+ 
+         n = n // 2 
+ 
+-    for i in range(3,int(math.sqrt(n) + 1)): 
++    for i in range(3,int(math.sqrt(n) + 2)): 
+ 
+         count = 0
+ 
+
+# mutant 13
+--- ./program853.py
++++ ./program853.py
+@@ -29,7 +29,7 @@
+ 
+     for i in range(3,int(math.sqrt(n) + 1)): 
+ 
+-        count = 0
++        count = 1
+ 
+         curr_sum = 1
+ 
+
+# mutant 22
+--- ./program853.py
++++ ./program853.py
+@@ -37,7 +37,7 @@
+ 
+         while n % i == 0: 
+ 
+-            count+=1 
++            count=1 
+ 
+             n = n // i 
+ 
+
+# mutant 23
+--- ./program853.py
++++ ./program853.py
+@@ -37,7 +37,7 @@
+ 
+         while n % i == 0: 
+ 
+-            count+=1 
++            count-=1 
+ 
+             n = n // i 
+ 
+
+# mutant 24
+--- ./program853.py
++++ ./program853.py
+@@ -37,7 +37,7 @@
+ 
+         while n % i == 0: 
+ 
+-            count+=1 
++            count+=2 
+ 
+             n = n // i 
+ 
+
+# mutant 25
+--- ./program853.py
++++ ./program853.py
+@@ -39,7 +39,7 @@
+ 
+             count+=1 
+ 
+-            n = n // i 
++            n = n / i 
+ 
+             curr_term *= i 
+ 
+
+# mutant 31
+--- ./program853.py
++++ ./program853.py
+@@ -45,7 +45,7 @@
+ 
+             curr_sum += curr_term    
+ 
+-        res *= curr_sum  
++        res = curr_sum  
+ 
+     if n >= 2: 
+ 
+
+# mutant 33
+--- ./program853.py
++++ ./program853.py
+@@ -47,7 +47,7 @@
+ 
+         res *= curr_sum  
+ 
+-    if n >= 2: 
++    if n > 2: 
+ 
+         res *= (1 + n) 
+ 
+
+# mutant 34
+--- ./program853.py
++++ ./program853.py
+@@ -47,7 +47,7 @@
+ 
+         res *= curr_sum  
+ 
+-    if n >= 2: 
++    if n >= 3: 
+ 
+         res *= (1 + n) 
+ 
+
+# mutant 41
+--- ./program853.py
++++ ./program853.py
+@@ -65,7 +65,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

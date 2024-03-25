@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program906.py (2) ----
+
+# mutant 1
+--- ./program906.py
++++ ./program906.py
+@@ -21,7 +21,7 @@
+ 
+ def extract_date(url):
+ 
+-        return re.findall(r'/(\d{4})/(\d{1,2})/(\d{1,2})/', url)
++        return re.findall(r'XX/(\d{4})/(\d{1,2})/(\d{1,2})/XX', url)
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 3
+--- ./program906.py
++++ ./program906.py
+@@ -34,7 +34,7 @@
+             url),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

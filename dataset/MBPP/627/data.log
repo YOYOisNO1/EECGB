@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program627.py (2) ----
+
+# mutant 1
+--- ./program627.py
++++ ./program627.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_first_missing(array,start,end): 
+ 
+-    if (start > end): 
++    if (start >= end): 
+ 
+         return end + 1
+ 
+
+# mutant 14
+--- ./program627.py
++++ ./program627.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

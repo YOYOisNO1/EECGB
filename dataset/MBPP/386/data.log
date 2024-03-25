@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program386.py (5) ----
+
+# mutant 15
+--- ./program386.py
++++ ./program386.py
+@@ -35,7 +35,7 @@
+ 
+ 			count_left += 1
+ 
+-			if imbalance > 0:
++			if imbalance >= 0:
+ 
+ 				swap += imbalance
+ 
+
+# mutant 19
+--- ./program386.py
++++ ./program386.py
+@@ -39,7 +39,7 @@
+ 
+ 				swap += imbalance
+ 
+-				imbalance -= 1
++				imbalance = 1
+ 
+ 		elif chars[i] == ']':
+ 
+
+# mutant 20
+--- ./program386.py
++++ ./program386.py
+@@ -39,7 +39,7 @@
+ 
+ 				swap += imbalance
+ 
+-				imbalance -= 1
++				imbalance += 1
+ 
+ 		elif chars[i] == ']':
+ 
+
+# mutant 21
+--- ./program386.py
++++ ./program386.py
+@@ -39,7 +39,7 @@
+ 
+ 				swap += imbalance
+ 
+-				imbalance -= 1
++				imbalance -= 2
+ 
+ 		elif chars[i] == ']':
+ 
+
+# mutant 31
+--- ./program386.py
++++ ./program386.py
+@@ -61,7 +61,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

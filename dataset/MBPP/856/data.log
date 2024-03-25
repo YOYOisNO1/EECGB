@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program856.py (4) ----
+
+# mutant 1
+--- ./program856.py
++++ ./program856.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_min_swaps(arr,n) : 
+ 
+-    noOfZeroes = [0] * n 
++    noOfZeroes = [1] * n 
+ 
+     count = 0 
+ 
+
+# mutant 9
+--- ./program856.py
++++ ./program856.py
+@@ -23,7 +23,7 @@
+ 
+     count = 0 
+ 
+-    noOfZeroes[n - 1] = 1 - arr[n - 1] 
++    noOfZeroes[n - 1] = 1 + arr[n - 1] 
+ 
+     for i in range(n-2,-1,-1) : 
+ 
+
+# mutant 16
+--- ./program856.py
++++ ./program856.py
+@@ -25,7 +25,7 @@
+ 
+     noOfZeroes[n - 1] = 1 - arr[n - 1] 
+ 
+-    for i in range(n-2,-1,-1) : 
++    for i in range(n-2,-2,-1) : 
+ 
+         noOfZeroes[i] = noOfZeroes[i + 1] 
+ 
+
+# mutant 34
+--- ./program856.py
++++ ./program856.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

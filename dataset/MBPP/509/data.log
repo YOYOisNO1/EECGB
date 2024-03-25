@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program509.py (1) ----
+
+# mutant 19
+--- ./program509.py
++++ ./program509.py
+@@ -35,7 +35,7 @@
+ 
+         sm = sm + n 
+ 
+-        n = n-2
++        n = n+2
+ 
+     return sm//count 
+ 
+
+
+Survived 🙁 (7)
+
+---- ./program509.py (7) ----
+
+# mutant 1
+--- ./program509.py
++++ ./program509.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def average_odd(n) : 
+ 
+-    if (n%2==0) : 
++    if (n/2==0) : 
+ 
+         return ("Invalid Input") 
+ 
+
+# mutant 5
+--- ./program509.py
++++ ./program509.py
+@@ -21,7 +21,7 @@
+ 
+     if (n%2==0) : 
+ 
+-        return ("Invalid Input") 
++        return ("XXInvalid InputXX") 
+ 
+         return -1 
+ 
+
+# mutant 6
+--- ./program509.py
++++ ./program509.py
+@@ -23,7 +23,7 @@
+ 
+         return ("Invalid Input") 
+ 
+-        return -1 
++        return +1 
+ 
+     sm =0
+ 
+
+# mutant 7
+--- ./program509.py
++++ ./program509.py
+@@ -23,7 +23,7 @@
+ 
+         return ("Invalid Input") 
+ 
+-        return -1 
++        return -2 
+ 
+     sm =0
+ 
+
+# mutant 8
+--- ./program509.py
++++ ./program509.py
+@@ -25,7 +25,7 @@
+ 
+         return -1 
+ 
+-    sm =0
++    sm =1
+ 
+     count =0
+ 
+
+# mutant 22
+--- ./program509.py
++++ ./program509.py
+@@ -37,7 +37,7 @@
+ 
+         n = n-2
+ 
+-    return sm//count 
++    return sm/count 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 25
+--- ./program509.py
++++ ./program509.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

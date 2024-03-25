@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program911.py (7) ----
+
+# mutant 1
+--- ./program911.py
++++ ./program911.py
+@@ -21,7 +21,7 @@
+ 
+     import heapq
+ 
+-    a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)
++    a, b = heapq.nlargest(4, nums), heapq.nsmallest(2, nums)
+ 
+     return max(a[0] * a[1] * a[2], a[0] * b[0] * b[1])
+ 
+
+# mutant 2
+--- ./program911.py
++++ ./program911.py
+@@ -21,7 +21,7 @@
+ 
+     import heapq
+ 
+-    a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)
++    a, b = heapq.nlargest(3, nums), heapq.nsmallest(3, nums)
+ 
+     return max(a[0] * a[1] * a[2], a[0] * b[0] * b[1])
+ 
+
+# mutant 9
+--- ./program911.py
++++ ./program911.py
+@@ -23,7 +23,7 @@
+ 
+     a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)
+ 
+-    return max(a[0] * a[1] * a[2], a[0] * b[0] * b[1])
++    return max(a[0] * a[1] * a[2], a[1] * b[0] * b[1])
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 10
+--- ./program911.py
++++ ./program911.py
+@@ -23,7 +23,7 @@
+ 
+     a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)
+ 
+-    return max(a[0] * a[1] * a[2], a[0] * b[0] * b[1])
++    return max(a[0] * a[1] * a[2], a[0] / b[0] * b[1])
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 11
+--- ./program911.py
++++ ./program911.py
+@@ -23,7 +23,7 @@
+ 
+     a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)
+ 
+-    return max(a[0] * a[1] * a[2], a[0] * b[0] * b[1])
++    return max(a[0] * a[1] * a[2], a[0] * b[1] * b[1])
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 12
+--- ./program911.py
++++ ./program911.py
+@@ -23,7 +23,7 @@
+ 
+     a, b = heapq.nlargest(3, nums), heapq.nsmallest(2, nums)
+ 
+-    return max(a[0] * a[1] * a[2], a[0] * b[0] * b[1])
++    return max(a[0] * a[1] * a[2], a[0] * b[0] / b[1])
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 16
+--- ./program911.py
++++ ./program911.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

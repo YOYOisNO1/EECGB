@@ -1,0 +1,133 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program315.py (1) ----
+
+# mutant 27
+--- ./program315.py
++++ ./program315.py
+@@ -47,7 +47,7 @@
+ 
+             currlen += 1
+ 
+-        i += 1
++        i = 1
+ 
+     if (currlen % 2 == 0): 
+ 
+
+
+Survived 🙁 (8)
+
+---- ./program315.py (8) ----
+
+# mutant 6
+--- ./program315.py
++++ ./program315.py
+@@ -25,7 +25,7 @@
+ 
+     currlen = 0
+ 
+-    maxlen = 0
++    maxlen = 1
+ 
+     st = -1
+ 
+
+# mutant 14
+--- ./program315.py
++++ ./program315.py
+@@ -33,7 +33,7 @@
+ 
+         if (str[i] == ' '): 
+ 
+-            if (currlen % 2 == 0): 
++            if (currlen / 2 == 0): 
+ 
+                 if (maxlen < currlen): 
+ 
+
+# mutant 15
+--- ./program315.py
++++ ./program315.py
+@@ -33,7 +33,7 @@
+ 
+         if (str[i] == ' '): 
+ 
+-            if (currlen % 2 == 0): 
++            if (currlen % 3 == 0): 
+ 
+                 if (maxlen < currlen): 
+ 
+
+# mutant 18
+--- ./program315.py
++++ ./program315.py
+@@ -35,7 +35,7 @@
+ 
+             if (currlen % 2 == 0): 
+ 
+-                if (maxlen < currlen): 
++                if (maxlen <= currlen): 
+ 
+                     maxlen = currlen 
+ 
+
+# mutant 20
+--- ./program315.py
++++ ./program315.py
+@@ -39,7 +39,7 @@
+ 
+                     maxlen = currlen 
+ 
+-                    st = i - currlen 
++                    st = i + currlen 
+ 
+             currlen = 0 
+ 
+
+# mutant 21
+--- ./program315.py
++++ ./program315.py
+@@ -39,7 +39,7 @@
+ 
+                     maxlen = currlen 
+ 
+-                    st = i - currlen 
++                    st = None 
+ 
+             currlen = 0 
+ 
+
+# mutant 34
+--- ./program315.py
++++ ./program315.py
+@@ -51,7 +51,7 @@
+ 
+     if (currlen % 2 == 0): 
+ 
+-        if (maxlen < currlen): 
++        if (maxlen <= currlen): 
+ 
+             maxlen = currlen 
+ 
+
+# mutant 45
+--- ./program315.py
++++ ./program315.py
+@@ -75,7 +75,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program295.py (4) ----
+
+# mutant 1
+--- ./program295.py
++++ ./program295.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_div(number):
+ 
+-    divisors = [1]
++    divisors = [2]
+ 
+     for i in range(2, number):
+ 
+
+# mutant 2
+--- ./program295.py
++++ ./program295.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_div(number):
+ 
+-    divisors = [1]
++    divisors = None
+ 
+     for i in range(2, number):
+ 
+
+# mutant 7
+--- ./program295.py
++++ ./program295.py
+@@ -32,7 +32,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(number, expected):
+     try:
+
+# mutant 8
+--- ./program295.py
++++ ./program295.py
+@@ -40,7 +40,7 @@
+             number),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program295.py (1) ----
+
+# mutant 9
+--- ./program295.py
++++ ./program295.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

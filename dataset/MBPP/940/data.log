@@ -1,0 +1,172 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program940.py (3) ----
+
+# mutant 13
+--- ./program940.py
++++ ./program940.py
+@@ -29,7 +29,7 @@
+ 
+         shift_down(arr, 0, end - 1)
+ 
+-        end -= 1
++        end = 1
+ 
+     return arr
+ 
+
+# mutant 23
+--- ./program940.py
++++ ./program940.py
+@@ -43,7 +43,7 @@
+ 
+         shift_down(arr, start, len(arr) - 1)
+ 
+-        start -= 1
++        start = 1
+ 
+ def shift_down(arr, start, end):
+ 
+
+# mutant 24
+--- ./program940.py
++++ ./program940.py
+@@ -43,7 +43,7 @@
+ 
+         shift_down(arr, start, len(arr) - 1)
+ 
+-        start -= 1
++        start += 1
+ 
+ def shift_down(arr, start, end):
+ 
+
+
+Survived 🙁 (9)
+
+---- ./program940.py (9) ----
+
+# mutant 5
+--- ./program940.py
++++ ./program940.py
+@@ -23,7 +23,7 @@
+ 
+     end = len(arr) - 1
+ 
+-    while end > 0:
++    while end >= 0:
+ 
+         arr[end], arr[0] = arr[0], arr[end]
+ 
+
+# mutant 17
+--- ./program940.py
++++ ./program940.py
+@@ -37,7 +37,7 @@
+ 
+ def heapify(arr):
+ 
+-    start = len(arr) // 2
++    start = len(arr) // 3
+ 
+     while start >= 0:
+ 
+
+# mutant 22
+--- ./program940.py
++++ ./program940.py
+@@ -41,7 +41,7 @@
+ 
+     while start >= 0:
+ 
+-        shift_down(arr, start, len(arr) - 1)
++        shift_down(arr, start, len(arr) - 2)
+ 
+         start -= 1
+ 
+
+# mutant 27
+--- ./program940.py
++++ ./program940.py
+@@ -49,7 +49,7 @@
+ 
+     root = start
+ 
+-    while root * 2 + 1 <= end:
++    while root / 2 + 1 <= end:
+ 
+         child = root * 2 + 1
+ 
+
+# mutant 28
+--- ./program940.py
++++ ./program940.py
+@@ -49,7 +49,7 @@
+ 
+     root = start
+ 
+-    while root * 2 + 1 <= end:
++    while root * 3 + 1 <= end:
+ 
+         child = root * 2 + 1
+ 
+
+# mutant 29
+--- ./program940.py
++++ ./program940.py
+@@ -49,7 +49,7 @@
+ 
+     root = start
+ 
+-    while root * 2 + 1 <= end:
++    while root * 2 - 1 <= end:
+ 
+         child = root * 2 + 1
+ 
+
+# mutant 40
+--- ./program940.py
++++ ./program940.py
+@@ -53,7 +53,7 @@
+ 
+         child = root * 2 + 1
+ 
+-        if child + 1 <= end and arr[child] < arr[child + 1]:
++        if child + 1 <= end and arr[child] <= arr[child + 1]:
+ 
+             child += 1
+ 
+
+# mutant 48
+--- ./program940.py
++++ ./program940.py
+@@ -57,7 +57,7 @@
+ 
+             child += 1
+ 
+-        if child <= end and arr[root] < arr[child]:
++        if child <= end and arr[root] <= arr[child]:
+ 
+             arr[root], arr[child] = arr[child], arr[root]
+ 
+
+# mutant 54
+--- ./program940.py
++++ ./program940.py
+@@ -81,7 +81,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

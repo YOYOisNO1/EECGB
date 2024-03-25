@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program83.py (6) ----
+
+# mutant 9
+--- ./program83.py
++++ ./program83.py
+@@ -25,7 +25,7 @@
+ 
+         summ += (ord(strr[i]) - ord('a') + 1)  
+ 
+-    if (summ % 26 == 0): 
++    if (summ / 26 == 0): 
+ 
+         return ord('z') 
+ 
+
+# mutant 10
+--- ./program83.py
++++ ./program83.py
+@@ -25,7 +25,7 @@
+ 
+         summ += (ord(strr[i]) - ord('a') + 1)  
+ 
+-    if (summ % 26 == 0): 
++    if (summ % 27 == 0): 
+ 
+         return ord('z') 
+ 
+
+# mutant 12
+--- ./program83.py
++++ ./program83.py
+@@ -25,7 +25,7 @@
+ 
+         summ += (ord(strr[i]) - ord('a') + 1)  
+ 
+-    if (summ % 26 == 0): 
++    if (summ % 26 == 1): 
+ 
+         return ord('z') 
+ 
+
+# mutant 13
+--- ./program83.py
++++ ./program83.py
+@@ -27,7 +27,7 @@
+ 
+     if (summ % 26 == 0): 
+ 
+-        return ord('z') 
++        return ord('XXzXX') 
+ 
+     else: 
+ 
+
+# mutant 15
+--- ./program83.py
++++ ./program83.py
+@@ -31,7 +31,7 @@
+ 
+     else: 
+ 
+-        summ = summ % 26
++        summ = summ % 27
+ 
+         return chr(ord('a') + summ - 1)
+ 
+
+# mutant 23
+--- ./program83.py
++++ ./program83.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

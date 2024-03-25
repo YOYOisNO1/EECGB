@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program156.py (3) ----
+
+# mutant 1
+--- ./program156.py
++++ ./program156.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tuple_int_str(tuple_str):
+ 
+-    result = tuple((int(x[0]), int(x[1])) for x in tuple_str)
++    result = tuple((int(x[1]), int(x[1])) for x in tuple_str)
+ 
+     return result
+ 
+
+# mutant 3
+--- ./program156.py
++++ ./program156.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def tuple_int_str(tuple_str):
+ 
+-    result = tuple((int(x[0]), int(x[1])) for x in tuple_str)
++    result = None
+ 
+     return result
+ 
+
+# mutant 5
+--- ./program156.py
++++ ./program156.py
+@@ -34,7 +34,7 @@
+             tuple_str),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

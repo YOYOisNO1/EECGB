@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program895.py (5) ----
+
+# mutant 3
+--- ./program895.py
++++ ./program895.py
+@@ -21,7 +21,7 @@
+ 
+     n = len(A)
+ 
+-    if n == 1:
++    if n == 2:
+ 
+         return A[0]
+ 
+
+# mutant 4
+--- ./program895.py
++++ ./program895.py
+@@ -23,7 +23,7 @@
+ 
+     if n == 1:
+ 
+-        return A[0]
++        return A[1]
+ 
+     look_up = [None] * n
+ 
+
+# mutant 11
+--- ./program895.py
++++ ./program895.py
+@@ -29,7 +29,7 @@
+ 
+     look_up[0] = A[0]
+ 
+-    look_up[1] = max(A[0], A[1])
++    look_up[1] = max(A[1], A[1])
+ 
+     for i in range(2, n):
+ 
+
+# mutant 12
+--- ./program895.py
++++ ./program895.py
+@@ -29,7 +29,7 @@
+ 
+     look_up[0] = A[0]
+ 
+-    look_up[1] = max(A[0], A[1])
++    look_up[1] = max(A[0], A[2])
+ 
+     for i in range(2, n):
+ 
+
+# mutant 26
+--- ./program895.py
++++ ./program895.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

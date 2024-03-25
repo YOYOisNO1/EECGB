@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program291.py (5) ----
+
+# mutant 1
+--- ./program291.py
++++ ./program291.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_no_of_ways(n, k): 
+ 
+-	dp = [0] * (n + 1) 
++	dp = [1] * (n + 1) 
+ 
+ 	total = k 
+ 
+
+# mutant 4
+--- ./program291.py
++++ ./program291.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_no_of_ways(n, k): 
+ 
+-	dp = [0] * (n + 1) 
++	dp = [0] * (n + 2) 
+ 
+ 	total = k 
+ 
+
+# mutant 6
+--- ./program291.py
++++ ./program291.py
+@@ -21,7 +21,7 @@
+ 
+ 	dp = [0] * (n + 1) 
+ 
+-	total = k 
++	total = None 
+ 
+ 	mod = 1000000007
+ 
+
+# mutant 7
+--- ./program291.py
++++ ./program291.py
+@@ -23,7 +23,7 @@
+ 
+ 	total = k 
+ 
+-	mod = 1000000007
++	mod = 1000000008
+ 
+ 	dp[1] = k 
+ 
+
+# mutant 29
+--- ./program291.py
++++ ./program291.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

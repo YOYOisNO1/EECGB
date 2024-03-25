@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program726.py (1) ----
+
+# mutant 4
+--- ./program726.py
++++ ./program726.py
+@@ -26,7 +26,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(test_tup, expected):
+     try:
+
+
+Survived 🙁 (4)
+
+---- ./program726.py (4) ----
+
+# mutant 1
+--- ./program726.py
++++ ./program726.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def multiply_elements(test_tup):
+ 
+-  res = tuple(i * j for i, j in zip(test_tup, test_tup[1:]))
++  res = tuple(i / j for i, j in zip(test_tup, test_tup[1:]))
+ 
+   return (res) 
+ 
+
+# mutant 2
+--- ./program726.py
++++ ./program726.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def multiply_elements(test_tup):
+ 
+-  res = tuple(i * j for i, j in zip(test_tup, test_tup[1:]))
++  res = tuple(i * j for i, j in zip(test_tup, test_tup[2:]))
+ 
+   return (res) 
+ 
+
+# mutant 3
+--- ./program726.py
++++ ./program726.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def multiply_elements(test_tup):
+ 
+-  res = tuple(i * j for i, j in zip(test_tup, test_tup[1:]))
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 5
+--- ./program726.py
++++ ./program726.py
+@@ -34,7 +34,7 @@
+             test_tup),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

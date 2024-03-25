@@ -1,0 +1,224 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (10)
+
+---- ./program901.py (10) ----
+
+# mutant 3
+--- ./program901.py
++++ ./program901.py
+@@ -23,7 +23,7 @@
+ 
+       return n
+ 
+-    i = n * 2
++    i = n / 2
+ 
+     factors = [number  for number in range(n, 1, -1) if number * 2 > n]
+ 
+
+# mutant 7
+--- ./program901.py
++++ ./program901.py
+@@ -25,7 +25,7 @@
+ 
+     i = n * 2
+ 
+-    factors = [number  for number in range(n, 1, -1) if number * 2 > n]
++    factors = [number  for number in range(n, 1, +1) if number * 2 > n]
+ 
+     while True:
+ 
+
+# mutant 9
+--- ./program901.py
++++ ./program901.py
+@@ -25,7 +25,7 @@
+ 
+     i = n * 2
+ 
+-    factors = [number  for number in range(n, 1, -1) if number * 2 > n]
++    factors = [number  for number in range(n, 1, -1) if number / 2 > n]
+ 
+     while True:
+ 
+
+# mutant 14
+--- ./program901.py
++++ ./program901.py
+@@ -31,7 +31,7 @@
+ 
+         for a in factors:
+ 
+-            if i % a != 0:
++            if i / a != 0:
+ 
+                 i += n
+ 
+
+# mutant 15
+--- ./program901.py
++++ ./program901.py
+@@ -31,7 +31,7 @@
+ 
+         for a in factors:
+ 
+-            if i % a != 0:
++            if i % a == 0:
+ 
+                 i += n
+ 
+
+# mutant 16
+--- ./program901.py
++++ ./program901.py
+@@ -31,7 +31,7 @@
+ 
+         for a in factors:
+ 
+-            if i % a != 0:
++            if i % a != 1:
+ 
+                 i += n
+ 
+
+# mutant 17
+--- ./program901.py
++++ ./program901.py
+@@ -33,7 +33,7 @@
+ 
+             if i % a != 0:
+ 
+-                i += n
++                i = n
+ 
+                 break
+ 
+
+# mutant 23
+--- ./program901.py
++++ ./program901.py
+@@ -37,7 +37,7 @@
+ 
+                 break
+ 
+-            if (a == factors[-1] and i % a == 0):
++            if (a == factors[-1] and i / a == 0):
+ 
+                 return i
+ 
+
+# mutant 24
+--- ./program901.py
++++ ./program901.py
+@@ -37,7 +37,7 @@
+ 
+                 break
+ 
+-            if (a == factors[-1] and i % a == 0):
++            if (a == factors[-1] and i % a != 0):
+ 
+                 return i
+ 
+
+# mutant 25
+--- ./program901.py
++++ ./program901.py
+@@ -37,7 +37,7 @@
+ 
+                 break
+ 
+-            if (a == factors[-1] and i % a == 0):
++            if (a == factors[-1] and i % a == 1):
+ 
+                 return i
+ 
+
+
+Survived 🙁 (6)
+
+---- ./program901.py (6) ----
+
+# mutant 2
+--- ./program901.py
++++ ./program901.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def smallest_multiple(n):
+ 
+-    if (n<=2):
++    if (n<=3):
+ 
+       return n
+ 
+
+# mutant 4
+--- ./program901.py
++++ ./program901.py
+@@ -23,7 +23,7 @@
+ 
+       return n
+ 
+-    i = n * 2
++    i = n * 3
+ 
+     factors = [number  for number in range(n, 1, -1) if number * 2 > n]
+ 
+
+# mutant 6
+--- ./program901.py
++++ ./program901.py
+@@ -25,7 +25,7 @@
+ 
+     i = n * 2
+ 
+-    factors = [number  for number in range(n, 1, -1) if number * 2 > n]
++    factors = [number  for number in range(n, 2, -1) if number * 2 > n]
+ 
+     while True:
+ 
+
+# mutant 10
+--- ./program901.py
++++ ./program901.py
+@@ -25,7 +25,7 @@
+ 
+     i = n * 2
+ 
+-    factors = [number  for number in range(n, 1, -1) if number * 2 > n]
++    factors = [number  for number in range(n, 1, -1) if number * 3 > n]
+ 
+     while True:
+ 
+
+# mutant 11
+--- ./program901.py
++++ ./program901.py
+@@ -25,7 +25,7 @@
+ 
+     i = n * 2
+ 
+-    factors = [number  for number in range(n, 1, -1) if number * 2 > n]
++    factors = [number  for number in range(n, 1, -1) if number * 2 >= n]
+ 
+     while True:
+ 
+
+# mutant 29
+--- ./program901.py
++++ ./program901.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

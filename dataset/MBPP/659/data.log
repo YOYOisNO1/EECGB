@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program659.py (3) ----
+
+# mutant 2
+--- ./program659.py
++++ ./program659.py
+@@ -21,7 +21,7 @@
+ 
+     _size = len(x) 
+ 
+-    repeated = [] 
++    repeated = None 
+ 
+     for i in range(_size): 
+ 
+
+# mutant 9
+--- ./program659.py
++++ ./program659.py
+@@ -38,7 +38,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(x, expected):
+     try:
+
+# mutant 10
+--- ./program659.py
++++ ./program659.py
+@@ -46,7 +46,7 @@
+             x),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program659.py (1) ----
+
+# mutant 11
+--- ./program659.py
++++ ./program659.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

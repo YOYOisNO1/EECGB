@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program808.py (2) ----
+
+# mutant 3
+--- ./program808.py
++++ ./program808.py
+@@ -23,7 +23,7 @@
+ 
+   for ele in test_tup:
+ 
+-    if ele == K:
++    if ele != K:
+ 
+       res = True
+ 
+
+# mutant 8
+--- ./program808.py
++++ ./program808.py
+@@ -42,7 +42,7 @@
+             test_tup, k),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (2)
+
+---- ./program808.py (2) ----
+
+# mutant 6
+--- ./program808.py
++++ ./program808.py
+@@ -27,7 +27,7 @@
+ 
+       res = True
+ 
+-      break
++      continue
+ 
+   return (res) 
+ 
+
+# mutant 9
+--- ./program808.py
++++ ./program808.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

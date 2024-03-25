@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program469.py (3) ----
+
+# mutant 3
+--- ./program469.py
++++ ./program469.py
+@@ -21,7 +21,7 @@
+ 
+     n = len(price)
+ 
+-    final_profit = [[None for x in range(n)] for y in range(k + 1)]
++    final_profit = [[None for x in range(n)] for y in range(k + 2)]
+ 
+     for i in range(k + 1):
+ 
+
+# mutant 21
+--- ./program469.py
++++ ./program469.py
+@@ -39,7 +39,7 @@
+ 
+                     curr_price = price[j] - price[x] + final_profit[i-1][x]
+ 
+-                    if max_so_far < curr_price:
++                    if max_so_far <= curr_price:
+ 
+                         max_so_far = curr_price
+ 
+
+# mutant 30
+--- ./program469.py
++++ ./program469.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

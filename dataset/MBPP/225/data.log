@@ -1,0 +1,154 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (11)
+
+---- ./program225.py (11) ----
+
+# mutant 3
+--- ./program225.py
++++ ./program225.py
+@@ -21,7 +21,7 @@
+ 
+     while (low < high): 
+ 
+-        mid = low + (high - low) // 2;   
++        mid = low + (high + low) // 2;   
+ 
+         if (arr[mid] == arr[high]): 
+ 
+
+# mutant 5
+--- ./program225.py
++++ ./program225.py
+@@ -21,7 +21,7 @@
+ 
+     while (low < high): 
+ 
+-        mid = low + (high - low) // 2;   
++        mid = low + (high - low) // 3;   
+ 
+         if (arr[mid] == arr[high]): 
+ 
+
+# mutant 7
+--- ./program225.py
++++ ./program225.py
+@@ -23,7 +23,7 @@
+ 
+         mid = low + (high - low) // 2;   
+ 
+-        if (arr[mid] == arr[high]): 
++        if (arr[mid] != arr[high]): 
+ 
+             high -= 1; 
+ 
+
+# mutant 8
+--- ./program225.py
++++ ./program225.py
+@@ -25,7 +25,7 @@
+ 
+         if (arr[mid] == arr[high]): 
+ 
+-            high -= 1; 
++            high = 1; 
+ 
+         elif (arr[mid] > arr[high]): 
+ 
+
+# mutant 9
+--- ./program225.py
++++ ./program225.py
+@@ -25,7 +25,7 @@
+ 
+         if (arr[mid] == arr[high]): 
+ 
+-            high -= 1; 
++            high += 1; 
+ 
+         elif (arr[mid] > arr[high]): 
+ 
+
+# mutant 10
+--- ./program225.py
++++ ./program225.py
+@@ -25,7 +25,7 @@
+ 
+         if (arr[mid] == arr[high]): 
+ 
+-            high -= 1; 
++            high -= 2; 
+ 
+         elif (arr[mid] > arr[high]): 
+ 
+
+# mutant 11
+--- ./program225.py
++++ ./program225.py
+@@ -27,7 +27,7 @@
+ 
+             high -= 1; 
+ 
+-        elif (arr[mid] > arr[high]): 
++        elif (arr[mid] >= arr[high]): 
+ 
+             low = mid + 1; 
+ 
+
+# mutant 12
+--- ./program225.py
++++ ./program225.py
+@@ -29,7 +29,7 @@
+ 
+         elif (arr[mid] > arr[high]): 
+ 
+-            low = mid + 1; 
++            low = mid - 1; 
+ 
+         else: 
+ 
+
+# mutant 13
+--- ./program225.py
++++ ./program225.py
+@@ -29,7 +29,7 @@
+ 
+         elif (arr[mid] > arr[high]): 
+ 
+-            low = mid + 1; 
++            low = mid + 2; 
+ 
+         else: 
+ 
+
+# mutant 14
+--- ./program225.py
++++ ./program225.py
+@@ -29,7 +29,7 @@
+ 
+         elif (arr[mid] > arr[high]): 
+ 
+-            low = mid + 1; 
++            low = None; 
+ 
+         else: 
+ 
+
+# mutant 18
+--- ./program225.py
++++ ./program225.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

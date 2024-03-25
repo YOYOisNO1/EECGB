@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program871.py (4) ----
+
+# mutant 3
+--- ./program871.py
++++ ./program871.py
+@@ -23,7 +23,7 @@
+ 
+     size2 = len(string2) 
+ 
+-    temp = '' 
++    temp = 'XXXX' 
+ 
+     if size1 != size2: 
+ 
+
+# mutant 4
+--- ./program871.py
++++ ./program871.py
+@@ -23,7 +23,7 @@
+ 
+     size2 = len(string2) 
+ 
+-    temp = '' 
++    temp = None 
+ 
+     if size1 != size2: 
+ 
+
+# mutant 6
+--- ./program871.py
++++ ./program871.py
+@@ -27,7 +27,7 @@
+ 
+     if size1 != size2: 
+ 
+-        return False
++        return True
+ 
+     temp = string1 + string1 
+ 
+
+# mutant 15
+--- ./program871.py
++++ ./program871.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

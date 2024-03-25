@@ -1,0 +1,648 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (49)
+
+---- ./program159.py (49) ----
+
+# mutant 3
+--- ./program159.py
++++ ./program159.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def month_season(month,days):
+ 
+- if month in ('January', 'February', 'March'):
++ if month in ('January', 'XXFebruaryXX', 'March'):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 4
+--- ./program159.py
++++ ./program159.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def month_season(month,days):
+ 
+- if month in ('January', 'February', 'March'):
++ if month in ('January', 'February', 'XXMarchXX'):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 8
+--- ./program159.py
++++ ./program159.py
+@@ -23,7 +23,7 @@
+ 
+ 	 season = 'winter'
+ 
+- elif month in ('April', 'May', 'June'):
++ elif month in ('XXAprilXX', 'May', 'June'):
+ 
+ 	 season = 'spring'
+ 
+
+# mutant 9
+--- ./program159.py
++++ ./program159.py
+@@ -23,7 +23,7 @@
+ 
+ 	 season = 'winter'
+ 
+- elif month in ('April', 'May', 'June'):
++ elif month in ('April', 'XXMayXX', 'June'):
+ 
+ 	 season = 'spring'
+ 
+
+# mutant 13
+--- ./program159.py
++++ ./program159.py
+@@ -27,7 +27,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif month in ('July', 'August', 'September'):
++ elif month not in ('July', 'August', 'September'):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 14
+--- ./program159.py
++++ ./program159.py
+@@ -27,7 +27,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif month in ('July', 'August', 'September'):
++ elif month in ('XXJulyXX', 'August', 'September'):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 15
+--- ./program159.py
++++ ./program159.py
+@@ -27,7 +27,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif month in ('July', 'August', 'September'):
++ elif month in ('July', 'XXAugustXX', 'September'):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 16
+--- ./program159.py
++++ ./program159.py
+@@ -27,7 +27,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif month in ('July', 'August', 'September'):
++ elif month in ('July', 'August', 'XXSeptemberXX'):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 17
+--- ./program159.py
++++ ./program159.py
+@@ -29,7 +29,7 @@
+ 
+  elif month in ('July', 'August', 'September'):
+ 
+-	 season = 'summer'
++	 season = 'XXsummerXX'
+ 
+  else:
+ 
+
+# mutant 18
+--- ./program159.py
++++ ./program159.py
+@@ -29,7 +29,7 @@
+ 
+  elif month in ('July', 'August', 'September'):
+ 
+-	 season = 'summer'
++	 season = None
+ 
+  else:
+ 
+
+# mutant 19
+--- ./program159.py
++++ ./program159.py
+@@ -33,7 +33,7 @@
+ 
+  else:
+ 
+-	 season = 'autumn'
++	 season = 'XXautumnXX'
+ 
+  if (month == 'March') and (days > 19):
+ 
+
+# mutant 20
+--- ./program159.py
++++ ./program159.py
+@@ -33,7 +33,7 @@
+ 
+  else:
+ 
+-	 season = 'autumn'
++	 season = None
+ 
+  if (month == 'March') and (days > 19):
+ 
+
+# mutant 22
+--- ./program159.py
++++ ./program159.py
+@@ -35,7 +35,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- if (month == 'March') and (days > 19):
++ if (month == 'XXMarchXX') and (days > 19):
+ 
+ 	 season = 'spring'
+ 
+
+# mutant 23
+--- ./program159.py
++++ ./program159.py
+@@ -35,7 +35,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- if (month == 'March') and (days > 19):
++ if (month == 'March') and (days >= 19):
+ 
+ 	 season = 'spring'
+ 
+
+# mutant 24
+--- ./program159.py
++++ ./program159.py
+@@ -35,7 +35,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- if (month == 'March') and (days > 19):
++ if (month == 'March') and (days > 20):
+ 
+ 	 season = 'spring'
+ 
+
+# mutant 26
+--- ./program159.py
++++ ./program159.py
+@@ -37,7 +37,7 @@
+ 
+  if (month == 'March') and (days > 19):
+ 
+-	 season = 'spring'
++	 season = 'XXspringXX'
+ 
+  elif (month == 'June') and (days > 20):
+ 
+
+# mutant 27
+--- ./program159.py
++++ ./program159.py
+@@ -37,7 +37,7 @@
+ 
+  if (month == 'March') and (days > 19):
+ 
+-	 season = 'spring'
++	 season = None
+ 
+  elif (month == 'June') and (days > 20):
+ 
+
+# mutant 29
+--- ./program159.py
++++ ./program159.py
+@@ -39,7 +39,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif (month == 'June') and (days > 20):
++ elif (month == 'XXJuneXX') and (days > 20):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 30
+--- ./program159.py
++++ ./program159.py
+@@ -39,7 +39,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif (month == 'June') and (days > 20):
++ elif (month == 'June') and (days >= 20):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 31
+--- ./program159.py
++++ ./program159.py
+@@ -39,7 +39,7 @@
+ 
+ 	 season = 'spring'
+ 
+- elif (month == 'June') and (days > 20):
++ elif (month == 'June') and (days > 21):
+ 
+ 	 season = 'summer'
+ 
+
+# mutant 33
+--- ./program159.py
++++ ./program159.py
+@@ -41,7 +41,7 @@
+ 
+  elif (month == 'June') and (days > 20):
+ 
+-	 season = 'summer'
++	 season = 'XXsummerXX'
+ 
+  elif (month == 'September') and (days > 21):
+ 
+
+# mutant 34
+--- ./program159.py
++++ ./program159.py
+@@ -41,7 +41,7 @@
+ 
+  elif (month == 'June') and (days > 20):
+ 
+-	 season = 'summer'
++	 season = None
+ 
+  elif (month == 'September') and (days > 21):
+ 
+
+# mutant 35
+--- ./program159.py
++++ ./program159.py
+@@ -43,7 +43,7 @@
+ 
+ 	 season = 'summer'
+ 
+- elif (month == 'September') and (days > 21):
++ elif (month != 'September') and (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 36
+--- ./program159.py
++++ ./program159.py
+@@ -43,7 +43,7 @@
+ 
+ 	 season = 'summer'
+ 
+- elif (month == 'September') and (days > 21):
++ elif (month == 'XXSeptemberXX') and (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 37
+--- ./program159.py
++++ ./program159.py
+@@ -43,7 +43,7 @@
+ 
+ 	 season = 'summer'
+ 
+- elif (month == 'September') and (days > 21):
++ elif (month == 'September') and (days >= 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 38
+--- ./program159.py
++++ ./program159.py
+@@ -43,7 +43,7 @@
+ 
+ 	 season = 'summer'
+ 
+- elif (month == 'September') and (days > 21):
++ elif (month == 'September') and (days > 22):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 39
+--- ./program159.py
++++ ./program159.py
+@@ -43,7 +43,7 @@
+ 
+ 	 season = 'summer'
+ 
+- elif (month == 'September') and (days > 21):
++ elif (month == 'September') or (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 40
+--- ./program159.py
++++ ./program159.py
+@@ -45,7 +45,7 @@
+ 
+  elif (month == 'September') and (days > 21):
+ 
+-	 season = 'autumn'
++	 season = 'XXautumnXX'
+ 
+  elif (month == 'October') and (days > 21):
+ 
+
+# mutant 41
+--- ./program159.py
++++ ./program159.py
+@@ -45,7 +45,7 @@
+ 
+  elif (month == 'September') and (days > 21):
+ 
+-	 season = 'autumn'
++	 season = None
+ 
+  elif (month == 'October') and (days > 21):
+ 
+
+# mutant 42
+--- ./program159.py
++++ ./program159.py
+@@ -47,7 +47,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'October') and (days > 21):
++ elif (month != 'October') and (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 43
+--- ./program159.py
++++ ./program159.py
+@@ -47,7 +47,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'October') and (days > 21):
++ elif (month == 'XXOctoberXX') and (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 44
+--- ./program159.py
++++ ./program159.py
+@@ -47,7 +47,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'October') and (days > 21):
++ elif (month == 'October') and (days >= 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 45
+--- ./program159.py
++++ ./program159.py
+@@ -47,7 +47,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'October') and (days > 21):
++ elif (month == 'October') and (days > 22):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 46
+--- ./program159.py
++++ ./program159.py
+@@ -47,7 +47,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'October') and (days > 21):
++ elif (month == 'October') or (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 49
+--- ./program159.py
++++ ./program159.py
+@@ -51,7 +51,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'November') and (days > 21):
++ elif (month != 'November') and (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 50
+--- ./program159.py
++++ ./program159.py
+@@ -51,7 +51,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'November') and (days > 21):
++ elif (month == 'XXNovemberXX') and (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 51
+--- ./program159.py
++++ ./program159.py
+@@ -51,7 +51,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'November') and (days > 21):
++ elif (month == 'November') and (days >= 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 52
+--- ./program159.py
++++ ./program159.py
+@@ -51,7 +51,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'November') and (days > 21):
++ elif (month == 'November') and (days > 22):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 53
+--- ./program159.py
++++ ./program159.py
+@@ -51,7 +51,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'November') and (days > 21):
++ elif (month == 'November') or (days > 21):
+ 
+ 	 season = 'autumn'
+ 
+
+# mutant 54
+--- ./program159.py
++++ ./program159.py
+@@ -53,7 +53,7 @@
+ 
+  elif (month == 'November') and (days > 21):
+ 
+-	 season = 'autumn'
++	 season = 'XXautumnXX'
+ 
+  elif (month == 'December') and (days > 20):
+ 
+
+# mutant 55
+--- ./program159.py
++++ ./program159.py
+@@ -53,7 +53,7 @@
+ 
+  elif (month == 'November') and (days > 21):
+ 
+-	 season = 'autumn'
++	 season = None
+ 
+  elif (month == 'December') and (days > 20):
+ 
+
+# mutant 56
+--- ./program159.py
++++ ./program159.py
+@@ -55,7 +55,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'December') and (days > 20):
++ elif (month != 'December') and (days > 20):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 57
+--- ./program159.py
++++ ./program159.py
+@@ -55,7 +55,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'December') and (days > 20):
++ elif (month == 'XXDecemberXX') and (days > 20):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 58
+--- ./program159.py
++++ ./program159.py
+@@ -55,7 +55,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'December') and (days > 20):
++ elif (month == 'December') and (days >= 20):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 59
+--- ./program159.py
++++ ./program159.py
+@@ -55,7 +55,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'December') and (days > 20):
++ elif (month == 'December') and (days > 21):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 60
+--- ./program159.py
++++ ./program159.py
+@@ -55,7 +55,7 @@
+ 
+ 	 season = 'autumn'
+ 
+- elif (month == 'December') and (days > 20):
++ elif (month == 'December') or (days > 20):
+ 
+ 	 season = 'winter'
+ 
+
+# mutant 61
+--- ./program159.py
++++ ./program159.py
+@@ -57,7 +57,7 @@
+ 
+  elif (month == 'December') and (days > 20):
+ 
+-	 season = 'winter'
++	 season = 'XXwinterXX'
+ 
+  return season
+ 
+
+# mutant 62
+--- ./program159.py
++++ ./program159.py
+@@ -57,7 +57,7 @@
+ 
+  elif (month == 'December') and (days > 20):
+ 
+-	 season = 'winter'
++	 season = None
+ 
+  return season
+ 
+
+# mutant 65
+--- ./program159.py
++++ ./program159.py
+@@ -73,7 +73,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

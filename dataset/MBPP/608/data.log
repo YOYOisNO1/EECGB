@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program608.py (4) ----
+
+# mutant 1
+--- ./program608.py
++++ ./program608.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def bell_number(n): 
+ 
+-    bell = [[0 for i in range(n+1)] for j in range(n+1)] 
++    bell = [[1 for i in range(n+1)] for j in range(n+1)] 
+ 
+     bell[0][0] = 1
+ 
+
+# mutant 3
+--- ./program608.py
++++ ./program608.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def bell_number(n): 
+ 
+-    bell = [[0 for i in range(n+1)] for j in range(n+1)] 
++    bell = [[0 for i in range(n+2)] for j in range(n+1)] 
+ 
+     bell[0][0] = 1
+ 
+
+# mutant 5
+--- ./program608.py
++++ ./program608.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def bell_number(n): 
+ 
+-    bell = [[0 for i in range(n+1)] for j in range(n+1)] 
++    bell = [[0 for i in range(n+1)] for j in range(n+2)] 
+ 
+     bell[0][0] = 1
+ 
+
+# mutant 34
+--- ./program608.py
++++ ./program608.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

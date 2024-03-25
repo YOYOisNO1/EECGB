@@ -1,0 +1,367 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program661.py (5) ----
+
+# mutant 11
+--- ./program661.py
++++ ./program661.py
+@@ -27,7 +27,7 @@
+ 
+ 	if n >= 2: 
+ 
+-		sum[1] = arr[0] + arr[1] 
++		sum[1] = arr[1] + arr[1] 
+ 
+ 	if n > 2: 
+ 
+
+# mutant 12
+--- ./program661.py
++++ ./program661.py
+@@ -27,7 +27,7 @@
+ 
+ 	if n >= 2: 
+ 
+-		sum[1] = arr[0] + arr[1] 
++		sum[1] = arr[0] - arr[1] 
+ 
+ 	if n > 2: 
+ 
+
+# mutant 13
+--- ./program661.py
++++ ./program661.py
+@@ -27,7 +27,7 @@
+ 
+ 	if n >= 2: 
+ 
+-		sum[1] = arr[0] + arr[1] 
++		sum[1] = arr[0] + arr[2] 
+ 
+ 	if n > 2: 
+ 
+
+# mutant 29
+--- ./program661.py
++++ ./program661.py
+@@ -35,7 +35,7 @@
+ 
+ 	for i in range(3, n): 
+ 
+-		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
++		sum[i] = max(max(sum[i-1], sum[i+2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
+ 
+ 	return sum[n-1]
+ 
+
+# mutant 35
+--- ./program661.py
++++ ./program661.py
+@@ -35,7 +35,7 @@
+ 
+ 	for i in range(3, n): 
+ 
+-		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
++		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] - sum[i-3]) 
+ 
+ 	return sum[n-1]
+ 
+
+
+Survived 🙁 (22)
+
+---- ./program661.py (22) ----
+
+# mutant 1
+--- ./program661.py
++++ ./program661.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_sum_of_three_consecutive(arr, n): 
+ 
+-	sum = [0 for k in range(n)] 
++	sum = [1 for k in range(n)] 
+ 
+ 	if n >= 1: 
+ 
+
+# mutant 3
+--- ./program661.py
++++ ./program661.py
+@@ -21,7 +21,7 @@
+ 
+ 	sum = [0 for k in range(n)] 
+ 
+-	if n >= 1: 
++	if n > 1: 
+ 
+ 		sum[0] = arr[0] 
+ 
+
+# mutant 4
+--- ./program661.py
++++ ./program661.py
+@@ -21,7 +21,7 @@
+ 
+ 	sum = [0 for k in range(n)] 
+ 
+-	if n >= 1: 
++	if n >= 2: 
+ 
+ 		sum[0] = arr[0] 
+ 
+
+# mutant 5
+--- ./program661.py
++++ ./program661.py
+@@ -23,7 +23,7 @@
+ 
+ 	if n >= 1: 
+ 
+-		sum[0] = arr[0] 
++		sum[1] = arr[0] 
+ 
+ 	if n >= 2: 
+ 
+
+# mutant 6
+--- ./program661.py
++++ ./program661.py
+@@ -23,7 +23,7 @@
+ 
+ 	if n >= 1: 
+ 
+-		sum[0] = arr[0] 
++		sum[0] = arr[1] 
+ 
+ 	if n >= 2: 
+ 
+
+# mutant 8
+--- ./program661.py
++++ ./program661.py
+@@ -25,7 +25,7 @@
+ 
+ 		sum[0] = arr[0] 
+ 
+-	if n >= 2: 
++	if n > 2: 
+ 
+ 		sum[1] = arr[0] + arr[1] 
+ 
+
+# mutant 9
+--- ./program661.py
++++ ./program661.py
+@@ -25,7 +25,7 @@
+ 
+ 		sum[0] = arr[0] 
+ 
+-	if n >= 2: 
++	if n >= 3: 
+ 
+ 		sum[1] = arr[0] + arr[1] 
+ 
+
+# mutant 15
+--- ./program661.py
++++ ./program661.py
+@@ -29,7 +29,7 @@
+ 
+ 		sum[1] = arr[0] + arr[1] 
+ 
+-	if n > 2: 
++	if n >= 2: 
+ 
+ 		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
+ 
+
+# mutant 16
+--- ./program661.py
++++ ./program661.py
+@@ -29,7 +29,7 @@
+ 
+ 		sum[1] = arr[0] + arr[1] 
+ 
+-	if n > 2: 
++	if n > 3: 
+ 
+ 		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
+ 
+
+# mutant 17
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[3] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 18
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[2], max(arr[1] + arr[2], arr[0] + arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 19
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[1], max(arr[2] + arr[2], arr[0] + arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 20
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[1], max(arr[1] - arr[2], arr[0] + arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 21
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[1], max(arr[1] + arr[3], arr[0] + arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 22
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[1] + arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 23
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] - arr[2])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 24
+--- ./program661.py
++++ ./program661.py
+@@ -31,7 +31,7 @@
+ 
+ 	if n > 2: 
+ 
+-		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
++		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[3])) 
+ 
+ 	for i in range(3, n): 
+ 
+
+# mutant 26
+--- ./program661.py
++++ ./program661.py
+@@ -33,7 +33,7 @@
+ 
+ 		sum[2] = max(sum[1], max(arr[1] + arr[2], arr[0] + arr[2])) 
+ 
+-	for i in range(3, n): 
++	for i in range(4, n): 
+ 
+ 		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
+ 
+
+# mutant 28
+--- ./program661.py
++++ ./program661.py
+@@ -35,7 +35,7 @@
+ 
+ 	for i in range(3, n): 
+ 
+-		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
++		sum[i] = max(max(sum[i-2], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
+ 
+ 	return sum[n-1]
+ 
+
+# mutant 30
+--- ./program661.py
++++ ./program661.py
+@@ -35,7 +35,7 @@
+ 
+ 	for i in range(3, n): 
+ 
+-		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
++		sum[i] = max(max(sum[i-1], sum[i-3] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
+ 
+ 	return sum[n-1]
+ 
+
+# mutant 31
+--- ./program661.py
++++ ./program661.py
+@@ -35,7 +35,7 @@
+ 
+ 	for i in range(3, n): 
+ 
+-		sum[i] = max(max(sum[i-1], sum[i-2] + arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
++		sum[i] = max(max(sum[i-1], sum[i-2] - arr[i]), arr[i] + arr[i-1] + sum[i-3]) 
+ 
+ 	return sum[n-1]
+ 
+
+# mutant 43
+--- ./program661.py
++++ ./program661.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

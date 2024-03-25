@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program218.py (3) ----
+
+# mutant 1
+--- ./program218.py
++++ ./program218.py
+@@ -21,7 +21,7 @@
+ 
+ def min_operations(A,B):  
+ 
+-    if (A > B): 
++    if (A >= B): 
+ 
+         swap(A,B)  
+ 
+
+# mutant 2
+--- ./program218.py
++++ ./program218.py
+@@ -25,7 +25,7 @@
+ 
+         swap(A,B)  
+ 
+-    B = B // math.gcd(A,B);  
++    B = B / math.gcd(A,B);  
+ 
+     return B - 1
+ 
+
+# mutant 8
+--- ./program218.py
++++ ./program218.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

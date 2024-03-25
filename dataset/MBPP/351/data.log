@@ -1,0 +1,128 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (9)
+
+---- ./program351.py (9) ----
+
+# mutant 9
+--- ./program351.py
++++ ./program351.py
+@@ -31,7 +31,7 @@
+ 
+             count_map[arr[i]] = 1
+ 
+-        i += 1
++        i = 1
+ 
+     for i in range(0, n):  
+ 
+
+# mutant 10
+--- ./program351.py
++++ ./program351.py
+@@ -31,7 +31,7 @@
+ 
+             count_map[arr[i]] = 1
+ 
+-        i += 1
++        i -= 1
+ 
+     for i in range(0, n):  
+ 
+
+# mutant 11
+--- ./program351.py
++++ ./program351.py
+@@ -31,7 +31,7 @@
+ 
+             count_map[arr[i]] = 1
+ 
+-        i += 1
++        i += 2
+ 
+     for i in range(0, n):  
+ 
+
+# mutant 14
+--- ./program351.py
++++ ./program351.py
+@@ -39,7 +39,7 @@
+ 
+             return arr[i] 
+ 
+-        i += 1 
++        i = 1 
+ 
+     return -1
+ 
+
+# mutant 15
+--- ./program351.py
++++ ./program351.py
+@@ -39,7 +39,7 @@
+ 
+             return arr[i] 
+ 
+-        i += 1 
++        i -= 1 
+ 
+     return -1
+ 
+
+# mutant 16
+--- ./program351.py
++++ ./program351.py
+@@ -39,7 +39,7 @@
+ 
+             return arr[i] 
+ 
+-        i += 1 
++        i += 2 
+ 
+     return -1
+ 
+
+# mutant 17
+--- ./program351.py
++++ ./program351.py
+@@ -41,7 +41,7 @@
+ 
+         i += 1 
+ 
+-    return -1
++    return +1
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 18
+--- ./program351.py
++++ ./program351.py
+@@ -41,7 +41,7 @@
+ 
+         i += 1 
+ 
+-    return -1
++    return -2
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 21
+--- ./program351.py
++++ ./program351.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

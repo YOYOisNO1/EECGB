@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program131.py (5) ----
+
+# mutant 1
+--- ./program131.py
++++ ./program131.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def reverse_vowels(str1):
+ 
+-	vowels = ""
++	vowels = "XXXX"
+ 
+ 	for char in str1:
+ 
+
+# mutant 4
+--- ./program131.py
++++ ./program131.py
+@@ -23,7 +23,7 @@
+ 
+ 	for char in str1:
+ 
+-		if char in "aeiouAEIOU":
++		if char in "XXaeiouAEIOUXX":
+ 
+ 			vowels += char
+ 
+
+# mutant 10
+--- ./program131.py
++++ ./program131.py
+@@ -31,7 +31,7 @@
+ 
+ 	for char in str1:
+ 
+-		if char in "aeiouAEIOU":
++		if char in "XXaeiouAEIOUXX":
+ 
+ 			result_string += vowels[-1]
+ 
+
+# mutant 15
+--- ./program131.py
++++ ./program131.py
+@@ -35,7 +35,7 @@
+ 
+ 			result_string += vowels[-1]
+ 
+-			vowels = vowels[:-1]
++			vowels = vowels[:+1]
+ 
+ 		else:
+ 
+
+# mutant 22
+--- ./program131.py
++++ ./program131.py
+@@ -55,7 +55,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

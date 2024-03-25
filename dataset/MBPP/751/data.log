@@ -1,0 +1,226 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program751.py (2) ----
+
+# mutant 20
+--- ./program751.py
++++ ./program751.py
+@@ -25,7 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
++    right_child = (2 * i - 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+                                       and check_min_heap(arr, 2 * i + 2))
+ 
+
+# mutant 26
+--- ./program751.py
++++ ./program751.py
+@@ -25,7 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
++    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i - 2] 
+ 
+                                       and check_min_heap(arr, 2 * i + 2))
+ 
+
+
+Survived 🙁 (14)
+
+---- ./program751.py (14) ----
+
+# mutant 1
+--- ./program751.py
++++ ./program751.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_min_heap(arr, i):
+ 
+-    if 2 * i + 2 > len(arr):
++    if 3 * i + 2 > len(arr):
+ 
+         return True
+ 
+
+# mutant 4
+--- ./program751.py
++++ ./program751.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_min_heap(arr, i):
+ 
+-    if 2 * i + 2 > len(arr):
++    if 2 * i + 3 > len(arr):
+ 
+         return True
+ 
+
+# mutant 5
+--- ./program751.py
++++ ./program751.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_min_heap(arr, i):
+ 
+-    if 2 * i + 2 > len(arr):
++    if 2 * i + 2 >= len(arr):
+ 
+         return True
+ 
+
+# mutant 7
+--- ./program751.py
++++ ./program751.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
++    left_child = (arr[i] < arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+     right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+
+# mutant 10
+--- ./program751.py
++++ ./program751.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
++    left_child = (arr[i] <= arr[2 * i - 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+     right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+
+# mutant 12
+--- ./program751.py
++++ ./program751.py
+@@ -23,7 +23,7 @@
+ 
+         return True
+ 
+-    left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
++    left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 3 * i + 1)
+ 
+     right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+
+# mutant 22
+--- ./program751.py
++++ ./program751.py
+@@ -25,7 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
++    right_child = (2 * i + 2 != len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+                                       and check_min_heap(arr, 2 * i + 2))
+ 
+
+# mutant 23
+--- ./program751.py
++++ ./program751.py
+@@ -25,7 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
++    right_child = (2 * i + 2 == len(arr)) or (arr[i] < arr[2 * i + 2] 
+ 
+                                       and check_min_heap(arr, 2 * i + 2))
+ 
+
+# mutant 24
+--- ./program751.py
++++ ./program751.py
+@@ -25,7 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
++    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[3 * i + 2] 
+ 
+                                       and check_min_heap(arr, 2 * i + 2))
+ 
+
+# mutant 27
+--- ./program751.py
++++ ./program751.py
+@@ -25,7 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
++    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 3] 
+ 
+                                       and check_min_heap(arr, 2 * i + 2))
+ 
+
+# mutant 28
+--- ./program751.py
++++ ./program751.py
+@@ -27,7 +27,7 @@
+ 
+     right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+-                                      and check_min_heap(arr, 2 * i + 2))
++                                      and check_min_heap(arr, 3 * i + 2))
+ 
+     return left_child and right_child
+ 
+
+# mutant 31
+--- ./program751.py
++++ ./program751.py
+@@ -27,7 +27,7 @@
+ 
+     right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+ 
+-                                      and check_min_heap(arr, 2 * i + 2))
++                                      and check_min_heap(arr, 2 * i + 3))
+ 
+     return left_child and right_child
+ 
+
+# mutant 32
+--- ./program751.py
++++ ./program751.py
+@@ -25,9 +25,7 @@
+ 
+     left_child = (arr[i] <= arr[2 * i + 1]) and check_min_heap(arr, 2 * i + 1)
+ 
+-    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] 
+-
+-                                      and check_min_heap(arr, 2 * i + 2))
++    right_child = (2 * i + 2 == len(arr)) or (arr[i] <= arr[2 * i + 2] or check_min_heap(arr, 2 * i + 2))
+ 
+     return left_child and right_child
+ 
+
+# mutant 38
+--- ./program751.py
++++ ./program751.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

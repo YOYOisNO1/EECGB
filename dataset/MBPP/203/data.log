@@ -1,0 +1,112 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program203.py (3) ----
+
+# mutant 5
+--- ./program203.py
++++ ./program203.py
+@@ -23,7 +23,7 @@
+ 
+     setBits = 0
+ 
+-    while (x > 0) : 
++    while (x >= 0) : 
+ 
+         setBits += x & 1
+ 
+
+# mutant 11
+--- ./program203.py
++++ ./program203.py
+@@ -27,7 +27,7 @@
+ 
+         setBits += x & 1
+ 
+-        x >>= 1
++        x = 1
+ 
+     return setBits  
+ 
+
+# mutant 12
+--- ./program203.py
++++ ./program203.py
+@@ -27,7 +27,7 @@
+ 
+         setBits += x & 1
+ 
+-        x >>= 1
++        x <<= 1
+ 
+     return setBits  
+ 
+
+
+Suspicious 🤔 (3)
+
+---- ./program203.py (3) ----
+
+# mutant 6
+--- ./program203.py
++++ ./program203.py
+@@ -23,7 +23,7 @@
+ 
+     setBits = 0
+ 
+-    while (x > 0) : 
++    while (x > 1) : 
+ 
+         setBits += x & 1
+ 
+
+# mutant 7
+--- ./program203.py
++++ ./program203.py
+@@ -25,7 +25,7 @@
+ 
+     while (x > 0) : 
+ 
+-        setBits += x & 1
++        setBits = x & 1
+ 
+         x >>= 1
+ 
+
+# mutant 14
+--- ./program203.py
++++ ./program203.py
+@@ -34,7 +34,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(n1, n2, expected):
+     try:
+
+
+Survived 🙁 (1)
+
+---- ./program203.py (1) ----
+
+# mutant 16
+--- ./program203.py
++++ ./program203.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

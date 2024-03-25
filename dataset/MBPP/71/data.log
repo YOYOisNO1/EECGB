@@ -1,0 +1,172 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program71.py (3) ----
+
+# mutant 13
+--- ./program71.py
++++ ./program71.py
+@@ -31,7 +31,7 @@
+ 
+         gaps = int(float(gaps) / shrink_fact)
+ 
+-        swapped = False
++        swapped = True
+ 
+         i = 0
+ 
+
+# mutant 19
+--- ./program71.py
++++ ./program71.py
+@@ -37,7 +37,7 @@
+ 
+         while gaps + i < len(nums):
+ 
+-            if nums[i] > nums[i+gaps]:
++            if nums[i] >= nums[i+gaps]:
+ 
+                 nums[i], nums[i+gaps] = nums[i+gaps], nums[i]
+ 
+
+# mutant 26
+--- ./program71.py
++++ ./program71.py
+@@ -43,7 +43,7 @@
+ 
+                 swapped = True
+ 
+-            i += 1
++            i = 1
+ 
+     return nums
+ 
+
+
+Survived 🙁 (9)
+
+---- ./program71.py (9) ----
+
+# mutant 4
+--- ./program71.py
++++ ./program71.py
+@@ -23,7 +23,7 @@
+ 
+     gaps = len(nums)
+ 
+-    swapped = True
++    swapped = False
+ 
+     i = 0
+ 
+
+# mutant 5
+--- ./program71.py
++++ ./program71.py
+@@ -23,7 +23,7 @@
+ 
+     gaps = len(nums)
+ 
+-    swapped = True
++    swapped = None
+ 
+     i = 0
+ 
+
+# mutant 6
+--- ./program71.py
++++ ./program71.py
+@@ -25,7 +25,7 @@
+ 
+     swapped = True
+ 
+-    i = 0
++    i = 1
+ 
+     while gaps > 1 or swapped:
+ 
+
+# mutant 7
+--- ./program71.py
++++ ./program71.py
+@@ -25,7 +25,7 @@
+ 
+     swapped = True
+ 
+-    i = 0
++    i = None
+ 
+     while gaps > 1 or swapped:
+ 
+
+# mutant 8
+--- ./program71.py
++++ ./program71.py
+@@ -27,7 +27,7 @@
+ 
+     i = 0
+ 
+-    while gaps > 1 or swapped:
++    while gaps >= 1 or swapped:
+ 
+         gaps = int(float(gaps) / shrink_fact)
+ 
+
+# mutant 14
+--- ./program71.py
++++ ./program71.py
+@@ -31,7 +31,7 @@
+ 
+         gaps = int(float(gaps) / shrink_fact)
+ 
+-        swapped = False
++        swapped = None
+ 
+         i = 0
+ 
+
+# mutant 24
+--- ./program71.py
++++ ./program71.py
+@@ -41,7 +41,7 @@
+ 
+                 nums[i], nums[i+gaps] = nums[i+gaps], nums[i]
+ 
+-                swapped = True
++                swapped = False
+ 
+             i += 1
+ 
+
+# mutant 25
+--- ./program71.py
++++ ./program71.py
+@@ -41,7 +41,7 @@
+ 
+                 nums[i], nums[i+gaps] = nums[i+gaps], nums[i]
+ 
+-                swapped = True
++                swapped = None
+ 
+             i += 1
+ 
+
+# mutant 31
+--- ./program71.py
++++ ./program71.py
+@@ -59,7 +59,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

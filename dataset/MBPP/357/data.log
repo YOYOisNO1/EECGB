@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program357.py (1) ----
+
+# mutant 1
+--- ./program357.py
++++ ./program357.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_max(test_list):
+ 
+-  res = max(int(j) for i in test_list for j in i)
++  res = None
+ 
+   return (res) 
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program357.py (1) ----
+
+# mutant 4
+--- ./program357.py
++++ ./program357.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

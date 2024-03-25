@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program555.py (2) ----
+
+# mutant 4
+--- ./program555.py
++++ ./program555.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def difference(n) :  
+ 
+-    S = (n*(n + 1))//2;  
++    S = (n*(n + 1))/2;  
+ 
+     res = S*(S-1);  
+ 
+
+# mutant 13
+--- ./program555.py
++++ ./program555.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (4)
+
+---- ./program337.py (4) ----
+
+# mutant 2
+--- ./program337.py
++++ ./program337.py
+@@ -21,7 +21,7 @@
+ 
+ def text_match_word(text):
+ 
+-        patterns = '\w+\S*$'
++        patterns = None
+ 
+         if re.search(patterns,  text):
+ 
+
+# mutant 4
+--- ./program337.py
++++ ./program337.py
+@@ -29,7 +29,7 @@
+ 
+         else:
+ 
+-                return 'Not matched!'
++                return 'XXNot matched!XX'
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 5
+--- ./program337.py
++++ ./program337.py
+@@ -34,7 +34,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(text, expected):
+     try:
+
+# mutant 6
+--- ./program337.py
++++ ./program337.py
+@@ -42,7 +42,7 @@
+             text),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program337.py (1) ----
+
+# mutant 7
+--- ./program337.py
++++ ./program337.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

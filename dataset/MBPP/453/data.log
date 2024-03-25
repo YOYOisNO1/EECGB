@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program453.py (7) ----
+
+# mutant 2
+--- ./program453.py
++++ ./program453.py
+@@ -21,7 +21,7 @@
+ 
+ def sumof_factors(n) : 
+ 
+-    if (n % 2 != 0) : 
++    if (n % 3 != 0) : 
+ 
+         return 0
+ 
+
+# mutant 5
+--- ./program453.py
++++ ./program453.py
+@@ -23,7 +23,7 @@
+ 
+     if (n % 2 != 0) : 
+ 
+-        return 0
++        return 1
+ 
+     res = 1
+ 
+
+# mutant 10
+--- ./program453.py
++++ ./program453.py
+@@ -27,7 +27,7 @@
+ 
+     res = 1
+ 
+-    for i in range(2, (int)(math.sqrt(n)) + 1) :    
++    for i in range(2, (int)(math.sqrt(n)) + 2) :    
+ 
+         count = 0
+ 
+
+# mutant 23
+--- ./program453.py
++++ ./program453.py
+@@ -39,7 +39,7 @@
+ 
+             count= count + 1
+ 
+-            n = n // i 
++            n = n / i 
+ 
+             if (i == 2 and count == 1) : 
+ 
+
+# mutant 38
+--- ./program453.py
++++ ./program453.py
+@@ -51,7 +51,7 @@
+ 
+         res = res * curr_sum  
+ 
+-    if (n >= 2) : 
++    if (n > 2) : 
+ 
+         res = res * (1 + n) 
+ 
+
+# mutant 39
+--- ./program453.py
++++ ./program453.py
+@@ -51,7 +51,7 @@
+ 
+         res = res * curr_sum  
+ 
+-    if (n >= 2) : 
++    if (n >= 3) : 
+ 
+         res = res * (1 + n) 
+ 
+
+# mutant 46
+--- ./program453.py
++++ ./program453.py
+@@ -69,7 +69,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

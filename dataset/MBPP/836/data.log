@@ -1,0 +1,263 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program836.py (5) ----
+
+# mutant 14
+--- ./program836.py
++++ ./program836.py
+@@ -33,7 +33,7 @@
+ 
+ 	for i in range(0,size): 
+ 
+-		max_ending_here += a[i] 
++		max_ending_here = a[i] 
+ 
+ 		if max_so_far < max_ending_here: 
+ 
+
+# mutant 17
+--- ./program836.py
++++ ./program836.py
+@@ -37,7 +37,7 @@
+ 
+ 		if max_so_far < max_ending_here: 
+ 
+-			max_so_far = max_ending_here 
++			max_so_far = None 
+ 
+ 			start = s 
+ 
+
+# mutant 18
+--- ./program836.py
++++ ./program836.py
+@@ -39,7 +39,7 @@
+ 
+ 			max_so_far = max_ending_here 
+ 
+-			start = s 
++			start = None 
+ 
+ 			end = i 
+ 
+
+# mutant 19
+--- ./program836.py
++++ ./program836.py
+@@ -41,7 +41,7 @@
+ 
+ 			start = s 
+ 
+-			end = i 
++			end = None 
+ 
+ 		if max_ending_here < 0: 
+ 
+
+# mutant 29
+--- ./program836.py
++++ ./program836.py
+@@ -49,7 +49,7 @@
+ 
+ 			s = i+1
+ 
+-	return (end - start + 1)
++	return (end - start + 2)
+ 
+ # TESTING CODE 
+ # ============================================
+
+
+Survived 🙁 (14)
+
+---- ./program836.py (14) ----
+
+# mutant 2
+--- ./program836.py
++++ ./program836.py
+@@ -21,7 +21,7 @@
+ 
+ def max_sub_array_sum(a,size): 
+ 
+-	max_so_far = -maxsize - 1
++	max_so_far = -maxsize + 1
+ 
+ 	max_ending_here = 0
+ 
+
+# mutant 3
+--- ./program836.py
++++ ./program836.py
+@@ -21,7 +21,7 @@
+ 
+ def max_sub_array_sum(a,size): 
+ 
+-	max_so_far = -maxsize - 1
++	max_so_far = -maxsize - 2
+ 
+ 	max_ending_here = 0
+ 
+
+# mutant 7
+--- ./program836.py
++++ ./program836.py
+@@ -25,7 +25,7 @@
+ 
+ 	max_ending_here = 0
+ 
+-	start = 0
++	start = 1
+ 
+ 	end = 0
+ 
+
+# mutant 8
+--- ./program836.py
++++ ./program836.py
+@@ -25,7 +25,7 @@
+ 
+ 	max_ending_here = 0
+ 
+-	start = 0
++	start = None
+ 
+ 	end = 0
+ 
+
+# mutant 9
+--- ./program836.py
++++ ./program836.py
+@@ -27,7 +27,7 @@
+ 
+ 	start = 0
+ 
+-	end = 0
++	end = 1
+ 
+ 	s = 0
+ 
+
+# mutant 10
+--- ./program836.py
++++ ./program836.py
+@@ -27,7 +27,7 @@
+ 
+ 	start = 0
+ 
+-	end = 0
++	end = None
+ 
+ 	s = 0
+ 
+
+# mutant 11
+--- ./program836.py
++++ ./program836.py
+@@ -29,7 +29,7 @@
+ 
+ 	end = 0
+ 
+-	s = 0
++	s = 1
+ 
+ 	for i in range(0,size): 
+ 
+
+# mutant 12
+--- ./program836.py
++++ ./program836.py
+@@ -29,7 +29,7 @@
+ 
+ 	end = 0
+ 
+-	s = 0
++	s = None
+ 
+ 	for i in range(0,size): 
+ 
+
+# mutant 13
+--- ./program836.py
++++ ./program836.py
+@@ -31,7 +31,7 @@
+ 
+ 	s = 0
+ 
+-	for i in range(0,size): 
++	for i in range(1,size): 
+ 
+ 		max_ending_here += a[i] 
+ 
+
+# mutant 16
+--- ./program836.py
++++ ./program836.py
+@@ -35,7 +35,7 @@
+ 
+ 		max_ending_here += a[i] 
+ 
+-		if max_so_far < max_ending_here: 
++		if max_so_far <= max_ending_here: 
+ 
+ 			max_so_far = max_ending_here 
+ 
+
+# mutant 20
+--- ./program836.py
++++ ./program836.py
+@@ -43,7 +43,7 @@
+ 
+ 			end = i 
+ 
+-		if max_ending_here < 0: 
++		if max_ending_here <= 0: 
+ 
+ 			max_ending_here = 0
+ 
+
+# mutant 21
+--- ./program836.py
++++ ./program836.py
+@@ -43,7 +43,7 @@
+ 
+ 			end = i 
+ 
+-		if max_ending_here < 0: 
++		if max_ending_here < 1: 
+ 
+ 			max_ending_here = 0
+ 
+
+# mutant 22
+--- ./program836.py
++++ ./program836.py
+@@ -45,7 +45,7 @@
+ 
+ 		if max_ending_here < 0: 
+ 
+-			max_ending_here = 0
++			max_ending_here = 1
+ 
+ 			s = i+1
+ 
+
+# mutant 32
+--- ./program836.py
++++ ./program836.py
+@@ -63,7 +63,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,172 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program246.py (2) ----
+
+# mutant 13
+--- ./program246.py
++++ ./program246.py
+@@ -31,7 +31,7 @@
+ 
+         n = number/ g;
+ 
+-        g2 = g;
++        g2 = None;
+ 
+         g = (g + n)/2;
+ 
+
+# mutant 14
+--- ./program246.py
++++ ./program246.py
+@@ -33,7 +33,7 @@
+ 
+         g2 = g;
+ 
+-        g = (g + n)/2;
++        g = (g - n)/2;
+ 
+     return g;
+ 
+
+
+Survived 🙁 (10)
+
+---- ./program246.py (10) ----
+
+# mutant 2
+--- ./program246.py
++++ ./program246.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def babylonian_squareroot(number):
+ 
+-    if(number == 0):
++    if(number == 1):
+ 
+         return 0;
+ 
+
+# mutant 3
+--- ./program246.py
++++ ./program246.py
+@@ -21,7 +21,7 @@
+ 
+     if(number == 0):
+ 
+-        return 0;
++        return 1;
+ 
+     g = number/2.0;
+ 
+
+# mutant 4
+--- ./program246.py
++++ ./program246.py
+@@ -23,7 +23,7 @@
+ 
+         return 0;
+ 
+-    g = number/2.0;
++    g = number*2.0;
+ 
+     g2 = g + 1;
+ 
+
+# mutant 5
+--- ./program246.py
++++ ./program246.py
+@@ -23,7 +23,7 @@
+ 
+         return 0;
+ 
+-    g = number/2.0;
++    g = number/3.0;
+ 
+     g2 = g + 1;
+ 
+
+# mutant 7
+--- ./program246.py
++++ ./program246.py
+@@ -25,7 +25,7 @@
+ 
+     g = number/2.0;
+ 
+-    g2 = g + 1;
++    g2 = g - 1;
+ 
+     while(g != g2):
+ 
+
+# mutant 8
+--- ./program246.py
++++ ./program246.py
+@@ -25,7 +25,7 @@
+ 
+     g = number/2.0;
+ 
+-    g2 = g + 1;
++    g2 = g + 2;
+ 
+     while(g != g2):
+ 
+
+# mutant 9
+--- ./program246.py
++++ ./program246.py
+@@ -25,7 +25,7 @@
+ 
+     g = number/2.0;
+ 
+-    g2 = g + 1;
++    g2 = None;
+ 
+     while(g != g2):
+ 
+
+# mutant 19
+--- ./program246.py
++++ ./program246.py
+@@ -40,7 +40,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual - expected) <= 1e-09
+ 
+ def driver(number, expected):
+     try:
+
+# mutant 20
+--- ./program246.py
++++ ./program246.py
+@@ -40,7 +40,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return abs(actual - expected) < 1e-09
++    return abs(actual - expected) < 2e-09
+ 
+ def driver(number, expected):
+     try:
+
+# mutant 22
+--- ./program246.py
++++ ./program246.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

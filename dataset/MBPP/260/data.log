@@ -1,0 +1,94 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program260.py (5) ----
+
+# mutant 1
+--- ./program260.py
++++ ./program260.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def newman_prime(n): 
+ 
+-	if n == 0 or n == 1: 
++	if n != 0 or n == 1: 
+ 
+ 		return 1
+ 
+
+# mutant 3
+--- ./program260.py
++++ ./program260.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def newman_prime(n): 
+ 
+-	if n == 0 or n == 1: 
++	if n == 0 or n != 1: 
+ 
+ 		return 1
+ 
+
+# mutant 5
+--- ./program260.py
++++ ./program260.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def newman_prime(n): 
+ 
+-	if n == 0 or n == 1: 
++	if n == 0 and n == 1: 
+ 
+ 		return 1
+ 
+
+# mutant 7
+--- ./program260.py
++++ ./program260.py
+@@ -23,7 +23,7 @@
+ 
+ 		return 1
+ 
+-	return 2 * newman_prime(n - 1) + newman_prime(n - 2)
++	return 3 * newman_prime(n - 1) + newman_prime(n - 2)
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 15
+--- ./program260.py
++++ ./program260.py
+@@ -36,7 +36,7 @@
+             n),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (1)
+
+---- ./program260.py (1) ----
+
+# mutant 16
+--- ./program260.py
++++ ./program260.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

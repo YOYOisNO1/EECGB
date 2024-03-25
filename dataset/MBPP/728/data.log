@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program728.py (1) ----
+
+# mutant 2
+--- ./program728.py
++++ ./program728.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_list(lst1,lst2):
+ 
+-  res_list = [lst1[i] + lst2[i] for i in range(len(lst1))] 
++  res_list = None 
+ 
+   return res_list
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program728.py (1) ----
+
+# mutant 5
+--- ./program728.py
++++ ./program728.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

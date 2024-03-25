@@ -1,0 +1,193 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (14)
+
+---- ./program364.py (14) ----
+
+# mutant 1
+--- ./program364.py
++++ ./program364.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def make_flip(ch): 
+ 
+-	return '1' if (ch == '0') else '0'
++	return 'XX1XX' if (ch == '0') else '0'
+ 
+ def get_flip_with_starting_charcter(str, expected): 
+ 
+
+# mutant 2
+--- ./program364.py
++++ ./program364.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def make_flip(ch): 
+ 
+-	return '1' if (ch == '0') else '0'
++	return '1' if (ch != '0') else '0'
+ 
+ def get_flip_with_starting_charcter(str, expected): 
+ 
+
+# mutant 3
+--- ./program364.py
++++ ./program364.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def make_flip(ch): 
+ 
+-	return '1' if (ch == '0') else '0'
++	return '1' if (ch == 'XX0XX') else '0'
+ 
+ def get_flip_with_starting_charcter(str, expected): 
+ 
+
+# mutant 4
+--- ./program364.py
++++ ./program364.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def make_flip(ch): 
+ 
+-	return '1' if (ch == '0') else '0'
++	return '1' if (ch == '0') else 'XX0XX'
+ 
+ def get_flip_with_starting_charcter(str, expected): 
+ 
+
+# mutant 5
+--- ./program364.py
++++ ./program364.py
+@@ -23,7 +23,7 @@
+ 
+ def get_flip_with_starting_charcter(str, expected): 
+ 
+-	flip_count = 0
++	flip_count = 1
+ 
+ 	for i in range(len( str)): 
+ 
+
+# mutant 6
+--- ./program364.py
++++ ./program364.py
+@@ -23,7 +23,7 @@
+ 
+ def get_flip_with_starting_charcter(str, expected): 
+ 
+-	flip_count = 0
++	flip_count = None
+ 
+ 	for i in range(len( str)): 
+ 
+
+# mutant 7
+--- ./program364.py
++++ ./program364.py
+@@ -27,7 +27,7 @@
+ 
+ 	for i in range(len( str)): 
+ 
+-		if (str[i] != expected): 
++		if (str[i] == expected): 
+ 
+ 			flip_count += 1
+ 
+
+# mutant 8
+--- ./program364.py
++++ ./program364.py
+@@ -29,7 +29,7 @@
+ 
+ 		if (str[i] != expected): 
+ 
+-			flip_count += 1
++			flip_count = 1
+ 
+ 		expected = make_flip(expected) 
+ 
+
+# mutant 9
+--- ./program364.py
++++ ./program364.py
+@@ -29,7 +29,7 @@
+ 
+ 		if (str[i] != expected): 
+ 
+-			flip_count += 1
++			flip_count -= 1
+ 
+ 		expected = make_flip(expected) 
+ 
+
+# mutant 10
+--- ./program364.py
++++ ./program364.py
+@@ -29,7 +29,7 @@
+ 
+ 		if (str[i] != expected): 
+ 
+-			flip_count += 1
++			flip_count += 2
+ 
+ 		expected = make_flip(expected) 
+ 
+
+# mutant 11
+--- ./program364.py
++++ ./program364.py
+@@ -31,7 +31,7 @@
+ 
+ 			flip_count += 1
+ 
+-		expected = make_flip(expected) 
++		expected = None 
+ 
+ 	return flip_count 
+ 
+
+# mutant 12
+--- ./program364.py
++++ ./program364.py
+@@ -37,7 +37,7 @@
+ 
+ def min_flip_to_make_string_alternate(str): 
+ 
+-	return min(get_flip_with_starting_charcter(str, '0'),get_flip_with_starting_charcter(str, '1')) 
++	return min(get_flip_with_starting_charcter(str, 'XX0XX'),get_flip_with_starting_charcter(str, '1')) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 13
+--- ./program364.py
++++ ./program364.py
+@@ -37,7 +37,7 @@
+ 
+ def min_flip_to_make_string_alternate(str): 
+ 
+-	return min(get_flip_with_starting_charcter(str, '0'),get_flip_with_starting_charcter(str, '1')) 
++	return min(get_flip_with_starting_charcter(str, '0'),get_flip_with_starting_charcter(str, 'XX1XX')) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 15
+--- ./program364.py
++++ ./program364.py
+@@ -50,7 +50,7 @@
+             str),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program841.py (2) ----
+
+# mutant 5
+--- ./program841.py
++++ ./program841.py
+@@ -25,7 +25,7 @@
+ 
+ 		for j in range(i + 1, n): 
+ 
+-			if (arr[i] > arr[j]): 
++			if (arr[i] >= arr[j]): 
+ 
+ 				inv_count += 1
+ 
+
+# mutant 11
+--- ./program841.py
++++ ./program841.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

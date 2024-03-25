@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program286.py (5) ----
+
+# mutant 2
+--- ./program286.py
++++ ./program286.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_sub_array_sum_repeated(a, n, k): 
+ 
+-	max_so_far = -2147483648
++	max_so_far = -2147483649
+ 
+ 	max_ending_here = 0
+ 
+
+# mutant 10
+--- ./program286.py
++++ ./program286.py
+@@ -27,7 +27,7 @@
+ 
+ 		max_ending_here = max_ending_here + a[i%n] 
+ 
+-		if (max_so_far < max_ending_here): 
++		if (max_so_far <= max_ending_here): 
+ 
+ 			max_so_far = max_ending_here 
+ 
+
+# mutant 12
+--- ./program286.py
++++ ./program286.py
+@@ -31,7 +31,7 @@
+ 
+ 			max_so_far = max_ending_here 
+ 
+-		if (max_ending_here < 0): 
++		if (max_ending_here <= 0): 
+ 
+ 			max_ending_here = 0
+ 
+
+# mutant 13
+--- ./program286.py
++++ ./program286.py
+@@ -31,7 +31,7 @@
+ 
+ 			max_so_far = max_ending_here 
+ 
+-		if (max_ending_here < 0): 
++		if (max_ending_here < 1): 
+ 
+ 			max_ending_here = 0
+ 
+
+# mutant 18
+--- ./program286.py
++++ ./program286.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

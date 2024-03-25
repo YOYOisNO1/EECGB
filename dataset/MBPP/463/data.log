@@ -1,0 +1,245 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (18)
+
+---- ./program463.py (18) ----
+
+# mutant 4
+--- ./program463.py
++++ ./program463.py
+@@ -23,7 +23,7 @@
+ 
+ 	max_ending_here = 1
+ 
+-	min_ending_here = 1
++	min_ending_here = 2
+ 
+ 	max_so_far = 0
+ 
+
+# mutant 6
+--- ./program463.py
++++ ./program463.py
+@@ -25,7 +25,7 @@
+ 
+ 	min_ending_here = 1
+ 
+-	max_so_far = 0
++	max_so_far = 1
+ 
+ 	flag = 0
+ 
+
+# mutant 8
+--- ./program463.py
++++ ./program463.py
+@@ -27,7 +27,7 @@
+ 
+ 	max_so_far = 0
+ 
+-	flag = 0
++	flag = 1
+ 
+ 	for i in range(0, n):
+ 
+
+# mutant 9
+--- ./program463.py
++++ ./program463.py
+@@ -27,7 +27,7 @@
+ 
+ 	max_so_far = 0
+ 
+-	flag = 0
++	flag = None
+ 
+ 	for i in range(0, n):
+ 
+
+# mutant 12
+--- ./program463.py
++++ ./program463.py
+@@ -31,7 +31,7 @@
+ 
+ 	for i in range(0, n):
+ 
+-		if arr[i] > 0:
++		if arr[i] > 1:
+ 
+ 			max_ending_here = max_ending_here * arr[i]
+ 
+
+# mutant 15
+--- ./program463.py
++++ ./program463.py
+@@ -35,7 +35,7 @@
+ 
+ 			max_ending_here = max_ending_here * arr[i]
+ 
+-			min_ending_here = min (min_ending_here * arr[i], 1)
++			min_ending_here = min (min_ending_here / arr[i], 1)
+ 
+ 			flag = 1
+ 
+
+# mutant 16
+--- ./program463.py
++++ ./program463.py
+@@ -35,7 +35,7 @@
+ 
+ 			max_ending_here = max_ending_here * arr[i]
+ 
+-			min_ending_here = min (min_ending_here * arr[i], 1)
++			min_ending_here = min (min_ending_here * arr[i], 2)
+ 
+ 			flag = 1
+ 
+
+# mutant 18
+--- ./program463.py
++++ ./program463.py
+@@ -37,7 +37,7 @@
+ 
+ 			min_ending_here = min (min_ending_here * arr[i], 1)
+ 
+-			flag = 1
++			flag = 2
+ 
+ 		elif arr[i] == 0:
+ 
+
+# mutant 19
+--- ./program463.py
++++ ./program463.py
+@@ -37,7 +37,7 @@
+ 
+ 			min_ending_here = min (min_ending_here * arr[i], 1)
+ 
+-			flag = 1
++			flag = None
+ 
+ 		elif arr[i] == 0:
+ 
+
+# mutant 21
+--- ./program463.py
++++ ./program463.py
+@@ -39,7 +39,7 @@
+ 
+ 			flag = 1
+ 
+-		elif arr[i] == 0:
++		elif arr[i] == 1:
+ 
+ 			max_ending_here = 1
+ 
+
+# mutant 24
+--- ./program463.py
++++ ./program463.py
+@@ -43,7 +43,7 @@
+ 
+ 			max_ending_here = 1
+ 
+-			min_ending_here = 1
++			min_ending_here = 2
+ 
+ 		else:
+ 
+
+# mutant 28
+--- ./program463.py
++++ ./program463.py
+@@ -49,7 +49,7 @@
+ 
+ 			temp = max_ending_here
+ 
+-			max_ending_here = max (min_ending_here * arr[i], 1)
++			max_ending_here = max (min_ending_here * arr[i], 2)
+ 
+ 			min_ending_here = temp * arr[i]
+ 
+
+# mutant 32
+--- ./program463.py
++++ ./program463.py
+@@ -53,7 +53,7 @@
+ 
+ 			min_ending_here = temp * arr[i]
+ 
+-		if (max_so_far < max_ending_here):
++		if (max_so_far <= max_ending_here):
+ 
+ 			max_so_far = max_ending_here
+ 
+
+# mutant 34
+--- ./program463.py
++++ ./program463.py
+@@ -57,7 +57,7 @@
+ 
+ 			max_so_far = max_ending_here
+ 
+-	if flag == 0 and max_so_far == 0:
++	if flag != 0 and max_so_far == 0:
+ 
+ 		return 0
+ 
+
+# mutant 35
+--- ./program463.py
++++ ./program463.py
+@@ -57,7 +57,7 @@
+ 
+ 			max_so_far = max_ending_here
+ 
+-	if flag == 0 and max_so_far == 0:
++	if flag == 1 and max_so_far == 0:
+ 
+ 		return 0
+ 
+
+# mutant 37
+--- ./program463.py
++++ ./program463.py
+@@ -57,7 +57,7 @@
+ 
+ 			max_so_far = max_ending_here
+ 
+-	if flag == 0 and max_so_far == 0:
++	if flag == 0 and max_so_far == 1:
+ 
+ 		return 0
+ 
+
+# mutant 39
+--- ./program463.py
++++ ./program463.py
+@@ -59,7 +59,7 @@
+ 
+ 	if flag == 0 and max_so_far == 0:
+ 
+-		return 0
++		return 1
+ 
+ 	return max_so_far
+ 
+
+# mutant 42
+--- ./program463.py
++++ ./program463.py
+@@ -75,7 +75,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,128 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (9)
+
+---- ./program660.py (9) ----
+
+# mutant 1
+--- ./program660.py
++++ ./program660.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_points(l1,r1,l2,r2): 
+ 
+-    x = min(l1,l2) if (l1 != l2) else -1
++    x = min(l1,l2) if (l1 == l2) else -1
+ 
+     y = max(r1,r2) if (r1 != r2) else -1
+ 
+
+# mutant 2
+--- ./program660.py
++++ ./program660.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_points(l1,r1,l2,r2): 
+ 
+-    x = min(l1,l2) if (l1 != l2) else -1
++    x = min(l1,l2) if (l1 != l2) else +1
+ 
+     y = max(r1,r2) if (r1 != r2) else -1
+ 
+
+# mutant 3
+--- ./program660.py
++++ ./program660.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_points(l1,r1,l2,r2): 
+ 
+-    x = min(l1,l2) if (l1 != l2) else -1
++    x = min(l1,l2) if (l1 != l2) else -2
+ 
+     y = max(r1,r2) if (r1 != r2) else -1
+ 
+
+# mutant 4
+--- ./program660.py
++++ ./program660.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_points(l1,r1,l2,r2): 
+ 
+-    x = min(l1,l2) if (l1 != l2) else -1
++    x = None
+ 
+     y = max(r1,r2) if (r1 != r2) else -1
+ 
+
+# mutant 5
+--- ./program660.py
++++ ./program660.py
+@@ -21,7 +21,7 @@
+ 
+     x = min(l1,l2) if (l1 != l2) else -1
+ 
+-    y = max(r1,r2) if (r1 != r2) else -1
++    y = max(r1,r2) if (r1 == r2) else -1
+ 
+     return (x,y)
+ 
+
+# mutant 6
+--- ./program660.py
++++ ./program660.py
+@@ -21,7 +21,7 @@
+ 
+     x = min(l1,l2) if (l1 != l2) else -1
+ 
+-    y = max(r1,r2) if (r1 != r2) else -1
++    y = max(r1,r2) if (r1 != r2) else +1
+ 
+     return (x,y)
+ 
+
+# mutant 7
+--- ./program660.py
++++ ./program660.py
+@@ -21,7 +21,7 @@
+ 
+     x = min(l1,l2) if (l1 != l2) else -1
+ 
+-    y = max(r1,r2) if (r1 != r2) else -1
++    y = max(r1,r2) if (r1 != r2) else -2
+ 
+     return (x,y)
+ 
+
+# mutant 8
+--- ./program660.py
++++ ./program660.py
+@@ -21,7 +21,7 @@
+ 
+     x = min(l1,l2) if (l1 != l2) else -1
+ 
+-    y = max(r1,r2) if (r1 != r2) else -1
++    y = None
+ 
+     return (x,y)
+ 
+
+# mutant 10
+--- ./program660.py
++++ ./program660.py
+@@ -36,7 +36,7 @@
+             l1, r1, l2, r2),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

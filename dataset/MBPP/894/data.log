@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program894.py (2) ----
+
+# mutant 2
+--- ./program894.py
++++ ./program894.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def float_to_tuple(test_str):
+ 
+-  res = tuple(map(float, test_str.split(', ')))
++  res = None
+ 
+   return (res) 
+ 
+
+# mutant 4
+--- ./program894.py
++++ ./program894.py
+@@ -34,7 +34,7 @@
+             test_str),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

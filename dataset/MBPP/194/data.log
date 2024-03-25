@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program194.py (1) ----
+
+# mutant 10
+--- ./program194.py
++++ ./program194.py
+@@ -31,7 +31,7 @@
+ 
+         last_digit = temp % 10; 
+ 
+-        temp = int(temp / 10); 
++        temp = int(temp * 10); 
+ 
+         dec_value += last_digit*base; 
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program194.py (1) ----
+
+# mutant 21
+--- ./program194.py
++++ ./program194.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

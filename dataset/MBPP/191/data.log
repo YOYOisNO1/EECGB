@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program191.py (3) ----
+
+# mutant 6
+--- ./program191.py
++++ ./program191.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumber(monthname3):
+ 
+-  if monthname3 =="April" or monthname3== "June" or monthname3== "September" or monthname3== "November":
++  if monthname3 =="April" or monthname3== "June" or monthname3== "XXSeptemberXX" or monthname3== "November":
+ 
+     return True
+ 
+
+# mutant 8
+--- ./program191.py
++++ ./program191.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_monthnumber(monthname3):
+ 
+-  if monthname3 =="April" or monthname3== "June" or monthname3== "September" or monthname3== "November":
++  if monthname3 =="April" or monthname3== "June" or monthname3== "September" or monthname3== "XXNovemberXX":
+ 
+     return True
+ 
+
+# mutant 14
+--- ./program191.py
++++ ./program191.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,115 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (8)
+
+---- ./program236.py (8) ----
+
+# mutant 1
+--- ./program236.py
++++ ./program236.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def no_of_triangle(N,K):
+ 
+-    if (N < K):
++    if (N <= K):
+ 
+         return -1;
+ 
+
+# mutant 4
+--- ./program236.py
++++ ./program236.py
+@@ -25,7 +25,7 @@
+ 
+     else:
+ 
+-        Tri_up = 0;
++        Tri_up = 1;
+ 
+         Tri_up = ((N - K + 1) *(N - K + 2)) // 2;
+ 
+
+# mutant 5
+--- ./program236.py
++++ ./program236.py
+@@ -25,7 +25,7 @@
+ 
+     else:
+ 
+-        Tri_up = 0;
++        Tri_up = None;
+ 
+         Tri_up = ((N - K + 1) *(N - K + 2)) // 2;
+ 
+
+# mutant 13
+--- ./program236.py
++++ ./program236.py
+@@ -27,7 +27,7 @@
+ 
+         Tri_up = 0;
+ 
+-        Tri_up = ((N - K + 1) *(N - K + 2)) // 2;
++        Tri_up = ((N - K + 1) *(N - K + 2)) / 2;
+ 
+         Tri_down = 0;
+ 
+
+# mutant 16
+--- ./program236.py
++++ ./program236.py
+@@ -29,7 +29,7 @@
+ 
+         Tri_up = ((N - K + 1) *(N - K + 2)) // 2;
+ 
+-        Tri_down = 0;
++        Tri_down = 1;
+ 
+         Tri_down = ((N - 2 * K + 1) *(N - 2 * K + 2)) // 2;
+ 
+
+# mutant 17
+--- ./program236.py
++++ ./program236.py
+@@ -29,7 +29,7 @@
+ 
+         Tri_up = ((N - K + 1) *(N - K + 2)) // 2;
+ 
+-        Tri_down = 0;
++        Tri_down = None;
+ 
+         Tri_down = ((N - 2 * K + 1) *(N - 2 * K + 2)) // 2;
+ 
+
+# mutant 29
+--- ./program236.py
++++ ./program236.py
+@@ -31,7 +31,7 @@
+ 
+         Tri_down = 0;
+ 
+-        Tri_down = ((N - 2 * K + 1) *(N - 2 * K + 2)) // 2;
++        Tri_down = ((N - 2 * K + 1) *(N - 2 * K + 2)) / 2;
+ 
+         return Tri_up + Tri_down;
+ 
+
+# mutant 35
+--- ./program236.py
++++ ./program236.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

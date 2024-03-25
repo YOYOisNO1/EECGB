@@ -1,0 +1,107 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (2)
+
+---- ./program311.py (2) ----
+
+# mutant 15
+--- ./program311.py
++++ ./program311.py
+@@ -31,7 +31,7 @@
+ 
+             pos = count      
+ 
+-        count += 1; temp>>=1
++        count += 1; temp=1
+ 
+     return (n | (1 << (pos))) 
+ 
+
+# mutant 16
+--- ./program311.py
++++ ./program311.py
+@@ -31,7 +31,7 @@
+ 
+             pos = count      
+ 
+-        count += 1; temp>>=1
++        count += 1; temp<<=1
+ 
+     return (n | (1 << (pos))) 
+ 
+
+
+Survived 🙁 (5)
+
+---- ./program311.py (5) ----
+
+# mutant 2
+--- ./program311.py
++++ ./program311.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_left_most_unset_bit(n): 
+ 
+-    if not (n & (n + 1)): 
++    if not (n | (n + 1)): 
+ 
+         return n 
+ 
+
+# mutant 3
+--- ./program311.py
++++ ./program311.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_left_most_unset_bit(n): 
+ 
+-    if not (n & (n + 1)): 
++    if not (n & (n - 1)): 
+ 
+         return n 
+ 
+
+# mutant 4
+--- ./program311.py
++++ ./program311.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def set_left_most_unset_bit(n): 
+ 
+-    if not (n & (n + 1)): 
++    if not (n & (n + 2)): 
+ 
+         return n 
+ 
+
+# mutant 5
+--- ./program311.py
++++ ./program311.py
+@@ -23,7 +23,7 @@
+ 
+         return n 
+ 
+-    pos, temp, count = 0, n, 0 
++    pos, temp, count = 1, n, 0 
+ 
+     while temp: 
+ 
+
+# mutant 23
+--- ./program311.py
++++ ./program311.py
+@@ -47,7 +47,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

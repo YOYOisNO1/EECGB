@@ -1,0 +1,146 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program264.py (2) ----
+
+# mutant 8
+--- ./program264.py
++++ ./program264.py
+@@ -29,7 +29,7 @@
+ 
+  else:
+ 
+-	 d_age = 21 + (h_age - 2)*4
++	 d_age = 22 + (h_age - 2)*4
+ 
+  return d_age
+ 
+
+# mutant 15
+--- ./program264.py
++++ ./program264.py
+@@ -36,7 +36,7 @@
+ # TESTING CODE 
+ # ============================================
+ def validate_solution(actual, expected):
+-    return actual == expected
++    return actual != expected
+ 
+ def driver(h_age, expected):
+     try:
+
+
+Survived 🙁 (8)
+
+---- ./program264.py (8) ----
+
+# mutant 1
+--- ./program264.py
++++ ./program264.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def dog_age(h_age):
+ 
+- if h_age < 0:
++ if h_age <= 0:
+ 
+  	exit()
+ 
+
+# mutant 2
+--- ./program264.py
++++ ./program264.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def dog_age(h_age):
+ 
+- if h_age < 0:
++ if h_age < 1:
+ 
+  	exit()
+ 
+
+# mutant 3
+--- ./program264.py
++++ ./program264.py
+@@ -23,7 +23,7 @@
+ 
+  	exit()
+ 
+- elif h_age <= 2:
++ elif h_age < 2:
+ 
+ 	 d_age = h_age * 10.5
+ 
+
+# mutant 4
+--- ./program264.py
++++ ./program264.py
+@@ -23,7 +23,7 @@
+ 
+  	exit()
+ 
+- elif h_age <= 2:
++ elif h_age <= 3:
+ 
+ 	 d_age = h_age * 10.5
+ 
+
+# mutant 5
+--- ./program264.py
++++ ./program264.py
+@@ -25,7 +25,7 @@
+ 
+  elif h_age <= 2:
+ 
+-	 d_age = h_age * 10.5
++	 d_age = h_age / 10.5
+ 
+  else:
+ 
+
+# mutant 6
+--- ./program264.py
++++ ./program264.py
+@@ -25,7 +25,7 @@
+ 
+  elif h_age <= 2:
+ 
+-	 d_age = h_age * 10.5
++	 d_age = h_age * 11.5
+ 
+  else:
+ 
+
+# mutant 7
+--- ./program264.py
++++ ./program264.py
+@@ -25,7 +25,7 @@
+ 
+  elif h_age <= 2:
+ 
+-	 d_age = h_age * 10.5
++	 d_age = None
+ 
+  else:
+ 
+
+# mutant 17
+--- ./program264.py
++++ ./program264.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

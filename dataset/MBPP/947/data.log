@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program947.py (4) ----
+
+# mutant 1
+--- ./program947.py
++++ ./program947.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def len_log(list1):
+ 
+-    min=len(list1[0])
++    min=len(list1[1])
+ 
+     for i in list1:
+ 
+
+# mutant 3
+--- ./program947.py
++++ ./program947.py
+@@ -23,7 +23,7 @@
+ 
+     for i in list1:
+ 
+-        if len(i)<min:
++        if len(i)<=min:
+ 
+             min=len(i)
+ 
+
+# mutant 4
+--- ./program947.py
++++ ./program947.py
+@@ -25,7 +25,7 @@
+ 
+         if len(i)<min:
+ 
+-            min=len(i)
++            min= None
+ 
+     return min
+ 
+
+# mutant 7
+--- ./program947.py
++++ ./program947.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

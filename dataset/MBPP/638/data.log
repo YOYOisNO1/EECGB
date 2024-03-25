@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program638.py (2) ----
+
+# mutant 15
+--- ./program638.py
++++ ./program638.py
+@@ -23,7 +23,7 @@
+ 
+  windchill = 13.12 + 0.6215*t -  11.37*math.pow(v, 0.16) + 0.3965*t*math.pow(v, 0.16)
+ 
+- return int(round(windchill, 0))
++ return int(round(windchill, 1))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 18
+--- ./program638.py
++++ ./program638.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

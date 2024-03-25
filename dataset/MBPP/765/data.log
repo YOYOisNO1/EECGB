@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program765.py (2) ----
+
+# mutant 6
+--- ./program765.py
++++ ./program765.py
+@@ -23,7 +23,7 @@
+ 
+ 	n = n + 1
+ 
+-	return (int)(n+(math.log((n + math.log(n, 2)), 2))) 
++	return (int)(n+(math.log((n + math.log(n, 3)), 2))) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 10
+--- ./program765.py
++++ ./program765.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,76 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (5)
+
+---- ./program110.py (5) ----
+
+# mutant 2
+--- ./program110.py
++++ ./program110.py
+@@ -23,7 +23,7 @@
+ 
+   for sub in test_list:
+ 
+-    if sub[0] > strt_val:
++    if sub[1] > strt_val:
+ 
+       res.append((strt_val, sub[0]))
+ 
+
+# mutant 3
+--- ./program110.py
++++ ./program110.py
+@@ -23,7 +23,7 @@
+ 
+   for sub in test_list:
+ 
+-    if sub[0] > strt_val:
++    if sub[0] >= strt_val:
+ 
+       res.append((strt_val, sub[0]))
+ 
+
+# mutant 4
+--- ./program110.py
++++ ./program110.py
+@@ -25,7 +25,7 @@
+ 
+     if sub[0] > strt_val:
+ 
+-      res.append((strt_val, sub[0]))
++      res.append((strt_val, sub[1]))
+ 
+       strt_val = sub[1]
+ 
+
+# mutant 7
+--- ./program110.py
++++ ./program110.py
+@@ -29,7 +29,7 @@
+ 
+       strt_val = sub[1]
+ 
+-    if strt_val < stop_val:
++    if strt_val <= stop_val:
+ 
+       res.append((strt_val, stop_val))
+ 
+
+# mutant 9
+--- ./program110.py
++++ ./program110.py
+@@ -46,7 +46,7 @@
+             test_list, strt_val, stop_val),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

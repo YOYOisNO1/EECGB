@@ -1,0 +1,388 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (29)
+
+---- ./program926.py (29) ----
+
+# mutant 6
+--- ./program926.py
++++ ./program926.py
+@@ -23,7 +23,7 @@
+ 
+ 		return 1
+ 
+-	return (binomial_coeffi(n - 1, k - 1) 
++	return (binomial_coeffi(n + 1, k - 1) 
+ 
+ 		+ binomial_coeffi(n - 1, k)) 
+ 
+
+# mutant 7
+--- ./program926.py
++++ ./program926.py
+@@ -23,7 +23,7 @@
+ 
+ 		return 1
+ 
+-	return (binomial_coeffi(n - 1, k - 1) 
++	return (binomial_coeffi(n - 2, k - 1) 
+ 
+ 		+ binomial_coeffi(n - 1, k)) 
+ 
+
+# mutant 13
+--- ./program926.py
++++ ./program926.py
+@@ -29,7 +29,7 @@
+ 
+ def rencontres_number(n, m): 
+ 
+-	if (n == 0 and m == 0): 
++	if (n != 0 and m == 0): 
+ 
+ 		return 1
+ 
+
+# mutant 14
+--- ./program926.py
++++ ./program926.py
+@@ -29,7 +29,7 @@
+ 
+ def rencontres_number(n, m): 
+ 
+-	if (n == 0 and m == 0): 
++	if (n == 1 and m == 0): 
+ 
+ 		return 1
+ 
+
+# mutant 15
+--- ./program926.py
++++ ./program926.py
+@@ -29,7 +29,7 @@
+ 
+ def rencontres_number(n, m): 
+ 
+-	if (n == 0 and m == 0): 
++	if (n == 0 and m != 0): 
+ 
+ 		return 1
+ 
+
+# mutant 16
+--- ./program926.py
++++ ./program926.py
+@@ -29,7 +29,7 @@
+ 
+ def rencontres_number(n, m): 
+ 
+-	if (n == 0 and m == 0): 
++	if (n == 0 and m == 1): 
+ 
+ 		return 1
+ 
+
+# mutant 17
+--- ./program926.py
++++ ./program926.py
+@@ -29,7 +29,7 @@
+ 
+ def rencontres_number(n, m): 
+ 
+-	if (n == 0 and m == 0): 
++	if (n == 0 or m == 0): 
+ 
+ 		return 1
+ 
+
+# mutant 18
+--- ./program926.py
++++ ./program926.py
+@@ -31,7 +31,7 @@
+ 
+ 	if (n == 0 and m == 0): 
+ 
+-		return 1
++		return 2
+ 
+ 	if (n == 1 and m == 0): 
+ 
+
+# mutant 19
+--- ./program926.py
++++ ./program926.py
+@@ -33,7 +33,7 @@
+ 
+ 		return 1
+ 
+-	if (n == 1 and m == 0): 
++	if (n != 1 and m == 0): 
+ 
+ 		return 0
+ 
+
+# mutant 20
+--- ./program926.py
++++ ./program926.py
+@@ -33,7 +33,7 @@
+ 
+ 		return 1
+ 
+-	if (n == 1 and m == 0): 
++	if (n == 2 and m == 0): 
+ 
+ 		return 0
+ 
+
+# mutant 21
+--- ./program926.py
++++ ./program926.py
+@@ -33,7 +33,7 @@
+ 
+ 		return 1
+ 
+-	if (n == 1 and m == 0): 
++	if (n == 1 and m != 0): 
+ 
+ 		return 0
+ 
+
+# mutant 22
+--- ./program926.py
++++ ./program926.py
+@@ -33,7 +33,7 @@
+ 
+ 		return 1
+ 
+-	if (n == 1 and m == 0): 
++	if (n == 1 and m == 1): 
+ 
+ 		return 0
+ 
+
+# mutant 23
+--- ./program926.py
++++ ./program926.py
+@@ -33,7 +33,7 @@
+ 
+ 		return 1
+ 
+-	if (n == 1 and m == 0): 
++	if (n == 1 or m == 0): 
+ 
+ 		return 0
+ 
+
+# mutant 24
+--- ./program926.py
++++ ./program926.py
+@@ -35,7 +35,7 @@
+ 
+ 	if (n == 1 and m == 0): 
+ 
+-		return 0
++		return 1
+ 
+ 	if (m == 0): 
+ 
+
+# mutant 25
+--- ./program926.py
++++ ./program926.py
+@@ -37,7 +37,7 @@
+ 
+ 		return 0
+ 
+-	if (m == 0): 
++	if (m != 0): 
+ 
+ 		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+
+# mutant 26
+--- ./program926.py
++++ ./program926.py
+@@ -37,7 +37,7 @@
+ 
+ 		return 0
+ 
+-	if (m == 0): 
++	if (m == 1): 
+ 
+ 		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+
+# mutant 27
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n + 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 28
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 2) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 29
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) / (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 30
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n + 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 31
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n - 2, 0)+ rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 32
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n - 1, 1)+ rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 33
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n - 1, 0)- rencontres_number(n - 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 34
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n + 2, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 35
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 3, 0))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 36
+--- ./program926.py
++++ ./program926.py
+@@ -39,7 +39,7 @@
+ 
+ 	if (m == 0): 
+ 
+-		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
++		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 1))) 
+ 
+ 	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
+ 
+
+# mutant 37
+--- ./program926.py
++++ ./program926.py
+@@ -41,7 +41,7 @@
+ 
+ 		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+-	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
++	return (binomial_coeffi(n, m) / rencontres_number(n - m, 0))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 38
+--- ./program926.py
++++ ./program926.py
+@@ -41,7 +41,7 @@
+ 
+ 		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+-	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
++	return (binomial_coeffi(n, m) * rencontres_number(n + m, 0))
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 39
+--- ./program926.py
++++ ./program926.py
+@@ -41,7 +41,7 @@
+ 
+ 		return ((n - 1) * (rencontres_number(n - 1, 0)+ rencontres_number(n - 2, 0))) 
+ 
+-	return (binomial_coeffi(n, m) * rencontres_number(n - m, 0))
++	return (binomial_coeffi(n, m) * rencontres_number(n - m, 1))
+ 
+ # TESTING CODE 
+ # ============================================
+

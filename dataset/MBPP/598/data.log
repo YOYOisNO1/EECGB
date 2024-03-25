@@ -1,0 +1,81 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program598.py (3) ----
+
+# mutant 6
+--- ./program598.py
++++ ./program598.py
+@@ -25,7 +25,7 @@
+ 
+  temp = number
+ 
+- while temp > 0:
++ while temp >= 0:
+ 
+            times = times + 1
+ 
+
+# mutant 15
+--- ./program598.py
++++ ./program598.py
+@@ -33,7 +33,7 @@
+ 
+  temp = number
+ 
+- while temp > 0:
++ while temp >= 0:
+ 
+            reminder = temp % 10
+ 
+
+# mutant 23
+--- ./program598.py
++++ ./program598.py
+@@ -39,7 +39,7 @@
+ 
+            sum = sum + (reminder ** times)
+ 
+-           temp //= 10
++           temp = 10
+ 
+  if number == sum:
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program598.py (2) ----
+
+# mutant 12
+--- ./program598.py
++++ ./program598.py
+@@ -29,7 +29,7 @@
+ 
+            times = times + 1
+ 
+-           temp = temp // 10
++           temp = temp // 11
+ 
+  temp = number
+ 
+
+# mutant 31
+--- ./program598.py
++++ ./program598.py
+@@ -61,7 +61,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

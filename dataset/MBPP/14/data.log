@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program14.py (3) ----
+
+# mutant 1
+--- ./program14.py
++++ ./program14.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_volume(l,b,h) : 
+ 
+-    return ((l * b * h) / 2) 
++    return ((l / b * h) / 2) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 2
+--- ./program14.py
++++ ./program14.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_volume(l,b,h) : 
+ 
+-    return ((l * b * h) / 2) 
++    return ((l * b / h) / 2) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 4
+--- ./program14.py
++++ ./program14.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def find_volume(l,b,h) : 
+ 
+-    return ((l * b * h) / 2) 
++    return ((l * b * h) / 3) 
+ 
+ # TESTING CODE 
+ # ============================================
+
+
+Survived 🙁 (1)
+
+---- ./program14.py (1) ----
+
+# mutant 7
+--- ./program14.py
++++ ./program14.py
+@@ -33,7 +33,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

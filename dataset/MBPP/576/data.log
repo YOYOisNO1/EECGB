@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program576.py (3) ----
+
+# mutant 9
+--- ./program576.py
++++ ./program576.py
+@@ -25,7 +25,7 @@
+ 
+         if (A[i] == B[j]): 
+ 
+-            i += 1; 
++            i = 1; 
+ 
+             j += 1; 
+ 
+
+# mutant 10
+--- ./program576.py
++++ ./program576.py
+@@ -25,7 +25,7 @@
+ 
+         if (A[i] == B[j]): 
+ 
+-            i += 1; 
++            i -= 1; 
+ 
+             j += 1; 
+ 
+
+# mutant 21
+--- ./program576.py
++++ ./program576.py
+@@ -37,7 +37,7 @@
+ 
+             i = i - j + 1; 
+ 
+-            j = 0;       
++            j = 1;       
+ 
+     return False; 
+ 
+
+
+Survived 🙁 (5)
+
+---- ./program576.py (5) ----
+
+# mutant 3
+--- ./program576.py
++++ ./program576.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def is_sub_array(A,B,n,m): 
+ 
+-    i = 0; j = 0; 
++    i = 0; j = 1; 
+ 
+     while (i < n and j < m):  
+ 
+
+# mutant 6
+--- ./program576.py
++++ ./program576.py
+@@ -21,7 +21,7 @@
+ 
+     i = 0; j = 0; 
+ 
+-    while (i < n and j < m):  
++    while (i < n and j <= m):  
+ 
+         if (A[i] == B[j]): 
+ 
+
+# mutant 17
+--- ./program576.py
++++ ./program576.py
+@@ -35,7 +35,7 @@
+ 
+         else: 
+ 
+-            i = i - j + 1; 
++            i = i + j + 1; 
+ 
+             j = 0;       
+ 
+
+# mutant 19
+--- ./program576.py
++++ ./program576.py
+@@ -35,7 +35,7 @@
+ 
+         else: 
+ 
+-            i = i - j + 1; 
++            i = i - j + 2; 
+ 
+             j = 0;       
+ 
+
+# mutant 26
+--- ./program576.py
++++ ./program576.py
+@@ -53,7 +53,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

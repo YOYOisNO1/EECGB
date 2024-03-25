@@ -1,0 +1,42 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (1)
+
+---- ./program345.py (1) ----
+
+# mutant 1
+--- ./program345.py
++++ ./program345.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def diff_consecutivenums(nums):
+ 
+-    result = [b-a for a, b in zip(nums[:-1], nums[1:])]
++    result = [b+a for a, b in zip(nums[:-1], nums[1:])]
+ 
+     return result
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program345.py (1) ----
+
+# mutant 8
+--- ./program345.py
++++ ./program345.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

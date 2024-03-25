@@ -1,0 +1,367 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (23)
+
+---- ./program834.py (23) ----
+
+# mutant 7
+--- ./program834.py
++++ ./program834.py
+@@ -25,7 +25,7 @@
+ 
+         matrix=[row[:] for row in [[0]*n]*n]        
+ 
+-        row_st=0
++        row_st=1
+ 
+         row_ed=n-1        
+ 
+
+# mutant 10
+--- ./program834.py
++++ ./program834.py
+@@ -27,7 +27,7 @@
+ 
+         row_st=0
+ 
+-        row_ed=n-1        
++        row_ed=n-2        
+ 
+         col_st=0
+ 
+
+# mutant 12
+--- ./program834.py
++++ ./program834.py
+@@ -29,7 +29,7 @@
+ 
+         row_ed=n-1        
+ 
+-        col_st=0
++        col_st=1
+ 
+         col_ed=n-1
+ 
+
+# mutant 15
+--- ./program834.py
++++ ./program834.py
+@@ -31,7 +31,7 @@
+ 
+         col_st=0
+ 
+-        col_ed=n-1
++        col_ed=n-2
+ 
+         current=1        
+ 
+
+# mutant 22
+--- ./program834.py
++++ ./program834.py
+@@ -39,7 +39,7 @@
+ 
+             if current>n*n:
+ 
+-                break
++                continue
+ 
+             for c in range (col_st, col_ed+1):
+ 
+
+# mutant 23
+--- ./program834.py
++++ ./program834.py
+@@ -41,7 +41,7 @@
+ 
+                 break
+ 
+-            for c in range (col_st, col_ed+1):
++            for c in range (col_st, col_ed-1):
+ 
+                 matrix[row_st][c]=current
+ 
+
+# mutant 26
+--- ./program834.py
++++ ./program834.py
+@@ -45,7 +45,7 @@
+ 
+                 matrix[row_st][c]=current
+ 
+-                current+=1
++                current=1
+ 
+             row_st+=1
+ 
+
+# mutant 27
+--- ./program834.py
++++ ./program834.py
+@@ -45,7 +45,7 @@
+ 
+                 matrix[row_st][c]=current
+ 
+-                current+=1
++                current-=1
+ 
+             row_st+=1
+ 
+
+# mutant 31
+--- ./program834.py
++++ ./program834.py
+@@ -47,7 +47,7 @@
+ 
+                 current+=1
+ 
+-            row_st+=1
++            row_st+=2
+ 
+             for r in range (row_st, row_ed+1):
+ 
+
+# mutant 32
+--- ./program834.py
++++ ./program834.py
+@@ -49,7 +49,7 @@
+ 
+             row_st+=1
+ 
+-            for r in range (row_st, row_ed+1):
++            for r in range (row_st, row_ed-1):
+ 
+                 matrix[r][col_ed]=current
+ 
+
+# mutant 35
+--- ./program834.py
++++ ./program834.py
+@@ -53,7 +53,7 @@
+ 
+                 matrix[r][col_ed]=current
+ 
+-                current+=1
++                current=1
+ 
+             col_ed-=1
+ 
+
+# mutant 36
+--- ./program834.py
++++ ./program834.py
+@@ -53,7 +53,7 @@
+ 
+                 matrix[r][col_ed]=current
+ 
+-                current+=1
++                current-=1
+ 
+             col_ed-=1
+ 
+
+# mutant 40
+--- ./program834.py
++++ ./program834.py
+@@ -55,7 +55,7 @@
+ 
+                 current+=1
+ 
+-            col_ed-=1
++            col_ed-=2
+ 
+             for c in range (col_ed, col_st-1, -1):
+ 
+
+# mutant 41
+--- ./program834.py
++++ ./program834.py
+@@ -57,7 +57,7 @@
+ 
+             col_ed-=1
+ 
+-            for c in range (col_ed, col_st-1, -1):
++            for c in range (col_ed, col_st+1, -1):
+ 
+                 matrix[row_ed][c]=current
+ 
+
+# mutant 44
+--- ./program834.py
++++ ./program834.py
+@@ -57,7 +57,7 @@
+ 
+             col_ed-=1
+ 
+-            for c in range (col_ed, col_st-1, -1):
++            for c in range (col_ed, col_st-1, -2):
+ 
+                 matrix[row_ed][c]=current
+ 
+
+# mutant 46
+--- ./program834.py
++++ ./program834.py
+@@ -61,7 +61,7 @@
+ 
+                 matrix[row_ed][c]=current
+ 
+-                current+=1
++                current=1
+ 
+             row_ed-=1
+ 
+
+# mutant 47
+--- ./program834.py
++++ ./program834.py
+@@ -61,7 +61,7 @@
+ 
+                 matrix[row_ed][c]=current
+ 
+-                current+=1
++                current-=1
+ 
+             row_ed-=1
+ 
+
+# mutant 51
+--- ./program834.py
++++ ./program834.py
+@@ -63,7 +63,7 @@
+ 
+                 current+=1
+ 
+-            row_ed-=1
++            row_ed-=2
+ 
+             for r in range (row_ed, row_st-1, -1):
+ 
+
+# mutant 52
+--- ./program834.py
++++ ./program834.py
+@@ -65,7 +65,7 @@
+ 
+             row_ed-=1
+ 
+-            for r in range (row_ed, row_st-1, -1):
++            for r in range (row_ed, row_st+1, -1):
+ 
+                 matrix[r][col_st]=current
+ 
+
+# mutant 55
+--- ./program834.py
++++ ./program834.py
+@@ -65,7 +65,7 @@
+ 
+             row_ed-=1
+ 
+-            for r in range (row_ed, row_st-1, -1):
++            for r in range (row_ed, row_st-1, -2):
+ 
+                 matrix[r][col_st]=current
+ 
+
+# mutant 57
+--- ./program834.py
++++ ./program834.py
+@@ -69,7 +69,7 @@
+ 
+                 matrix[r][col_st]=current
+ 
+-                current+=1
++                current=1
+ 
+             col_st+=1
+ 
+
+# mutant 58
+--- ./program834.py
++++ ./program834.py
+@@ -69,7 +69,7 @@
+ 
+                 matrix[r][col_st]=current
+ 
+-                current+=1
++                current-=1
+ 
+             col_st+=1
+ 
+
+# mutant 62
+--- ./program834.py
++++ ./program834.py
+@@ -71,7 +71,7 @@
+ 
+                 current+=1
+ 
+-            col_st+=1
++            col_st+=2
+ 
+         return matrix
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program834.py (4) ----
+
+# mutant 1
+--- ./program834.py
++++ ./program834.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def generate_matrix(n):
+ 
+-        if n<=0:
++        if n<0:
+ 
+             return [] 
+ 
+
+# mutant 2
+--- ./program834.py
++++ ./program834.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def generate_matrix(n):
+ 
+-        if n<=0:
++        if n<=1:
+ 
+             return [] 
+ 
+
+# mutant 3
+--- ./program834.py
++++ ./program834.py
+@@ -23,7 +23,7 @@
+ 
+             return [] 
+ 
+-        matrix=[row[:] for row in [[0]*n]*n]        
++        matrix=[row[:] for row in [[1]*n]*n]        
+ 
+         row_st=0
+ 
+
+# mutant 65
+--- ./program834.py
++++ ./program834.py
+@@ -87,7 +87,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

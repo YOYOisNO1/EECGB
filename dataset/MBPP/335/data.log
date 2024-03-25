@@ -1,0 +1,68 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (3)
+
+---- ./program335.py (3) ----
+
+# mutant 2
+--- ./program335.py
++++ ./program335.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def ap_sum(a,n,d):
+ 
+-  total = (n * (2 * a + (n - 1) * d)) / 2
++  total = (n * (3 * a + (n - 1) * d)) / 2
+ 
+   return total
+ 
+
+# mutant 3
+--- ./program335.py
++++ ./program335.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def ap_sum(a,n,d):
+ 
+-  total = (n * (2 * a + (n - 1) * d)) / 2
++  total = (n * (2 / a + (n - 1) * d)) / 2
+ 
+   return total
+ 
+
+# mutant 4
+--- ./program335.py
++++ ./program335.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def ap_sum(a,n,d):
+ 
+-  total = (n * (2 * a + (n - 1) * d)) / 2
++  total = (n * (2 * a - (n - 1) * d)) / 2
+ 
+   return total
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program335.py (1) ----
+
+# mutant 13
+--- ./program335.py
++++ ./program335.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

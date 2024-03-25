@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program270.py (3) ----
+
+# mutant 1
+--- ./program270.py
++++ ./program270.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_even_and_even_index(arr,n):  
+ 
+-    i = 0
++    i = 1
+ 
+     sum = 0
+ 
+
+# mutant 2
+--- ./program270.py
++++ ./program270.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def sum_even_and_even_index(arr,n):  
+ 
+-    i = 0
++    i = None
+ 
+     sum = 0
+ 
+
+# mutant 15
+--- ./program270.py
++++ ./program270.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

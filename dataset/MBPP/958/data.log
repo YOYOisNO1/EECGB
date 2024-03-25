@@ -1,0 +1,328 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program958.py (1) ----
+
+# mutant 40
+--- ./program958.py
++++ ./program958.py
+@@ -35,7 +35,7 @@
+ 
+                 num -= val[i]
+ 
+-            i += 1
++            i = 1
+ 
+         return roman_num
+ 
+
+
+Survived 🙁 (23)
+
+---- ./program958.py (23) ----
+
+# mutant 1
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1001, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 2
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 901, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 3
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 501, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 4
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 401,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 5
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 400,101, 90, 50, 40,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 6
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 400,100, 91, 50, 40,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 8
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 400,100, 90, 50, 41,10, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 9
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 400,100, 90, 50, 40,11, 9, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 10
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 10, 5, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 11
+--- ./program958.py
++++ ./program958.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def int_to_roman( num):
+ 
+-        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
++        val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 6, 4,1]
+ 
+         syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+
+# mutant 15
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["XXMXX", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 16
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "XXCMXX", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 17
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "XXDXX", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 18
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "XXCDXX","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 19
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "CD","XXCXX", "XC", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 20
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "CD","C", "XXXCXX", "L", "XL","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 22
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XXXLXX","X", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 23
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","XXXXX", "IX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 24
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "XXIXXX", "V", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 25
+--- ./program958.py
++++ ./program958.py
+@@ -21,7 +21,7 @@
+ 
+         val = [1000, 900, 500, 400,100, 90, 50, 40,10, 9, 5, 4,1]
+ 
+-        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "V", "IV","I"]
++        syb = ["M", "CM", "D", "CD","C", "XC", "L", "XL","X", "IX", "XXVXX", "IV","I"]
+ 
+         roman_num = ''
+ 
+
+# mutant 31
+--- ./program958.py
++++ ./program958.py
+@@ -25,7 +25,7 @@
+ 
+         roman_num = ''
+ 
+-        i = 0
++        i = 1
+ 
+         while  num > 0:
+ 
+
+# mutant 36
+--- ./program958.py
++++ ./program958.py
+@@ -31,7 +31,7 @@
+ 
+             for _ in range(num // val[i]):
+ 
+-                roman_num += syb[i]
++                roman_num = syb[i]
+ 
+                 num -= val[i]
+ 
+
+# mutant 45
+--- ./program958.py
++++ ./program958.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

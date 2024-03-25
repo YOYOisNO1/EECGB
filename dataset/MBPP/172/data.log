@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (2)
+
+---- ./program172.py (2) ----
+
+# mutant 5
+--- ./program172.py
++++ ./program172.py
+@@ -23,7 +23,7 @@
+ 
+   for i in range(len(s)):
+ 
+-    if (s[i]== 's' and s[i+1]=='t' and s[i+2]== 'd'):
++    if (s[i]== 's' and s[i-1]=='t' and s[i+2]== 'd'):
+ 
+       count = count + 1
+ 
+
+# mutant 16
+--- ./program172.py
++++ ./program172.py
+@@ -25,7 +25,7 @@
+ 
+     if (s[i]== 's' and s[i+1]=='t' and s[i+2]== 'd'):
+ 
+-      count = count + 1
++      count = None
+ 
+   return count
+ 
+
+
+Survived 🙁 (1)
+
+---- ./program172.py (1) ----
+
+# mutant 19
+--- ./program172.py
++++ ./program172.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

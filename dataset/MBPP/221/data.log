@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program221.py (3) ----
+
+# mutant 5
+--- ./program221.py
++++ ./program221.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def first_even(nums):
+ 
+-    first_even = next((el for el in nums if el%2==0),-1)
++    first_even = next((el for el in nums if el%2==0),+1)
+ 
+     return first_even
+ 
+
+# mutant 6
+--- ./program221.py
++++ ./program221.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def first_even(nums):
+ 
+-    first_even = next((el for el in nums if el%2==0),-1)
++    first_even = next((el for el in nums if el%2==0),-2)
+ 
+     return first_even
+ 
+
+# mutant 10
+--- ./program221.py
++++ ./program221.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

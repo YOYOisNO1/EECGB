@@ -1,0 +1,211 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (7)
+
+---- ./program714.py (7) ----
+
+# mutant 6
+--- ./program714.py
++++ ./program714.py
+@@ -25,7 +25,7 @@
+ 
+     i = 2
+ 
+-    while((i * i) <= m): 
++    while((i / i) <= m): 
+ 
+         total = 0
+ 
+
+# mutant 13
+--- ./program714.py
++++ ./program714.py
+@@ -31,7 +31,7 @@
+ 
+         while (n % i == 0): 
+ 
+-            n /= i 
++            n = i 
+ 
+             total += 1 
+ 
+
+# mutant 14
+--- ./program714.py
++++ ./program714.py
+@@ -31,7 +31,7 @@
+ 
+         while (n % i == 0): 
+ 
+-            n /= i 
++            n *= i 
+ 
+             total += 1 
+ 
+
+# mutant 25
+--- ./program714.py
++++ ./program714.py
+@@ -41,7 +41,7 @@
+ 
+         while((temp + j) <= total): 
+ 
+-            temp += j 
++            temp -= j 
+ 
+             count += 1
+ 
+
+# mutant 30
+--- ./program714.py
++++ ./program714.py
+@@ -45,7 +45,7 @@
+ 
+             count += 1
+ 
+-            j += 1 
++            j -= 1 
+ 
+         i += 1
+ 
+
+# mutant 32
+--- ./program714.py
++++ ./program714.py
+@@ -47,7 +47,7 @@
+ 
+             j += 1 
+ 
+-        i += 1
++        i = 1
+ 
+     if (n != 1): 
+ 
+
+# mutant 33
+--- ./program714.py
++++ ./program714.py
+@@ -47,7 +47,7 @@
+ 
+             j += 1 
+ 
+-        i += 1
++        i -= 1
+ 
+     if (n != 1): 
+ 
+
+
+Survived 🙁 (8)
+
+---- ./program714.py (8) ----
+
+# mutant 4
+--- ./program714.py
++++ ./program714.py
+@@ -23,7 +23,7 @@
+ 
+     count = 0
+ 
+-    i = 2
++    i = 3
+ 
+     while((i * i) <= m): 
+ 
+
+# mutant 7
+--- ./program714.py
++++ ./program714.py
+@@ -25,7 +25,7 @@
+ 
+     i = 2
+ 
+-    while((i * i) <= m): 
++    while((i * i) < m): 
+ 
+         total = 0
+ 
+
+# mutant 24
+--- ./program714.py
++++ ./program714.py
+@@ -41,7 +41,7 @@
+ 
+         while((temp + j) <= total): 
+ 
+-            temp += j 
++            temp = j 
+ 
+             count += 1
+ 
+
+# mutant 34
+--- ./program714.py
++++ ./program714.py
+@@ -47,7 +47,7 @@
+ 
+             j += 1 
+ 
+-        i += 1
++        i += 2
+ 
+     if (n != 1): 
+ 
+
+# mutant 37
+--- ./program714.py
++++ ./program714.py
+@@ -51,7 +51,7 @@
+ 
+     if (n != 1): 
+ 
+-        count += 1 
++        count = 1 
+ 
+     return count 
+ 
+
+# mutant 38
+--- ./program714.py
++++ ./program714.py
+@@ -51,7 +51,7 @@
+ 
+     if (n != 1): 
+ 
+-        count += 1 
++        count -= 1 
+ 
+     return count 
+ 
+
+# mutant 39
+--- ./program714.py
++++ ./program714.py
+@@ -51,7 +51,7 @@
+ 
+     if (n != 1): 
+ 
+-        count += 1 
++        count += 2 
+ 
+     return count 
+ 
+
+# mutant 42
+--- ./program714.py
++++ ./program714.py
+@@ -67,7 +67,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

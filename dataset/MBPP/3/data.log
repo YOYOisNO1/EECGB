@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program3.py (3) ----
+
+# mutant 7
+--- ./program3.py
++++ ./program3.py
+@@ -25,7 +25,7 @@
+ 
+     for i in range(2,int(math.sqrt(n)) + 1):
+ 
+-        if n % i == 0:
++        if n % i != 0:
+ 
+             result = True
+ 
+
+# mutant 8
+--- ./program3.py
++++ ./program3.py
+@@ -25,7 +25,7 @@
+ 
+     for i in range(2,int(math.sqrt(n)) + 1):
+ 
+-        if n % i == 0:
++        if n % i == 1:
+ 
+             result = True
+ 
+
+# mutant 13
+--- ./program3.py
++++ ./program3.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

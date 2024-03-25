@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (6)
+
+---- ./program891.py (6) ----
+
+# mutant 3
+--- ./program891.py
++++ ./program891.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def same_length(A,B): 
+ 
+-    while (A > 0 and B > 0): 
++    while (A > 0 and B >= 0): 
+ 
+         A = A / 10; 
+ 
+
+# mutant 12
+--- ./program891.py
++++ ./program891.py
+@@ -25,7 +25,7 @@
+ 
+         B = B / 10; 
+ 
+-    if (A == 0 and B == 0): 
++    if (A != 0 and B == 0): 
+ 
+         return True; 
+ 
+
+# mutant 13
+--- ./program891.py
++++ ./program891.py
+@@ -25,7 +25,7 @@
+ 
+         B = B / 10; 
+ 
+-    if (A == 0 and B == 0): 
++    if (A == 1 and B == 0): 
+ 
+         return True; 
+ 
+
+# mutant 16
+--- ./program891.py
++++ ./program891.py
+@@ -25,7 +25,7 @@
+ 
+         B = B / 10; 
+ 
+-    if (A == 0 and B == 0): 
++    if (A == 0 or B == 0): 
+ 
+         return True; 
+ 
+
+# mutant 18
+--- ./program891.py
++++ ./program891.py
+@@ -29,7 +29,7 @@
+ 
+         return True; 
+ 
+-    return False; 
++    return True; 
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 20
+--- ./program891.py
++++ ./program891.py
+@@ -42,7 +42,7 @@
+             a, b),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (2)
+
+---- ./program891.py (2) ----
+
+# mutant 1
+--- ./program891.py
++++ ./program891.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def same_length(A,B): 
+ 
+-    while (A > 0 and B > 0): 
++    while (A >= 0 and B > 0): 
+ 
+         A = A / 10; 
+ 
+
+# mutant 21
+--- ./program891.py
++++ ./program891.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

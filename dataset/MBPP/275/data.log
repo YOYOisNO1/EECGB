@@ -1,0 +1,102 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (7)
+
+---- ./program275.py (7) ----
+
+# mutant 1
+--- ./program275.py
++++ ./program275.py
+@@ -23,7 +23,7 @@
+ 
+     for i in range(n): 
+ 
+-        a[i] = (a[i] // m + (a[i] % m != 0))  
++        a[i] = (a[i] / m + (a[i] % m != 0))  
+ 
+     result,maxx = -1,-1
+ 
+
+# mutant 7
+--- ./program275.py
++++ ./program275.py
+@@ -25,7 +25,7 @@
+ 
+         a[i] = (a[i] // m + (a[i] % m != 0))  
+ 
+-    result,maxx = -1,-1
++    result,maxx = +1,-1
+ 
+     for i in range(n - 1,-1,-1): 
+ 
+
+# mutant 8
+--- ./program275.py
++++ ./program275.py
+@@ -25,7 +25,7 @@
+ 
+         a[i] = (a[i] // m + (a[i] % m != 0))  
+ 
+-    result,maxx = -1,-1
++    result,maxx = -2,-1
+ 
+     for i in range(n - 1,-1,-1): 
+ 
+
+# mutant 9
+--- ./program275.py
++++ ./program275.py
+@@ -25,7 +25,7 @@
+ 
+         a[i] = (a[i] // m + (a[i] % m != 0))  
+ 
+-    result,maxx = -1,-1
++    result,maxx = -1,+1
+ 
+     for i in range(n - 1,-1,-1): 
+ 
+
+# mutant 10
+--- ./program275.py
++++ ./program275.py
+@@ -25,7 +25,7 @@
+ 
+         a[i] = (a[i] // m + (a[i] % m != 0))  
+ 
+-    result,maxx = -1,-1
++    result,maxx = -1,-2
+ 
+     for i in range(n - 1,-1,-1): 
+ 
+
+# mutant 15
+--- ./program275.py
++++ ./program275.py
+@@ -27,7 +27,7 @@
+ 
+     result,maxx = -1,-1
+ 
+-    for i in range(n - 1,-1,-1): 
++    for i in range(n - 1,-2,-1): 
+ 
+         if (maxx < a[i]): 
+ 
+
+# mutant 25
+--- ./program275.py
++++ ./program275.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

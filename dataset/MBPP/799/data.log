@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program799.py (5) ----
+
+# mutant 2
+--- ./program799.py
++++ ./program799.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-INT_BITS = 32
++INT_BITS = None
+ 
+ def left_rotate(n,d):   
+ 
+
+# mutant 3
+--- ./program799.py
++++ ./program799.py
+@@ -21,7 +21,7 @@
+ 
+ def left_rotate(n,d):   
+ 
+-    return (n << d)|(n >> (INT_BITS - d))  
++    return (n >> d)|(n >> (INT_BITS - d))  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 4
+--- ./program799.py
++++ ./program799.py
+@@ -21,7 +21,7 @@
+ 
+ def left_rotate(n,d):   
+ 
+-    return (n << d)|(n >> (INT_BITS - d))  
++    return (n << d)&(n >> (INT_BITS - d))  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 5
+--- ./program799.py
++++ ./program799.py
+@@ -21,7 +21,7 @@
+ 
+ def left_rotate(n,d):   
+ 
+-    return (n << d)|(n >> (INT_BITS - d))  
++    return (n << d)|(n << (INT_BITS - d))  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program799.py
++++ ./program799.py
+@@ -34,7 +34,7 @@
+             n, d),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (3)
+
+---- ./program799.py (3) ----
+
+# mutant 1
+--- ./program799.py
++++ ./program799.py
+@@ -17,7 +17,7 @@
+ #
+ # SOLUTION CODE
+ # ============================================
+-INT_BITS = 32
++INT_BITS = 33
+ 
+ def left_rotate(n,d):   
+ 
+
+# mutant 6
+--- ./program799.py
++++ ./program799.py
+@@ -21,7 +21,7 @@
+ 
+ def left_rotate(n,d):   
+ 
+-    return (n << d)|(n >> (INT_BITS - d))  
++    return (n << d)|(n >> (INT_BITS + d))  
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 9
+--- ./program799.py
++++ ./program799.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

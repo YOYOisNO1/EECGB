@@ -1,0 +1,203 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program69.py (1) ----
+
+# mutant 20
+--- ./program69.py
++++ ./program69.py
+@@ -43,7 +43,7 @@
+ 
+ 				while (n < len(s)) and (l[i+n] == s[n]):
+ 
+-					n += 1				
++					n = 1				
+ 
+ 				if n == len(s):
+ 
+
+
+Suspicious 🤔 (5)
+
+---- ./program69.py (5) ----
+
+# mutant 12
+--- ./program69.py
++++ ./program69.py
+@@ -37,7 +37,7 @@
+ 
+ 		for i in range(len(l)):
+ 
+-			if l[i] == s[0]:
++			if l[i] != s[0]:
+ 
+ 				n = 1
+ 
+
+# mutant 22
+--- ./program69.py
++++ ./program69.py
+@@ -43,7 +43,7 @@
+ 
+ 				while (n < len(s)) and (l[i+n] == s[n]):
+ 
+-					n += 1				
++					n += 2				
+ 
+ 				if n == len(s):
+ 
+
+# mutant 24
+--- ./program69.py
++++ ./program69.py
+@@ -47,7 +47,7 @@
+ 
+ 				if n == len(s):
+ 
+-					sub_set = True
++					sub_set = False
+ 
+ 	return sub_set
+ 
+
+# mutant 25
+--- ./program69.py
++++ ./program69.py
+@@ -47,7 +47,7 @@
+ 
+ 				if n == len(s):
+ 
+-					sub_set = True
++					sub_set = None
+ 
+ 	return sub_set
+ 
+
+# mutant 27
+--- ./program69.py
++++ ./program69.py
+@@ -62,7 +62,7 @@
+             l, s),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+
+
+Survived 🙁 (8)
+
+---- ./program69.py (8) ----
+
+# mutant 4
+--- ./program69.py
++++ ./program69.py
+@@ -23,7 +23,7 @@
+ 
+ 	if s == []:
+ 
+-		sub_set = True
++		sub_set = False
+ 
+ 	elif s == l:
+ 
+
+# mutant 5
+--- ./program69.py
++++ ./program69.py
+@@ -23,7 +23,7 @@
+ 
+ 	if s == []:
+ 
+-		sub_set = True
++		sub_set = None
+ 
+ 	elif s == l:
+ 
+
+# mutant 7
+--- ./program69.py
++++ ./program69.py
+@@ -27,7 +27,7 @@
+ 
+ 	elif s == l:
+ 
+-		sub_set = True
++		sub_set = False
+ 
+ 	elif len(s) > len(l):
+ 
+
+# mutant 8
+--- ./program69.py
++++ ./program69.py
+@@ -27,7 +27,7 @@
+ 
+ 	elif s == l:
+ 
+-		sub_set = True
++		sub_set = None
+ 
+ 	elif len(s) > len(l):
+ 
+
+# mutant 9
+--- ./program69.py
++++ ./program69.py
+@@ -29,7 +29,7 @@
+ 
+ 		sub_set = True
+ 
+-	elif len(s) > len(l):
++	elif len(s) >= len(l):
+ 
+ 		sub_set = False
+ 
+
+# mutant 10
+--- ./program69.py
++++ ./program69.py
+@@ -31,7 +31,7 @@
+ 
+ 	elif len(s) > len(l):
+ 
+-		sub_set = False
++		sub_set = True
+ 
+ 	else:
+ 
+
+# mutant 11
+--- ./program69.py
++++ ./program69.py
+@@ -31,7 +31,7 @@
+ 
+ 	elif len(s) > len(l):
+ 
+-		sub_set = False
++		sub_set = None
+ 
+ 	else:
+ 
+
+# mutant 28
+--- ./program69.py
++++ ./program69.py
+@@ -63,7 +63,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program524.py (6) ----
+
+# mutant 1
+--- ./program524.py
++++ ./program524.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def max_sum_increasing_subsequence(arr, n): 
+ 
+-	max = 0
++	max = 1
+ 
+ 	msis = [0 for x in range(n)] 
+ 
+
+# mutant 3
+--- ./program524.py
++++ ./program524.py
+@@ -21,7 +21,7 @@
+ 
+ 	max = 0
+ 
+-	msis = [0 for x in range(n)] 
++	msis = [1 for x in range(n)] 
+ 
+ 	for i in range(n): 
+ 
+
+# mutant 7
+--- ./program524.py
++++ ./program524.py
+@@ -31,7 +31,7 @@
+ 
+ 		for j in range(i): 
+ 
+-			if (arr[i] > arr[j] and
++			if (arr[i] >= arr[j] and
+ 
+ 				msis[i] < msis[j] + arr[i]): 
+ 
+
+# mutant 8
+--- ./program524.py
++++ ./program524.py
+@@ -33,7 +33,7 @@
+ 
+ 			if (arr[i] > arr[j] and
+ 
+-				msis[i] < msis[j] + arr[i]): 
++				msis[i] <= msis[j] + arr[i]): 
+ 
+ 				msis[i] = msis[j] + arr[i] 
+ 
+
+# mutant 13
+--- ./program524.py
++++ ./program524.py
+@@ -39,7 +39,7 @@
+ 
+ 	for i in range(n): 
+ 
+-		if max < msis[i]: 
++		if max <= msis[i]: 
+ 
+ 			max = msis[i] 
+ 
+
+# mutant 17
+--- ./program524.py
++++ ./program524.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,63 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (4)
+
+---- ./program257.py (4) ----
+
+# mutant 1
+--- ./program257.py
++++ ./program257.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def swap_numbers(a,b):
+ 
+- temp = a
++ temp = None
+ 
+  a = b
+ 
+
+# mutant 2
+--- ./program257.py
++++ ./program257.py
+@@ -21,7 +21,7 @@
+ 
+  temp = a
+ 
+- a = b
++ a = None
+ 
+  b = temp
+ 
+
+# mutant 3
+--- ./program257.py
++++ ./program257.py
+@@ -23,7 +23,7 @@
+ 
+  a = b
+ 
+- b = temp
++ b = None
+ 
+  return (a,b)
+ 
+
+# mutant 5
+--- ./program257.py
++++ ./program257.py
+@@ -38,7 +38,7 @@
+             a, b),
+             expected
+         ):
+-            return "PASSED"
++            return "XXPASSEDXX"
+         return "FAILED"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+

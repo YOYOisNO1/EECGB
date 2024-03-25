@@ -1,0 +1,55 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (1)
+
+---- ./program516.py (1) ----
+
+# mutant 18
+--- ./program516.py
++++ ./program516.py
+@@ -49,7 +49,7 @@
+ 
+           a += 1
+ 
+-      placement *= RADIX
++      placement = RADIX
+ 
+     return nums
+ 
+
+
+Survived 🙁 (2)
+
+---- ./program516.py (2) ----
+
+# mutant 6
+--- ./program516.py
++++ ./program516.py
+@@ -27,7 +27,7 @@
+ 
+ 
+ 
+-    while placement < max_digit:
++    while placement <= max_digit:
+ 
+       buckets = [list() for _ in range( RADIX )]
+ 
+
+# mutant 22
+--- ./program516.py
++++ ./program516.py
+@@ -65,7 +65,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

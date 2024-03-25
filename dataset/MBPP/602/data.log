@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program602.py (3) ----
+
+# mutant 1
+--- ./program602.py
++++ ./program602.py
+@@ -21,7 +21,7 @@
+ 
+   for index,c in enumerate(str1):
+ 
+-    if str1[:index+1].count(c) > 1:
++    if str1[:index-1].count(c) > 1:
+ 
+       return c 
+ 
+
+# mutant 2
+--- ./program602.py
++++ ./program602.py
+@@ -21,7 +21,7 @@
+ 
+   for index,c in enumerate(str1):
+ 
+-    if str1[:index+1].count(c) > 1:
++    if str1[:index+2].count(c) > 1:
+ 
+       return c 
+ 
+
+# mutant 8
+--- ./program602.py
++++ ./program602.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

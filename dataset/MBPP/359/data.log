@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program359.py (2) ----
+
+# mutant 6
+--- ./program359.py
++++ ./program359.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def check_solution(a,b,c): 
+ 
+-    if (2*b*b == 9*a*c): 
++    if (2*b*b == 9/a*c): 
+ 
+         return ("Yes"); 
+ 
+
+# mutant 12
+--- ./program359.py
++++ ./program359.py
+@@ -39,7 +39,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

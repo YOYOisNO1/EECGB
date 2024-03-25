@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Suspicious 🤔 (5)
+
+---- ./program347.py (5) ----
+
+# mutant 7
+--- ./program347.py
++++ ./program347.py
+@@ -27,7 +27,7 @@
+ 
+         n = temp 
+ 
+-    return n * (n + 1) * (3 * m - n + 1) // 6
++    return n * (n + 2) * (3 * m - n + 1) // 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 8
+--- ./program347.py
++++ ./program347.py
+@@ -27,7 +27,7 @@
+ 
+         n = temp 
+ 
+-    return n * (n + 1) * (3 * m - n + 1) // 6
++    return n * (n + 1) / (3 * m - n + 1) // 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 9
+--- ./program347.py
++++ ./program347.py
+@@ -27,7 +27,7 @@
+ 
+         n = temp 
+ 
+-    return n * (n + 1) * (3 * m - n + 1) // 6
++    return n * (n + 1) * (4 * m - n + 1) // 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 12
+--- ./program347.py
++++ ./program347.py
+@@ -27,7 +27,7 @@
+ 
+         n = temp 
+ 
+-    return n * (n + 1) * (3 * m - n + 1) // 6
++    return n * (n + 1) * (3 * m - n - 1) // 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 13
+--- ./program347.py
++++ ./program347.py
+@@ -27,7 +27,7 @@
+ 
+         n = temp 
+ 
+-    return n * (n + 1) * (3 * m - n + 1) // 6
++    return n * (n + 1) * (3 * m - n + 2) // 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+
+Survived 🙁 (3)
+
+---- ./program347.py (3) ----
+
+# mutant 1
+--- ./program347.py
++++ ./program347.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def count_squares(m,n): 
+ 
+-    if (n < m): 
++    if (n <= m): 
+ 
+         temp = m 
+ 
+
+# mutant 14
+--- ./program347.py
++++ ./program347.py
+@@ -27,7 +27,7 @@
+ 
+         n = temp 
+ 
+-    return n * (n + 1) * (3 * m - n + 1) // 6
++    return n * (n + 1) * (3 * m - n + 1) / 6
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 18
+--- ./program347.py
++++ ./program347.py
+@@ -41,7 +41,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

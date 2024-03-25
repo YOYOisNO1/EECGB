@@ -1,0 +1,177 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (3)
+
+---- ./program657.py (3) ----
+
+# mutant 12
+--- ./program657.py
++++ ./program657.py
+@@ -29,7 +29,7 @@
+ 
+         while (fact % 10 == 0) :  
+ 
+-            fact = int(fact / 10) 
++            fact = int(fact * 10) 
+ 
+     while (fact >= 10) : 
+ 
+
+# mutant 13
+--- ./program657.py
++++ ./program657.py
+@@ -29,7 +29,7 @@
+ 
+         while (fact % 10 == 0) :  
+ 
+-            fact = int(fact / 10) 
++            fact = int(fact / 11) 
+ 
+     while (fact >= 10) : 
+ 
+
+# mutant 17
+--- ./program657.py
++++ ./program657.py
+@@ -33,7 +33,7 @@
+ 
+     while (fact >= 10) : 
+ 
+-        fact = int(fact / 10) 
++        fact = int(fact * 10) 
+ 
+     return math.floor(fact) 
+ 
+
+
+Suspicious 🤔 (3)
+
+---- ./program657.py (3) ----
+
+# mutant 4
+--- ./program657.py
++++ ./program657.py
+@@ -23,7 +23,7 @@
+ 
+     fact = 1
+ 
+-    for i in range(2,n + 1) : 
++    for i in range(2,n - 1) : 
+ 
+         fact = fact * i 
+ 
+
+# mutant 6
+--- ./program657.py
++++ ./program657.py
+@@ -25,7 +25,7 @@
+ 
+     for i in range(2,n + 1) : 
+ 
+-        fact = fact * i 
++        fact = fact / i 
+ 
+         while (fact % 10 == 0) :  
+ 
+
+# mutant 19
+--- ./program657.py
++++ ./program657.py
+@@ -33,7 +33,7 @@
+ 
+     while (fact >= 10) : 
+ 
+-        fact = int(fact / 10) 
++        fact = None 
+ 
+     return math.floor(fact) 
+ 
+
+
+Survived 🙁 (6)
+
+---- ./program657.py (6) ----
+
+# mutant 8
+--- ./program657.py
++++ ./program657.py
+@@ -27,7 +27,7 @@
+ 
+         fact = fact * i 
+ 
+-        while (fact % 10 == 0) :  
++        while (fact / 10 == 0) :  
+ 
+             fact = int(fact / 10) 
+ 
+
+# mutant 9
+--- ./program657.py
++++ ./program657.py
+@@ -27,7 +27,7 @@
+ 
+         fact = fact * i 
+ 
+-        while (fact % 10 == 0) :  
++        while (fact % 11 == 0) :  
+ 
+             fact = int(fact / 10) 
+ 
+
+# mutant 11
+--- ./program657.py
++++ ./program657.py
+@@ -27,7 +27,7 @@
+ 
+         fact = fact * i 
+ 
+-        while (fact % 10 == 0) :  
++        while (fact % 10 == 1) :  
+ 
+             fact = int(fact / 10) 
+ 
+
+# mutant 15
+--- ./program657.py
++++ ./program657.py
+@@ -31,7 +31,7 @@
+ 
+             fact = int(fact / 10) 
+ 
+-    while (fact >= 10) : 
++    while (fact > 10) : 
+ 
+         fact = int(fact / 10) 
+ 
+
+# mutant 16
+--- ./program657.py
++++ ./program657.py
+@@ -31,7 +31,7 @@
+ 
+             fact = int(fact / 10) 
+ 
+-    while (fact >= 10) : 
++    while (fact >= 11) : 
+ 
+         fact = int(fact / 10) 
+ 
+
+# mutant 22
+--- ./program657.py
++++ ./program657.py
+@@ -49,7 +49,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

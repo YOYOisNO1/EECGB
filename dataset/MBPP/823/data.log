@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program823.py (2) ----
+
+# mutant 8
+--- ./program823.py
++++ ./program823.py
+@@ -37,7 +37,7 @@
+ 
+   else : 
+ 
+-      return ("entered string isnt a substring")
++      return ("XXentered string isnt a substringXX")
+ 
+ # TESTING CODE 
+ # ============================================
+
+# mutant 11
+--- ./program823.py
++++ ./program823.py
+@@ -51,7 +51,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

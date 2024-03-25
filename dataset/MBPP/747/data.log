@@ -1,0 +1,115 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (8)
+
+---- ./program747.py (8) ----
+
+# mutant 1
+--- ./program747.py
++++ ./program747.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def lcs_of_three(X, Y, Z, m, n, o): 
+ 
+-	L = [[[0 for i in range(o+1)] for j in range(n+1)] 
++	L = [[[1 for i in range(o+1)] for j in range(n+1)] 
+ 
+ 		for k in range(m+1)] 
+ 
+
+# mutant 3
+--- ./program747.py
++++ ./program747.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def lcs_of_three(X, Y, Z, m, n, o): 
+ 
+-	L = [[[0 for i in range(o+1)] for j in range(n+1)] 
++	L = [[[0 for i in range(o+2)] for j in range(n+1)] 
+ 
+ 		for k in range(m+1)] 
+ 
+
+# mutant 5
+--- ./program747.py
++++ ./program747.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def lcs_of_three(X, Y, Z, m, n, o): 
+ 
+-	L = [[[0 for i in range(o+1)] for j in range(n+1)] 
++	L = [[[0 for i in range(o+1)] for j in range(n+2)] 
+ 
+ 		for k in range(m+1)] 
+ 
+
+# mutant 7
+--- ./program747.py
++++ ./program747.py
+@@ -21,7 +21,7 @@
+ 
+ 	L = [[[0 for i in range(o+1)] for j in range(n+1)] 
+ 
+-		for k in range(m+1)] 
++		for k in range(m+2)] 
+ 
+ 	for i in range(m+1): 
+ 
+
+# mutant 21
+--- ./program747.py
++++ ./program747.py
+@@ -29,7 +29,7 @@
+ 
+ 			for k in range(o+1): 
+ 
+-				if (i == 0 or j == 0 or k == 0): 
++				if (i == 0 and j == 0 or k == 0): 
+ 
+ 					L[i][j][k] = 0
+ 
+
+# mutant 28
+--- ./program747.py
++++ ./program747.py
+@@ -33,7 +33,7 @@
+ 
+ 					L[i][j][k] = 0
+ 
+-				elif (X[i-1] == Y[j-1] and
++				elif (X[i-1] == Y[j-2] and
+ 
+ 					X[i-1] == Z[k-1]): 
+ 
+
+# mutant 33
+--- ./program747.py
++++ ./program747.py
+@@ -35,7 +35,7 @@
+ 
+ 				elif (X[i-1] == Y[j-1] and
+ 
+-					X[i-1] == Z[k-1]): 
++					X[i-1] == Z[k-2]): 
+ 
+ 					L[i][j][k] = L[i-1][j-1][k-1] + 1
+ 
+
+# mutant 53
+--- ./program747.py
++++ ./program747.py
+@@ -61,7 +61,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

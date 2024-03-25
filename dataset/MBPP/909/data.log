@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program909.py (3) ----
+
+# mutant 2
+--- ./program909.py
++++ ./program909.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def previous_palindrome(num):
+ 
+-    for x in range(num-1,0,-1):
++    for x in range(num-2,0,-1):
+ 
+         if str(x) == str(x)[::-1]:
+ 
+
+# mutant 3
+--- ./program909.py
++++ ./program909.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def previous_palindrome(num):
+ 
+-    for x in range(num-1,0,-1):
++    for x in range(num-1,1,-1):
+ 
+         if str(x) == str(x)[::-1]:
+ 
+
+# mutant 11
+--- ./program909.py
++++ ./program909.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,50 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (3)
+
+---- ./program935.py (3) ----
+
+# mutant 1
+--- ./program935.py
++++ ./program935.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def series_sum(number):
+ 
+- total = 0
++ total = 1
+ 
+  total = (number * (number + 1) * (2 * number + 1)) / 6
+ 
+
+# mutant 2
+--- ./program935.py
++++ ./program935.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def series_sum(number):
+ 
+- total = 0
++ total = None
+ 
+  total = (number * (number + 1) * (2 * number + 1)) / 6
+ 
+
+# mutant 16
+--- ./program935.py
++++ ./program935.py
+@@ -37,7 +37,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

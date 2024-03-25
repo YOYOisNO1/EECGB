@@ -1,0 +1,37 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (2)
+
+---- ./program745.py (2) ----
+
+# mutant 2
+--- ./program745.py
++++ ./program745.py
+@@ -19,7 +19,7 @@
+ # ============================================
+ def divisible_by_digits(startnum, endnum):
+ 
+-    return [n for n in range(startnum, endnum+1) \
++    return [n for n in range(startnum, endnum+2) \
+ 
+                 if not any(map(lambda x: int(x) == 0 or n%int(x) != 0, str(n)))]
+ 
+
+# mutant 13
+--- ./program745.py
++++ ./program745.py
+@@ -35,7 +35,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

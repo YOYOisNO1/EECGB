@@ -1,0 +1,89 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Survived 🙁 (6)
+
+---- ./program763.py (6) ----
+
+# mutant 2
+--- ./program763.py
++++ ./program763.py
+@@ -21,7 +21,7 @@
+ 
+     arr = sorted(arr) 
+ 
+-    diff = 10**20 
++    diff = 11**20 
+ 
+     for i in range(n-1): 
+ 
+
+# mutant 3
+--- ./program763.py
++++ ./program763.py
+@@ -21,7 +21,7 @@
+ 
+     arr = sorted(arr) 
+ 
+-    diff = 10**20 
++    diff = 10*20 
+ 
+     for i in range(n-1): 
+ 
+
+# mutant 4
+--- ./program763.py
++++ ./program763.py
+@@ -21,7 +21,7 @@
+ 
+     arr = sorted(arr) 
+ 
+-    diff = 10**20 
++    diff = 10**21 
+ 
+     for i in range(n-1): 
+ 
+
+# mutant 7
+--- ./program763.py
++++ ./program763.py
+@@ -23,7 +23,7 @@
+ 
+     diff = 10**20 
+ 
+-    for i in range(n-1): 
++    for i in range(n-2): 
+ 
+         if arr[i+1] - arr[i] < diff: 
+ 
+
+# mutant 11
+--- ./program763.py
++++ ./program763.py
+@@ -25,7 +25,7 @@
+ 
+     for i in range(n-1): 
+ 
+-        if arr[i+1] - arr[i] < diff: 
++        if arr[i+1] - arr[i] <= diff: 
+ 
+             diff = arr[i+1] - arr[i]  
+ 
+
+# mutant 18
+--- ./program763.py
++++ ./program763.py
+@@ -43,7 +43,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

@@ -1,0 +1,120 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (4)
+
+---- ./program167.py (4) ----
+
+# mutant 8
+--- ./program167.py
++++ ./program167.py
+@@ -25,7 +25,7 @@
+ 
+         return n   
+ 
+-    while( n != 0): 
++    while( n == 0): 
+ 
+         n >>= 1
+ 
+
+# mutant 9
+--- ./program167.py
++++ ./program167.py
+@@ -25,7 +25,7 @@
+ 
+         return n   
+ 
+-    while( n != 0): 
++    while( n != 1): 
+ 
+         n >>= 1
+ 
+
+# mutant 10
+--- ./program167.py
++++ ./program167.py
+@@ -27,7 +27,7 @@
+ 
+     while( n != 0): 
+ 
+-        n >>= 1
++        n = 1
+ 
+         count += 1
+ 
+
+# mutant 11
+--- ./program167.py
++++ ./program167.py
+@@ -27,7 +27,7 @@
+ 
+     while( n != 0): 
+ 
+-        n >>= 1
++        n <<= 1
+ 
+         count += 1
+ 
+
+
+Survived 🙁 (4)
+
+---- ./program167.py (4) ----
+
+# mutant 4
+--- ./program167.py
++++ ./program167.py
+@@ -21,7 +21,7 @@
+ 
+     count = 0; 
+ 
+-    if (n and not(n & (n - 1))): 
++    if (n and not(n | (n - 1))): 
+ 
+         return n   
+ 
+
+# mutant 5
+--- ./program167.py
++++ ./program167.py
+@@ -21,7 +21,7 @@
+ 
+     count = 0; 
+ 
+-    if (n and not(n & (n - 1))): 
++    if (n and not(n & (n + 1))): 
+ 
+         return n   
+ 
+
+# mutant 6
+--- ./program167.py
++++ ./program167.py
+@@ -21,7 +21,7 @@
+ 
+     count = 0; 
+ 
+-    if (n and not(n & (n - 1))): 
++    if (n and not(n & (n - 2))): 
+ 
+         return n   
+ 
+
+# mutant 20
+--- ./program167.py
++++ ./program167.py
+@@ -45,7 +45,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+

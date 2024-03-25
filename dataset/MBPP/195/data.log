@@ -1,0 +1,159 @@
+To apply a mutant on disk:
+    mutmut apply <id>
+
+To show a mutant:
+    mutmut show <id>
+
+
+Timed out ⏰ (5)
+
+---- ./program195.py (5) ----
+
+# mutant 10
+--- ./program195.py
++++ ./program195.py
+@@ -27,7 +27,7 @@
+ 
+     while (low <= high):
+ 
+-        mid = (low + high) // 2 
++        mid = (low - high) // 2 
+ 
+         if arr[mid] > x:
+ 
+
+# mutant 12
+--- ./program195.py
++++ ./program195.py
+@@ -27,7 +27,7 @@
+ 
+     while (low <= high):
+ 
+-        mid = (low + high) // 2 
++        mid = (low + high) // 3 
+ 
+         if arr[mid] > x:
+ 
+
+# mutant 15
+--- ./program195.py
++++ ./program195.py
+@@ -31,7 +31,7 @@
+ 
+         if arr[mid] > x:
+ 
+-            high = mid - 1
++            high = mid + 1
+ 
+         elif arr[mid] < x:
+ 
+
+# mutant 19
+--- ./program195.py
++++ ./program195.py
+@@ -35,7 +35,7 @@
+ 
+         elif arr[mid] < x:
+ 
+-            low = mid + 1
++            low = mid - 1
+ 
+         else:
+ 
+
+# mutant 23
+--- ./program195.py
++++ ./program195.py
+@@ -41,7 +41,7 @@
+ 
+             res = mid
+ 
+-            high = mid - 1
++            high = mid + 1
+ 
+     return res
+ 
+
+
+Survived 🙁 (6)
+
+---- ./program195.py (6) ----
+
+# mutant 3
+--- ./program195.py
++++ ./program195.py
+@@ -21,7 +21,7 @@
+ 
+     low = 0
+ 
+-    high = n - 1
++    high = n + 1
+ 
+     res = -1  
+ 
+
+# mutant 6
+--- ./program195.py
++++ ./program195.py
+@@ -23,7 +23,7 @@
+ 
+     high = n - 1
+ 
+-    res = -1  
++    res = +1  
+ 
+     while (low <= high):
+ 
+
+# mutant 7
+--- ./program195.py
++++ ./program195.py
+@@ -23,7 +23,7 @@
+ 
+     high = n - 1
+ 
+-    res = -1  
++    res = -2  
+ 
+     while (low <= high):
+ 
+
+# mutant 8
+--- ./program195.py
++++ ./program195.py
+@@ -23,7 +23,7 @@
+ 
+     high = n - 1
+ 
+-    res = -1  
++    res = None  
+ 
+     while (low <= high):
+ 
+
+# mutant 24
+--- ./program195.py
++++ ./program195.py
+@@ -41,7 +41,7 @@
+ 
+             res = mid
+ 
+-            high = mid - 1
++            high = mid - 2
+ 
+     return res
+ 
+
+# mutant 28
+--- ./program195.py
++++ ./program195.py
+@@ -57,7 +57,7 @@
+             expected
+         ):
+             return "PASSED"
+-        return "FAILED"
++        return "XXFAILEDXX"
+     except Exception as exception_obj:
+         return type(exception_obj).__name__
+     
+
